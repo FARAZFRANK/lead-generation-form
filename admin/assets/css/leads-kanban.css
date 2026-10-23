@@ -1,0 +1,255 @@
+/**
+ * Lead Generation Form Pro - Mini-CRM Kanban Board Styles
+ * Version: 3.2.0
+ */
+
+/* View Switcher */
+.wlgf-view-switcher {
+	display: inline-flex;
+	align-items: center;
+	background: #f1f5f9;
+	border: 1px solid #e2e8f0;
+	padding: 4px;
+	border-radius: 10px;
+	gap: 4px;
+	margin-bottom: 0;
+}
+
+.wlgf-view-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	border-radius: 7px;
+	border: 1px solid transparent;
+	background: transparent;
+	color: #64748b;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.4;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+	outline: none;
+	box-sizing: border-box;
+}
+
+.wlgf-view-btn:hover {
+	color: #0f172a;
+	background: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}
+
+.wlgf-view-btn.active {
+	background: #ffffff;
+	color: #2563eb;
+	border-color: rgba(226, 232, 240, 0.9);
+	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+	font-weight: 700;
+}
+
+/* Kanban Board Layout */
+.wlgf-kanban-board {
+	display: flex;
+	gap: 16px;
+	overflow-x: auto;
+	padding-bottom: 20px;
+	min-height: 520px;
+	align-items: flex-start;
+}
+
+.wlgf-kanban-column {
+	flex: 0 0 290px;
+	background: #f1f5f9;
+	border-radius: 14px;
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #e2e8f0;
+	max-height: 80vh;
+}
+
+.wlgf-kanban-col-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #e2e8f0;
+	margin-bottom: 12px;
+}
+
+.wlgf-kanban-col-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #1e293b;
+	margin: 0;
+}
+
+.wlgf-kanban-col-badge {
+	background: #ffffff;
+	color: #475569;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 2px 8px;
+	border-radius: 12px;
+	border: 1px solid #cbd5e1;
+}
+
+/* Status Column Highlights */
+.wlgf-col-new .wlgf-kanban-col-header       { border-color: #3b82f6; }
+.wlgf-col-contacted .wlgf-kanban-col-header { border-color: #0284c7; }
+.wlgf-col-followup .wlgf-kanban-col-header  { border-color: #f59e0b; }
+.wlgf-col-qualified .wlgf-kanban-col-header { border-color: #8b5cf6; }
+.wlgf-col-converted .wlgf-kanban-col-header { border-color: #10b981; }
+.wlgf-col-abandoned .wlgf-kanban-col-header { border-color: #ef4444; }
+
+/* Cards Container */
+.wlgf-kanban-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	overflow-y: auto;
+	min-height: 120px;
+	padding: 2px;
+}
+
+.wlgf-kanban-cards.wlgf-drag-over {
+	background: #e2e8f0;
+	border-radius: 8px;
+}
+
+/* Individual Lead Card */
+.wlgf-kanban-card {
+	background: #ffffff;
+	border-radius: 12px;
+	padding: 14px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	border: 1px solid #e2e8f0;
+	cursor: grab;
+	transition: all 0.2s ease;
+	position: relative;
+}
+
+.wlgf-kanban-card:hover {
+	box-shadow: 0 6px 14px -2px rgba(0, 0, 0, 0.12);
+	transform: translateY(-2px);
+	border-color: #cbd5e1;
+}
+
+.wlgf-kanban-card.wlgf-dragging {
+	opacity: 0.4;
+	cursor: grabbing;
+}
+
+.wlgf-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.wlgf-card-id {
+	font-size: 11px;
+	font-weight: 700;
+	color: #94a3b8;
+}
+
+.wlgf-card-date {
+	font-size: 11px;
+	color: #94a3b8;
+}
+
+.wlgf-card-name {
+	font-size: 14px;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0 0 6px 0;
+}
+
+.wlgf-card-meta {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-bottom: 12px;
+	font-size: 12px;
+	color: #64748b;
+}
+
+.wlgf-card-meta-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.wlgf-card-meta-item i {
+	font-size: 11px;
+	width: 14px;
+	color: #94a3b8;
+}
+
+/* Quick Action Bar on Card */
+.wlgf-card-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 10px;
+	border-top: 1px solid #f1f5f9;
+}
+
+.wlgf-card-btn-group {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.wlgf-card-action-btn {
+	width: 28px;
+	height: 28px;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	color: #475569;
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	text-decoration: none !important;
+	transition: all 0.15s ease;
+}
+
+.wlgf-card-action-btn:hover {
+	background: #2563eb;
+	color: #ffffff;
+	border-color: #2563eb;
+}
+
+.wlgf-card-action-btn.wlgf-act-wa:hover {
+	background: #25d366;
+	border-color: #25d366;
+	color: #ffffff;
+}
+
+.wlgf-card-action-btn.wlgf-act-call:hover {
+	background: #0284c7;
+	border-color: #0284c7;
+	color: #ffffff;
+}
+
+.wlgf-card-action-btn.wlgf-act-pdf:hover {
+	background: #ea580c;
+	border-color: #ea580c;
+	color: #ffffff;
+}
+
+.wlgf-card-action-btn.wlgf-act-view:hover {
+	background: #4f46e5;
+	border-color: #4f46e5;
+	color: #ffffff;
+}
+

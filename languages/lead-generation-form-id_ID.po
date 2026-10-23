@@ -1,0 +1,663 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form\n"
+"POT-Creation-Date: 2024-10-04 15:19+0530\n"
+"PO-Revision-Date: 2024-10-04 15:20+0530\n"
+"Last-Translator: \n"
+"Language-Team: Webenvo\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/dashboard.php:65
+msgid "Total From Created"
+msgstr "Total Dibuat"
+
+#: admin/dashboard.php:67 admin/manage-forms.php:36
+msgid "Create New Form"
+msgstr "Buat Formulir Baru"
+
+#: admin/dashboard.php:68 lead-generation-form.php:161
+msgid "Manage Forms"
+msgstr "Kelola Formulir"
+
+#: admin/dashboard.php:73
+msgid "Total Lead Captured"
+msgstr "Total Dicapai"
+
+#: admin/dashboard.php:75
+msgid "Manage Leads"
+msgstr "Kelola Lead"
+
+#: admin/dashboard.php:80
+msgid "Getting Started Tips"
+msgstr "Tips Memulai"
+
+#: admin/dashboard.php:81
+msgid "Create a new form using the FORM GENERATOR menu"
+msgstr "Buat formulir baru menggunakan menu PEMBUATAN FORMULIR"
+
+#: admin/dashboard.php:82
+msgid "Copy a form shortcode from the MANAGE FORMS menu"
+msgstr "Salin kode singkat formulir dari menu KELOLA FORMULIR"
+
+#: admin/dashboard.php:83
+msgid "Publish form shortcode on a page or post"
+msgstr "Terbitkan kode singkat formulir pada halaman atau pos"
+
+#: admin/dashboard.php:84
+msgid "Manage captured leads and saved data on the ALL CAPTURED LEADS menu"
+msgstr ""
+"Kelola prospek yang diambil dan data yang disimpan di menu SEMUA LEAD YANG "
+"DITANGKAPKelola lead yang diambil dan data yang disimpan di menu SEMUA LEAD "
+"YANG DICAPAI"
+
+#: admin/dashboard.php:85
+msgid "Using the SETTINGS menu page you can configure the settings"
+msgstr ""
+"Menggunakan halaman menu PENGATURAN, Anda dapat mengonfigurasi "
+"pengaturanDengan menggunakan halaman menu PENGATURAN, Anda dapat "
+"mengonfigurasi pengaturan"
+
+#: admin/dashboard.php:90 admin/lead-loader.php:37
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+#: admin/dashboard.php:91
+msgid ""
+"Please refer to our video docs for more help and tutorial videos about "
+"plugins."
+msgstr ""
+"Silakan lihat dokumen video kami untuk bantuan lebih lanjut dan video "
+"tutorial tentang plugin.Silakan merujuk ke video dokumen kami untuk bantuan "
+"lebih lanjut dan tutorial tentang plugin."
+
+#: admin/dashboard.php:92
+msgid "Visit Our YouTube Channel"
+msgstr "Kunjungi Saluran YouTube Kami"
+
+#: admin/dashboard.php:93
+msgid "Read plugin change logs."
+msgstr "Membaca log perubahan plugin."
+
+#: admin/dashboard.php:95
+msgid "Plugin Change Logs"
+msgstr "Log Perubahan Plugin"
+
+#: admin/form-generator.php:76
+msgid "Create or Modify Form"
+msgstr "Buat atau Ubah Formulir"
+
+#: admin/form-generator.php:100 admin/import-export.php:124
+#: admin/manage-forms.php:43 admin/manage-forms.php:85
+msgid "Form Name"
+msgstr "Nama Formulir"
+
+#: admin/form-generator.php:101 admin/import-export.php:125
+msgid "Type a name for the form"
+msgstr "Ketikkan nama untuk formulir"
+
+#: admin/form-generator.php:117
+msgid "Save Form"
+msgstr "Simpan Formulir"
+
+#: admin/form-generator.php:126
+msgid "Please Read FAQ While Create OR Modify Form"
+msgstr "Harap Baca FAQ Saat Membuat ATAU Memodifikasi Formulir"
+
+#: admin/form-generator.php:131
+msgid "Q.1. Is it permissible to use copied content for the Form structure?"
+msgstr ""
+"Q.1. Apakah diperbolehkan menggunakan konten yang disalin untuk struktur "
+"Formulir?"
+
+#: admin/form-generator.php:132
+msgid "You may insert copied information as plain text."
+msgstr "Anda dapat menyisipkan informasi yang disalin sebagai teks biasa."
+
+#: admin/form-generator.php:133
+msgid ""
+"However, directly pasting data into Form label and attribute fields is "
+"discouraged."
+msgstr ""
+"Namun, tidak disarankan untuk langsung menempelkan data ke bidang label dan "
+"atribut Formulir."
+
+#: admin/form-generator.php:137
+msgid "Q.2. Can I include several fields in the Form structure?"
+msgstr "Q.2. Bisakah saya menyertakan beberapa bidang dalam struktur Formulir?"
+
+#: admin/form-generator.php:138
+msgid "Absolutely, you can incorporate numerous fields in the Form."
+msgstr "Tentu saja, Anda dapat memasukkan banyak bidang ke dalam Formulir."
+
+#: admin/form-generator.php:139
+msgid "However, only one submit button is allowed per Form."
+msgstr "Namun, hanya satu tombol kirim yang diperbolehkan per Formulir."
+
+#: admin/form-generator.php:143
+msgid ""
+"Q.3. Can I alter the Form structure after it's been published on the website?"
+msgstr ""
+"Q.3. Bisakah saya mengubah struktur Formulir setelah dipublikasikan di situs "
+"web?"
+
+#: admin/form-generator.php:144
+msgid "It's advised against changing the form structure after publishing."
+msgstr ""
+"Disarankan untuk tidak mengubah struktur formulir setelah dipublikasikan."
+
+#: admin/form-generator.php:145
+msgid ""
+"Doing so may lead to discrepancies in the records table on the All Leads "
+"page."
+msgstr ""
+"Hal ini dapat menyebabkan perbedaan dalam tabel catatan di halaman Semua "
+"Prospek."
+
+#: admin/form-generator.php:146
+msgid ""
+"However, if you haven't received any submissions or data from users, you may "
+"make adjustments to the Form."
+msgstr ""
+"Namun, jika Anda belum menerima kiriman atau data apa pun dari pengguna, "
+"Anda dapat melakukan penyesuaian pada Formulir."
+
+#: admin/form-generator.php:147
+msgid ""
+"You can clone the current Form and modify or replace it with an older one."
+msgstr ""
+"Anda dapat mengkloning Formulir saat ini dan memodifikasi atau menggantinya "
+"dengan yang lebih lama."
+
+#: admin/form-generator.php:151
+msgid "Server Info for debugging"
+msgstr "Info Server untuk debugging"
+
+#: admin/form-generator.php:159
+msgid "Maximum upload file size"
+msgstr "Ukuran file unggahan maksimum"
+
+#: admin/form-generator.php:160
+msgid "Maximum post size"
+msgstr "Ukuran kiriman maksimum"
+
+#: admin/import-export.php:41
+msgid "Export A Form"
+msgstr "Ekspor Formulir"
+
+#: admin/import-export.php:44 admin/import-export.php:76
+#: admin/import-export.php:93 admin/lead-loader.php:37 admin/lead-loader.php:39
+#: admin/leads.php:37
+msgid "Select Form"
+msgstr "Pilih Formulir"
+
+#: admin/import-export.php:57
+msgid "Export From Data"
+msgstr "Ekspor Data Dari Formulir"
+
+#: admin/import-export.php:63
+msgid "Copy Code"
+msgstr "Salin Kode"
+
+#: admin/import-export.php:64
+msgid "Code copied to clipboard."
+msgstr "Kode disalin ke clipboard."
+
+#: admin/import-export.php:71
+msgid "Combine Two Form"
+msgstr "Gabungkan Dua Formulir"
+
+#: admin/import-export.php:74
+msgid "Form One"
+msgstr "Formulir Satu"
+
+#: admin/import-export.php:91
+msgid "Form Two"
+msgstr "Formulir Dua"
+
+#: admin/import-export.php:108
+msgid "Combine From"
+msgstr "Gabungkan Dari"
+
+#: admin/import-export.php:113
+msgid ""
+"Form combined successfully. Go to the Manage Forms menu to manage combined "
+"forms."
+msgstr ""
+"Formulir berhasil digabungkan. Buka menu Kelola Formulir untuk mengelola "
+"formulir gabungan."
+
+#: admin/import-export.php:121
+msgid "Import A Form"
+msgstr "Impor Formulir"
+
+#: admin/import-export.php:128
+msgid "Paste Form Data"
+msgstr "Tempelkan Data Formulir"
+
+#: admin/import-export.php:129
+msgid "Important Note: Please paste the copied Form data in JSON format only."
+msgstr ""
+"Catatan Penting: Harap tempelkan data Formulir yang disalin dalam format "
+"JSON saja."
+
+#: admin/import-export.php:132
+msgid "Import From Data"
+msgstr "Impor Data Dari Formulir"
+
+#: admin/import-export.php:137
+msgid "Form imported successfully"
+msgstr "Formulir berhasil diimpor"
+
+#: admin/import-export.php:146
+msgid "Please Read FAQ While Import & Export and Combining Forms"
+msgstr "Silakan Baca FAQ Saat Mengimpor"
+
+#: admin/import-export.php:151
+msgid "Q.1. What is the use of import, export, and combine forms features?"
+msgstr "Q.1. Apa kegunaan fitur impor, ekspor, dan penggabungan formulir?"
+
+#: admin/import-export.php:152
+msgid ""
+"You can use Export Form features for exporting forms from one website to "
+"another website where the Lead Generation Form plugin is installed."
+msgstr ""
+"Anda dapat menggunakan fitur Ekspor Formulir untuk mengekspor formulir dari "
+"satu situs web ke situs web lain tempat plugin Formulir Pembuatan Prospek "
+"diinstal."
+
+#: admin/import-export.php:153
+msgid "Using the Import Form feature, you can import via copied code."
+msgstr ""
+"Menggunakan fitur Impor Formulir, Anda dapat mengimpor melalui kode yang "
+"disalin."
+
+#: admin/import-export.php:154
+msgid "The Combined Form feature is utilized to merge two forms into one form."
+msgstr ""
+"Fitur Formulir Gabungan dimanfaatkan untuk menggabungkan dua formulir "
+"menjadi satu formulir."
+
+#: admin/import-export.php:158
+msgid "Q.2. What are the primary guidelines for exporting forms?"
+msgstr "Q.2. Apa pedoman utama untuk mengekspor formulir?"
+
+#: admin/import-export.php:159
+msgid ""
+"While importing a form, always use the Copy Code button to copy the form "
+"code."
+msgstr ""
+"Saat mengimpor formulir, selalu gunakan tombol Salin Kode untuk menyalin "
+"kode formulir."
+
+#: admin/import-export.php:163
+msgid "Q.3. What are the primary guidelines for import forms?"
+msgstr "Q.3. Apa pedoman utama untuk formulir impor?"
+
+#: admin/import-export.php:164
+msgid "Always paste the copied JSON object data for importing."
+msgstr "Selalu tempelkan data objek JSON yang disalin untuk diimpor."
+
+#: admin/import-export.php:165
+msgid ""
+"Adding other than JSON object data for importing Forms will result in an "
+"error."
+msgstr ""
+"Menambahkan data objek selain JSON untuk mengimpor Formulir akan "
+"menghasilkan kesalahan."
+
+#: admin/import-export.php:169
+msgid ""
+"Q.4. Can we import and export Forms from any third-party plugins like "
+"Contact Form 7?"
+msgstr ""
+"Q.4. Bisakah kita mengimpor dan mengekspor Formulir dari plugin pihak ketiga "
+"seperti Formulir Kontak 7?"
+
+#: admin/import-export.php:170
+msgid "No, you can't import or export Forms from other or third-party plugins."
+msgstr ""
+"Tidak, Anda tidak dapat mengimpor atau mengekspor Formulir dari plugin lain "
+"atau pihak ketiga."
+
+#: admin/import-export.php:171
+msgid ""
+"You can only import or export Forms into the Lead Generation Form plugin."
+msgstr ""
+"Anda hanya dapat mengimpor atau mengekspor Formulir ke plugin Formulir "
+"Pembuatan Prospek."
+
+#: admin/import-export.php:175
+msgid "Q.5. What are the primary guidelines for combining forms?"
+msgstr "Q.5. Apa pedoman utama untuk menggabungkan formulir?"
+
+#: admin/import-export.php:176
+msgid ""
+"The key instruction is to review and refine the resulting form by "
+"eliminating any redundant submit buttons if they are present."
+msgstr ""
+"Instruksi utamanya adalah meninjau dan menyempurnakan formulir yang "
+"dihasilkan dengan menghilangkan tombol kirim yang berlebihan jika ada."
+
+#: admin/leads.php:35
+msgid "Select a Form to Access Its Captured Leads"
+msgstr "Pilih Formulir untuk Mengakses Lead yang Tercatat"
+
+#: admin/leads.php:60
+msgid "Please Read FAQ While Managing All Leads"
+msgstr "Harap Baca FAQ Saat Mengelola Semua Prospek"
+
+#: admin/leads.php:65
+msgid "Q.1. How do you filter data tables?"
+msgstr "Q.1. Bagaimana Anda memfilter tabel data?"
+
+#: admin/leads.php:66
+msgid "Use the search button located at the top corner of the table."
+msgstr "Gunakan tombol pencarian yang terletak di sudut atas tabel."
+
+#: admin/leads.php:67
+msgid "Enter your criteria in the search box to filter data and rows."
+msgstr ""
+"Masukkan kriteria Anda di kotak pencarian untuk memfilter data dan baris."
+
+#: admin/leads.php:68
+msgid "To sort the table, click on the desired column header or label."
+msgstr "Untuk mengurutkan tabel, klik judul atau label kolom yang diinginkan."
+
+#: admin/leads.php:72
+msgid "Q.2. How can you download the complete list of leads data?"
+msgstr "Q.2. Bagaimana cara mengunduh daftar lengkap data prospek?"
+
+#: admin/leads.php:73
+msgid "Choose the desired Form from the list."
+msgstr "Pilih Formulir yang diinginkan dari daftar."
+
+#: admin/leads.php:74
+msgid ""
+"If you have a saved record, a download button will appear below the table."
+msgstr ""
+"Jika Anda memiliki catatan yang disimpan, tombol unduh akan muncul di bawah "
+"tabel."
+
+#: admin/leads.php:75
+msgid "Click on this button to download the list."
+msgstr "Klik tombol ini untuk mengunduh daftarnya."
+
+#: admin/leads.php:79
+msgid "Q.3. Can I download the filtered data list?"
+msgstr "Q.3. Bisakah saya mengunduh daftar data yang difilter?"
+
+#: admin/leads.php:80
+msgid "No, downloading the filtered data list is not possible."
+msgstr "Tidak, pengunduhan daftar data yang difilter tidak dapat dilakukan."
+
+#: admin/leads.php:81
+msgid "The download provides a complete list of leads in CSV format."
+msgstr "Unduhan menyediakan daftar lengkap prospek dalam format CSV."
+
+#: admin/leads.php:82
+msgid ""
+"However, once you open the CSV file in Microsoft Excel, you can apply "
+"filters to the data."
+msgstr ""
+"Namun, setelah Anda membuka file CSV di Microsoft Excel, Anda dapat "
+"menerapkan filter pada data."
+
+#: admin/manage-forms.php:35
+msgid "Manage Form"
+msgstr "Kelola Formulir"
+
+#: admin/manage-forms.php:42 admin/manage-forms.php:84
+#: includes/shortcode.php:734
+msgid "Form ID"
+msgstr "ID Formulir"
+
+#: admin/manage-forms.php:44 admin/manage-forms.php:86
+msgid "Form Shortcode"
+msgstr "Kode Singkat Formulir"
+
+#: admin/manage-forms.php:45 admin/manage-forms.php:87
+msgid "Action"
+msgstr "Aksi"
+
+#: admin/manage-forms.php:68 lead-generation-form.php:254
+msgid "Copied"
+msgstr "Disalin"
+
+#: admin/manage-forms.php:97
+msgid "Please Read FAQ While Manage Forms"
+msgstr "Harap Baca FAQ Saat Mengelola Formulir"
+
+#: admin/manage-forms.php:102
+msgid "Q.1. What is the use of Clone Form features?"
+msgstr "Q.1. Apa kegunaan fitur Clone Form?"
+
+#: admin/manage-forms.php:103
+msgid "Using clone form features you can make a copy of an existing form."
+msgstr ""
+"Dengan menggunakan fitur formulir klon, Anda dapat membuat salinan formulir "
+"yang sudah ada."
+
+#: admin/manage-forms.php:107
+msgid "Q.2. What are the primary guidelines for deleting a form?"
+msgstr "Q.2. Apa saja pedoman utama untuk menghapus formulir?"
+
+#: admin/manage-forms.php:108
+msgid ""
+"When you want to delete a form, it is essential to be aware that all the "
+"leads captured through that specific form will be permanently removed along "
+"with the form itself."
+msgstr ""
+"Saat Anda ingin menghapus formulir, penting untuk menyadari bahwa semua "
+"prospek yang ditangkap melalui formulir spesifik tersebut akan dihapus "
+"secara permanen bersama dengan formulir itu sendiri."
+
+#: admin/settings.php:34 includes/install-script.php:28
+msgid "Thank you! Your query has been successfully submitted."
+msgstr "Terima kasih! Pertanyaan Anda telah berhasil dikirim."
+
+#: admin/settings.php:42
+msgid "Settings Panel"
+msgstr "Panel Pengaturan"
+
+#: admin/settings.php:53
+msgid "Recaptcha Status"
+msgstr "Status Recaptcha"
+
+#: admin/settings.php:55 admin/settings.php:90
+msgid "ON"
+msgstr "ON"
+
+#: admin/settings.php:56 admin/settings.php:91
+msgid "OFF"
+msgstr "OFF"
+
+#: admin/settings.php:66
+msgid "How do we get the Google reCAPTCHA Site Key and Secret Key?"
+msgstr ""
+"Bagaimana cara mendapatkan Kunci Situs dan Kunci Rahasia Google reCAPTCHA?"
+
+#: admin/settings.php:69
+msgid "Message"
+msgstr "Pesan"
+
+#: admin/settings.php:74
+msgid "Message To User"
+msgstr "Pesan ke Pengguna"
+
+#: admin/settings.php:76
+msgid ""
+"After successful form submission shows a message to the user, allowed HTML "
+"tags are p, strong, i, br, a, and hr."
+msgstr ""
+"Setelah pengiriman formulir berhasil menampilkan pesan kepada pengguna, tag "
+"HTML yang diperbolehkan adalah p, strong, i, br, a, dan hr."
+
+#: admin/settings.php:84
+msgid "Email"
+msgstr "Email"
+
+#: admin/settings.php:88
+msgid "Notify To Admin"
+msgstr "Beritahu Admin"
+
+#: admin/settings.php:93
+msgid ""
+"After successful lead captures an email notification is sent to admin with "
+"lead data."
+msgstr ""
+"Setelah pengambilan prospek berhasil, pemberitahuan email dikirim ke admin "
+"dengan data prospek."
+
+#: admin/settings.php:96
+msgid "Email Via"
+msgstr "Email Via"
+
+#: admin/settings.php:105
+msgid "For Gmail use smtp.gmail.com as SMTP Host."
+msgstr "Untuk Gmail, gunakan smtp.gmail.com sebagai Host SMTP."
+
+#: admin/settings.php:109
+msgid "Username"
+msgstr "Nama belakang"
+
+#: admin/settings.php:111
+msgid ""
+"For Gmail, your email address example@gmail.com is used as an SMTP Username."
+msgstr ""
+"Untuk Gmail, alamat email Anda example@gmail.com digunakan sebagai Nama "
+"Pengguna SMTP."
+
+#: admin/settings.php:115
+msgid "Password"
+msgstr "Kata sandi"
+
+#: admin/settings.php:117
+msgid "How to get a Gmail SMTP Password?"
+msgstr "Bagaimana cara mendapatkan Kata Sandi SMTP Gmail?"
+
+#: admin/settings.php:121
+msgid "Encryption"
+msgstr "Enkripsi"
+
+#: admin/settings.php:126
+msgid "Encryption will be used when sending an email."
+msgstr "Enkripsi akan digunakan saat mengirim email."
+
+#: admin/settings.php:132
+msgid ""
+"The port which will be used when sending an email. If you choose TLS it "
+"should be set to 587. For SSL use port 465 instead."
+msgstr ""
+"Port yang akan digunakan saat mengirim email. Port yang akan digunakan saat "
+"mengirim email. Jika Anda memilih TLS, sebaiknya disetel ke 587. Untuk SSL, "
+"gunakan port 465."
+
+#: admin/settings.php:139
+msgid "Save Settings"
+msgstr "Simpan Pengaturan"
+
+#: includes/shortcode.php:509 includes/shortcode.php:637
+msgid "Sorry! you do not have sufficient permission to access this form."
+msgstr ""
+"Maaf! Anda tidak memiliki izin yang memadai untuk mengakses formulir ini."
+
+#: includes/shortcode.php:588
+msgid "Sorry! your request has not been verified."
+msgstr "Maaf! permintaan Anda belum diverifikasi."
+
+#: includes/shortcode.php:732
+msgid "Details are as follows"
+msgstr "Rinciannya adalah sebagai berikut"
+
+#: includes/shortcode.php:759
+msgid "A new query received by"
+msgstr "Permintaan baru diterima oleh"
+
+#: lead-generation-form.php:162
+msgid "Form Generator"
+msgstr "Pembuat Formulir"
+
+#: lead-generation-form.php:163
+msgid "All Captured Leads"
+msgstr "Semua Lead yang Dicapai"
+
+#: lead-generation-form.php:164
+msgid "Import & Export"
+msgstr "Impor & Ekspor"
+
+#: lead-generation-form.php:165
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: lead-generation-form.php:438 lead-generation-form.php:554
+msgid "Date Time"
+msgstr "Tanggal Waktu"
+
+#: lead-generation-form.php:439 lead-generation-form.php:555
+msgid "Actions"
+msgstr "Tindakan"
+
+#: lead-generation-form.php:528
+msgid "Select Lead"
+msgstr "Pilih Pemimpin"
+
+#: lead-generation-form.php:556
+msgid "Delete Selected Leads"
+msgstr "Hapus Prospek yang Dipilih"
+
+#: lead-generation-form.php:562
+msgid "Download All Data List"
+msgstr "Unduh Daftar Semua Data"
+
+#~ msgid "row"
+#~ msgstr "baris"
+
+#~ msgid "column"
+#~ msgstr "kolom"
+
+#~ msgid "cell"
+#~ msgstr "sel"
+
+#~ msgid "Manage Froms"
+#~ msgstr "Kelola Formulir"
+
+#~ msgid "Recaptcha"
+#~ msgstr "Recaptcha"
+
+#~ msgid "Site Key"
+#~ msgstr "Kunci Situs"
+
+#~ msgid "Secret Key"
+#~ msgstr "Kunci Rahasia"
+
+#~ msgid "WP MAIL"
+#~ msgstr "WP MAIL"
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "SMTP Host"
+#~ msgstr "Host SMTP"
+
+#~ msgid "For Gmail your email password use as SMTP Password."
+#~ msgstr "Untuk Gmail, gunakan kata sandi email Anda sebagai Kata Sandi SMTP."
+
+#~ msgid "TLS"
+#~ msgstr "TLS"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "SMTP Port"
+#~ msgstr "Port SMTP"
+
+#~ msgid "New Lead Captured by Form ID"
+#~ msgstr "Lead Baru Dicapai oleh ID Formulir"

@@ -1,0 +1,44 @@
+/**
+ * Lead Generation Form - Import & Export View Styles
+ * Scoped cleanly under .wlgf-admin-wrap with zero !important rules
+ */
+
+.wlgf-admin-wrap .wlgf-code-box {
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 13px;
+    padding: 16px;
+    border-radius: var(--wlgf-radius-md);
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #1e293b;
+    box-sizing: border-box;
+}
+
+.wlgf-admin-wrap .wlgf-code-box:focus {
+    outline: none;
+    border-color: var(--wlgf-primary);
+}
+
+.wlgf-admin-wrap .wlgf-card__body .wlgf-form-group {
+    margin-bottom: 20px;
+}
+
+.wlgf-admin-wrap .wlgf-card__body > .wlgf-btn {
+    margin-top: 8px;
+}
+
+.wlgf-admin-wrap .wlgf-grid--3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 1200px) {
+    .wlgf-admin-wrap .wlgf-grid--3 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

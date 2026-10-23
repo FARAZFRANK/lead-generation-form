@@ -1,0 +1,9 @@
+# Testing & Temporary Assets
+.playwright-mcp/
+*.log
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

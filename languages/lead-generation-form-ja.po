@@ -1,0 +1,617 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form\n"
+"POT-Creation-Date: 2024-10-04 15:21+0530\n"
+"PO-Revision-Date: 2024-10-04 15:22+0530\n"
+"Last-Translator: \n"
+"Language-Team: Webenvo.com\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/dashboard.php:65
+msgid "Total From Created"
+msgstr "作成からの合計"
+
+#: admin/dashboard.php:67 admin/manage-forms.php:36
+msgid "Create New Form"
+msgstr "新規フォームの作成"
+
+#: admin/dashboard.php:68 lead-generation-form.php:161
+msgid "Manage Forms"
+msgstr "フォームの管理"
+
+#: admin/dashboard.php:73
+msgid "Total Lead Captured"
+msgstr "総リード獲得"
+
+#: admin/dashboard.php:75
+msgid "Manage Leads"
+msgstr "リードの管理"
+
+#: admin/dashboard.php:80
+msgid "Getting Started Tips"
+msgstr "入門のヒント"
+
+#: admin/dashboard.php:81
+msgid "Create a new form using the FORM GENERATOR menu"
+msgstr "FORM GENERATORメニューを使用して新しいフォームを作成する"
+
+#: admin/dashboard.php:82
+msgid "Copy a form shortcode from the MANAGE FORMS menu"
+msgstr "「フォームの管理」メニューからフォームのショートコードをコピーする"
+
+#: admin/dashboard.php:83
+msgid "Publish form shortcode on a page or post"
+msgstr "フォームショートコードをページまたは投稿に公開する"
+
+#: admin/dashboard.php:84
+msgid "Manage captured leads and saved data on the ALL CAPTURED LEADS menu"
+msgstr "ALL CAPTURED LEADSメニューで獲得したリードと保存されたデータを管理する"
+
+#: admin/dashboard.php:85
+msgid "Using the SETTINGS menu page you can configure the settings"
+msgstr "SETTINGSメニューページを使用して設定を行うことができます"
+
+#: admin/dashboard.php:90 admin/lead-loader.php:37
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: admin/dashboard.php:91
+msgid ""
+"Please refer to our video docs for more help and tutorial videos about "
+"plugins."
+msgstr ""
+"プラグインに関する詳細なヘルプとチュートリアルビデオについては、ビデオドキュ"
+"メントを参照してください。"
+
+#: admin/dashboard.php:92
+msgid "Visit Our YouTube Channel"
+msgstr "YouTubeチャンネルにアクセスしてください"
+
+#: admin/dashboard.php:93
+msgid "Read plugin change logs."
+msgstr "プラグインの変更ログを読みます。"
+
+#: admin/dashboard.php:95
+msgid "Plugin Change Logs"
+msgstr "プラグインの変更ログ"
+
+#: admin/form-generator.php:76
+msgid "Create or Modify Form"
+msgstr "フォームの作成または変更"
+
+#: admin/form-generator.php:100 admin/import-export.php:124
+#: admin/manage-forms.php:43 admin/manage-forms.php:85
+msgid "Form Name"
+msgstr "フォーム名"
+
+#: admin/form-generator.php:101 admin/import-export.php:125
+msgid "Type a name for the form"
+msgstr "フォームの名前を入力します"
+
+#: admin/form-generator.php:117
+msgid "Save Form"
+msgstr "フォームの保存"
+
+#: admin/form-generator.php:126
+msgid "Please Read FAQ While Create OR Modify Form"
+msgstr "フォームの作成または変更中によくある質問をお読みください"
+
+#: admin/form-generator.php:131
+msgid "Q.1. Is it permissible to use copied content for the Form structure?"
+msgstr "Q.1. コピーしたコンテンツをフォーム構造に使用することは許可されますか?"
+
+#: admin/form-generator.php:132
+msgid "You may insert copied information as plain text."
+msgstr "コピーした情報をプレーンテキストとして挿入できます。"
+
+#: admin/form-generator.php:133
+msgid ""
+"However, directly pasting data into Form label and attribute fields is "
+"discouraged."
+msgstr ""
+"ただし、フォームのラベルと属性フィールドにデータを直接貼り付けることはお勧め"
+"できません。"
+
+#: admin/form-generator.php:137
+msgid "Q.2. Can I include several fields in the Form structure?"
+msgstr "Q.2. フォーム構造に複数のフィールドを含めることはできますか?"
+
+#: admin/form-generator.php:138
+msgid "Absolutely, you can incorporate numerous fields in the Form."
+msgstr "もちろん、フォームに多数のフィールドを組み込むことができます。"
+
+#: admin/form-generator.php:139
+msgid "However, only one submit button is allowed per Form."
+msgstr "ただし、送信ボタンはフォームごとに 1 つだけ使用できます。"
+
+#: admin/form-generator.php:143
+msgid ""
+"Q.3. Can I alter the Form structure after it's been published on the website?"
+msgstr "Q.3. Web サイトに公開した後にフォームの構造を変更できますか?"
+
+#: admin/form-generator.php:144
+msgid "It's advised against changing the form structure after publishing."
+msgstr "公開後にフォーム構造を変更しないことをお勧めします。"
+
+#: admin/form-generator.php:145
+msgid ""
+"Doing so may lead to discrepancies in the records table on the All Leads "
+"page."
+msgstr ""
+"そうすると、[すべてのリード] ページのレコード テーブルに不一致が生じる可能性"
+"があります。"
+
+#: admin/form-generator.php:146
+msgid ""
+"However, if you haven't received any submissions or data from users, you may "
+"make adjustments to the Form."
+msgstr ""
+"ただし、ユーザーから提出物やデータを受け取っていない場合は、フォームを調整す"
+"ることができます。"
+
+#: admin/form-generator.php:147
+msgid ""
+"You can clone the current Form and modify or replace it with an older one."
+msgstr ""
+"現在のフォームのクローンを作成し、古いフォームに変更または置き換えることがで"
+"きます。"
+
+#: admin/form-generator.php:151
+msgid "Server Info for debugging"
+msgstr "デバッグ用サーバー情報"
+
+#: admin/form-generator.php:159
+msgid "Maximum upload file size"
+msgstr "最大アップロードファイルサイズ"
+
+#: admin/form-generator.php:160
+msgid "Maximum post size"
+msgstr "最大ポストサイズ"
+
+#: admin/import-export.php:41
+msgid "Export A Form"
+msgstr "フォームのエクスポート"
+
+#: admin/import-export.php:44 admin/import-export.php:76
+#: admin/import-export.php:93 admin/lead-loader.php:37 admin/lead-loader.php:39
+#: admin/leads.php:37
+msgid "Select Form"
+msgstr "フォーム選択"
+
+#: admin/import-export.php:57
+msgid "Export From Data"
+msgstr "データからエクスポート"
+
+#: admin/import-export.php:63
+msgid "Copy Code"
+msgstr "コードをコピーする"
+
+#: admin/import-export.php:64
+msgid "Code copied to clipboard."
+msgstr "コードがクリップボードにコピーされました。"
+
+#: admin/import-export.php:71
+msgid "Combine Two Form"
+msgstr "二つの形を組み合わせる"
+
+#: admin/import-export.php:74
+msgid "Form One"
+msgstr "フォームワン"
+
+#: admin/import-export.php:91
+msgid "Form Two"
+msgstr "フォーム2"
+
+#: admin/import-export.php:108
+msgid "Combine From"
+msgstr "結合元"
+
+#: admin/import-export.php:113
+msgid ""
+"Form combined successfully. Go to the Manage Forms menu to manage combined "
+"forms."
+msgstr "フォームは正常に結合されました。"
+
+#: admin/import-export.php:121
+msgid "Import A Form"
+msgstr "フォームのインポート"
+
+#: admin/import-export.php:128
+msgid "Paste Form Data"
+msgstr "フォームデータの貼り付け"
+
+#: admin/import-export.php:129
+msgid "Important Note: Please paste the copied Form data in JSON format only."
+msgstr ""
+"重要な注意事項: コピーしたフォーム データは JSON 形式のみで貼り付けてくださ"
+"い。"
+
+#: admin/import-export.php:132
+msgid "Import From Data"
+msgstr "データからインポート"
+
+#: admin/import-export.php:137
+msgid "Form imported successfully"
+msgstr "フォームは正常にインポートされました"
+
+#: admin/import-export.php:146
+msgid "Please Read FAQ While Import & Export and Combining Forms"
+msgstr "インポート中によくある質問をお読みください"
+
+#: admin/import-export.php:151
+msgid "Q.1. What is the use of import, export, and combine forms features?"
+msgstr "Q.1. フォームのインポート、エクスポート、結合機能は何に役立ちますか?"
+
+#: admin/import-export.php:152
+msgid ""
+"You can use Export Form features for exporting forms from one website to "
+"another website where the Lead Generation Form plugin is installed."
+msgstr ""
+"フォームのエクスポート機能を使用して、ある Web サイトから Lead Generation "
+"Form プラグインがインストールされている別の Web サイトにフォームをエクスポー"
+"トできます。"
+
+#: admin/import-export.php:153
+msgid "Using the Import Form feature, you can import via copied code."
+msgstr ""
+"インポートフォーム機能を使用すると、コピーしたコードを介してインポートできま"
+"す。"
+
+#: admin/import-export.php:154
+msgid "The Combined Form feature is utilized to merge two forms into one form."
+msgstr ""
+"結合フォーム機能は、2 つのフォームを 1 つのフォームに結合するために利用されま"
+"す。"
+
+#: admin/import-export.php:158
+msgid "Q.2. What are the primary guidelines for exporting forms?"
+msgstr "Q.2. フォームをエクスポートするための主なガイドラインは何ですか?"
+
+#: admin/import-export.php:159
+msgid ""
+"While importing a form, always use the Copy Code button to copy the form "
+"code."
+msgstr ""
+"フォームをインポートするときは、必ず [コードのコピー] ボタンを使用してフォー"
+"ム コードをコピーしてください。"
+
+#: admin/import-export.php:163
+msgid "Q.3. What are the primary guidelines for import forms?"
+msgstr "Q.3. インポートフォームの主なガイドラインは何ですか?"
+
+#: admin/import-export.php:164
+msgid "Always paste the copied JSON object data for importing."
+msgstr ""
+"インポートする場合は、コピーした JSON オブジェクト データを必ず貼り付けてくだ"
+"さい。"
+
+#: admin/import-export.php:165
+msgid ""
+"Adding other than JSON object data for importing Forms will result in an "
+"error."
+msgstr ""
+"Formsインポート時にJSON以外のオブジェクトデータを追加するとエラーとなります。"
+
+#: admin/import-export.php:169
+msgid ""
+"Q.4. Can we import and export Forms from any third-party plugins like "
+"Contact Form 7?"
+msgstr ""
+"Q.4. Contact Form 7 などのサードパーティのプラグインからフォームをインポート"
+"およびエクスポートできますか?"
+
+#: admin/import-export.php:170
+msgid "No, you can't import or export Forms from other or third-party plugins."
+msgstr ""
+"いいえ、他のプラグインまたはサードパーティのプラグインからフォームをインポー"
+"トまたはエクスポートすることはできません。"
+
+#: admin/import-export.php:171
+msgid ""
+"You can only import or export Forms into the Lead Generation Form plugin."
+msgstr ""
+"フォームは Lead Generation Form プラグインにのみインポートまたはエクスポート"
+"できます。"
+
+#: admin/import-export.php:175
+msgid "Q.5. What are the primary guidelines for combining forms?"
+msgstr "Q.5. フォームを組み合わせる際の主なガイドラインは何ですか?"
+
+#: admin/import-export.php:176
+msgid ""
+"The key instruction is to review and refine the resulting form by "
+"eliminating any redundant submit buttons if they are present."
+msgstr ""
+"重要な指示は、冗長な送信ボタンが存在する場合は削除して、結果のフォームをレ"
+"ビューして改良することです。"
+
+#: admin/leads.php:35
+msgid "Select a Form to Access Its Captured Leads"
+msgstr "獲得したリードにアクセスするフォームを選択してください"
+
+#: admin/leads.php:60
+msgid "Please Read FAQ While Managing All Leads"
+msgstr "すべてのリードを管理する際はよくある質問をお読みください"
+
+#: admin/leads.php:65
+msgid "Q.1. How do you filter data tables?"
+msgstr "Q.1. データテーブルをどのようにフィルタリングしますか?"
+
+#: admin/leads.php:66
+msgid "Use the search button located at the top corner of the table."
+msgstr "表の上部隅にある検索ボタンを使用します。"
+
+#: admin/leads.php:67
+msgid "Enter your criteria in the search box to filter data and rows."
+msgstr "検索ボックスに条件を入力してデータと行をフィルタリングします。"
+
+#: admin/leads.php:68
+msgid "To sort the table, click on the desired column header or label."
+msgstr ""
+"テーブルを並べ替えるには、目的の列ヘッダーまたはラベルをクリックします。"
+
+#: admin/leads.php:72
+msgid "Q.2. How can you download the complete list of leads data?"
+msgstr ""
+"Q.2. 見込み顧客データの完全なリストをダウンロードするにはどうすればよいです"
+"か?"
+
+#: admin/leads.php:73
+msgid "Choose the desired Form from the list."
+msgstr "リストから目的のフォームを選択します。"
+
+#: admin/leads.php:74
+msgid ""
+"If you have a saved record, a download button will appear below the table."
+msgstr ""
+"保存されたレコードがある場合は、表の下にダウンロード ボタンが表示されます。"
+
+#: admin/leads.php:75
+msgid "Click on this button to download the list."
+msgstr "このボタンをクリックしてリストをダウンロードします。"
+
+#: admin/leads.php:79
+msgid "Q.3. Can I download the filtered data list?"
+msgstr "Q.3. フィルタリングされたデータのリストをダウンロードできますか?"
+
+#: admin/leads.php:80
+msgid "No, downloading the filtered data list is not possible."
+msgstr "いいえ、絞り込みデータリストのダウンロードはできません。"
+
+#: admin/leads.php:81
+msgid "The download provides a complete list of leads in CSV format."
+msgstr "ダウンロードすると、リードの完全なリストが CSV 形式で提供されます。"
+
+#: admin/leads.php:82
+msgid ""
+"However, once you open the CSV file in Microsoft Excel, you can apply "
+"filters to the data."
+msgstr ""
+"ただし、CSV ファイルを Microsoft Excel で開くと、データにフィルターを適用でき"
+"ます。"
+
+#: admin/manage-forms.php:35
+msgid "Manage Form"
+msgstr "フォームの管理"
+
+#: admin/manage-forms.php:42 admin/manage-forms.php:84
+#: includes/shortcode.php:734
+msgid "Form ID"
+msgstr "フォームID"
+
+#: admin/manage-forms.php:44 admin/manage-forms.php:86
+msgid "Form Shortcode"
+msgstr "フォームショートコード"
+
+#: admin/manage-forms.php:45 admin/manage-forms.php:87
+msgid "Action"
+msgstr "アクション"
+
+#: admin/manage-forms.php:68 lead-generation-form.php:254
+msgid "Copied"
+msgstr "コピーされました"
+
+#: admin/manage-forms.php:97
+msgid "Please Read FAQ While Manage Forms"
+msgstr "フォームを管理する際はよくある質問をお読みください"
+
+#: admin/manage-forms.php:102
+msgid "Q.1. What is the use of Clone Form features?"
+msgstr "Q.1. クローンフォーム機能はどのような用途に使用されますか?"
+
+#: admin/manage-forms.php:103
+msgid "Using clone form features you can make a copy of an existing form."
+msgstr ""
+"クローンフォーム機能を使用すると、既存のフォームのコピーを作成できます。"
+
+#: admin/manage-forms.php:107
+msgid "Q.2. What are the primary guidelines for deleting a form?"
+msgstr "Q.2. フォームを削除するための主なガイドラインは何ですか?"
+
+#: admin/manage-forms.php:108
+msgid ""
+"When you want to delete a form, it is essential to be aware that all the "
+"leads captured through that specific form will be permanently removed along "
+"with the form itself."
+msgstr ""
+"フォームを削除する場合は、その特定のフォームを通じて取得されたすべての見込み"
+"客がフォーム自体とともに完全に削除されることに注意することが重要です。"
+
+#: admin/settings.php:34 includes/install-script.php:28
+msgid "Thank you! Your query has been successfully submitted."
+msgstr "ありがとうございます。お問い合わせは正常に送信されました。"
+
+#: admin/settings.php:42
+msgid "Settings Panel"
+msgstr "設定パネル"
+
+#: admin/settings.php:53
+msgid "Recaptcha Status"
+msgstr "再キャプチャステータス"
+
+#: admin/settings.php:55 admin/settings.php:90
+msgid "ON"
+msgstr "オン"
+
+#: admin/settings.php:56 admin/settings.php:91
+msgid "OFF"
+msgstr "オフ"
+
+#: admin/settings.php:66
+msgid "How do we get the Google reCAPTCHA Site Key and Secret Key?"
+msgstr ""
+"Google reCAPTCHA サイトキーとシークレットキーを取得するにはどうすればよいです"
+"か?"
+
+#: admin/settings.php:69
+msgid "Message"
+msgstr "メッセージ"
+
+#: admin/settings.php:74
+msgid "Message To User"
+msgstr "ユーザーへのメッセージ"
+
+#: admin/settings.php:76
+msgid ""
+"After successful form submission shows a message to the user, allowed HTML "
+"tags are p, strong, i, br, a, and hr."
+msgstr ""
+"フォームの送信が成功すると、ユーザーにメッセージが表示されます。許可される "
+"HTML タグは、p、strong、i、br、a、および hr です。"
+
+#: admin/settings.php:84
+msgid "Email"
+msgstr "メール"
+
+#: admin/settings.php:88
+msgid "Notify To Admin"
+msgstr "管理者に通知"
+
+#: admin/settings.php:93
+msgid ""
+"After successful lead captures an email notification is sent to admin with "
+"lead data."
+msgstr ""
+"リードのキャプチャが成功すると、リード データを含む電子メール通知が管理者に送"
+"信されます。"
+
+#: admin/settings.php:96
+msgid "Email Via"
+msgstr "メール経由"
+
+#: admin/settings.php:105
+msgid "For Gmail use smtp.gmail.com as SMTP Host."
+msgstr "Gmail の場合は、SMTP ホストとして smtp.gmail.com を使用します。"
+
+#: admin/settings.php:109
+msgid "Username"
+msgstr "ユーザー名"
+
+#: admin/settings.php:111
+msgid ""
+"For Gmail, your email address example@gmail.com is used as an SMTP Username."
+msgstr ""
+"Gmail の場合、電子メール アドレス example@gmail.com が SMTP ユーザー名として"
+"使用されます。"
+
+#: admin/settings.php:115
+msgid "Password"
+msgstr "パスワード"
+
+#: admin/settings.php:117
+msgid "How to get a Gmail SMTP Password?"
+msgstr "Gmail SMTP パスワードを取得するにはどうすればいいですか?"
+
+#: admin/settings.php:121
+msgid "Encryption"
+msgstr "暗号化"
+
+#: admin/settings.php:126
+msgid "Encryption will be used when sending an email."
+msgstr "メール送信時に暗号化が使用されます。"
+
+#: admin/settings.php:132
+msgid ""
+"The port which will be used when sending an email. If you choose TLS it "
+"should be set to 587. For SSL use port 465 instead."
+msgstr "メール送信時に使用するポート。 "
+
+#: admin/settings.php:139
+msgid "Save Settings"
+msgstr "設定の保存"
+
+#: includes/shortcode.php:509 includes/shortcode.php:637
+msgid "Sorry! you do not have sufficient permission to access this form."
+msgstr ""
+"申し訳ございません。このフォームにアクセスするための十分な権限がありません。"
+
+#: includes/shortcode.php:588
+msgid "Sorry! your request has not been verified."
+msgstr "申し訳ございません。リクエストは確認されていません。"
+
+#: includes/shortcode.php:732
+msgid "Details are as follows"
+msgstr "詳細は以下の通りです"
+
+#: includes/shortcode.php:759
+msgid "A new query received by"
+msgstr "新しい問い合わせが届きました"
+
+#: lead-generation-form.php:162
+msgid "Form Generator"
+msgstr "フォームジェネレーター"
+
+#: lead-generation-form.php:163
+msgid "All Captured Leads"
+msgstr "獲得したすべてのリード"
+
+#: lead-generation-form.php:164
+msgid "Import & Export"
+msgstr "インポート"
+
+#: lead-generation-form.php:165
+msgid "Settings"
+msgstr "設定"
+
+#: lead-generation-form.php:438 lead-generation-form.php:554
+msgid "Date Time"
+msgstr "日付時刻"
+
+#: lead-generation-form.php:439 lead-generation-form.php:555
+msgid "Actions"
+msgstr "アクション"
+
+#: lead-generation-form.php:528
+msgid "Select Lead"
+msgstr "リードの選択"
+
+#: lead-generation-form.php:556
+msgid "Delete Selected Leads"
+msgstr "選択したリードを削除"
+
+#: lead-generation-form.php:562
+msgid "Download All Data List"
+msgstr "全データリストダウンロード"
+
+#~ msgid "row"
+#~ msgstr "行"
+
+#~ msgid "column"
+#~ msgstr "コラム"
+
+#~ msgid "cell"
+#~ msgstr "セル"
+
+#~ msgid "For Gmail your email password use as SMTP Password."
+#~ msgstr "Gmail の場合、メール パスワードを SMTP パスワードとして使用します。"
+
+#~ msgid "New Lead Captured by Form ID"
+#~ msgstr "フォームIDによって獲得された新規リード"

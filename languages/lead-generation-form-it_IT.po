@@ -1,0 +1,634 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form\n"
+"POT-Creation-Date: 2024-10-04 15:20+0530\n"
+"PO-Revision-Date: 2024-10-04 15:20+0530\n"
+"Last-Translator: \n"
+"Language-Team: Webenvo.com\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/dashboard.php:65
+msgid "Total From Created"
+msgstr "Totale da creato"
+
+#: admin/dashboard.php:67 admin/manage-forms.php:36
+msgid "Create New Form"
+msgstr "Crea nuovo modulo"
+
+#: admin/dashboard.php:68 lead-generation-form.php:161
+msgid "Manage Forms"
+msgstr "Gestisci moduli"
+
+#: admin/dashboard.php:73
+msgid "Total Lead Captured"
+msgstr "Totale lead acquisito"
+
+#: admin/dashboard.php:75
+msgid "Manage Leads"
+msgstr "Gestisci lead"
+
+#: admin/dashboard.php:80
+msgid "Getting Started Tips"
+msgstr "Suggerimenti per iniziare"
+
+#: admin/dashboard.php:81
+msgid "Create a new form using the FORM GENERATOR menu"
+msgstr "Crea un nuovo modulo utilizzando il menu FORM GENERATOR"
+
+#: admin/dashboard.php:82
+msgid "Copy a form shortcode from the MANAGE FORMS menu"
+msgstr "Copiare il codice funzione di un modulo dal menu GESTIONE MODULI"
+
+#: admin/dashboard.php:83
+msgid "Publish form shortcode on a page or post"
+msgstr "Pubblica lo shortcode del modulo su una pagina o un post"
+
+#: admin/dashboard.php:84
+msgid "Manage captured leads and saved data on the ALL CAPTURED LEADS menu"
+msgstr ""
+"Gestione delle derivazioni acquisite e dei dati salvati nel menu TUTTE LE "
+"DERIVAZIONI CATTURATE"
+
+#: admin/dashboard.php:85
+msgid "Using the SETTINGS menu page you can configure the settings"
+msgstr ""
+"Utilizzando la pagina del menu IMPOSTAZIONI è possibile configurare le "
+"impostazioni"
+
+#: admin/dashboard.php:90 admin/lead-loader.php:37
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: admin/dashboard.php:91
+msgid ""
+"Please refer to our video docs for more help and tutorial videos about "
+"plugins."
+msgstr ""
+"Per ulteriore assistenza e video tutorial sui plugin, fare riferimento ai "
+"nostri documenti video."
+
+#: admin/dashboard.php:92
+msgid "Visit Our YouTube Channel"
+msgstr "Visita il nostro canale YouTube"
+
+#: admin/dashboard.php:93
+msgid "Read plugin change logs."
+msgstr "Leggi i registri delle modifiche del plugin."
+
+#: admin/dashboard.php:95
+msgid "Plugin Change Logs"
+msgstr "Registri delle modifiche dei plugin"
+
+#: admin/form-generator.php:76
+msgid "Create or Modify Form"
+msgstr "Crea o modifica modulo"
+
+#: admin/form-generator.php:100 admin/import-export.php:124
+#: admin/manage-forms.php:43 admin/manage-forms.php:85
+msgid "Form Name"
+msgstr "Nome modulo"
+
+#: admin/form-generator.php:101 admin/import-export.php:125
+msgid "Type a name for the form"
+msgstr "Digitare un nome per il modulo"
+
+#: admin/form-generator.php:117
+msgid "Save Form"
+msgstr "Salva modulo"
+
+#: admin/form-generator.php:126
+msgid "Please Read FAQ While Create OR Modify Form"
+msgstr ""
+"Leggere le domande frequenti durante la creazione o la modifica del modulo"
+
+#: admin/form-generator.php:131
+msgid "Q.1. Is it permissible to use copied content for the Form structure?"
+msgstr ""
+"D.1. È consentito utilizzare contenuto copiato per la struttura del modulo?"
+
+#: admin/form-generator.php:132
+msgid "You may insert copied information as plain text."
+msgstr "È possibile inserire le informazioni copiate come testo semplice."
+
+#: admin/form-generator.php:133
+msgid ""
+"However, directly pasting data into Form label and attribute fields is "
+"discouraged."
+msgstr ""
+"Tuttavia, è sconsigliato incollare direttamente i dati nei campi "
+"dell'etichetta e degli attributi del modulo."
+
+#: admin/form-generator.php:137
+msgid "Q.2. Can I include several fields in the Form structure?"
+msgstr "D.2. Posso includere più campi nella struttura del modulo?"
+
+#: admin/form-generator.php:138
+msgid "Absolutely, you can incorporate numerous fields in the Form."
+msgstr "Assolutamente sì, puoi incorporare numerosi campi nel Modulo."
+
+#: admin/form-generator.php:139
+msgid "However, only one submit button is allowed per Form."
+msgstr "Tuttavia, è consentito un solo pulsante di invio per modulo."
+
+#: admin/form-generator.php:143
+msgid ""
+"Q.3. Can I alter the Form structure after it's been published on the website?"
+msgstr ""
+"D.3. Posso modificare la struttura del Modulo dopo che è stato pubblicato "
+"sul sito?"
+
+#: admin/form-generator.php:144
+msgid "It's advised against changing the form structure after publishing."
+msgstr ""
+"Si sconsiglia di modificare la struttura del modulo dopo la pubblicazione."
+
+#: admin/form-generator.php:145
+msgid ""
+"Doing so may lead to discrepancies in the records table on the All Leads "
+"page."
+msgstr ""
+"Ciò potrebbe causare discrepanze nella tabella dei record nella pagina Tutti "
+"i lead."
+
+#: admin/form-generator.php:146
+msgid ""
+"However, if you haven't received any submissions or data from users, you may "
+"make adjustments to the Form."
+msgstr ""
+"Tuttavia, se non hai ricevuto alcun contributo o dato dagli utenti, puoi "
+"apportare modifiche al modulo."
+
+#: admin/form-generator.php:147
+msgid ""
+"You can clone the current Form and modify or replace it with an older one."
+msgstr ""
+"Puoi clonare il modulo corrente e modificarlo o sostituirlo con uno più "
+"vecchio."
+
+#: admin/form-generator.php:151
+msgid "Server Info for debugging"
+msgstr "Informazioni sul server per il debug"
+
+#: admin/form-generator.php:159
+msgid "Maximum upload file size"
+msgstr "Dimensione massima del file da caricare"
+
+#: admin/form-generator.php:160
+msgid "Maximum post size"
+msgstr "Dimensione massima del post"
+
+#: admin/import-export.php:41
+msgid "Export A Form"
+msgstr "Esporta un modulo"
+
+#: admin/import-export.php:44 admin/import-export.php:76
+#: admin/import-export.php:93 admin/lead-loader.php:37 admin/lead-loader.php:39
+#: admin/leads.php:37
+msgid "Select Form"
+msgstr "Seleziona modulo"
+
+#: admin/import-export.php:57
+msgid "Export From Data"
+msgstr "Esporta da dati"
+
+#: admin/import-export.php:63
+msgid "Copy Code"
+msgstr "Copia codice"
+
+#: admin/import-export.php:64
+msgid "Code copied to clipboard."
+msgstr "Codice copiato negli appunti."
+
+#: admin/import-export.php:71
+msgid "Combine Two Form"
+msgstr "Combina due moduli"
+
+#: admin/import-export.php:74
+msgid "Form One"
+msgstr "Primo modulo"
+
+#: admin/import-export.php:91
+msgid "Form Two"
+msgstr "Modulo due"
+
+#: admin/import-export.php:108
+msgid "Combine From"
+msgstr "Combina da"
+
+#: admin/import-export.php:113
+msgid ""
+"Form combined successfully. Go to the Manage Forms menu to manage combined "
+"forms."
+msgstr ""
+"Modulo combinato correttamente. Vai al menu Gestisci moduli per gestire i "
+"moduli combinati."
+
+#: admin/import-export.php:121
+msgid "Import A Form"
+msgstr "Importa un modulo"
+
+#: admin/import-export.php:128
+msgid "Paste Form Data"
+msgstr "Incolla dati modulo"
+
+#: admin/import-export.php:129
+msgid "Important Note: Please paste the copied Form data in JSON format only."
+msgstr ""
+"Nota importante: incolla i dati del modulo copiati solo in formato JSON."
+
+#: admin/import-export.php:132
+msgid "Import From Data"
+msgstr "Importa da dati"
+
+#: admin/import-export.php:137
+msgid "Form imported successfully"
+msgstr "Modulo importato con successo"
+
+#: admin/import-export.php:146
+msgid "Please Read FAQ While Import & Export and Combining Forms"
+msgstr "Leggere le domande frequenti durante l'importazione"
+
+#: admin/import-export.php:151
+msgid "Q.1. What is the use of import, export, and combine forms features?"
+msgstr ""
+"D.1. A cosa servono le funzionalità di importazione, esportazione e "
+"combinazione di moduli?"
+
+#: admin/import-export.php:152
+msgid ""
+"You can use Export Form features for exporting forms from one website to "
+"another website where the Lead Generation Form plugin is installed."
+msgstr ""
+"È possibile utilizzare le funzionalità di esportazione modulo per esportare "
+"moduli da un sito Web a un altro sito Web in cui è installato il plug-in "
+"Modulo di generazione lead."
+
+#: admin/import-export.php:153
+msgid "Using the Import Form feature, you can import via copied code."
+msgstr ""
+"Utilizzando la funzione Modulo di importazione, puoi importare tramite "
+"codice copiato."
+
+#: admin/import-export.php:154
+msgid "The Combined Form feature is utilized to merge two forms into one form."
+msgstr ""
+"La funzione Modulo combinato viene utilizzata per unire due moduli in un "
+"unico modulo."
+
+#: admin/import-export.php:158
+msgid "Q.2. What are the primary guidelines for exporting forms?"
+msgstr ""
+"D.2. Quali sono le linee guida principali per l'esportazione dei moduli?"
+
+#: admin/import-export.php:159
+msgid ""
+"While importing a form, always use the Copy Code button to copy the form "
+"code."
+msgstr ""
+"Durante l'importazione di un modulo, utilizzare sempre il pulsante Copia "
+"codice per copiare il codice del modulo."
+
+#: admin/import-export.php:163
+msgid "Q.3. What are the primary guidelines for import forms?"
+msgstr ""
+"D.3. Quali sono le linee guida principali per i moduli di importazione?"
+
+#: admin/import-export.php:164
+msgid "Always paste the copied JSON object data for importing."
+msgstr "Incolla sempre i dati dell'oggetto JSON copiati per l'importazione."
+
+#: admin/import-export.php:165
+msgid ""
+"Adding other than JSON object data for importing Forms will result in an "
+"error."
+msgstr ""
+"L'aggiunta di dati di oggetti diversi da quelli JSON per l'importazione di "
+"moduli genererà un errore."
+
+#: admin/import-export.php:169
+msgid ""
+"Q.4. Can we import and export Forms from any third-party plugins like "
+"Contact Form 7?"
+msgstr ""
+"D.4. Possiamo importare ed esportare moduli da plugin di terze parti come "
+"Contact Form 7?"
+
+#: admin/import-export.php:170
+msgid "No, you can't import or export Forms from other or third-party plugins."
+msgstr ""
+"No, non puoi importare o esportare moduli da plugin altri o di terze parti."
+
+#: admin/import-export.php:171
+msgid ""
+"You can only import or export Forms into the Lead Generation Form plugin."
+msgstr ""
+"Puoi importare o esportare moduli solo nel plug-in Modulo di generazione "
+"lead."
+
+#: admin/import-export.php:175
+msgid "Q.5. What are the primary guidelines for combining forms?"
+msgstr "D.5. Quali sono le linee guida principali per combinare i moduli?"
+
+#: admin/import-export.php:176
+msgid ""
+"The key instruction is to review and refine the resulting form by "
+"eliminating any redundant submit buttons if they are present."
+msgstr ""
+"L'istruzione chiave è rivedere e perfezionare il modulo risultante "
+"eliminando eventuali pulsanti di invio ridondanti, se presenti."
+
+#: admin/leads.php:35
+msgid "Select a Form to Access Its Captured Leads"
+msgstr "Seleziona un modulo per accedere ai lead acquisiti"
+
+#: admin/leads.php:60
+msgid "Please Read FAQ While Managing All Leads"
+msgstr "Leggere le domande frequenti durante la gestione di tutti i lead"
+
+#: admin/leads.php:65
+msgid "Q.1. How do you filter data tables?"
+msgstr "D.1. Come si filtrano le tabelle di dati?"
+
+#: admin/leads.php:66
+msgid "Use the search button located at the top corner of the table."
+msgstr ""
+"Utilizza il pulsante di ricerca situato nell'angolo superiore della tabella."
+
+#: admin/leads.php:67
+msgid "Enter your criteria in the search box to filter data and rows."
+msgstr ""
+"Inserisci i tuoi criteri nella casella di ricerca per filtrare dati e righe."
+
+#: admin/leads.php:68
+msgid "To sort the table, click on the desired column header or label."
+msgstr ""
+"Per ordinare la tabella, fare clic sull'intestazione o sull'etichetta della "
+"colonna desiderata."
+
+#: admin/leads.php:72
+msgid "Q.2. How can you download the complete list of leads data?"
+msgstr "D.2. Come posso scaricare l'elenco completo dei dati dei lead?"
+
+#: admin/leads.php:73
+msgid "Choose the desired Form from the list."
+msgstr "Scegli il modulo desiderato dall'elenco."
+
+#: admin/leads.php:74
+msgid ""
+"If you have a saved record, a download button will appear below the table."
+msgstr ""
+"Se hai un record salvato, sotto la tabella apparirà un pulsante di download."
+
+#: admin/leads.php:75
+msgid "Click on this button to download the list."
+msgstr "Fare clic su questo pulsante per scaricare l'elenco."
+
+#: admin/leads.php:79
+msgid "Q.3. Can I download the filtered data list?"
+msgstr "D.3. Posso scaricare l'elenco dei dati filtrati?"
+
+#: admin/leads.php:80
+msgid "No, downloading the filtered data list is not possible."
+msgstr "No, non è possibile scaricare la lista dei dati filtrati."
+
+#: admin/leads.php:81
+msgid "The download provides a complete list of leads in CSV format."
+msgstr "Il download fornisce un elenco completo dei lead in formato CSV."
+
+#: admin/leads.php:82
+msgid ""
+"However, once you open the CSV file in Microsoft Excel, you can apply "
+"filters to the data."
+msgstr ""
+"Tuttavia, una volta aperto il file CSV in Microsoft Excel, è possibile "
+"applicare filtri ai dati."
+
+#: admin/manage-forms.php:35
+msgid "Manage Form"
+msgstr "Gestisci modulo"
+
+#: admin/manage-forms.php:42 admin/manage-forms.php:84
+#: includes/shortcode.php:734
+msgid "Form ID"
+msgstr "ID modulo"
+
+#: admin/manage-forms.php:44 admin/manage-forms.php:86
+msgid "Form Shortcode"
+msgstr "Codice breve modulo"
+
+#: admin/manage-forms.php:45 admin/manage-forms.php:87
+msgid "Action"
+msgstr "Azione"
+
+#: admin/manage-forms.php:68 lead-generation-form.php:254
+msgid "Copied"
+msgstr "Copiato"
+
+#: admin/manage-forms.php:97
+msgid "Please Read FAQ While Manage Forms"
+msgstr "Leggere le domande frequenti durante la gestione dei moduli"
+
+#: admin/manage-forms.php:102
+msgid "Q.1. What is the use of Clone Form features?"
+msgstr "D.1. A cosa servono le funzionalità Modulo clone?"
+
+#: admin/manage-forms.php:103
+msgid "Using clone form features you can make a copy of an existing form."
+msgstr ""
+"Utilizzando le funzionalità del modulo clone è possibile creare una copia di "
+"un modulo esistente."
+
+#: admin/manage-forms.php:107
+msgid "Q.2. What are the primary guidelines for deleting a form?"
+msgstr "D.2. Quali sono le linee guida principali per eliminare un modulo?"
+
+#: admin/manage-forms.php:108
+msgid ""
+"When you want to delete a form, it is essential to be aware that all the "
+"leads captured through that specific form will be permanently removed along "
+"with the form itself."
+msgstr ""
+"Quando si vuole eliminare un modulo è fondamentale essere consapevoli che "
+"tutti i lead catturati tramite quello specifico modulo verranno rimossi "
+"definitivamente insieme al modulo stesso."
+
+#: admin/settings.php:34 includes/install-script.php:28
+msgid "Thank you! Your query has been successfully submitted."
+msgstr "Grazie! La tua richiesta è stata inviata correttamente."
+
+#: admin/settings.php:42
+msgid "Settings Panel"
+msgstr "Pannello Impostazioni"
+
+#: admin/settings.php:53
+msgid "Recaptcha Status"
+msgstr "Stato Recaptcha"
+
+#: admin/settings.php:55 admin/settings.php:90
+msgid "ON"
+msgstr "SU"
+
+#: admin/settings.php:56 admin/settings.php:91
+msgid "OFF"
+msgstr "DISATTIVATO"
+
+#: admin/settings.php:66
+msgid "How do we get the Google reCAPTCHA Site Key and Secret Key?"
+msgstr ""
+"Come possiamo ottenere la chiave del sito e la chiave segreta di Google "
+"reCAPTCHA?"
+
+#: admin/settings.php:69
+msgid "Message"
+msgstr "Messaggio"
+
+#: admin/settings.php:74
+msgid "Message To User"
+msgstr "Messaggio all'utente"
+
+#: admin/settings.php:76
+msgid ""
+"After successful form submission shows a message to the user, allowed HTML "
+"tags are p, strong, i, br, a, and hr."
+msgstr ""
+"Dopo l'invio riuscito del modulo viene mostrato un messaggio all'utente, i "
+"tag HTML consentiti sono p, strong, i, br, a e hr."
+
+#: admin/settings.php:84
+msgid "Email"
+msgstr "E-mail"
+
+#: admin/settings.php:88
+msgid "Notify To Admin"
+msgstr "Notifica all'amministratore"
+
+#: admin/settings.php:93
+msgid ""
+"After successful lead captures an email notification is sent to admin with "
+"lead data."
+msgstr ""
+"Dopo aver acquisito con successo il lead, viene inviata una notifica email "
+"all'amministratore con i dati del lead."
+
+#: admin/settings.php:96
+msgid "Email Via"
+msgstr "E-mail tramite"
+
+#: admin/settings.php:105
+msgid "For Gmail use smtp.gmail.com as SMTP Host."
+msgstr "Per Gmail utilizza smtp.gmail.com come host SMTP."
+
+#: admin/settings.php:109
+msgid "Username"
+msgstr "Nome utente"
+
+#: admin/settings.php:111
+msgid ""
+"For Gmail, your email address example@gmail.com is used as an SMTP Username."
+msgstr ""
+"Per Gmail, il tuo indirizzo email example@gmail.com viene utilizzato come "
+"nome utente SMTP."
+
+#: admin/settings.php:115
+msgid "Password"
+msgstr "Parola d'ordine"
+
+#: admin/settings.php:117
+msgid "How to get a Gmail SMTP Password?"
+msgstr "Come ottenere una password SMTP di Gmail?"
+
+#: admin/settings.php:121
+msgid "Encryption"
+msgstr "Crittografia"
+
+#: admin/settings.php:126
+msgid "Encryption will be used when sending an email."
+msgstr "La crittografia verrà utilizzata durante l'invio di un'e-mail."
+
+#: admin/settings.php:132
+msgid ""
+"The port which will be used when sending an email. If you choose TLS it "
+"should be set to 587. For SSL use port 465 instead."
+msgstr ""
+"La porta che verrà utilizzata per l'invio di un'e-mail. Se scegli TLS "
+"dovrebbe essere impostato su 587. Per SSL usa invece la porta 465."
+
+#: admin/settings.php:139
+msgid "Save Settings"
+msgstr "Salva impostazioni"
+
+#: includes/shortcode.php:509 includes/shortcode.php:637
+msgid "Sorry! you do not have sufficient permission to access this form."
+msgstr ""
+"Spiacenti! Non hai i permessi sufficienti per accedere a questo modulo."
+
+#: includes/shortcode.php:588
+msgid "Sorry! your request has not been verified."
+msgstr "Spiacenti! La tua richiesta non è stata verificata."
+
+#: includes/shortcode.php:732
+msgid "Details are as follows"
+msgstr "I dettagli sono i seguenti"
+
+#: includes/shortcode.php:759
+msgid "A new query received by"
+msgstr "Una nuova query ricevuta da"
+
+#: lead-generation-form.php:162
+msgid "Form Generator"
+msgstr "Generatore di moduli"
+
+#: lead-generation-form.php:163
+msgid "All Captured Leads"
+msgstr "Tutte le derivazioni catturate"
+
+#: lead-generation-form.php:164
+msgid "Import & Export"
+msgstr "Importa"
+
+#: lead-generation-form.php:165
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: lead-generation-form.php:438 lead-generation-form.php:554
+msgid "Date Time"
+msgstr "Data Ora"
+
+#: lead-generation-form.php:439 lead-generation-form.php:555
+msgid "Actions"
+msgstr "Azioni"
+
+#: lead-generation-form.php:528
+msgid "Select Lead"
+msgstr "Seleziona Lead"
+
+#: lead-generation-form.php:556
+msgid "Delete Selected Leads"
+msgstr "Elimina lead selezionati"
+
+#: lead-generation-form.php:562
+msgid "Download All Data List"
+msgstr "Scarica l'elenco di tutti i dati"
+
+#~ msgid "row"
+#~ msgstr "row"
+
+#~ msgid "column"
+#~ msgstr "column"
+
+#~ msgid "cell"
+#~ msgstr "cell"
+
+#~ msgid "For Gmail your email password use as SMTP Password."
+#~ msgstr "Per Gmail utilizza la password della tua email come password SMTP."
+
+#~ msgid "New Lead Captured by Form ID"
+#~ msgstr "Nuovo lead acquisito dall'ID modulo"

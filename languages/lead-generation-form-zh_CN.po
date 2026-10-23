@@ -1,0 +1,606 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form\n"
+"POT-Creation-Date: 2024-10-04 15:24+0530\n"
+"PO-Revision-Date: 2024-10-04 15:24+0530\n"
+"Last-Translator: \n"
+"Language-Team: Webenvo\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/dashboard.php:65
+msgid "Total From Created"
+msgstr "总计创建的表单"
+
+#: admin/dashboard.php:67 admin/manage-forms.php:36
+msgid "Create New Form"
+msgstr "创建新表单"
+
+#: admin/dashboard.php:68 lead-generation-form.php:161
+msgid "Manage Forms"
+msgstr "管理表单"
+
+#: admin/dashboard.php:73
+msgid "Total Lead Captured"
+msgstr "总计捕获的线索"
+
+#: admin/dashboard.php:75
+msgid "Manage Leads"
+msgstr "管理线索"
+
+#: admin/dashboard.php:80
+msgid "Getting Started Tips"
+msgstr "入门提示"
+
+#: admin/dashboard.php:81
+msgid "Create a new form using the FORM GENERATOR menu"
+msgstr "使用“表单生成器”菜单创建一个新表单"
+
+#: admin/dashboard.php:82
+msgid "Copy a form shortcode from the MANAGE FORMS menu"
+msgstr "从“管理表单”菜单复制一个表单短代码"
+
+#: admin/dashboard.php:83
+msgid "Publish form shortcode on a page or post"
+msgstr "在页面或帖子上发布表单短代码"
+
+#: admin/dashboard.php:84
+msgid "Manage captured leads and saved data on the ALL CAPTURED LEADS menu"
+msgstr "在“所有捕获的线索”菜单上管理捕获的线索和保存的数据"
+
+#: admin/dashboard.php:85
+msgid "Using the SETTINGS menu page you can configure the settings"
+msgstr "您可以在“设置”菜单页面上配置设置"
+
+#: admin/dashboard.php:90 admin/lead-loader.php:37
+msgid "Documentation"
+msgstr "文档"
+
+#: admin/dashboard.php:91
+msgid ""
+"Please refer to our video docs for more help and tutorial videos about "
+"plugins."
+msgstr "请参考我们的视频文档以获取更多有关插件的帮助和教程视频。"
+
+#: admin/dashboard.php:92
+msgid "Visit Our YouTube Channel"
+msgstr "访问我们的YouTube频道"
+
+#: admin/dashboard.php:93
+msgid "Read plugin change logs."
+msgstr "閱讀插件更改日誌。"
+
+#: admin/dashboard.php:95
+msgid "Plugin Change Logs"
+msgstr "插件變更日誌"
+
+#: admin/form-generator.php:76
+msgid "Create or Modify Form"
+msgstr "创建或修改表单"
+
+#: admin/form-generator.php:100 admin/import-export.php:124
+#: admin/manage-forms.php:43 admin/manage-forms.php:85
+msgid "Form Name"
+msgstr "表单名称"
+
+#: admin/form-generator.php:101 admin/import-export.php:125
+msgid "Type a name for the form"
+msgstr "为表单输入名称"
+
+#: admin/form-generator.php:117
+msgid "Save Form"
+msgstr "保存表单"
+
+#: admin/form-generator.php:126
+msgid "Please Read FAQ While Create OR Modify Form"
+msgstr "创建或修改表单时请阅读常见问题解答"
+
+#: admin/form-generator.php:131
+msgid "Q.1. Is it permissible to use copied content for the Form structure?"
+msgstr "Q.1. 是否允许在表单结构中使用复制的内容？"
+
+#: admin/form-generator.php:132
+msgid "You may insert copied information as plain text."
+msgstr "您可以以纯文本形式插入复制的信息。"
+
+#: admin/form-generator.php:133
+msgid ""
+"However, directly pasting data into Form label and attribute fields is "
+"discouraged."
+msgstr "但是，不鼓励将数据直接粘贴到表单标签和属性字段中。"
+
+#: admin/form-generator.php:137
+msgid "Q.2. Can I include several fields in the Form structure?"
+msgstr "Q.2. 我可以在表单结构中包含多个字段吗？"
+
+#: admin/form-generator.php:138
+msgid "Absolutely, you can incorporate numerous fields in the Form."
+msgstr "当然，您可以在表单中合并多个字段。"
+
+#: admin/form-generator.php:139
+msgid "However, only one submit button is allowed per Form."
+msgstr "但是，每个表单只允许有一个提交按钮。"
+
+#: admin/form-generator.php:143
+msgid ""
+"Q.3. Can I alter the Form structure after it's been published on the website?"
+msgstr "Q.3. 表格结构在网站上发布后可以更改吗？"
+
+#: admin/form-generator.php:144
+msgid "It's advised against changing the form structure after publishing."
+msgstr "建议不要在发布后更改表单结构。"
+
+#: admin/form-generator.php:145
+msgid ""
+"Doing so may lead to discrepancies in the records table on the All Leads "
+"page."
+msgstr "这样做可能会导致“所有线索”页面上的记录表出现差异。"
+
+#: admin/form-generator.php:146
+msgid ""
+"However, if you haven't received any submissions or data from users, you may "
+"make adjustments to the Form."
+msgstr "但是，如果您没有收到用户的任何提交或数据，您可以对表格进行调整。"
+
+#: admin/form-generator.php:147
+msgid ""
+"You can clone the current Form and modify or replace it with an older one."
+msgstr "您可以克隆当前表单并修改或替换为旧表单。"
+
+#: admin/form-generator.php:151
+msgid "Server Info for debugging"
+msgstr "用于调试的服务器信息"
+
+#: admin/form-generator.php:159
+msgid "Maximum upload file size"
+msgstr "最大上传文件大小"
+
+#: admin/form-generator.php:160
+msgid "Maximum post size"
+msgstr "最大立柱尺寸"
+
+#: admin/import-export.php:41
+msgid "Export A Form"
+msgstr "导出表单"
+
+#: admin/import-export.php:44 admin/import-export.php:76
+#: admin/import-export.php:93 admin/lead-loader.php:37 admin/lead-loader.php:39
+#: admin/leads.php:37
+msgid "Select Form"
+msgstr "选择表单"
+
+#: admin/import-export.php:57
+msgid "Export From Data"
+msgstr "导出表单数据"
+
+#: admin/import-export.php:63
+msgid "Copy Code"
+msgstr "复制代码"
+
+#: admin/import-export.php:64
+msgid "Code copied to clipboard."
+msgstr "代码已复制到剪贴板。"
+
+#: admin/import-export.php:71
+msgid "Combine Two Form"
+msgstr "合并两个表单"
+
+#: admin/import-export.php:74
+msgid "Form One"
+msgstr "表单一"
+
+#: admin/import-export.php:91
+msgid "Form Two"
+msgstr "表单二"
+
+#: admin/import-export.php:108
+msgid "Combine From"
+msgstr "合并自"
+
+#: admin/import-export.php:113
+msgid ""
+"Form combined successfully. Go to the Manage Forms menu to manage combined "
+"forms."
+msgstr "表格合并成功。 转至“管理表单”菜单来管理组合表单。"
+
+#: admin/import-export.php:121
+msgid "Import A Form"
+msgstr "导入表单"
+
+#: admin/import-export.php:128
+msgid "Paste Form Data"
+msgstr "粘贴表单数据"
+
+#: admin/import-export.php:129
+msgid "Important Note: Please paste the copied Form data in JSON format only."
+msgstr "重要提示：请仅粘贴以JSON格式复制的表单数据。"
+
+#: admin/import-export.php:132
+msgid "Import From Data"
+msgstr "导入数据来自"
+
+#: admin/import-export.php:137
+msgid "Form imported successfully"
+msgstr "表单导入成功"
+
+#: admin/import-export.php:146
+msgid "Please Read FAQ While Import & Export and Combining Forms"
+msgstr "导入时请阅读常见问题解答"
+
+#: admin/import-export.php:151
+msgid "Q.1. What is the use of import, export, and combine forms features?"
+msgstr "Q.1. 导入、导出和组合表单功能有什么用？"
+
+#: admin/import-export.php:152
+msgid ""
+"You can use Export Form features for exporting forms from one website to "
+"another website where the Lead Generation Form plugin is installed."
+msgstr ""
+"您可以使用导出表单功能将表单从一个网站导出到安装了潜在客户生成表单插件的另一"
+"网站。"
+
+#: admin/import-export.php:153
+msgid "Using the Import Form feature, you can import via copied code."
+msgstr "使用导入表单功能，您可以通过复制的代码导入。"
+
+#: admin/import-export.php:154
+msgid "The Combined Form feature is utilized to merge two forms into one form."
+msgstr "組合表單功能用於將兩種表單合併為一種表單。"
+
+#: admin/import-export.php:158
+msgid "Q.2. What are the primary guidelines for exporting forms?"
+msgstr "Q.2.匯出表格的主要準則是什麼？"
+
+#: admin/import-export.php:159
+msgid ""
+"While importing a form, always use the Copy Code button to copy the form "
+"code."
+msgstr "导入表单时，请始终使用“复制代码”按钮复制表单代码。"
+
+#: admin/import-export.php:163
+msgid "Q.3. What are the primary guidelines for import forms?"
+msgstr "Q.3.進口表格的主要準則是什麼？"
+
+#: admin/import-export.php:164
+msgid "Always paste the copied JSON object data for importing."
+msgstr "始终粘贴复制的 JSON 对象数据以进行导入。"
+
+#: admin/import-export.php:165
+msgid ""
+"Adding other than JSON object data for importing Forms will result in an "
+"error."
+msgstr "添加非 JSON 对象数据用于导入表单将导致错误。"
+
+#: admin/import-export.php:169
+msgid ""
+"Q.4. Can we import and export Forms from any third-party plugins like "
+"Contact Form 7?"
+msgstr "Q.4. 我们可以从 Contact Form 7 等任何第三方插件导入和导出表单吗？"
+
+#: admin/import-export.php:170
+msgid "No, you can't import or export Forms from other or third-party plugins."
+msgstr "不，您不能从其他或第三方插件导入或导出表单。"
+
+#: admin/import-export.php:171
+msgid ""
+"You can only import or export Forms into the Lead Generation Form plugin."
+msgstr "您只能将表单导入或导出到潜在客户生成表单插件中。"
+
+#: admin/import-export.php:175
+msgid "Q.5. What are the primary guidelines for combining forms?"
+msgstr "Q.5.組合表格的主要準則是什麼？"
+
+#: admin/import-export.php:176
+msgid ""
+"The key instruction is to review and refine the resulting form by "
+"eliminating any redundant submit buttons if they are present."
+msgstr ""
+"关键说明是通过消除任何多余的提交按钮（如果存在）来审查和完善生成的表单。"
+
+#: admin/leads.php:35
+msgid "Select a Form to Access Its Captured Leads"
+msgstr "选择一个表单以访问其捕获的线索"
+
+#: admin/leads.php:60
+msgid "Please Read FAQ While Managing All Leads"
+msgstr "管理所有潜在客户时请阅读常见问题解答"
+
+#: admin/leads.php:65
+msgid "Q.1. How do you filter data tables?"
+msgstr "Q.1. 如何过滤数据表？"
+
+#: admin/leads.php:66
+msgid "Use the search button located at the top corner of the table."
+msgstr "使用位于表格顶角的搜索按钮。"
+
+#: admin/leads.php:67
+msgid "Enter your criteria in the search box to filter data and rows."
+msgstr "在搜索框中输入您的条件以过滤数据和行。"
+
+#: admin/leads.php:68
+msgid "To sort the table, click on the desired column header or label."
+msgstr "要对表格进行排序，请单击所需的列标题或标签。"
+
+#: admin/leads.php:72
+msgid "Q.2. How can you download the complete list of leads data?"
+msgstr "Q.2. 如何下载完整的潜在客户数据列表？"
+
+#: admin/leads.php:73
+msgid "Choose the desired Form from the list."
+msgstr "从列表中选择所需的表格。"
+
+#: admin/leads.php:74
+msgid ""
+"If you have a saved record, a download button will appear below the table."
+msgstr "如果您有保存的记录，表格下方会出现下载按钮。"
+
+#: admin/leads.php:75
+msgid "Click on this button to download the list."
+msgstr "单击此按钮下载列表。"
+
+#: admin/leads.php:79
+msgid "Q.3. Can I download the filtered data list?"
+msgstr "Q.3. 我可以下载过滤后的数据列表吗？"
+
+#: admin/leads.php:80
+msgid "No, downloading the filtered data list is not possible."
+msgstr "不，无法下载过滤后的数据列表。"
+
+#: admin/leads.php:81
+msgid "The download provides a complete list of leads in CSV format."
+msgstr "下载提供了 CSV 格式的完整潜在客户列表。"
+
+#: admin/leads.php:82
+msgid ""
+"However, once you open the CSV file in Microsoft Excel, you can apply "
+"filters to the data."
+msgstr "但是，在 Microsoft Excel 中打开 CSV 文件后，您可以对数据应用过滤器。"
+
+#: admin/manage-forms.php:35
+msgid "Manage Form"
+msgstr "管理表单"
+
+#: admin/manage-forms.php:42 admin/manage-forms.php:84
+#: includes/shortcode.php:734
+msgid "Form ID"
+msgstr "表单ID"
+
+#: admin/manage-forms.php:44 admin/manage-forms.php:86
+msgid "Form Shortcode"
+msgstr "表单短代码"
+
+#: admin/manage-forms.php:45 admin/manage-forms.php:87
+msgid "Action"
+msgstr "操作"
+
+#: admin/manage-forms.php:68 lead-generation-form.php:254
+msgid "Copied"
+msgstr "已复制"
+
+#: admin/manage-forms.php:97
+msgid "Please Read FAQ While Manage Forms"
+msgstr "管理表单时请阅读常见问题解答"
+
+#: admin/manage-forms.php:102
+msgid "Q.1. What is the use of Clone Form features?"
+msgstr "Q.1.克隆表單功能有什麼用？"
+
+#: admin/manage-forms.php:103
+msgid "Using clone form features you can make a copy of an existing form."
+msgstr "使用克隆表单功能，您可以复制现有表单。"
+
+#: admin/manage-forms.php:107
+msgid "Q.2. What are the primary guidelines for deleting a form?"
+msgstr "Q.2.刪除表單的主要準則是什麼？"
+
+#: admin/manage-forms.php:108
+msgid ""
+"When you want to delete a form, it is essential to be aware that all the "
+"leads captured through that specific form will be permanently removed along "
+"with the form itself."
+msgstr ""
+"当您想要删除表单时，必须注意通过该特定表单捕获的所有潜在客户都将与表单本身一"
+"起永久删除。"
+
+#: admin/settings.php:34 includes/install-script.php:28
+msgid "Thank you! Your query has been successfully submitted."
+msgstr "謝謝你！您的查詢已成功提交。"
+
+#: admin/settings.php:42
+msgid "Settings Panel"
+msgstr "设置面板"
+
+#: admin/settings.php:53
+msgid "Recaptcha Status"
+msgstr "验证码状态"
+
+#: admin/settings.php:55 admin/settings.php:90
+msgid "ON"
+msgstr "开启"
+
+#: admin/settings.php:56 admin/settings.php:91
+msgid "OFF"
+msgstr "关闭"
+
+#: admin/settings.php:66
+msgid "How do we get the Google reCAPTCHA Site Key and Secret Key?"
+msgstr "我們如何取得 Google reCAPTCHA 網站金鑰和金鑰？"
+
+#: admin/settings.php:69
+msgid "Message"
+msgstr "消息"
+
+#: admin/settings.php:74
+msgid "Message To User"
+msgstr "消息给用户"
+
+#: admin/settings.php:76
+msgid ""
+"After successful form submission shows a message to the user, allowed HTML "
+"tags are p, strong, i, br, a, and hr."
+msgstr ""
+"成功提交表单后，会向用户显示一条消息，允许的 HTML 标签包括 p、strong、i、br、"
+"a 和 hr。"
+
+#: admin/settings.php:84
+msgid "Email"
+msgstr "电子邮件"
+
+#: admin/settings.php:88
+msgid "Notify To Admin"
+msgstr "通知管理员"
+
+#: admin/settings.php:93
+msgid ""
+"After successful lead captures an email notification is sent to admin with "
+"lead data."
+msgstr "成功捕获潜在客户后，将向管理员发送包含潜在客户数据的电子邮件通知。"
+
+#: admin/settings.php:96
+msgid "Email Via"
+msgstr "电子邮件通过"
+
+#: admin/settings.php:105
+msgid "For Gmail use smtp.gmail.com as SMTP Host."
+msgstr "对于Gmail，请使用smtp.gmail.com作为SMTP主机。"
+
+#: admin/settings.php:109
+msgid "Username"
+msgstr "使用者名稱"
+
+#: admin/settings.php:111
+msgid ""
+"For Gmail, your email address example@gmail.com is used as an SMTP Username."
+msgstr "对于 Gmail，您的电子邮件地址 example@gmail.com 用作 SMTP 用户名。"
+
+#: admin/settings.php:115
+msgid "Password"
+msgstr "密碼"
+
+#: admin/settings.php:117
+msgid "How to get a Gmail SMTP Password?"
+msgstr "如何取得 Gmail SMTP 密碼？"
+
+#: admin/settings.php:121
+msgid "Encryption"
+msgstr "加密"
+
+#: admin/settings.php:126
+msgid "Encryption will be used when sending an email."
+msgstr "发送电子邮件时将使用加密。"
+
+#: admin/settings.php:132
+msgid ""
+"The port which will be used when sending an email. If you choose TLS it "
+"should be set to 587. For SSL use port 465 instead."
+msgstr ""
+"发送电子邮件时使用的端口。发送电子邮件时将使用的端口。如果选择TLS，则应设置为"
+"587。对于SSL，请改用端口465。"
+
+#: admin/settings.php:139
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: includes/shortcode.php:509 includes/shortcode.php:637
+msgid "Sorry! you do not have sufficient permission to access this form."
+msgstr "對不起！您沒有足夠的權限存取此表單。"
+
+#: includes/shortcode.php:588
+msgid "Sorry! your request has not been verified."
+msgstr "對不起！您的請求尚未得到驗證。"
+
+#: includes/shortcode.php:732
+msgid "Details are as follows"
+msgstr "詳情如下"
+
+#: includes/shortcode.php:759
+msgid "A new query received by"
+msgstr "收到的新查詢"
+
+#: lead-generation-form.php:162
+msgid "Form Generator"
+msgstr "表单生成器"
+
+#: lead-generation-form.php:163
+msgid "All Captured Leads"
+msgstr "所有捕获的线索"
+
+#: lead-generation-form.php:164
+msgid "Import & Export"
+msgstr "导入和导出"
+
+#: lead-generation-form.php:165
+msgid "Settings"
+msgstr "设置"
+
+#: lead-generation-form.php:438 lead-generation-form.php:554
+msgid "Date Time"
+msgstr "日期時間"
+
+#: lead-generation-form.php:439 lead-generation-form.php:555
+msgid "Actions"
+msgstr "操作"
+
+#: lead-generation-form.php:528
+msgid "Select Lead"
+msgstr "选择潜在客户"
+
+#: lead-generation-form.php:556
+msgid "Delete Selected Leads"
+msgstr "Excluir leads selecionados"
+
+#: lead-generation-form.php:562
+msgid "Download All Data List"
+msgstr "下载所有数据列表"
+
+#~ msgid "row"
+#~ msgstr "行"
+
+#~ msgid "column"
+#~ msgstr "列"
+
+#~ msgid "cell"
+#~ msgstr "单元格"
+
+#~ msgid "Manage Froms"
+#~ msgstr "管理表单"
+
+#~ msgid "Recaptcha"
+#~ msgstr "验证码"
+
+#~ msgid "Site Key"
+#~ msgstr "站点密钥"
+
+#~ msgid "Secret Key"
+#~ msgstr "密钥"
+
+#~ msgid "WP MAIL"
+#~ msgstr "WP邮件"
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "SMTP Host"
+#~ msgstr "SMTP主机"
+
+#~ msgid "For Gmail your email password use as SMTP Password."
+#~ msgstr "对于Gmail，请使用你的电子邮件密码作为SMTP密码。"
+
+#~ msgid "TLS"
+#~ msgstr "TLS"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "SMTP Port"
+#~ msgstr "SMTP端口"
+
+#~ msgid "New Lead Captured by Form ID"
+#~ msgstr "通过表单ID捕获的新线索"

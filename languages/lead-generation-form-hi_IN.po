@@ -1,0 +1,585 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form\n"
+"POT-Creation-Date: 2024-10-04 15:17+0530\n"
+"PO-Revision-Date: 2024-10-04 15:17+0530\n"
+"Last-Translator: \n"
+"Language-Team: Webenvo\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/dashboard.php:65
+msgid "Total From Created"
+msgstr "कुल बनाई गई फॉर्म"
+
+#: admin/dashboard.php:67 admin/manage-forms.php:36
+msgid "Create New Form"
+msgstr "नया फॉर्म बनाएं"
+
+#: admin/dashboard.php:68 lead-generation-form.php:161
+msgid "Manage Forms"
+msgstr "फ़ॉर्म प्रबंधन करें"
+
+#: admin/dashboard.php:73
+msgid "Total Lead Captured"
+msgstr "कुल लीड जकड़ा गया"
+
+#: admin/dashboard.php:75
+msgid "Manage Leads"
+msgstr "लीड प्रबंधित करें"
+
+#: admin/dashboard.php:80
+msgid "Getting Started Tips"
+msgstr "शुरूआत के लिए सुझाव"
+
+#: admin/dashboard.php:81
+msgid "Create a new form using the FORM GENERATOR menu"
+msgstr "फ़ॉर्म जेनरेटर मेनू का उपयोग करके एक नया फॉर्म बनाएं"
+
+#: admin/dashboard.php:82
+msgid "Copy a form shortcode from the MANAGE FORMS menu"
+msgstr "मैनेज फॉर्म्स मेनू से एक फॉर्म शॉर्टकोड कॉपी करें"
+
+#: admin/dashboard.php:83
+msgid "Publish form shortcode on a page or post"
+msgstr "फॉर्म शॉर्टकोड को एक पेज या पोस्ट पर प्रकाशित करें"
+
+#: admin/dashboard.php:84
+msgid "Manage captured leads and saved data on the ALL CAPTURED LEADS menu"
+msgstr "सभी कैप्चर्ड लीड्स मेनू पर कैप्चर्ड लीड्स और सेव की गई डेटा का प्रबंधन करें"
+
+#: admin/dashboard.php:85
+msgid "Using the SETTINGS menu page you can configure the settings"
+msgstr "सेटिंग्स मेनू पेज का उपयोग करके आप सेटिंग्स को कॉन्फ़िगर कर सकते हैं"
+
+#: admin/dashboard.php:90 admin/lead-loader.php:37
+msgid "Documentation"
+msgstr "दस्तावेज़ीकरण"
+
+#: admin/dashboard.php:91
+msgid "Please refer to our video docs for more help and tutorial videos about plugins."
+msgstr "अधिक मदद और प्लगइन्स के बारे में ट्यूटरियल वीडियो के लिए हमारे वीडियो दस्तावेज़ का संदर्भ करें।"
+
+#: admin/dashboard.php:92
+msgid "Visit Our YouTube Channel"
+msgstr "हमारे YouTube चैनल पर जाएं"
+
+#: admin/dashboard.php:93
+msgid "Read plugin change logs."
+msgstr "प्लगइन परिवर्तन लॉग पढ़ें."
+
+#: admin/dashboard.php:95
+msgid "Plugin Change Logs"
+msgstr "प्लगइन परिवर्तन लॉग"
+
+#: admin/form-generator.php:76
+msgid "Create or Modify Form"
+msgstr "फॉर्म बनाएं या संशोधित करें"
+
+#: admin/form-generator.php:100 admin/import-export.php:124 admin/manage-forms.php:43
+#: admin/manage-forms.php:85
+msgid "Form Name"
+msgstr "फॉर्म का नाम"
+
+#: admin/form-generator.php:101 admin/import-export.php:125
+msgid "Type a name for the form"
+msgstr "फॉर्म के लिए एक नाम टाइप करें"
+
+#: admin/form-generator.php:117
+msgid "Save Form"
+msgstr "फॉर्म सहेजें"
+
+#: admin/form-generator.php:126
+msgid "Please Read FAQ While Create OR Modify Form"
+msgstr "कृपया फ़ॉर्म बनाते या संशोधित करते समय FAQ पढ़ें"
+
+#: admin/form-generator.php:131
+msgid "Q.1. Is it permissible to use copied content for the Form structure?"
+msgstr "प्रश्न 1. क्या फ़ॉर्म संरचना के लिए कॉपी किए गए सामग्र का उपयोग स्वीकार्य है?"
+
+#: admin/form-generator.php:132
+msgid "You may insert copied information as plain text."
+msgstr "आप कॉपी की गई जानकारी को सादा पाठ के रूप में डाल सकते हैं।"
+
+#: admin/form-generator.php:133
+msgid "However, directly pasting data into Form label and attribute fields is discouraged."
+msgstr "हालांकि, फ़ॉर्म लेबल और विशेषता फ़ील्ड में डेटा को सीधे पेस्ट करना असलहित है।"
+
+#: admin/form-generator.php:137
+msgid "Q.2. Can I include several fields in the Form structure?"
+msgstr "प्रश्न 2. क्या मैं फ़ॉर्म संरचना में कई फ़ील्ड शामिल कर सकता हूँ?"
+
+#: admin/form-generator.php:138
+msgid "Absolutely, you can incorporate numerous fields in the Form."
+msgstr "बिल्कुल, आप फ़ॉर्म में अनेक फ़ील्ड शामिल कर सकते हैं।"
+
+#: admin/form-generator.php:139
+msgid "However, only one submit button is allowed per Form."
+msgstr "हालांकि, हर फ़ॉर्म में केवल एक सबमिट बटन की अनुमति है।"
+
+#: admin/form-generator.php:143
+msgid "Q.3. Can I alter the Form structure after it's been published on the website?"
+msgstr "प्रश्न 3. क्या मैं वेबसाइट पर प्रकाशित होने के बाद फ़ॉर्म संरचना को बदल सकता हूँ?"
+
+#: admin/form-generator.php:144
+msgid "It's advised against changing the form structure after publishing."
+msgstr "प्रकाशन के बाद फ़ॉर्म संरचना को बदलने से बचा जाता है।"
+
+#: admin/form-generator.php:145
+msgid "Doing so may lead to discrepancies in the records table on the All Leads page."
+msgstr "ऐसा करने से ऑल लीड्स पेज पर रिकॉर्ड तालिका में विसंगतियां हो सकती हैं।"
+
+#: admin/form-generator.php:146
+msgid ""
+"However, if you haven't received any submissions or data from users, you may make adjustments to "
+"the Form."
+msgstr "हालांकि, अगर आपको उपयोगकर्ताओं से कोई प्रस्तुतियाँ या डेटा नहीं मिला है, तो आप फ़ॉर्म में सुधार कर सकते हैं।"
+
+#: admin/form-generator.php:147
+msgid "You can clone the current Form and modify or replace it with an older one."
+msgstr "आप वर्तमान फॉर्म को क्लोन कर सकते हैं और उसे संशोधित कर सकते हैं या पुराने फॉर्म से बदल सकते हैं।"
+
+#: admin/form-generator.php:151
+msgid "Server Info for debugging"
+msgstr "सर्वर सूचना डिबगिंग के लिए"
+
+#: admin/form-generator.php:159
+msgid "Maximum upload file size"
+msgstr "अधिकतम अपलोड फ़ाइल का आकार"
+
+#: admin/form-generator.php:160
+msgid "Maximum post size"
+msgstr "अधिकतम पोस्ट का आकार"
+
+#: admin/import-export.php:41
+msgid "Export A Form"
+msgstr "फॉर्म निर्यात करें"
+
+#: admin/import-export.php:44 admin/import-export.php:76 admin/import-export.php:93
+#: admin/lead-loader.php:37 admin/lead-loader.php:39 admin/leads.php:37
+msgid "Select Form"
+msgstr "फॉर्म का चयन करें"
+
+#: admin/import-export.php:57
+msgid "Export From Data"
+msgstr "डेटा निर्यात करें"
+
+#: admin/import-export.php:63
+msgid "Copy Code"
+msgstr "कोड कॉपी करें"
+
+#: admin/import-export.php:64
+msgid "Code copied to clipboard."
+msgstr "कोड क्लिपबोर्ड पर कॉपी किया गया है।"
+
+#: admin/import-export.php:71
+msgid "Combine Two Form"
+msgstr "दो फॉर्म को मिलाएं"
+
+#: admin/import-export.php:74
+msgid "Form One"
+msgstr "फॉर्म एक"
+
+#: admin/import-export.php:91
+msgid "Form Two"
+msgstr "फॉर्म दो"
+
+#: admin/import-export.php:108
+msgid "Combine From"
+msgstr "से मिलाएं"
+
+#: admin/import-export.php:113
+msgid "Form combined successfully. Go to the Manage Forms menu to manage combined forms."
+msgstr "फॉर्म सफलतापूर्वक संयोजित हुआ. संयुक्त प्रपत्रों को प्रबंधित करने के लिए प्रपत्र प्रबंधित करें मेनू पर जाएँ।"
+
+#: admin/import-export.php:121
+msgid "Import A Form"
+msgstr "एक फॉर्म आयात करें"
+
+#: admin/import-export.php:128
+msgid "Paste Form Data"
+msgstr "फॉर्म डेटा पेस्ट करें"
+
+#: admin/import-export.php:129
+msgid "Important Note: Please paste the copied Form data in JSON format only."
+msgstr "महत्वपूर्ण नोट: कृपया कॉपी किए गए फॉर्म डेटा को केवल JSON प्रारूप में पेस्ट करें।"
+
+#: admin/import-export.php:132
+msgid "Import From Data"
+msgstr "डेटा आयात करें"
+
+#: admin/import-export.php:137
+msgid "Form imported successfully"
+msgstr "फॉर्म सफलतापूर्वक आयात किया गया"
+
+#: admin/import-export.php:146
+msgid "Please Read FAQ While Import & Export and Combining Forms"
+msgstr "कृपया फ़ॉर्म आयात और निर्यात और फ़ॉर्मों को मिलाने के दौरान FAQ पढ़ें"
+
+#: admin/import-export.php:151
+msgid "Q.1. What is the use of import, export, and combine forms features?"
+msgstr "प्रश्न 1. आयात, निर्यात, और फ़ॉर्मों को मिलाने के फ़ीचर का उपयोग क्या है?"
+
+#: admin/import-export.php:152
+msgid ""
+"You can use Export Form features for exporting forms from one website to another website where the "
+"Lead Generation Form plugin is installed."
+msgstr ""
+"आप फ़ॉर्मों को एक वेबसाइट से दूसरी वेबसाइट पर निर्यात करने के लिए निर्यात फ़ॉर्म फ़ीचर का उपयोग कर सकते हैं, जहां लीड "
+"जनरेशन फ़ॉर्म प्लगइन इंस्टॉल किया गया है।"
+
+#: admin/import-export.php:153
+msgid "Using the Import Form feature, you can import via copied code."
+msgstr "आयात फ़ॉर्म फीचर का उपयोग करके आप कॉपी किए गए कोड के माध्यम से आयात कर सकते हैं।"
+
+#: admin/import-export.php:154
+msgid "The Combined Form feature is utilized to merge two forms into one form."
+msgstr "संयुक्त प्रपत्र सुविधा का उपयोग दो प्रपत्रों को एक प्रपत्र में विलय करने के लिए किया जाता है।"
+
+#: admin/import-export.php:158
+msgid "Q.2. What are the primary guidelines for exporting forms?"
+msgstr "प्रश्न 2. फॉर्म निर्यात करने के लिए प्राथमिक दिशानिर्देश क्या हैं?"
+
+#: admin/import-export.php:159
+msgid "While importing a form, always use the Copy Code button to copy the form code."
+msgstr "फॉर्म आयात करते समय, फॉर्म कोड को कॉपी करने के लिए हमेशा कॉपी कोड बटन का उपयोग करें।"
+
+#: admin/import-export.php:163
+msgid "Q.3. What are the primary guidelines for import forms?"
+msgstr "प्रश्न 3. आयात प्रपत्रों के लिए प्राथमिक दिशानिर्देश क्या हैं?"
+
+#: admin/import-export.php:164
+msgid "Always paste the copied JSON object data for importing."
+msgstr "हमेशा आयात के लिए कॉपी किए गए JSON ऑब्जेक्ट डेटा को पेस्ट करें।"
+
+#: admin/import-export.php:165
+msgid "Adding other than JSON object data for importing Forms will result in an error."
+msgstr "फ़ॉर्मों को आयात करने के लिए JSON ऑब्जेक्ट डेटा के इलावा कुछ जोड़ने पर त्रुटि होगी।"
+
+#: admin/import-export.php:169
+msgid "Q.4. Can we import and export Forms from any third-party plugins like Contact Form 7?"
+msgstr "प्रश्न 4. क्या हम किसी भी थर्ड पार्टी प्लगइन से जैसे कि कॉन्टैक्ट फ़ॉर्म 7 से फ़ॉर्म आयात और निर्यात कर सकते हैं?"
+
+#: admin/import-export.php:170
+msgid "No, you can't import or export Forms from other or third-party plugins."
+msgstr "नहीं, आप अन्य या थर्ड पार्टी प्लगइन से फ़ॉर्म आयात या निर्यात नहीं कर सकते हैं।"
+
+#: admin/import-export.php:171
+msgid "You can only import or export Forms into the Lead Generation Form plugin."
+msgstr "आप केवल लीड जनरेशन फ़ॉर्म प्लगइन में फ़ॉर्म आयात या निर्यात कर सकते हैं।"
+
+#: admin/import-export.php:175
+msgid "Q.5. What are the primary guidelines for combining forms?"
+msgstr "प्रश्न 5. फॉर्मों के संयोजन के लिए प्राथमिक दिशानिर्देश क्या हैं?"
+
+#: admin/import-export.php:176
+msgid ""
+"The key instruction is to review and refine the resulting form by eliminating any redundant submit "
+"buttons if they are present."
+msgstr ""
+"मुख्य निर्देश है कि उपस्थित हैं तो किसी भी अतिरिक्त सबमिट बटन को हटाकर परिणामस्वरूप फ़ॉर्म की समीक्षा और सुधार करें।"
+
+#: admin/leads.php:35
+msgid "Select a Form to Access Its Captured Leads"
+msgstr "अपने कैप्चर्ड लीड्स तक पहुँचने के लिए एक फॉर्म का चयन करें"
+
+#: admin/leads.php:60
+msgid "Please Read FAQ While Managing All Leads"
+msgstr "कृपया सभी लीड का प्रबंधन करते समय FAQ पढ़ें"
+
+#: admin/leads.php:65
+msgid "Q.1. How do you filter data tables?"
+msgstr "प्रश्न 1. डेटा टेबल को कैसे फ़िल्टर करते हैं?"
+
+#: admin/leads.php:66
+msgid "Use the search button located at the top corner of the table."
+msgstr "टेबल के ऊपरी कोने पर स्थित खोज बटन का उपयोग करें।"
+
+#: admin/leads.php:67
+msgid "Enter your criteria in the search box to filter data and rows."
+msgstr "डेटा और पंक्तियों को फ़िल्टर करने के लिए खोज बॉक्स में अपने मान्यता को दर्ज करें।"
+
+#: admin/leads.php:68
+msgid "To sort the table, click on the desired column header or label."
+msgstr "टेबल को क्रमित करने के लिए चाहिए कॉलम हेडर या लेबल पर क्लिक करें।"
+
+#: admin/leads.php:72
+msgid "Q.2. How can you download the complete list of leads data?"
+msgstr "प्रश्न 2. लीड्स डेटा की पूरी सूची को कैसे डाउनलोड कर सकते हैं?"
+
+#: admin/leads.php:73
+msgid "Choose the desired Form from the list."
+msgstr "सूची से वांछित फ़ॉर्म का चयन करें।"
+
+#: admin/leads.php:74
+msgid "If you have a saved record, a download button will appear below the table."
+msgstr "आपके पास एक सहेजा रिकॉर्ड है, तो टेबल के नीचे एक डाउनलोड बटन दिखाई देगा।"
+
+#: admin/leads.php:75
+msgid "Click on this button to download the list."
+msgstr "सूची को डाउनलोड करने के लिए इस बटन पर क्लिक करें।"
+
+#: admin/leads.php:79
+msgid "Q.3. Can I download the filtered data list?"
+msgstr "प्रश्न 3. क्या मैं फ़िल्टर किए गए डेटा सूची को डाउनलोड कर सकता हूँ?"
+
+#: admin/leads.php:80
+msgid "No, downloading the filtered data list is not possible."
+msgstr "नहीं, फ़िल्टर किए गए डेटा सूची को डाउनलोड करना संभव नहीं है।"
+
+#: admin/leads.php:81
+msgid "The download provides a complete list of leads in CSV format."
+msgstr "डाउनलोड CSV प्रारूप में लीड की पूरी सूची प्रदान करता है।"
+
+#: admin/leads.php:82
+msgid "However, once you open the CSV file in Microsoft Excel, you can apply filters to the data."
+msgstr "हालांकि, एक बार आप Microsoft Excel में CSV फ़ाइल खोलते हैं, तो आप डेटा पर फ़िल्टर लगा सकते हैं।"
+
+#: admin/manage-forms.php:35
+msgid "Manage Form"
+msgstr "फॉर्म प्रबंधित करें"
+
+#: admin/manage-forms.php:42 admin/manage-forms.php:84 includes/shortcode.php:734
+msgid "Form ID"
+msgstr "फॉर्म आईडी"
+
+#: admin/manage-forms.php:44 admin/manage-forms.php:86
+msgid "Form Shortcode"
+msgstr "फॉर्म शॉर्टकोड"
+
+#: admin/manage-forms.php:45 admin/manage-forms.php:87
+msgid "Action"
+msgstr "क्रिया"
+
+#: admin/manage-forms.php:68 lead-generation-form.php:254
+msgid "Copied"
+msgstr "कॉपी किया गया"
+
+#: admin/manage-forms.php:97
+msgid "Please Read FAQ While Manage Forms"
+msgstr "कृपया फ़ॉर्म प्रबंधन करते समय FAQ पढ़ें"
+
+#: admin/manage-forms.php:102
+msgid "Q.1. What is the use of Clone Form features?"
+msgstr "प्रश्न 1. क्लोन फॉर्म सुविधा का उपयोग क्या है?"
+
+#: admin/manage-forms.php:103
+msgid "Using clone form features you can make a copy of an existing form."
+msgstr "क्लोन फ़ॉर्म सुविधाओं का उपयोग करके आप किसी मौजूदा फ़ॉर्म की प्रतिलिपि बना सकते हैं।"
+
+#: admin/manage-forms.php:107
+msgid "Q.2. What are the primary guidelines for deleting a form?"
+msgstr "प्रश्न 2. किसी फॉर्म को हटाने के लिए प्राथमिक दिशानिर्देश क्या हैं?"
+
+#: admin/manage-forms.php:108
+msgid ""
+"When you want to delete a form, it is essential to be aware that all the leads captured through "
+"that specific form will be permanently removed along with the form itself."
+msgstr ""
+"जब आप किसी फ़ॉर्म को हटाना चाहते हैं, तो यह महत्वपूर्ण है कि आपको यह जानना जरूरी है कि विशिष्ट फ़ॉर्म के माध्यम से "
+"जिन सभी लीड लिए गए हैं, वे सभी लीड विशिष्ट फ़ॉर्म के साथ ही स्थायी रूप से हटा दिए जाएंगे।"
+
+#: admin/settings.php:34 includes/install-script.php:28
+msgid "Thank you! Your query has been successfully submitted."
+msgstr "धन्यवाद! आपकी क्वेरी सफलतापूर्वक सबमिट कर दी गई है।"
+
+#: admin/settings.php:42
+msgid "Settings Panel"
+msgstr "सेटिंग्स पैनल"
+
+#: admin/settings.php:53
+msgid "Recaptcha Status"
+msgstr "रीकैप्चा स्थिति"
+
+#: admin/settings.php:55 admin/settings.php:90
+msgid "ON"
+msgstr "चालू"
+
+#: admin/settings.php:56 admin/settings.php:91
+msgid "OFF"
+msgstr "बंद"
+
+#: admin/settings.php:66
+msgid "How do we get the Google reCAPTCHA Site Key and Secret Key?"
+msgstr "हम Google reCAPTCHA साइट कुंजी और गुप्त कुंजी कैसे प्राप्त करें?"
+
+#: admin/settings.php:69
+msgid "Message"
+msgstr "संदेश"
+
+#: admin/settings.php:74
+msgid "Message To User"
+msgstr "उपयोगकर्ता को संदेश"
+
+#: admin/settings.php:76
+msgid ""
+"After successful form submission shows a message to the user, allowed HTML tags are p, strong, i, "
+"br, a, and hr."
+msgstr ""
+"सफल फॉर्म सबमिशन के बाद उपयोगकर्ता को एक संदेश दिखाया जाता है, अनुमत HTML टैग पी, स्ट्रॉन्ग, आई, बीआर, ए और "
+"एचआर हैं।"
+
+#: admin/settings.php:84
+msgid "Email"
+msgstr "ईमेल"
+
+#: admin/settings.php:88
+msgid "Notify To Admin"
+msgstr "व्यवस्थापक को सूचित करें"
+
+#: admin/settings.php:93
+msgid "After successful lead captures an email notification is sent to admin with lead data."
+msgstr "सफल लीड कैप्चर के बाद एडमिन को लीड डेटा के साथ एक ईमेल सूचना भेजी जाती है।"
+
+#: admin/settings.php:96
+msgid "Email Via"
+msgstr "ईमेल के माध्यम से"
+
+#: admin/settings.php:105
+msgid "For Gmail use smtp.gmail.com as SMTP Host."
+msgstr "Gmail के लिए SMTP होस्ट के रूप में smtp.gmail.com का उपयोग करें।"
+
+#: admin/settings.php:109
+msgid "Username"
+msgstr "उपयोगकर्ता नाम"
+
+#: admin/settings.php:111
+msgid "For Gmail, your email address example@gmail.com is used as an SMTP Username."
+msgstr ""
+"जीमेल के लिए, आपका ईमेल पता example@gmail.com एक एसएमटीपी उपयोगकर्ता नाम के रूप में उपयोग किया जाता है।"
+
+#: admin/settings.php:115
+msgid "Password"
+msgstr "पासवर्ड"
+
+#: admin/settings.php:117
+msgid "How to get a Gmail SMTP Password?"
+msgstr "जीमेल एसएमटीपी पासवर्ड कैसे प्राप्त करें?"
+
+#: admin/settings.php:121
+msgid "Encryption"
+msgstr "एन्क्रिप्शन"
+
+#: admin/settings.php:126
+msgid "Encryption will be used when sending an email."
+msgstr "ईमेल भेजने के समय एन्क्रिप्शन का उपयोग किया जाएगा।"
+
+#: admin/settings.php:132
+msgid ""
+"The port which will be used when sending an email. If you choose TLS it should be set to 587. For "
+"SSL use port 465 instead."
+msgstr ""
+"ईमेल भेजने के समय उपयोग किए जाने वाले पोर्ट को सेट किया जाएगा। यदि आप TLS चुनते हैं तो इसे 587 पर सेट किया जाना "
+"चाहिए। SSL के लिए बजाय इसके पोर्ट 465 का उपयोग करें।"
+
+#: admin/settings.php:139
+msgid "Save Settings"
+msgstr "सेटिंग्स सहेजें"
+
+#: includes/shortcode.php:509 includes/shortcode.php:637
+msgid "Sorry! you do not have sufficient permission to access this form."
+msgstr "क्षमा करें! आपके पास इस फ़ॉर्म तक पहुंचने की पर्याप्त अनुमति नहीं है।"
+
+#: includes/shortcode.php:588
+msgid "Sorry! your request has not been verified."
+msgstr "क्षमा करें! आपका अनुरोध सत्यापित नहीं किया गया है."
+
+#: includes/shortcode.php:732
+msgid "Details are as follows"
+msgstr "विवरण इस प्रकार है"
+
+#: includes/shortcode.php:759
+msgid "A new query received by"
+msgstr "एक नई क्वेरी प्राप्त हुई"
+
+#: lead-generation-form.php:162
+msgid "Form Generator"
+msgstr "फ़ॉर्म जेनरेटर"
+
+#: lead-generation-form.php:163
+msgid "All Captured Leads"
+msgstr "सभी कैप्चर किए गए लीड्स"
+
+#: lead-generation-form.php:164
+msgid "Import & Export"
+msgstr "आयात और निर्यात"
+
+#: lead-generation-form.php:165
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: lead-generation-form.php:438 lead-generation-form.php:554
+msgid "Date Time"
+msgstr "दिनांक समय"
+
+#: lead-generation-form.php:439 lead-generation-form.php:555
+msgid "Actions"
+msgstr "क्रियाएँ"
+
+#: lead-generation-form.php:440
+msgid "Select All"
+msgstr "सबका चयन करें"
+
+#: lead-generation-form.php:528
+msgid "Select Lead"
+msgstr "लीड चुनें"
+
+#: lead-generation-form.php:556
+msgid "Delete Selected Leads"
+msgstr "चयनित लीड हटाएँ"
+
+#: lead-generation-form.php:562
+msgid "Download All Data List"
+msgstr "सभी डेटा सूची डाउनलोड करें"
+
+#~ msgid "row"
+#~ msgstr "पंक्ति"
+
+#~ msgid "column"
+#~ msgstr "स्तंभ"
+
+#~ msgid "cell"
+#~ msgstr "कक्ष"
+
+#~ msgid "Manage Froms"
+#~ msgstr "फॉर्म प्रबंधित करें"
+
+#~ msgid "Recaptcha"
+#~ msgstr "रीकैप्चा"
+
+#~ msgid "Site Key"
+#~ msgstr "साइट कुंजी"
+
+#~ msgid "Secret Key"
+#~ msgstr "गुप्त कुंजी"
+
+#~ msgid "WP MAIL"
+#~ msgstr "WP मेल"
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "SMTP Host"
+#~ msgstr "SMTP होस्ट"
+
+#~ msgid "For Gmail your email password use as SMTP Password."
+#~ msgstr "Gmail के लिए आपके ईमेल पासवर्ड का उपयोग SMTP पासवर्ड के रूप में करें।"
+
+#~ msgid "TLS"
+#~ msgstr "TLS"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "SMTP Port"
+#~ msgstr "SMTP पोर्ट"
+
+#~ msgid "New Lead Captured by Form ID"
+#~ msgstr "फ़ॉर्म आईडी द्वारा नई लीड कैप्चर की गई"

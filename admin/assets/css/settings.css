@@ -1,0 +1,564 @@
+/**
+ * Lead Generation Form - Settings View Styles
+ * Scoped cleanly under .wlgf-admin-wrap with zero !important rules
+ */
+
+/* Sticky Page Header (Global Settings) */
+.wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+.wlgf-header--sticky {
+    position: sticky;
+    top: 32px;
+    z-index: 900;
+    background: var(--wlgf-surface, #ffffff);
+    transition: border-radius 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.admin-bar .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+body.admin-bar .wlgf-header--sticky {
+    top: 32px;
+}
+
+body:not(.admin-bar) .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+body:not(.admin-bar) .wlgf-header--sticky {
+    top: 0;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+    body.admin-bar .wlgf-header--sticky {
+        top: 46px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body.admin-bar .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+    body.admin-bar .wlgf-header--sticky {
+        top: 0;
+    }
+}
+
+.wlgf-admin-wrap .wlgf-header.wlgf-header--sticky.wlgf-header--is-stuck,
+.wlgf-header--sticky.wlgf-header--is-stuck {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top-color: transparent !important;
+    box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.wlgf-admin-wrap .wlgf-tabs-nav {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--wlgf-border);
+    margin-bottom: 24px;
+}
+
+.wlgf-admin-wrap .wlgf-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--wlgf-text-muted);
+    cursor: pointer;
+    transition: all var(--wlgf-transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wlgf-admin-wrap .wlgf-tab-btn:hover {
+    color: var(--wlgf-primary);
+}
+
+.wlgf-admin-wrap .wlgf-tab-btn--active {
+    color: var(--wlgf-primary);
+    border-bottom-color: var(--wlgf-primary);
+}
+
+.wlgf-admin-wrap .wlgf-tab-content {
+    display: none;
+}
+
+.wlgf-admin-wrap .wlgf-tab-content--active {
+    display: block;
+}
+
+/* Danger Zone / Factory Reset Card */
+.wlgf-card--danger-zone {
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.05);
+}
+
+.wlgf-card--danger-zone .wlgf-card__header {
+    background: rgba(254, 242, 242, 0.6);
+    border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.wlgf-reset-backup-notice {
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.wlgf-reset-backup-notice i.fa-triangle-exclamation {
+    color: #d97706;
+    font-size: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.wlgf-reset-backup-notice__text {
+    flex: 1;
+    font-size: 13.5px;
+    color: #92400e;
+    line-height: 1.55;
+}
+
+.wlgf-reset-backup-notice__link {
+    color: #b45309;
+    font-weight: 700;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color var(--wlgf-transition-fast);
+}
+
+.wlgf-reset-backup-notice__link:hover {
+    color: #78350f;
+    text-decoration: underline;
+}
+
+/* Email Template Designer & Branding */
+.wlgf-logo-preview-box {
+    background: #f8fafc;
+    border: 1px dashed var(--wlgf-border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+}
+
+.wlgf-logo-preview-box img {
+    max-height: 48px;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+.wlgf-btn--danger-outline {
+    background: transparent;
+    color: var(--wlgf-danger);
+    border: 1px solid var(--wlgf-danger);
+}
+
+.wlgf-btn--danger-outline:hover {
+    background: var(--wlgf-danger);
+    color: #ffffff;
+}
+
+.wlgf-color-code {
+    font-family: monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.wlgf-color-picker {
+    cursor: pointer;
+    border: 1px solid var(--wlgf-border);
+    border-radius: 6px;
+    padding: 2px;
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+}
+
+/* Email Template Live Preview Modal */
+.wlgf-email-preview-modal-dialog {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    animation: wlgfModalZoom 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wlgf-preview-size-btn--active {
+    background: var(--wlgf-primary) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Submission Confirmation Card Styles (Admin & Preview)
+   ========================================================================== */
+
+.wlgf-conf-preview-container {
+    background: #f8fafc;
+    min-height: 380px;
+    padding: 36px 24px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0 0 12px 12px;
+    box-sizing: border-box;
+}
+
+.wlgf-conf-preview-wrapper {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.wlgf-conf-preview-note {
+    font-size: 12.5px;
+    color: #64748b;
+    text-align: center;
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+    width: 100%;
+    max-width: 520px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.wlgf-confirmation-card {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 12px 0;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: var(--wlgf-conf-bg, #f0fdf4);
+    border: 1.5px solid var(--wlgf-conf-border, #86efac);
+}
+
+.wlgf-confirmation--animated {
+    animation: wlgfCardFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes wlgfCardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Style: Modern Centered Card (Default) */
+.wlgf-confirmation--modern-card {
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.12), 0 8px 10px -6px rgba(16, 185, 129, 0.08);
+}
+
+.wlgf-confirmation--modern-card .wlgf-confirmation-badge {
+    margin-bottom: 14px;
+}
+
+/* Style: Left-Accent Banner */
+.wlgf-confirmation--banner {
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 18px;
+    border-left: 5px solid var(--wlgf-conf-icon, #16a34a);
+    box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.05);
+}
+
+.wlgf-confirmation--banner .wlgf-confirmation-badge {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+/* Style: Minimal Inline Pill */
+.wlgf-confirmation--minimal-pill {
+    border-radius: 9999px;
+    padding: 12px 24px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.wlgf-confirmation--minimal-pill .wlgf-confirmation-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.wlgf-confirmation--minimal-pill .wlgf-confirmation-title {
+    display: inline;
+    margin-right: 6px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.wlgf-confirmation--minimal-pill .wlgf-confirmation-desc {
+    display: inline;
+    font-size: 14px;
+}
+
+/* Style: Glassmorphism Blur Card */
+.wlgf-confirmation--glassmorphism {
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.09);
+    border: 1.5px solid var(--wlgf-conf-border, #86efac);
+}
+
+/* Badge & Icon */
+.wlgf-confirmation-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--wlgf-conf-icon-bg, #dcfce7);
+    color: var(--wlgf-conf-icon, #16a34a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    line-height: 1;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.18);
+    transition: transform 0.2s ease;
+}
+
+.wlgf-confirmation--animated .wlgf-confirmation-badge {
+    animation: wlgfBadgePop 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes wlgfBadgePop {
+    0% {
+        transform: scale(0) rotate(-25deg);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.15) rotate(4deg);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.95) rotate(-2deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+/* Typography */
+.wlgf-confirmation-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--wlgf-conf-heading, #14532d);
+    margin: 0 0 6px 0;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+}
+
+.wlgf-confirmation-desc {
+    font-size: 14.5px;
+    font-weight: 400;
+    color: var(--wlgf-conf-text, #166534);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.wlgf-confirmation-desc p {
+    margin: 0 0 6px 0;
+}
+
+.wlgf-confirmation-desc p:last-child {
+    margin-bottom: 0;
+}
+
+.wlgf-confirmation-desc a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Email List & Blacklist Code-like Input Formatting */
+#blacklist_emails,
+#blacklist_domains,
+#cc_admin_emails {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+}
+
+
+
+
+
+/* Quick Add Domain Chips */
+.wlgf-chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+    align-items: center;
+}
+.wlgf-chip-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    font-weight: 600;
+    margin-right: 4px;
+}
+.wlgf-chip-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #2563eb;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+.wlgf-chip-btn:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+/* Ensure clean vertical spacing between stacked form groups in settings cards */
+.wlgf-admin-wrap .wlgf-card__body > .wlgf-form-group {
+    margin-bottom: 20px;
+}
+
+.wlgf-admin-wrap .wlgf-card__body > .wlgf-form-group:last-child {
+    margin-bottom: 0;
+}
+
+.wlgf-admin-wrap .wlgf-card__body .wlgf-grid > .wlgf-form-group,
+.wlgf-admin-wrap .wlgf-card__body .wlgf-grid--2 > .wlgf-form-group,
+.wlgf-admin-wrap .wlgf-card__body .wlgf-grid--2col > .wlgf-form-group {
+    margin-bottom: 0;
+}
+
+/* Range Slider Styling */
+.wlgf-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 9999px;
+    background: #e2e8f0;
+    outline: none;
+    transition: background 0.2s ease;
+}
+
+.wlgf-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--wlgf-primary, #2563eb);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.wlgf-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.wlgf-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--wlgf-primary, #2563eb);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Payment Gateway Card Header & Toggle Switch Alignment */
+.wlgf-payment-card-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 12px 16px !important;
+    padding: 16px 22px !important;
+    background: var(--wlgf-surface-subtle, #f8fafc) !important;
+    border-bottom: 1px solid var(--wlgf-border, #e2e8f0) !important;
+}
+
+.wlgf-payment-card-header .wlgf-card__title {
+    margin: 0 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: var(--wlgf-text-main, #0f172a) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.wlgf-toggle-wrap {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+}
+
+.wlgf-toggle-label {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: var(--wlgf-text-main, #0f172a) !important;
+    user-select: none !important;
+    line-height: 1 !important;
+}
+
+/* Utility Flex Classes */
+.wlgf-d-flex {
+    display: flex !important;
+}
+.wlgf-justify-between {
+    justify-content: space-between !important;
+}
+.wlgf-align-center,
+.wlgf-items-center {
+    align-items: center !important;
+}
+
+

@@ -1,0 +1,229 @@
+/**
+ * Lead Generation Form - Manage Forms View Styles
+ * All core styles are handled via wlgf-admin-ui.css
+ */
+
+.wlgf-admin-wrap table.dataTable td.dt-type-numeric,
+.wlgf-admin-wrap table.dataTable th.dt-type-numeric,
+.wlgf-admin-wrap table.dataTable td.dt-type-date,
+.wlgf-admin-wrap table.dataTable th.dt-type-date {
+	text-align: left !important;
+}
+
+.wlgf-date-cell {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: flex-start !important;
+	text-align: left !important;
+	gap: 2px;
+	line-height: 1.35;
+	min-width: 110px;
+}
+
+.wlgf-date-main {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px;
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--wlgf-text-main, #0f172a);
+	white-space: nowrap;
+	text-align: left !important;
+}
+
+.wlgf-date-main i {
+	font-size: 11px;
+	color: var(--wlgf-text-muted, #64748b);
+}
+
+.wlgf-date-sub {
+	display: inline-block !important;
+	font-size: 11px;
+	color: var(--wlgf-text-subtle, #94a3b8);
+	padding-left: 17px !important;
+	white-space: nowrap;
+	text-align: left !important;
+}
+
+/* Clone Confirmation Modal Styles */
+.wlgf-clone-modal-card {
+	max-width: 520px !important;
+	border-radius: 14px !important;
+	box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(15, 23, 42, 0.08) !important;
+	overflow: hidden;
+}
+
+.wlgf-clone-modal__header {
+	padding: 18px 22px !important;
+	background: #ffffff !important;
+	border-bottom: 1px solid var(--wlgf-border, #e2e8f0) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+}
+
+.wlgf-clone-modal__header-left {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.wlgf-clone-modal__icon-wrap {
+	width: 42px;
+	height: 42px;
+	border-radius: 10px;
+	background: rgba(16, 185, 129, 0.12);
+	color: #059669;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 19px;
+	flex-shrink: 0;
+}
+
+.wlgf-clone-modal__subtitle {
+	display: block;
+	font-size: 12px;
+	color: var(--wlgf-text-muted, #64748b);
+	margin-top: 2px;
+}
+
+.wlgf-clone-modal-close-btn {
+	background: transparent;
+	border: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 6px;
+	color: var(--wlgf-text-muted, #64748b);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	transition: background 0.15s ease, color 0.15s ease;
+}
+
+.wlgf-clone-modal-close-btn:hover {
+	background: var(--wlgf-surface-subtle, #f1f5f9);
+	color: var(--wlgf-text-main, #0f172a);
+}
+
+.wlgf-clone-modal__body {
+	padding: 22px !important;
+	background: #ffffff !important;
+}
+
+.wlgf-clone-info-card {
+	background: #f8fafc;
+	border: 1px solid var(--wlgf-border, #e2e8f0);
+	border-radius: 10px;
+	padding: 14px 16px;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.wlgf-clone-info-row {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.wlgf-clone-info-label {
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--wlgf-text-muted, #64748b);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.wlgf-clone-name-display {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	color: var(--wlgf-text-main, #0f172a);
+	word-break: break-word;
+}
+
+.wlgf-clone-shortcode-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #ffffff;
+	border: 1px solid var(--wlgf-border, #cbd5e1);
+	border-radius: 8px;
+	padding: 6px 8px 6px 12px;
+	gap: 10px;
+}
+
+.wlgf-clone-shortcode-box code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: 13px;
+	font-weight: 600;
+	color: #2563eb;
+	background: none;
+	padding: 0;
+	user-select: all;
+}
+
+#wlgf-clone-modal-copy-btn {
+	white-space: nowrap;
+	font-size: 12px;
+	gap: 6px;
+	transition: all 0.2s ease;
+}
+
+#wlgf-clone-modal-copy-btn.copied {
+	background: #059669 !important;
+	color: #ffffff !important;
+	border-color: #059669 !important;
+}
+
+.wlgf-clone-modal__tip {
+	font-size: 12px !important;
+	padding: 10px 14px !important;
+	border-radius: 8px !important;
+	line-height: 1.4 !important;
+	margin: 0 !important;
+	display: flex !important;
+	align-items: flex-start !important;
+	gap: 10px !important;
+}
+
+.wlgf-clone-modal__tip i {
+	margin-top: 2px;
+	flex-shrink: 0;
+}
+
+.wlgf-clone-modal__footer {
+	padding: 14px 22px !important;
+	background: #f8fafc !important;
+	border-top: 1px solid var(--wlgf-border, #e2e8f0) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: flex-end !important;
+	gap: 10px !important;
+}
+
+/* Row Highlight Animation */
+@keyframes wlgfRowPulse {
+	0% {
+		background-color: rgba(59, 130, 246, 0.22);
+	}
+	50% {
+		background-color: rgba(59, 130, 246, 0.1);
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
+.wlgf-row--highlighted > td {
+	animation: wlgfRowPulse 3.5s ease-out forwards !important;
+}

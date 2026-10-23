@@ -1,0 +1,2078 @@
+/**
+ * Lead Generation Form - Modernized Form Generator & Builder Styles
+ * Scoped cleanly under .wlgf-admin-wrap and document body with zero !important rules
+ */
+
+.wlgf-admin-wrap .form-wrap label {
+    display: inline-block;
+}
+
+.wlgf-admin-wrap .hidden-field {
+    display: unset;
+}
+
+/* ==========================================================================
+   0. Sticky Page Header (Form Generator)
+   ========================================================================== */
+
+.wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+.wlgf-header--sticky {
+    position: sticky;
+    top: 32px;
+    z-index: 900;
+    background: var(--wlgf-surface, #ffffff);
+    transition: border-radius 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.admin-bar .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+body.admin-bar .wlgf-header--sticky {
+    top: 32px;
+}
+
+body:not(.admin-bar) .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+body:not(.admin-bar) .wlgf-header--sticky {
+    top: 0;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+    body.admin-bar .wlgf-header--sticky {
+        top: 46px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body.admin-bar .wlgf-admin-wrap .wlgf-header.wlgf-header--sticky,
+    body.admin-bar .wlgf-header--sticky {
+        top: 0;
+    }
+}
+
+.wlgf-admin-wrap .wlgf-header.wlgf-header--sticky.wlgf-header--is-stuck,
+.wlgf-header--sticky.wlgf-header--is-stuck {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top-color: transparent !important;
+    box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* ==========================================================================
+   1. Builder Main Workspace & Canvas Layout
+   ========================================================================== */
+
+.wlgf-admin-wrap .wlgf-builder-canvas {
+    background: var(--wlgf-surface);
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-lg);
+    padding: 24px;
+    box-shadow: var(--wlgf-shadow-sm);
+    margin-bottom: 24px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .stage-wrap {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    float: none;
+}
+
+/* ==========================================================================
+   2. Sidebar Field Control Palette (.cb-wrap)
+   ========================================================================== */
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap {
+    width: 290px;
+    flex-shrink: 0;
+    margin-left: 0;
+    float: none;
+    background: var(--wlgf-surface-subtle);
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-lg);
+    padding: 14px 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.wlgf-admin-wrap .wlgf-palette-search-wrap {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.wlgf-admin-wrap .wlgf-palette-search-wrap i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--wlgf-text-muted);
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.wlgf-admin-wrap .wlgf-palette-search-wrap input.wlgf-palette-search-input,
+.wlgf-admin-wrap .wlgf-palette-search-input {
+    width: 100%;
+    height: 38px;
+    line-height: 20px;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-md);
+    font-size: 13px;
+    background: #ffffff;
+    color: var(--wlgf-text-main);
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wlgf-admin-wrap .wlgf-palette-search-wrap input.wlgf-palette-search-input:focus,
+.wlgf-admin-wrap .wlgf-palette-search-input:focus {
+    border-color: var(--wlgf-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li {
+    background: #ffffff;
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-md);
+    padding: 9px 13px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--wlgf-text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: grab;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    float: none;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li.wlgf-field-hidden,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li.wlgf-field-hidden,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li.wlgf-field-hidden {
+    display: none;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap {
+    --wlgf-primary: #2563eb;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li:hover,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li:hover,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li:hover {
+    border-color: #2563eb;
+    background: #ffffff;
+    color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li:active,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li:active,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li i,
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li span.icon,
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li[class*="formbuilder-icon-"]::before,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li i,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li span.icon,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li[class*="formbuilder-icon-"]::before,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li i,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li span.icon,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li[class*="formbuilder-icon-"]::before {
+    color: #2563eb;
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li > span:not(.wlgf-palette-pro-pill),
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li > span:not(.wlgf-palette-pro-pill),
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li > span:not(.wlgf-palette-pro-pill) {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap ul li .wlgf-palette-pro-pill,
+.wlgf-admin-wrap .form-wrap.form-builder ul.frmb-control li .wlgf-palette-pro-pill,
+.wlgf-admin-wrap .form-wrap.form-builder ul.form-fields li .wlgf-palette-pro-pill {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Sidebar Actions & Clear Button */
+.wlgf-admin-wrap .form-wrap.form-builder .cb-wrap .form-actions {
+    float: none;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--wlgf-border);
+    width: 100%;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .form-actions button.clear-all {
+    width: 100%;
+    background: #ffffff;
+    color: var(--wlgf-danger);
+    border: 1px solid #fecaca;
+    border-radius: var(--wlgf-radius-md);
+    font-weight: 600;
+    font-size: 13px;
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: 0 1px 2px rgba(220, 38, 38, 0.05);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .form-actions button.clear-all:hover {
+    background: var(--wlgf-danger);
+    color: #ffffff;
+    border-color: var(--wlgf-danger);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* ==========================================================================
+   3. Canvas Dropzone & Field Cards (.frmb)
+   ========================================================================== */
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb {
+    min-height: 420px;
+    padding: 14px;
+    border-radius: var(--wlgf-radius-lg);
+    background: var(--wlgf-surface-subtle);
+    border: 2px dashed #cbd5e1;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 12px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb.empty-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb.empty-stage::after {
+    content: "Drag & drop fields here from the right sidebar to construct your form";
+    color: var(--wlgf-text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field {
+    background: #ffffff;
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-lg);
+    padding: 16px 20px;
+    margin: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    clear: none;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.wlgf-canvas-col-12 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.wlgf-canvas-col-6 {
+    width: calc(50% - 6px);
+    flex: 0 0 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.wlgf-canvas-col-4 {
+    width: calc(33.333% - 8px);
+    flex: 0 0 calc(33.333% - 8px);
+    max-width: calc(33.333% - 8px);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.wlgf-canvas-col-3 {
+    width: calc(25% - 9px);
+    flex: 0 0 calc(25% - 9px);
+    max-width: calc(25% - 9px);
+}
+
+/* Quick Column Switcher Bar (Removed from Canvas Header) */
+.wlgf-field-col-bar {
+    display: none !important;
+}
+
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .ui-sortable-placeholder,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .frmb-placeholder {
+    box-sizing: border-box;
+    margin: 0;
+    border: 2px dashed #3b82f6;
+    border-radius: var(--wlgf-radius-lg);
+    background: #eff6ff;
+    min-height: 80px;
+}
+
+/* Custom Field Canvas Previews */
+.wlgf-preview-divider {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.wlgf-preview-divider hr.wlgf-form-divider {
+    border: 0;
+    border-top: 2px dashed #cbd5e1;
+    margin: 4px 0;
+}
+
+.wlgf-preview-terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--wlgf-text-main);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field:hover {
+    border-color: var(--wlgf-primary-light);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.editing {
+    border-color: var(--wlgf-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Field Action Toolbar */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--wlgf-surface-muted);
+    border: 1px solid var(--wlgf-border);
+    border-radius: 20px;
+    padding: 3px 6px;
+    z-index: 5;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions .btn,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions a {
+    border: none;
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-size: 11px;
+    color: var(--wlgf-text-muted);
+    text-decoration: none;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions .del-button:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions a.del-button:hover {
+    background: #fee2e2;
+    color: var(--wlgf-danger);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions .copy-button:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions a.copy-button:hover {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions .edit-button:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions a.edit-button:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-actions .toggle-form:hover {
+    background: #dbeafe;
+    color: var(--wlgf-primary);
+}
+
+/* Field Preview Elements */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder {
+    padding-top: 4px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder label {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--wlgf-text-main);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .form-control,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb select {
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    line-height: normal !important;
+    padding: 0 34px 0 12px !important;
+    vertical-align: middle !important;
+}
+
+/* Field Settings Drawer */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements {
+    background: var(--wlgf-surface-subtle);
+    border-top: 1px solid var(--wlgf-border);
+    margin: 16px -20px -16px -20px;
+    padding: 20px 22px 26px 22px;
+    border-radius: 0 0 var(--wlgf-radius-lg) var(--wlgf-radius-lg);
+    position: relative;
+}
+
+/* Modern Pill Button Styles for Field Style Group & Precise Left Alignment */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap {
+    display: flex !important;
+    align-items: center !important;
+    clear: both !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap label {
+    float: none !important;
+    width: 16.6667% !important;
+    min-width: 93.3px !important;
+    max-width: 93.3px !important;
+    text-align: right !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group {
+    flex: 1 !important;
+    margin: 0 0 0 11.2px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 4px 11px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    line-height: 1.4;
+    outline: none;
+    margin: 0;
+    border: 1px solid transparent;
+    text-shadow: none;
+    box-shadow: none;
+    height: auto;
+    min-height: 26px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-default {
+    background: #f1f5f9;
+    color: #475569;
+    border-color: #cbd5e1;
+}
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-default:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-default.selected {
+    background: #334155;
+    color: #ffffff;
+    border-color: #334155;
+    box-shadow: 0 2px 6px rgba(51, 65, 85, 0.25);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-danger {
+    background: #fef2f2;
+    color: #dc2626;
+    border-color: #fecaca;
+}
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-danger:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-danger.selected {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+    box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-info {
+    background: #f0f9ff;
+    color: #0284c7;
+    border-color: #bae6fd;
+}
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-info:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-info.selected {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-primary {
+    background: #eff6ff;
+    color: #2563eb;
+    border-color: #bfdbfe;
+}
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-primary:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-primary.selected {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-success {
+    background: #f0fdf4;
+    color: #16a34a;
+    border-color: #bbf7d0;
+}
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-success:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-success.selected {
+    background: #16a34a;
+    color: #ffffff;
+    border-color: #16a34a;
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-warning {
+    background: #fffbeb;
+    color: #d97706;
+    border-color: #fde68a;
+}
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-warning:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.btn-warning.selected {
+    background: #d97706;
+    color: #ffffff;
+    border-color: #d97706;
+    box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .style-wrap .btn-group .btn.selected {
+    transform: translateY(-1px);
+}
+
+/* Modern Floating & Centered Close Button with proper breathing spacing */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements a.close-field {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: auto !important;
+    margin-top: 18px !important;
+    margin-bottom: 2px !important;
+    padding: 6px 20px !important;
+    background: #ffffff !important;
+    color: #475569 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.15s ease !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements a.close-field:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    border-color: #94a3b8 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    transform: translateX(-50%) translateY(-1px) !important;
+}
+
+/* Ultra-Modern Flatpickr Calendar Theme (Replaces Retro OS Datepicker) */
+.flatpickr-calendar {
+    background: #ffffff !important;
+    border-radius: 14px !important;
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.06) !important;
+    border: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    padding: 12px !important;
+    width: 315px !important;
+    z-index: 999999 !important;
+    animation: wlgfFadeDown 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.flatpickr-calendar.arrowTop:before, .flatpickr-calendar.arrowTop:after,
+.flatpickr-calendar.arrowBottom:before, .flatpickr-calendar.arrowBottom:after {
+    border: none !important;
+}
+.flatpickr-months {
+    align-items: center !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    margin-bottom: 8px !important;
+}
+.flatpickr-months .flatpickr-month {
+    height: 34px !important;
+    color: #0f172a !important;
+}
+.flatpickr-current-month {
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    padding-top: 4px !important;
+    color: #0f172a !important;
+}
+.flatpickr-current-month .numInputWrapper {
+    font-weight: 700 !important;
+}
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    padding: 6px !important;
+    border-radius: 8px !important;
+    color: #64748b !important;
+    transition: all 0.15s ease !important;
+    height: 32px !important;
+    width: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+span.flatpickr-weekday {
+    color: #94a3b8 !important;
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+.flatpickr-day {
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #1e293b !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    max-width: 36px !important;
+    margin: 2px !important;
+    transition: all 0.15s ease !important;
+    border: 1px solid transparent !important;
+}
+.flatpickr-day:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    border-color: #e2e8f0 !important;
+}
+.flatpickr-day.today {
+    border-color: #6366f1 !important;
+    color: #4f46e5 !important;
+    font-weight: 700 !important;
+}
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover {
+    background: #4f46e5 !important;
+    color: #ffffff !important;
+    border-color: #4f46e5 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35) !important;
+}
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    color: #cbd5e1 !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .form-group {
+    margin-bottom: 12px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements label {
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--wlgf-text-main);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements input,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Custom Dropdown Chevron / Caret Icon for all Builder Select Elements */
+.wlgf-admin-wrap .form-wrap.form-builder select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .fld-column_width,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .column_width-wrap select,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: #ffffff !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23475569' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+    background-position: right 10px center !important;
+    background-repeat: no-repeat !important;
+    background-size: 16px 16px !important;
+    padding-right: 34px !important;
+    cursor: pointer !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    line-height: 36px !important;
+    border: 1px solid var(--wlgf-border, #cbd5e1) !important;
+    border-radius: var(--wlgf-radius-sm, 6px) !important;
+    color: var(--wlgf-text-main, #0f172a) !important;
+    font-size: 13.5px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder select:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb select:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements select:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .fld-column_width:hover {
+    border-color: #94a3b8 !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%230f172a' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder select:focus,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb select:focus,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements select:focus,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements .fld-column_width:focus {
+    border-color: var(--wlgf-primary, #2563eb) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+    outline: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%232563eb' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E") !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder select[multiple],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb select[multiple],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .form-elements select[multiple] {
+    background-image: none !important;
+    padding-right: 12px !important;
+    height: auto !important;
+    min-height: auto !important;
+    appearance: auto !important;
+    -webkit-appearance: auto !important;
+}
+
+/* ==========================================================================
+   Field Options & Choices UI (Select, Radio-Group, Checkbox-Group)
+   ========================================================================== */
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-options {
+    background: #f8fafc;
+    border: 1px solid var(--wlgf-border, #e2e8f0);
+    border-radius: 8px;
+    padding: 12px 14px 10px 14px;
+    margin: 12px 0 16px 0;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-heading {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--wlgf-text-main, #0f172a);
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-toggle-values-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    margin: 0;
+    user-select: none;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-toggle-values-wrap input[type="checkbox"] {
+    width: 15px !important;
+    height: 15px !important;
+    min-height: 15px !important;
+    max-height: 15px !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-toggle-values-wrap:hover {
+    color: var(--wlgf-primary, #2563eb);
+}
+
+/* Options Table Column Headers */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-table-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px 6px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    box-sizing: border-box;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-table-header .wlgf-opt-th-default {
+    width: 20px;
+    min-width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-table-header .wlgf-opt-th-label {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-table-header .wlgf-opt-th-value {
+    flex: 1 1 0;
+    min-width: 0;
+    display: none;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-options.wlgf-show-values .wlgf-options-table-header .wlgf-opt-th-value {
+    display: block;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .wlgf-options-table-header .wlgf-opt-th-action {
+    width: 24px;
+    min-width: 24px;
+    flex-shrink: 0;
+}
+
+/* Sortable Options List */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options-wrap {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    background: transparent !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options > li {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--wlgf-border, #e2e8f0) !important;
+    border-radius: 6px !important;
+    padding: 6px 10px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.15s ease !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options > li:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Radio or Checkbox in each option */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options .option-selected {
+    width: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+    height: 18px !important;
+    min-height: 18px !important;
+    max-height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+}
+
+/* Inputs: Option Label and Option Value */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options input[type="text"].option-label {
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    line-height: 34px !important;
+    padding: 0 10px !important;
+    font-size: 13px !important;
+    color: var(--wlgf-text-main, #0f172a) !important;
+    background: #ffffff !important;
+    border: 1px solid var(--wlgf-border, #e2e8f0) !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    transition: border-color 0.15s ease !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options input[type="text"].option-value {
+    display: none !important;
+    flex: 1 1 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    line-height: 34px !important;
+    padding: 0 10px !important;
+    font-size: 13px !important;
+    color: #475569 !important;
+    background: #f8fafc !important;
+    border: 1px solid var(--wlgf-border, #e2e8f0) !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    transition: border-color 0.15s ease !important;
+}
+
+/* When Separate Values is enabled */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .field-options.wlgf-show-values .sortable-options input[type="text"].option-value {
+    display: inline-block !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options input[type="text"].option-label:focus,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options input[type="text"].option-value:focus {
+    border-color: var(--wlgf-primary, #2563eb) !important;
+    background: #ffffff !important;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15) !important;
+    outline: none !important;
+}
+
+/* Remove button */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options > li .remove {
+    position: static !important;
+    float: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    height: 24px !important;
+    border-radius: 4px !important;
+    color: #ef4444 !important;
+    background: transparent !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    transition: all 0.15s ease !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .sortable-options > li .remove:hover {
+    background-color: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+/* Option Actions (Add Option +) */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .option-actions {
+    margin-top: 10px;
+    padding-top: 6px;
+    text-align: right;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .option-actions a.add,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .option-actions a.add-opt {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--wlgf-primary, #2563eb) !important;
+    color: var(--wlgf-primary, #2563eb) !important;
+    font-size: 12.5px !important;
+    font-weight: 600 !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.15s ease !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .option-actions a.add:hover,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .option-actions a.add-opt:hover {
+    background: var(--wlgf-primary, #2563eb) !important;
+    color: #ffffff !important;
+    border-color: var(--wlgf-primary, #2563eb) !important;
+}
+
+/* ==========================================================================
+   4. Custom Field Badges & Previews (Multi-Step, Calculation, Ratings)
+   ========================================================================== */
+
+/* Step Break Card (PRO-002) */
+.wlgf-admin-wrap .frmb .step-break-field,
+.wlgf-admin-wrap .wlgf-step-break {
+    background: #f0f9ff;
+    border: 1px dashed #0284c7;
+    border-radius: var(--wlgf-radius-md);
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #0369a1;
+    margin: 12px 0;
+}
+
+/* Star Rating Preview (PRO-004) */
+.wlgf-preview-stars {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+}
+
+.wlgf-preview-stars label {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wlgf-text-main, #1e293b);
+    margin-bottom: 6px;
+}
+
+.wlgf-preview-stars .wlgf-stars-display,
+.frmb .wlgf-preview-stars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 20px;
+    color: var(--wlgf-warning, #f59e0b);
+}
+
+/* NPS Matrix Preview (PRO-004) */
+.wlgf-preview-nps {
+    padding: 8px 0;
+}
+
+.wlgf-nps-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.wlgf-nps-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--wlgf-radius-sm);
+    border: 1px solid var(--wlgf-border);
+    background: var(--wlgf-surface);
+    color: var(--wlgf-text-main);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Calculation / Price Estimator Field (PRO-015) */
+.wlgf-admin-wrap .frmb .calculation-field,
+.wlgf-admin-wrap .wlgf-calculation-field {
+    background: var(--wlgf-surface-subtle);
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-md);
+    padding: 12px;
+}
+
+.wlgf-preview-calc {
+    padding: 6px 0;
+}
+
+.wlgf-calc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--wlgf-surface-muted);
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-sm);
+    font-weight: 700;
+    color: var(--wlgf-text-main);
+    font-size: 14px;
+}
+
+.wlgf-calc-val {
+    color: var(--wlgf-primary);
+    font-size: 16px;
+}
+
+/* Condition Builder Styles (PRO-001) */
+.wlgf-condition-card {
+    background: var(--wlgf-surface-subtle);
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-md);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.wlgf-condition-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--wlgf-border);
+}
+
+.wlgf-condition-rule-row {
+    display: grid;
+    grid-template-columns: 1fr 140px 1fr auto;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.wlgf-rule-logic-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    border-radius: var(--wlgf-radius-xs);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: var(--wlgf-primary-light);
+    color: var(--wlgf-primary);
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   5. FormBuilder Modal Dialog & Confirmation Overlay (Compact & Scrollbar-Free)
+   ========================================================================== */
+
+body .form-builder-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: 100050;
+    display: none;
+}
+
+body .form-builder-overlay.visible {
+    display: block;
+}
+
+body .form-builder-dialog,
+body .form-builder-dialog.positioned,
+div.form-builder-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    width: 290px;
+    min-width: 260px;
+    max-width: 320px;
+    height: auto;
+    max-height: none;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #1e293b;
+    line-height: 1.4;
+    z-index: 100060;
+    box-sizing: border-box;
+}
+
+body .form-builder-dialog::-webkit-scrollbar,
+body .form-builder-dialog.positioned::-webkit-scrollbar,
+div.form-builder-dialog::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+body .form-builder-dialog.positioned .button-wrap::before,
+body .form-builder-dialog .button-wrap::before {
+    display: none;
+    content: none;
+}
+
+body .form-builder-dialog h3,
+body .form-builder-dialog div:first-child {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.4;
+    margin: 0;
+    display: block;
+}
+
+body .form-builder-dialog .button-wrap,
+body .form-builder-dialog.positioned .button-wrap {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    float: none;
+    position: static;
+}
+
+body .form-builder-dialog .button-wrap button,
+body .form-builder-dialog.positioned .button-wrap button {
+    min-width: 68px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12.5px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    margin: 0;
+}
+
+/* Cancel / "No" button */
+body .form-builder-dialog .button-wrap button.no,
+body .form-builder-dialog.positioned .button-wrap button.no {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+}
+
+body .form-builder-dialog .button-wrap button.no:hover,
+body .form-builder-dialog.positioned .button-wrap button.no:hover {
+    background: #f8fafc;
+    color: #0f172a;
+    border-color: #94a3b8;
+}
+
+/* Confirm / "Yes" button */
+body .form-builder-dialog .button-wrap button.yes,
+body .form-builder-dialog.positioned .button-wrap button.yes {
+    border: 1px solid #dc2626;
+    background: #dc2626;
+    color: #ffffff;
+}
+
+body .form-builder-dialog .button-wrap button.yes:hover,
+body .form-builder-dialog.positioned .button-wrap button.yes:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+}
+
+/* ==========================================================================
+   Theme Styler & Settings Accordion Column Spacing
+   ========================================================================== */
+.wlgf-admin-wrap .wlgf-collapsible__body .wlgf-grid--2col {
+    column-gap: 40px;
+    row-gap: 22px;
+}
+
+.wlgf-admin-wrap .wlgf-collapsible__body .wlgf-grid--2col .wlgf-form-group {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Template Modal Search Bar Icon & Input Spacing
+   ========================================================================== */
+.wlgf-admin-wrap .wlgf-template-search-box input.wlgf-template-search-input,
+.wlgf-admin-wrap .wlgf-template-search-box input[type="text"],
+.wlgf-admin-wrap input#wlgf-template-search-input {
+    padding-left: 40px;
+}
+
+/* ==========================================================================
+   Save & Update Button Feedback Animations & States
+   ========================================================================== */
+@keyframes wlgfButtonShake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.wlgf-btn--shake {
+    animation: wlgfButtonShake 0.4s ease-in-out;
+}
+
+.wlgf-admin-wrap .wlgf-input.wlgf-input--error {
+    border-color: var(--wlgf-danger);
+    box-shadow: 0 0 0 1px var(--wlgf-danger);
+}
+
+/* ==========================================================================
+   Template Library Eye-Catching Highlight Button & Callout Banner
+   ========================================================================== */
+@keyframes wlgfTemplatePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.55), 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(99, 102, 241, 0), 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0), 0 4px 12px rgba(99, 102, 241, 0.25);
+    }
+}
+
+@keyframes wlgfSparkleTwinkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+    50% { transform: scale(1.25) rotate(15deg); opacity: 1; filter: drop-shadow(0 0 4px #ffd700); }
+}
+
+.wlgf-admin-wrap .wlgf-btn--templates-highlight {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+    color: #ffffff !important;
+    border: 1px solid #4338ca !important;
+    font-weight: 600 !important;
+    padding: 8px 16px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    animation: wlgfTemplatePulse 2.5s infinite !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.wlgf-admin-wrap .wlgf-btn--templates-highlight:hover {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45) !important;
+    color: #ffffff !important;
+}
+
+.wlgf-admin-wrap .wlgf-btn--templates-highlight .wlgf-btn-sparkle {
+    display: inline-flex;
+    color: #fef08a;
+    animation: wlgfSparkleTwinkle 2s ease-in-out infinite;
+}
+
+.wlgf-admin-wrap .wlgf-btn--templates-highlight .wlgf-pill-badge {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Template Callout Banner above Form Name */
+.wlgf-admin-wrap .wlgf-templates-callout-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    border: 1px solid #ddd6fe;
+    border-left: 4px solid #7c3aed;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.06);
+    flex-wrap: wrap;
+}
+
+.wlgf-admin-wrap .wlgf-templates-callout-banner__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13.5px;
+    color: #4c1d95;
+    font-weight: 500;
+    flex: 1;
+    min-width: 260px;
+}
+
+.wlgf-admin-wrap .wlgf-templates-callout-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #7c3aed;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(124, 58, 237, 0.25);
+}
+
+.wlgf-admin-wrap .wlgf-open-templates-shortcut-btn {
+    background: #7c3aed !important;
+    border-color: #6d28d9 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(124, 58, 237, 0.25) !important;
+    white-space: nowrap;
+    transition: all 0.2s ease !important;
+}
+
+.wlgf-admin-wrap .wlgf-open-templates-shortcut-btn:hover {
+    background: #6d28d9 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35) !important;
+}
+
+/* ==========================================================================
+   Canvas Field Label Asterisk & Radio/Checkbox Inline Alignment Fixes
+   ========================================================================== */
+
+/* Keep Label and Asterisk (*) on the exact same line */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field .field-label {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: calc(100% - 30px) !important;
+    margin-right: 4px !important;
+    vertical-align: middle !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field .formbuilder-required {
+    display: inline-block !important;
+    color: #ef4444 !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
+    margin-left: 2px !important;
+}
+
+/* Keep Radio circle & Checkbox square aligned horizontally with text on the same line */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .formbuilder-radio,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .formbuilder-checkbox {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .formbuilder-radio input[type="radio"],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .formbuilder-checkbox input[type="checkbox"] {
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    width: 16px !important;
+    height: 16px !important;
+    cursor: pointer !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .formbuilder-radio label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb .prev-holder .formbuilder-checkbox label {
+    display: inline-block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    font-weight: 400 !important;
+    color: var(--wlgf-text-main, #0f172a) !important;
+    line-height: 1.4 !important;
+}
+
+/* Button fields on canvas: hide redundant top label, required asterisk, and tooltip icon */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field > .field-label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .formbuilder-required,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .tooltip-element,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .tooltip,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field [tooltip],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .form-elements .description-wrap {
+    display: none !important;
+}
+
+/* Canvas Tooltip Un-clipping & Modern Tooltip Design */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field {
+    overflow: visible !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .tooltip-element {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 17px !important;
+    height: 17px !important;
+    line-height: 1 !important;
+    border-radius: 50% !important;
+    background: #f1f5f9 !important;
+    color: #64748b !important;
+    border: 1px solid #cbd5e1 !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    margin-left: 6px !important;
+    vertical-align: middle !important;
+    cursor: help !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    position: relative !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder .tooltip-element:hover {
+    background: #4f46e5 !important;
+    color: #ffffff !important;
+    border-color: #4f46e5 !important;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3) !important;
+    transform: scale(1.1) !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder *[tooltip]:hover::after {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    font-weight: 500 !important;
+    width: max-content !important;
+    max-width: 260px !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    bottom: calc(100% + 8px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 999999 !important;
+    letter-spacing: normal !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    pointer-events: none !important;
+}
+
+.wlgf-admin-wrap .form-wrap.form-builder *[tooltip]:hover::before {
+    border-color: #0f172a transparent transparent transparent !important;
+    border-style: solid !important;
+    border-width: 6px 6px 0 6px !important;
+    bottom: calc(100% + 2px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 999999 !important;
+    pointer-events: none !important;
+}
+
+/* Display & Action Fields on Canvas: Hide Redundant Labels, Asterisks, and Tooltips */
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field > .field-label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field > .field-label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field > .field-label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.divider-field > .field-label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.step-break-field > .field-label,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.divider-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.step-break-field .required-asterisk,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .formbuilder-required,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field .formbuilder-required,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field .formbuilder-required,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.divider-field .formbuilder-required,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.step-break-field .formbuilder-required,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .tooltip-element,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field .tooltip-element,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field .tooltip-element,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.divider-field .tooltip-element,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.step-break-field .tooltip-element,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .tooltip,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field .tooltip,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field .tooltip,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field [tooltip],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field [tooltip],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field [tooltip],
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .form-elements .description-wrap,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field .form-elements .description-wrap,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field .form-elements .description-wrap,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.button-field .form-elements .required-wrap,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.header-field .form-elements .required-wrap,
+.wlgf-admin-wrap .form-wrap.form-builder .frmb li.form-field.paragraph-field .form-elements .required-wrap {
+    display: none !important;
+}
+
+/* Live Form Preview Modal Grid Columns */
+.wlgf-form-preview-grid .wlgf-col-12,
+.wlgf-preview-body .wlgf-col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+.wlgf-form-preview-grid .wlgf-col-6,
+.wlgf-preview-body .wlgf-col-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    box-sizing: border-box !important;
+}
+.wlgf-form-preview-grid .wlgf-col-4,
+.wlgf-preview-body .wlgf-col-4 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+    width: 33.333333% !important;
+    box-sizing: border-box !important;
+}
+.wlgf-form-preview-grid .wlgf-col-3,
+.wlgf-preview-body .wlgf-col-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    width: 25% !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 640px) {
+    .wlgf-form-preview-grid .wlgf-col-6,
+    .wlgf-form-preview-grid .wlgf-col-4,
+    .wlgf-form-preview-grid .wlgf-col-3,
+    .wlgf-preview-body .wlgf-col-6,
+    .wlgf-preview-body .wlgf-col-4,
+    .wlgf-preview-body .wlgf-col-3 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* ==========================================================================
+   Responsive Device Switcher (Live Preview Modal)
+   ========================================================================== */
+
+.wlgf-preview-device-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 3px;
+    gap: 2px;
+    margin-left: auto;
+    margin-right: 6px;
+    box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.wlgf-device-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #64748b;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+    box-shadow: none;
+}
+
+.wlgf-device-btn i {
+    font-size: 12px;
+    color: #94a3b8;
+    transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.wlgf-device-btn:hover:not(.active) {
+    color: #1e293b;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.wlgf-device-btn:hover:not(.active) i {
+    color: #475569;
+}
+
+.wlgf-device-btn.active {
+    color: #2563eb;
+    background: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.wlgf-device-btn.active i {
+    color: #2563eb;
+    transform: scale(1.08);
+}
+
+.wlgf-device-btn:focus-visible {
+    outline: 2px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 1px;
+}
+
+/* ==========================================================================
+   Form Builder Tips - Special & Advanced Fields Guide
+   ========================================================================== */
+.wlgf-field-guide-section {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--wlgf-border);
+}
+
+.wlgf-field-guide-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.wlgf-field-guide-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--wlgf-text-main);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wlgf-field-guide-title i {
+    color: #6366f1;
+}
+
+.wlgf-field-guide-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wlgf-field-guide-subtitle {
+    font-size: 13px;
+    color: var(--wlgf-text-muted);
+    margin: 0 0 14px 0;
+    line-height: 1.5;
+}
+
+.wlgf-field-tips-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wlgf-field-tip-item {
+    margin-top: 0 !important;
+    border: 1px solid var(--wlgf-border);
+    border-radius: var(--wlgf-radius-md);
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.wlgf-field-tip-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 3px 8px rgba(15, 23, 42, 0.05);
+}
+
+.wlgf-field-tip-item.wlgf-collapsible--active {
+    border-color: #93c5fd;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+}
+
+.wlgf-field-tip-item .wlgf-collapsible__header {
+    padding: 12px 16px;
+    background: #fafbfd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: inherit;
+    transition: background 0.15s ease;
+}
+
+.wlgf-field-tip-item:hover .wlgf-collapsible__header {
+    background: #f8fafc;
+}
+
+.wlgf-field-tip-item.wlgf-collapsible--active .wlgf-collapsible__header {
+    background: #f1f5f9;
+    border-bottom: 1px solid var(--wlgf-border);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.wlgf-field-tip-item__header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.wlgf-field-tip-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.wlgf-field-tip-icon--star {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.wlgf-field-tip-icon--nps {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.wlgf-field-tip-icon--calc {
+    background: #ede9fe;
+    color: #6366f1;
+}
+
+.wlgf-field-tip-icon--terms {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.wlgf-field-tip-icon--sig {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.wlgf-field-tip-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--wlgf-text-main);
+}
+
+.wlgf-field-tip-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--wlgf-text-main);
+    line-height: 1.55;
+    padding: 16px;
+    background: #ffffff;
+}
+
+.wlgf-field-tip-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.wlgf-field-tip-block strong {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wlgf-field-tip-block p {
+    margin: 0;
+    color: #334155;
+}
+
+.wlgf-field-tip-block ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.wlgf-field-tip-block li {
+    color: #334155;
+}
+
+.wlgf-field-tip-example {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #2563eb;
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+
+.wlgf-field-tip-example__header {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wlgf-field-tip-example p {
+    margin: 0;
+    color: #334155;
+}
+
+.wlgf-field-tip-example code {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    display: inline-block;
+    word-break: break-all;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   PRO Field Protection & Lock Styling (Free Edition)
+   ========================================================================== */
+.cb-wrap ul li.wlgf-palette-pro-locked {
+    position: relative;
+    cursor: pointer !important;
+}
+.cb-wrap ul li.wlgf-palette-pro-locked:hover {
+    border-color: #f59e0b !important;
+    background: #fffbeb !important;
+}
+.wlgf-canvas-field--pro-locked {
+    position: relative;
+    border: 2px dashed #f59e0b !important;
+    background: #fffbeb !important;
+    border-radius: 8px;
+    padding: 12px !important;
+    opacity: 0.95;
+}
+.wlgf-canvas-pro-locked-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #92400e;
+}
+.wlgf-canvas-pro-locked-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.wlgf-canvas-pro-locked-info i {
+    color: #d97706;
+}
+.wlgf-canvas-unlock-pro-btn {
+    flex-shrink: 0;
+}
+
+.wlgf-pro-locked-section fieldset[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    position: relative;
+    user-select: none;
+}
+.wlgf-pro-locked-section fieldset[disabled] * {
+    cursor: not-allowed !important;
+}
+.wlgf-pro-locked-section select:disabled,
+.wlgf-pro-locked-section input:disabled,
+.wlgf-pro-locked-section button:disabled {
+    background: #f1f5f9 !important;
+    border-color: #cbd5e1 !important;
+    color: #94a3b8 !important;
+}

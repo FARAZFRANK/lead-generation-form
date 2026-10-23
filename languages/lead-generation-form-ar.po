@@ -1,0 +1,630 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form\n"
+"POT-Creation-Date: 2024-10-04 15:13+0530\n"
+"PO-Revision-Date: 2024-10-04 15:13+0530\n"
+"Last-Translator: \n"
+"Language-Team: Webenvo.com\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.4\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/dashboard.php:65
+msgid "Total From Created"
+msgstr "الإجمالي من تم إنشاؤه"
+
+#: admin/dashboard.php:67 admin/manage-forms.php:36
+msgid "Create New Form"
+msgstr "إنشاء نموذج جديد"
+
+#: admin/dashboard.php:68 lead-generation-form.php:161
+msgid "Manage Forms"
+msgstr "إدارة النماذج"
+
+#: admin/dashboard.php:73
+msgid "Total Lead Captured"
+msgstr "إجمالي العملاء المحتملين الملتقطين"
+
+#: admin/dashboard.php:75
+msgid "Manage Leads"
+msgstr "إدارة العملاء المحتملين"
+
+#: admin/dashboard.php:80
+msgid "Getting Started Tips"
+msgstr "نصائح للبدء"
+
+#: admin/dashboard.php:81
+msgid "Create a new form using the FORM GENERATOR menu"
+msgstr "إنشاء نموذج جديد باستخدام قائمة مولد النماذج"
+
+#: admin/dashboard.php:82
+msgid "Copy a form shortcode from the MANAGE FORMS menu"
+msgstr "نسخ رمز النموذج القصير من قائمة إدارة النماذج"
+
+#: admin/dashboard.php:83
+msgid "Publish form shortcode on a page or post"
+msgstr "نشر رمز النموذج القصير على صفحة أو منشور"
+
+#: admin/dashboard.php:84
+msgid "Manage captured leads and saved data on the ALL CAPTURED LEADS menu"
+msgstr ""
+"إدارة العملاء المحتملين الملتقطين والبيانات المحفوظة في قائمة جميع العملاء "
+"المحتملين الملتقطين"
+
+#: admin/dashboard.php:85
+msgid "Using the SETTINGS menu page you can configure the settings"
+msgstr "باستخدام صفحة قائمة الإعدادات يمكنك تهيئة الإعدادات"
+
+#: admin/dashboard.php:90 admin/lead-loader.php:37
+msgid "Documentation"
+msgstr "التوثيق"
+
+#: admin/dashboard.php:91
+msgid ""
+"Please refer to our video docs for more help and tutorial videos about "
+"plugins."
+msgstr ""
+"يرجى الرجوع إلى مستندات الفيديو الخاصة بنا للمزيد من المساعدة ومقاطع الفيديو "
+"التعليمية حول الإضافات."
+
+#: admin/dashboard.php:92
+msgid "Visit Our YouTube Channel"
+msgstr "زيارة قناتنا على يوتيوب"
+
+#: admin/dashboard.php:93
+msgid "Read plugin change logs."
+msgstr "قراءة سجلات تغيير المكونات الإضافية."
+
+#: admin/dashboard.php:95
+msgid "Plugin Change Logs"
+msgstr "سجلات تغيير المكونات الإضافية"
+
+#: admin/form-generator.php:76
+msgid "Create or Modify Form"
+msgstr "إنشاء أو تعديل نموذج"
+
+#: admin/form-generator.php:100 admin/import-export.php:124
+#: admin/manage-forms.php:43 admin/manage-forms.php:85
+msgid "Form Name"
+msgstr "اسم النموذج"
+
+#: admin/form-generator.php:101 admin/import-export.php:125
+msgid "Type a name for the form"
+msgstr "اكتب اسمًا للنموذج"
+
+#: admin/form-generator.php:117
+msgid "Save Form"
+msgstr "حفظ النموذج"
+
+#: admin/form-generator.php:126
+msgid "Please Read FAQ While Create OR Modify Form"
+msgstr "يرجى قراءة الأسئلة الشائعة أثناء إنشاء أو تعديل النموذج"
+
+#: admin/form-generator.php:131
+msgid "Q.1. Is it permissible to use copied content for the Form structure?"
+msgstr "س1. هل يجوز استخدام المحتوى المنسوخ لهيكل النموذج؟"
+
+#: admin/form-generator.php:132
+msgid "You may insert copied information as plain text."
+msgstr "يمكنك إدراج المعلومات المنسوخة كنص عادي."
+
+#: admin/form-generator.php:133
+msgid ""
+"However, directly pasting data into Form label and attribute fields is "
+"discouraged."
+msgstr ""
+"ومع ذلك، يُحث على عدم لصق البيانات مباشرةً في حقول التسمية والسمات في النموذج."
+
+#: admin/form-generator.php:137
+msgid "Q.2. Can I include several fields in the Form structure?"
+msgstr "س2. هل يمكنني تضمين العديد من الحقول في هيكل النموذج؟"
+
+#: admin/form-generator.php:138
+msgid "Absolutely, you can incorporate numerous fields in the Form."
+msgstr "بالطبع، يمكنك دمج العديد من الحقول في النموذج."
+
+#: admin/form-generator.php:139
+msgid "However, only one submit button is allowed per Form."
+msgstr "ومع ذلك، يُسمح بزر الإرسال الواحد فقط لكل نموذج."
+
+#: admin/form-generator.php:143
+msgid ""
+"Q.3. Can I alter the Form structure after it's been published on the website?"
+msgstr "س3. هل يمكنني تعديل هيكل النموذج بعد نشره على الموقع؟"
+
+#: admin/form-generator.php:144
+msgid "It's advised against changing the form structure after publishing."
+msgstr "يُنصح بعدم تغيير هيكل النموذج بعد النشر."
+
+#: admin/form-generator.php:145
+msgid ""
+"Doing so may lead to discrepancies in the records table on the All Leads page."
+msgstr ""
+"قد يؤدي القيام بذلك إلى حدوث تناقضات في جدول السجلات الموجود في صفحة كافة "
+"العملاء المتوقعين."
+
+#: admin/form-generator.php:146
+msgid ""
+"However, if you haven't received any submissions or data from users, you may "
+"make adjustments to the Form."
+msgstr ""
+"ومع ذلك، إذا لم تتلق أي تقديمات أو بيانات من المستخدمين، يمكنك إجراء تعديلات "
+"على النموذج."
+
+#: admin/form-generator.php:147
+msgid ""
+"You can clone the current Form and modify or replace it with an older one."
+msgstr "يمكنك استنساخ النموذج الحالي وتعديله أو استبداله بنموذج أقدم."
+
+#: admin/form-generator.php:151
+msgid "Server Info for debugging"
+msgstr "معلومات الخادم للتصحيح"
+
+#: admin/form-generator.php:159
+msgid "Maximum upload file size"
+msgstr "أقصى حجم للملفات المرفوعة"
+
+#: admin/form-generator.php:160
+msgid "Maximum post size"
+msgstr "أقصى حجم للمشاركة"
+
+#: admin/import-export.php:41
+msgid "Export A Form"
+msgstr "تصدير نموذج"
+
+#: admin/import-export.php:44 admin/import-export.php:76
+#: admin/import-export.php:93 admin/lead-loader.php:37 admin/lead-loader.php:39
+#: admin/leads.php:37
+msgid "Select Form"
+msgstr "اختر نموذج"
+
+#: admin/import-export.php:57
+msgid "Export From Data"
+msgstr "تصدير من البيانات"
+
+#: admin/import-export.php:63
+msgid "Copy Code"
+msgstr "نسخ الرمز"
+
+#: admin/import-export.php:64
+msgid "Code copied to clipboard."
+msgstr "تم نسخ الرمز إلى الحافظة."
+
+#: admin/import-export.php:71
+msgid "Combine Two Form"
+msgstr "دمج نموذجين"
+
+#: admin/import-export.php:74
+msgid "Form One"
+msgstr "النموذج الأول"
+
+#: admin/import-export.php:91
+msgid "Form Two"
+msgstr "النموذج الثاني"
+
+#: admin/import-export.php:108
+msgid "Combine From"
+msgstr "الدمج من"
+
+#: admin/import-export.php:113
+msgid ""
+"Form combined successfully. Go to the Manage Forms menu to manage combined "
+"forms."
+msgstr ""
+"تم دمج النموذج بنجاح. انتقل إلى قائمة \"إدارة النماذج\" لإدارة النماذج "
+"المدمجة."
+
+#: admin/import-export.php:121
+msgid "Import A Form"
+msgstr "استيراد نموذج"
+
+#: admin/import-export.php:128
+msgid "Paste Form Data"
+msgstr "لصق بيانات النموذج"
+
+#: admin/import-export.php:129
+msgid "Important Note: Please paste the copied Form data in JSON format only."
+msgstr "ملاحظة هامة: يرجى لصق بيانات النموذج المنسوخة بتنسيق JSON فقط."
+
+#: admin/import-export.php:132
+msgid "Import From Data"
+msgstr "استيراد من البيانات"
+
+#: admin/import-export.php:137
+msgid "Form imported successfully"
+msgstr "تم استيراد النموذج بنجاح"
+
+#: admin/import-export.php:146
+msgid "Please Read FAQ While Import & Export and Combining Forms"
+msgstr "الرجاء قراءة الأسئلة الشائعة أثناء استيراد وتصدير ودمج النماذج"
+
+#: admin/import-export.php:151
+msgid "Q.1. What is the use of import, export, and combine forms features?"
+msgstr "س1. ما هو استخدام ميزات استيراد وتصدير ودمج النماذج؟"
+
+#: admin/import-export.php:152
+msgid ""
+"You can use Export Form features for exporting forms from one website to "
+"another website where the Lead Generation Form plugin is installed."
+msgstr ""
+"يمكنك استخدام ميزات تصدير النموذج لتصدير النماذج من موقع واحد إلى موقع آخر "
+"حيث تم تثبيت إضافة نموذج توليد العملاء."
+
+#: admin/import-export.php:153
+msgid "Using the Import Form feature, you can import via copied code."
+msgstr "باستخدام ميزة استيراد النموذج، يمكنك استيراده عبر الرمز المنسوخ."
+
+#: admin/import-export.php:154
+msgid "The Combined Form feature is utilized to merge two forms into one form."
+msgstr "يتم استخدام ميزة النموذج المدمج لدمج نموذجين في نموذج واحد."
+
+#: admin/import-export.php:158
+msgid "Q.2. What are the primary guidelines for exporting forms?"
+msgstr "س2. ما هي المبادئ التوجيهية الأساسية لتصدير النماذج؟"
+
+#: admin/import-export.php:159
+msgid ""
+"While importing a form, always use the Copy Code button to copy the form code."
+msgstr "عند استيراد نموذج، استخدم دائمًا زر نسخ الكود لنسخ كود النموذج."
+
+#: admin/import-export.php:163
+msgid "Q.3. What are the primary guidelines for import forms?"
+msgstr "س3. ما هي المبادئ التوجيهية الأساسية لنماذج الاستيراد؟"
+
+#: admin/import-export.php:164
+msgid "Always paste the copied JSON object data for importing."
+msgstr "قم دائمًا بلصق بيانات كائن JSON المنسوخة لاستيراد النماذج."
+
+#: admin/import-export.php:165
+msgid ""
+"Adding other than JSON object data for importing Forms will result in an "
+"error."
+msgstr "سيؤدي إلى حدوث خطأ إذا تمت إضافة بيانات غير كائن JSON لاستيراد النماذج."
+
+#: admin/import-export.php:169
+msgid ""
+"Q.4. Can we import and export Forms from any third-party plugins like Contact "
+"Form 7?"
+msgstr ""
+"س4. هل يمكننا استيراد وتصدير النماذج من الإضافات الخارجية مثل Contact Form 7؟"
+
+#: admin/import-export.php:170
+msgid "No, you can't import or export Forms from other or third-party plugins."
+msgstr ""
+"لا يمكنك استيراد أو تصدير النماذج من الإضافات الأخرى أو الإضافات من جهات "
+"خارجية."
+
+#: admin/import-export.php:171
+msgid ""
+"You can only import or export Forms into the Lead Generation Form plugin."
+msgstr "يمكنك فقط استيراد أو تصدير النماذج إلى إضافة Lead Generation Form."
+
+#: admin/import-export.php:175
+msgid "Q.5. What are the primary guidelines for combining forms?"
+msgstr "س5. ما هي المبادئ التوجيهية الأساسية لدمج النماذج؟"
+
+#: admin/import-export.php:176
+msgid ""
+"The key instruction is to review and refine the resulting form by eliminating "
+"any redundant submit buttons if they are present."
+msgstr ""
+"التعليمة الرئيسية هي مراجعة وتحسين النموذج الناتج من خلال إزالة أي أزرار "
+"إرسال زائدة إذا كانت موجودة."
+
+#: admin/leads.php:35
+msgid "Select a Form to Access Its Captured Leads"
+msgstr "اختر نموذجًا للوصول إلى العملاء المحتملين الملتقطين"
+
+#: admin/leads.php:60
+msgid "Please Read FAQ While Managing All Leads"
+msgstr "يرجى قراءة الأسئلة الشائعة أثناء إدارة جميع العملاء"
+
+#: admin/leads.php:65
+msgid "Q.1. How do you filter data tables?"
+msgstr "س1. كيف تقوم بتصفية جداول البيانات؟"
+
+#: admin/leads.php:66
+msgid "Use the search button located at the top corner of the table."
+msgstr "استخدم زر البحث الموجود في الزاوية العلوية للجدول."
+
+#: admin/leads.php:67
+msgid "Enter your criteria in the search box to filter data and rows."
+msgstr "أدخل معاييرك في مربع البحث لتصفية البيانات والصفوف."
+
+#: admin/leads.php:68
+msgid "To sort the table, click on the desired column header or label."
+msgstr "لفرز الجدول، انقر على رأس العمود أو العلامة المطلوبة."
+
+#: admin/leads.php:72
+msgid "Q.2. How can you download the complete list of leads data?"
+msgstr "س2. كيف يمكنك تنزيل القائمة الكاملة لبيانات العملاء؟"
+
+#: admin/leads.php:73
+msgid "Choose the desired Form from the list."
+msgstr "اختر النموذج المطلوب من القائمة."
+
+#: admin/leads.php:74
+msgid ""
+"If you have a saved record, a download button will appear below the table."
+msgstr "إذا كان لديك سجل محفوظ، سيظهر زر التنزيل أسفل الجدول."
+
+#: admin/leads.php:75
+msgid "Click on this button to download the list."
+msgstr "انقر على هذا الزر لتنزيل القائمة."
+
+#: admin/leads.php:79
+msgid "Q.3. Can I download the filtered data list?"
+msgstr "س3. هل يمكنني تنزيل القائمة المصفاة؟"
+
+#: admin/leads.php:80
+msgid "No, downloading the filtered data list is not possible."
+msgstr "لا، لا يمكن تنزيل القائمة المصفاة."
+
+#: admin/leads.php:81
+msgid "The download provides a complete list of leads in CSV format."
+msgstr "التنزيل يوفر قائمة كاملة من العملاء بتنسيق CSV."
+
+#: admin/leads.php:82
+msgid ""
+"However, once you open the CSV file in Microsoft Excel, you can apply filters "
+"to the data."
+msgstr ""
+"ومع ذلك، بمجرد فتح ملف CSV في Microsoft Excel، يمكنك تطبيق مرشحات على "
+"البيانات."
+
+#: admin/manage-forms.php:35
+msgid "Manage Form"
+msgstr "إدارة النموذج"
+
+#: admin/manage-forms.php:42 admin/manage-forms.php:84
+#: includes/shortcode.php:734
+msgid "Form ID"
+msgstr "معرّف النموذج"
+
+#: admin/manage-forms.php:44 admin/manage-forms.php:86
+msgid "Form Shortcode"
+msgstr "رمز النموذج القصير"
+
+#: admin/manage-forms.php:45 admin/manage-forms.php:87
+msgid "Action"
+msgstr "إجراء"
+
+#: admin/manage-forms.php:68 lead-generation-form.php:254
+msgid "Copied"
+msgstr "تم النسخ"
+
+#: admin/manage-forms.php:97
+msgid "Please Read FAQ While Manage Forms"
+msgstr "الرجاء قراءة الأسئلة الشائعة أثناء إدارة النماذج"
+
+#: admin/manage-forms.php:102
+msgid "Q.1. What is the use of Clone Form features?"
+msgstr "س1. ما هي فائدة ميزات Clone Form؟"
+
+#: admin/manage-forms.php:103
+msgid "Using clone form features you can make a copy of an existing form."
+msgstr "باستخدام ميزة استنساخ النموذج، يمكنك إنشاء نسخة من نموذج موجود."
+
+#: admin/manage-forms.php:107
+msgid "Q.2. What are the primary guidelines for deleting a form?"
+msgstr "س2. ما هي الإرشادات الأساسية لحذف النموذج؟"
+
+#: admin/manage-forms.php:108
+msgid ""
+"When you want to delete a form, it is essential to be aware that all the "
+"leads captured through that specific form will be permanently removed along "
+"with the form itself."
+msgstr ""
+"عندما ترغب في حذف نموذج، من الضروري أن تكون على علم بأن جميع العملاء الذين تم "
+"التقاطهم من خلال هذا النموذج الخاص سيتم حذفهم بشكل دائم مع النموذج نفسه."
+
+#: admin/settings.php:34 includes/install-script.php:28
+msgid "Thank you! Your query has been successfully submitted."
+msgstr "شكرا لك! لقد تم إرسال استفسارك بنجاح."
+
+#: admin/settings.php:42
+msgid "Settings Panel"
+msgstr "لوحة الإعدادات"
+
+#: admin/settings.php:53
+msgid "Recaptcha Status"
+msgstr "حالة Recaptcha"
+
+#: admin/settings.php:55 admin/settings.php:90
+msgid "ON"
+msgstr "تشغيل"
+
+#: admin/settings.php:56 admin/settings.php:91
+msgid "OFF"
+msgstr "إيقاف"
+
+#: admin/settings.php:66
+msgid "How do we get the Google reCAPTCHA Site Key and Secret Key?"
+msgstr "كيف نحصل على مفتاح موقع Google reCAPTCHA والمفتاح السري؟"
+
+#: admin/settings.php:69
+msgid "Message"
+msgstr "رسالة"
+
+#: admin/settings.php:74
+msgid "Message To User"
+msgstr "رسالة إلى المستخدم"
+
+#: admin/settings.php:76
+msgid ""
+"After successful form submission shows a message to the user, allowed HTML "
+"tags are p, strong, i, br, a, and hr."
+msgstr ""
+"بعد إرسال النموذج بنجاح، تظهر رسالة للمستخدم، العلامات HTML المسموح بها هي p، "
+"strong، i، br، a، وhr."
+
+#: admin/settings.php:84
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: admin/settings.php:88
+msgid "Notify To Admin"
+msgstr "إشعار للمسؤول"
+
+#: admin/settings.php:93
+msgid ""
+"After successful lead captures an email notification is sent to admin with "
+"lead data."
+msgstr ""
+"بعد التقاط العميل المحتمل بنجاح، يتم إرسال إشعار بالبريد الإلكتروني إلى "
+"المسؤول يتضمن بيانات العميل المتوقع."
+
+#: admin/settings.php:96
+msgid "Email Via"
+msgstr "البريد الإلكتروني عبر"
+
+#: admin/settings.php:105
+msgid "For Gmail use smtp.gmail.com as SMTP Host."
+msgstr "للاستخدام مع Gmail، استخدم smtp.gmail.com كمضيف SMTP."
+
+#: admin/settings.php:109
+msgid "Username"
+msgstr "اسم مستخدم SMTPاسم المستخدم"
+
+#: admin/settings.php:111
+msgid ""
+"For Gmail, your email address example@gmail.com is used as an SMTP Username."
+msgstr ""
+"بالنسبة إلى Gmail، يتم استخدام عنوان بريدك الإلكتروني example@gmail.com كاسم "
+"مستخدم SMTP."
+
+#: admin/settings.php:115
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: admin/settings.php:117
+msgid "How to get a Gmail SMTP Password?"
+msgstr "كيفية الحصول على كلمة مرور Gmail SMTP؟"
+
+#: admin/settings.php:121
+msgid "Encryption"
+msgstr "التشفير"
+
+#: admin/settings.php:126
+msgid "Encryption will be used when sending an email."
+msgstr "سيتم استخدام التشفير عند إرسال البريد الإلكتروني."
+
+#: admin/settings.php:132
+msgid ""
+"The port which will be used when sending an email. If you choose TLS it "
+"should be set to 587. For SSL use port 465 instead."
+msgstr ""
+"المنفذ الذي سيتم استخدامه عند إرسال رسالة بريد إلكتروني. إذا اخترت TLS، يجب "
+"تعيينه إلى 587. بالنسبة لـ SSL، استخدم المنفذ 465 بدلاً من ذلك."
+
+#: admin/settings.php:139
+msgid "Save Settings"
+msgstr "حفظ الإعدادات"
+
+#: includes/shortcode.php:509 includes/shortcode.php:637
+msgid "Sorry! you do not have sufficient permission to access this form."
+msgstr "عذرا! ليس لديك الصلاحيات الكافية للوصول إلى هذا النموذج."
+
+#: includes/shortcode.php:588
+msgid "Sorry! your request has not been verified."
+msgstr "عذرا! لم يتم التحقق من طلبك."
+
+#: includes/shortcode.php:732
+msgid "Details are as follows"
+msgstr "التفاصيل هي كما يلي"
+
+#: includes/shortcode.php:759
+msgid "A new query received by"
+msgstr "استعلام جديد تم استلامه بواسطة"
+
+#: lead-generation-form.php:162
+msgid "Form Generator"
+msgstr "مُولِّد النماذج"
+
+#: lead-generation-form.php:163
+msgid "All Captured Leads"
+msgstr "كافة العملاء المُلتقطين"
+
+#: lead-generation-form.php:164
+msgid "Import & Export"
+msgstr "استيراد وتصدير"
+
+#: lead-generation-form.php:165
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: lead-generation-form.php:438 lead-generation-form.php:554
+msgid "Date Time"
+msgstr "التاريخ والوقت"
+
+#: lead-generation-form.php:439 lead-generation-form.php:555
+msgid "Actions"
+msgstr "الإجراءات"
+
+#: lead-generation-form.php:528
+msgid "Select Lead"
+msgstr "حدد العميل المحتمل"
+
+#: lead-generation-form.php:556
+msgid "Delete Selected Leads"
+msgstr "حذف العملاء المتوقعين المحددين"
+
+#: lead-generation-form.php:562
+msgid "Download All Data List"
+msgstr "تنزيل قائمة البيانات كاملة"
+
+#~ msgid "Form Id"
+#~ msgstr "معرف النموذج"
+
+#~ msgid "row"
+#~ msgstr "صف"
+
+#~ msgid "column"
+#~ msgstr "عمود"
+
+#~ msgid "cell"
+#~ msgstr "خلية"
+
+#~ msgid "Manage Froms"
+#~ msgstr "إدارة النماذج"
+
+#~ msgid "Recaptcha"
+#~ msgstr "Recaptcha"
+
+#~ msgid "Site Key"
+#~ msgstr "مفتاح الموقع"
+
+#~ msgid "Secret Key"
+#~ msgstr "المفتاح السري"
+
+#~ msgid "WP MAIL"
+#~ msgstr "بريد WP"
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "SMTP Host"
+#~ msgstr "مضيف SMTP"
+
+#~ msgid "For Gmail your email password use as SMTP Password."
+#~ msgstr ""
+#~ "لـ Gmail، استخدم كلمة مرور البريد الإلكتروني الخاص بك ككلمة مرور SMTP."
+
+#~ msgid "TLS"
+#~ msgstr "TLS"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "SMTP Port"
+#~ msgstr "منفذ SMTP"
+
+#~ msgid "New Lead Captured by Form ID"
+#~ msgstr "تم التقاط عميل جديد بواسطة معرّف النموذج"
