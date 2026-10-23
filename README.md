@@ -1,7 +1,7 @@
 # Lead Generation Form (WordPress Plugin)
 
 <p align="center">
-  <img src="https://wpfrank.com/wp-content/uploads/lead-generation-form-banner.png" alt="Lead Generation Form Banner" width="100%" style="border-radius: 10px;" />
+  <img src=".github/assets/banner-772x250.png" alt="Lead Generation Form Banner" width="100%" style="border-radius: 10px;" />
 </p>
 
 <p align="center">
