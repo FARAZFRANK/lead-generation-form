@@ -243,10 +243,16 @@ jQuery(document).ready(function($) {
                         const hasSuccessMsg = $resp.find('#wlgf-msg').length > 0;
 
                         if ($errorAlert.length && !hasSuccessMsg) {
-                            $responseOutput.html(response).show();
+                            $responseOutput.html($errorAlert).show();
                             if (typeof wlgfToast === 'function') {
                                 const errorText = $errorAlert.text().trim() || 'Submission failed. Please check the errors.';
                                 wlgfToast(errorText, 'error', 6000);
+                            }
+                            if (window.turnstile && typeof window.turnstile.reset === 'function') {
+                                try { window.turnstile.reset(); } catch(e) {}
+                            }
+                            if (window.grecaptcha && typeof window.grecaptcha.reset === 'function') {
+                                try { window.grecaptcha.reset(); } catch(e) {}
                             }
                             if ($responseOutput.length && $responseOutput.offset()) {
                                 $('html, body').animate({

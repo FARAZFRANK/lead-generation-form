@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Get plugin version with authoritative constant prioritization and auto DB sync
-$wlgf_display_version = defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : get_option( 'wlgf_current_version', '1.3.1' );
+$wlgf_display_version = defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : get_option( 'wlgf_current_version', '1.3.2' );
 if ( defined( 'WLGF_PLUGIN_VERSION' ) && get_option( 'wlgf_current_version' ) !== WLGF_PLUGIN_VERSION ) {
 	update_option( 'wlgf_current_version', WLGF_PLUGIN_VERSION );
 }
@@ -12,7 +12,7 @@ if ( defined( 'WLGF_PLUGIN_VERSION' ) && get_option( 'wlgf_current_version' ) !=
 // Enqueue modern design system, icons, chartjs and dashboard controller
 wp_enqueue_style( 'wlgf-admin-ui-css' );
 wp_enqueue_style( 'wlgf-fontawesome-css' );
-$dashboard_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) ? ( defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : '1.3.1' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) : '1.3.1';
+$dashboard_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) ? ( defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : '1.3.2' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) : '1.3.2';
 wp_enqueue_script( 'wlgf-dashboard-js', plugin_dir_url( __FILE__ ) . 'assets/js/dashboard.js', array( 'jquery', 'wlgf-chartjs' ), $dashboard_js_ver, true );
 
 // Calculate forms, leads counts, and rich analytics safely

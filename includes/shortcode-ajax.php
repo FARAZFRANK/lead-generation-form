@@ -488,7 +488,7 @@ function wlgf_shortcode_callback( $atts ) {
 			}
 		}
 
-		$wlgf_form_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) ? ( defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.1' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) : null;
+		$wlgf_form_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) ? ( defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) : null;
 		wp_enqueue_script('wlgf-shortcode-form-js', plugin_dir_url(__FILE__). 'assets/js/wlgf-shortcode-form.js', $form_js_deps, $wlgf_form_js_ver, true); // load in footer
 
 		$wlgf_shortcode_config = array(
@@ -1311,7 +1311,8 @@ function wlgf_shortcode_callback( $atts ) {
                if (empty($rate_check['allowed'])) {
                     $rate_msg = !empty($rate_check['message']) ? $rate_check['message'] : __('Too many submissions detected from your IP address. Please wait a moment before trying again.', 'lead-generation-form');
                     echo '<div class="wlgf-alert wlgf-alert--danger"><i class="fa-solid fa-clock"></i> ' . esc_html($rate_msg) . '</div>';
-                    return;
+                    echo '</div>';
+                    return ob_get_clean();
                }
 
                // Anti-spam timing check (2 seconds minimum)

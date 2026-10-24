@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://wordpress.org/plugins/lead-generation-form/"><img src="https://img.shields.io/badge/WordPress.org-Plugin-0073aa?logo=wordpress&logoColor=white" alt="WordPress Plugin" /></a>
-  <a href="https://github.com/FARAZFRANK/lead-generation-form/releases/tag/v1.3.1"><img src="https://img.shields.io/badge/Release-v1.3.1-blue.svg?logo=github" alt="Latest Release" /></a>
+  <a href="https://github.com/FARAZFRANK/lead-generation-form/releases/tag/v1.3.2"><img src="https://img.shields.io/badge/Release-v1.3.2-blue.svg?logo=github" alt="Latest Release" /></a>
   <a href="https://wordpress.org/"><img src="https://img.shields.io/badge/WordPress-5.6%20to%206.7%2B-21759b.svg?logo=wordpress" alt="WordPress Compatibility" /></a>
   <a href="https://www.php.net/"><img src="https://img.shields.io/badge/PHP-7.4%20--%208.3-777bb4.svg?logo=php&logoColor=white" alt="PHP Compatibility" /></a>
   <a href="http://www.gnu.org/licenses/gpl-2.0.html"><img src="https://img.shields.io/badge/License-GPL%20v2%2B-green.svg" alt="License" /></a>
@@ -262,6 +262,13 @@ Lead Generation Form follows enterprise WordPress security guidelines:
 ## 📋 Changelog
 
 Refer to [readme.txt](readme.txt) for the full changelog history.
+
+### Version 1.3.2 (24 Oct 2026)
+* **Improved:** Modernized Lead Details modal close button with an accessible squircle button, refined typography, and smooth rotational hover effects.
+* **Improved:** Dynamic Payment column display in Captured Leads table and CSV exports — cleanly hidden for Free forms without payments while automatically preserved for Pro forms or historical downgraded records.
+* **Fixed:** Resolved submission rate-limit error response handling by preventing full HTML webpage injection into the form message container.
+* **Fixed:** Added auto-reset for Cloudflare Turnstile and Google reCAPTCHA widgets upon submission rate-limit or validation errors.
+* **Fixed:** Cleaned PHP output buffer handling across security abuse shield responses (Honeypot, Exploit Scanner, IP Rate Limiter).
 
 ### Version 1.3.1 (23 Oct 2026)
 * **Added:** Real-time searchable combobox for the "Choose Form" selector in Captured Leads with instant title and ID filtering.

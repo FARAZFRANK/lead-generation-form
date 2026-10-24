@@ -1225,3 +1225,61 @@
     color: #94a3b8;
     margin-top: 2px;
 }
+
+/* Modern High-End Modal Close Button */
+.wlgf-modal__close,
+.wlgf-modal__close-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    margin: 0;
+    border-radius: 9px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    flex-shrink: 0;
+}
+
+.wlgf-modal__close i,
+.wlgf-modal__close-btn i {
+    font-size: 14px;
+    line-height: 1;
+    pointer-events: none;
+    transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wlgf-modal__close:hover,
+.wlgf-modal__close-btn:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    color: #ef4444;
+    transform: scale(1.06);
+    box-shadow: 0 3px 10px rgba(239, 68, 68, 0.18);
+}
+
+.wlgf-modal__close:hover i,
+.wlgf-modal__close-btn:hover i {
+    transform: rotate(90deg);
+}
+
+.wlgf-modal__close:active,
+.wlgf-modal__close-btn:active {
+    transform: scale(0.94);
+    background: #fecaca;
+}
+
+.wlgf-modal__close:focus-visible,
+.wlgf-modal__close-btn:focus-visible {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #2563eb;
+    border-color: #2563eb;
+}

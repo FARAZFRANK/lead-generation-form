@@ -368,7 +368,9 @@ $wlgf_all_forms = $wpdb->get_results(
 				<h3 class="wlgf-modal__title">
 					<i class="fa-solid fa-triangle-exclamation wlgf-text-danger"></i> <?php esc_html_e( 'Confirm Lead Deletion', 'lead-generation-form' ); ?>
 				</h3>
-				<button type="button" class="wlgf-modal__close" id="wlgf-modal-close-btn">&times;</button>
+				<button type="button" class="wlgf-modal__close wlgf-modal__close-btn" id="wlgf-modal-close-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
 			</div>
 			<div class="wlgf-modal__body">
 				<p id="wlgf-modal-message">
@@ -393,7 +395,9 @@ $wlgf_all_forms = $wpdb->get_results(
 				<h3 class="wlgf-modal__title">
 					<i class="fa-regular fa-note-sticky wlgf-text-primary"></i> <?php esc_html_e( 'Lead Internal Notes & Follow-up', 'lead-generation-form' ); ?>
 				</h3>
-				<button type="button" class="wlgf-modal__close" id="wlgf-notes-modal-close-btn">&times;</button>
+				<button type="button" class="wlgf-modal__close wlgf-modal__close-btn" id="wlgf-notes-modal-close-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
 			</div>
 			<div class="wlgf-modal__body">
 				<div id="wlgf-lead-notes-list" class="wlgf-notes-list">
@@ -422,7 +426,9 @@ $wlgf_all_forms = $wpdb->get_results(
 				<h3 class="wlgf-modal__title" style="margin: 0; font-size: 16px; font-weight: 700; color: var(--wlgf-text-main); display: flex; align-items: center; gap: 8px;">
 					<i class="fa-solid fa-file-signature wlgf-text-primary"></i> <?php esc_html_e( 'Verified Digital Signature', 'lead-generation-form' ); ?>
 				</h3>
-				<button type="button" class="wlgf-modal__close" id="wlgf-signature-modal-close-btn">&times;</button>
+				<button type="button" class="wlgf-modal__close wlgf-modal__close-btn" id="wlgf-signature-modal-close-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
 			</div>
 			<div class="wlgf-modal__body" style="padding: 24px; text-align: center; background: #f8fafc;">
 				<div class="wlgf-signature-preview-card" style="background: #ffffff; border: 2px dashed #cbd5e1; border-radius: 12px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); margin-bottom: 16px;">
@@ -460,7 +466,9 @@ $wlgf_all_forms = $wpdb->get_results(
 					<a id="wlgf-lightbox-external-btn" href="#" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--outline wlgf-btn--sm" title="<?php esc_attr_e( 'Open in new tab', 'lead-generation-form' ); ?>">
 						<i class="fa-solid fa-arrow-up-right-from-square"></i>
 					</a>
-					<button type="button" class="wlgf-modal__close" id="wlgf-lightbox-modal-close-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">&times;</button>
+					<button type="button" class="wlgf-modal__close wlgf-modal__close-btn" id="wlgf-lightbox-modal-close-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
 				</div>
 			</div>
 			<div class="wlgf-modal__body wlgf-lightbox-body" id="wlgf-lightbox-body">
@@ -489,7 +497,9 @@ $wlgf_all_forms = $wpdb->get_results(
 				<h3 class="wlgf-modal__title" style="margin: 0; font-size: 16px; font-weight: 700; color: var(--wlgf-text-main); display: flex; align-items: center; gap: 8px;">
 					<i class="fa-solid fa-address-card wlgf-text-primary"></i> <span id="wlgf-lead-details-modal-title"><?php esc_html_e( 'Lead Submission Details', 'lead-generation-form' ); ?></span>
 				</h3>
-				<button type="button" class="wlgf-modal__close" id="wlgf-lead-details-modal-close-btn">&times;</button>
+				<button type="button" class="wlgf-modal__close wlgf-modal__close-btn" id="wlgf-lead-details-modal-close-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
 			</div>
 			<div class="wlgf-modal__body" id="wlgf-lead-details-modal-body" style="padding: 22px; overflow-y: auto; flex: 1; background: #f8fafc;">
 				<!-- Dynamic content loaded via AJAX -->

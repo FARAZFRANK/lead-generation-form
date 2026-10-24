@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
  * Plugin Name:       Lead Generation Form
  * Plugin URI:        https://wpfrank.com/wordpress-plugins/lead-generation-form-pro/
  * Description:       Clean, responsive drag-and-drop lead capture and contact form builder for WordPress with anti-spam, custom SMTP delivery, and CSV export.
- * Version:           1.3.1
+ * Version:           1.3.2
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            WP Frank
@@ -45,7 +45,7 @@ if (!defined('WLGF_IS_PRO')) {
 
 // Global Plugin Version Constant
 if (!defined('WLGF_PLUGIN_VERSION')) {
-	define('WLGF_PLUGIN_VERSION', '1.3.1');
+	define('WLGF_PLUGIN_VERSION', '1.3.2');
 }
 
 /* activation */
@@ -120,7 +120,7 @@ register_deactivation_hook(__FILE__, 'wlgf_deactivation');
 if (!function_exists('wlgf_check_version')) {
 	function wlgf_check_version()
 	{
-		$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.1';
+		$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2';
 		$current_db_version = sanitize_text_field(get_option('wlgf_current_version', '1.0'));
 
 		if (version_compare($current_db_version, $plugin_version, '<')) {
@@ -163,7 +163,7 @@ add_action('plugins_loaded', 'wlgf_load_translation');
 // register styles and scripts for frontend
 function wlgf_user_register_scripts()
 {
-	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.1';
+	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2';
 	wp_enqueue_script('jquery');
 	wp_register_script('wlgf-bootstrap-bundle-min-js', plugin_dir_url(__FILE__) . 'admin/assets/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.3');
 	$fa_css_path = plugin_dir_path(__FILE__) . 'admin/assets/fontawesome-free-6.4.2-web/css/all.min.css';
@@ -194,7 +194,7 @@ add_action('wp_enqueue_scripts', 'wlgf_user_register_scripts');
 // register styles and scripts for backend
 function wlgf_admin_register_scripts($hook = '')
 {
-	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.1';
+	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2';
 	$is_wlgf_page = isset($_GET['page']) && in_array(sanitize_text_field(wp_unslash($_GET['page'])), array(
 		'lead-generation-form',
 		'wlgf-manage-forms',
@@ -976,6 +976,17 @@ function wlgf_lead_loader_callback()
 					$wlgf_download_url = admin_url('admin-ajax.php?action=wlgf_export_leads_csv&wlgf_form_id=' . $wlgf_form_id . '&nonce=' . wp_create_nonce('wlgf-export-csv-' . $wlgf_form_id));
 					$wlgf_download_subscribers_url = admin_url('admin-ajax.php?action=wlgf_export_leads_csv&wlgf_form_id=' . $wlgf_form_id . '&newsletter_only=1&nonce=' . wp_create_nonce('wlgf-export-csv-' . $wlgf_form_id));
 
+					// Dynamic Payment Column: Only show if Pro is active OR if any lead in this form contains historical payment records (e.g. downgraded from Pro)
+					$show_payment_column = ( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO );
+					if ( ! $show_payment_column && is_array( $wlgf_form_data ) ) {
+						foreach ( $wlgf_form_data as $row_check ) {
+							if ( is_array( $row_check ) && ( ! empty( $row_check['wlgf_payment_status'] ) || ! empty( $row_check['wlgf_payment_transaction_id'] ) || ! empty( $row_check['wlgf_payment_amount_paid'] ) ) ) {
+								$show_payment_column = true;
+								break;
+							}
+						}
+					}
+
 					$wlgf_display_columns = array();
 					if (is_array($structure)) {
 						foreach ($structure as $item) {
@@ -1087,7 +1098,9 @@ function wlgf_lead_loader_callback()
 									<?php endforeach; ?>
 									<th class="wlgf-th-datetime"><?php esc_html_e('Date Time', 'lead-generation-form'); ?></th>
 									<th><?php esc_html_e('Newsletter', 'lead-generation-form'); ?></th>
-									<th><?php esc_html_e('Payment', 'lead-generation-form'); ?></th>
+									<?php if ( $show_payment_column ) : ?>
+										<th><?php esc_html_e('Payment', 'lead-generation-form'); ?></th>
+									<?php endif; ?>
 									<th><?php esc_html_e('Status', 'lead-generation-form'); ?></th>
 									<th><?php esc_html_e('Actions', 'lead-generation-form'); ?></th>
 									<th>
@@ -1312,6 +1325,7 @@ function wlgf_lead_loader_callback()
 													<span class="wlgf-lead-empty-dash">—</span>
 												<?php endif; ?>
 											</td>
+											<?php if ( $show_payment_column ) : ?>
 											<td>
 												<?php if (!empty($pay_status) && 'completed' === $pay_status): ?>
 													<span class="wlgf-badge wlgf-badge--success"
@@ -1329,6 +1343,7 @@ function wlgf_lead_loader_callback()
 													<span class="wlgf-lead-empty-dash">—</span>
 												<?php endif; ?>
 											</td>
+											<?php endif; ?>
 											<td>
 												<select class="wlgf-status-select wlgf-lead-status-select" id="wlgf-status-select-<?php echo esc_attr($row_key); ?>" data-form-id="<?php echo esc_attr($wlgf_form_id); ?>"
 													data-lead-index="<?php echo esc_attr($row_key); ?>">
@@ -1948,15 +1963,28 @@ function wlgf_export_leads_csv_callback()
 		}
 	}
 
+	// Dynamic Payment Columns in CSV: Only include if Pro is active OR if any lead has historical payment data
+	$show_payment_column = ( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO );
+	if ( ! $show_payment_column && is_array( $wlgf_form_data ) ) {
+		foreach ( $wlgf_form_data as $row_check ) {
+			if ( is_array( $row_check ) && ( ! empty( $row_check['wlgf_payment_status'] ) || ! empty( $row_check['wlgf_payment_transaction_id'] ) || ! empty( $row_check['wlgf_payment_amount_paid'] ) ) ) {
+				$show_payment_column = true;
+				break;
+			}
+		}
+	}
+
 	$headers = array();
 	foreach ($wlgf_display_columns as $col) {
 		$headers[] = $col['label'];
 	}
 	$headers[] = __('Date Time', 'lead-generation-form');
 	$headers[] = __('Newsletter Opt-in', 'lead-generation-form');
-	$headers[] = __('Payment Status', 'lead-generation-form');
-	$headers[] = __('Transaction ID', 'lead-generation-form');
-	$headers[] = __('Amount Paid', 'lead-generation-form');
+	if ( $show_payment_column ) {
+		$headers[] = __('Payment Status', 'lead-generation-form');
+		$headers[] = __('Transaction ID', 'lead-generation-form');
+		$headers[] = __('Amount Paid', 'lead-generation-form');
+	}
 	$headers[] = __('Lead Status', 'lead-generation-form');
 	fputcsv($output, $headers);
 
@@ -2016,9 +2044,11 @@ function wlgf_export_leads_csv_callback()
 			$csv_row[] = isset($row['Date Time']) ? $row['Date Time'] : (isset($row['date_time']) ? $row['date_time'] : '');
 			$is_optin = (!empty($row['_newsletter_optin']) && 1 === (int) $row['_newsletter_optin']);
 			$csv_row[] = $is_optin ? __('Yes (Opted-in)', 'lead-generation-form') : __('No', 'lead-generation-form');
-			$csv_row[] = !empty($row['wlgf_payment_status']) ? $row['wlgf_payment_status'] : 'N/A';
-			$csv_row[] = !empty($row['wlgf_payment_transaction_id']) ? $row['wlgf_payment_transaction_id'] : '';
-			$csv_row[] = !empty($row['wlgf_payment_amount_paid']) ? $row['wlgf_payment_amount_paid'] : '';
+			if ( $show_payment_column ) {
+				$csv_row[] = !empty($row['wlgf_payment_status']) ? $row['wlgf_payment_status'] : 'N/A';
+				$csv_row[] = !empty($row['wlgf_payment_transaction_id']) ? $row['wlgf_payment_transaction_id'] : '';
+				$csv_row[] = !empty($row['wlgf_payment_amount_paid']) ? $row['wlgf_payment_amount_paid'] : '';
+			}
 			$csv_row[] = isset($row['_status']) ? $row['_status'] : 'new';
 
 			$escaped_csv_row = array();

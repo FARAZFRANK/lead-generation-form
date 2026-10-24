@@ -2196,7 +2196,7 @@ $max_post_size   = ini_get( 'post_max_size' );
 					<i class="fa-solid fa-shapes"></i>
 				</div>
 				<h3 class="wlgf-modal__title"><?php esc_html_e( 'Form Template Library', 'lead-generation-form' ); ?></h3>
-				<button type="button" class="wlgf-modal__close-btn" id="wlgf-close-templates-btn" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>">&times;</button>
+				<button type="button" class="wlgf-modal__close-btn" id="wlgf-close-templates-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>"><i class="fa-solid fa-xmark"></i></button>
 			</div>
 			<div class="wlgf-modal__body">
 				<p class="wlgf-template-modal-header-desc"><?php esc_html_e( 'Choose from 20+ conversion-optimized, pre-built templates or start with a clean slate to rapidly build your custom form structure.', 'lead-generation-form' ); ?></p>
@@ -2862,7 +2862,7 @@ $max_post_size   = ini_get( 'post_max_size' );
 					<button type="button" class="wlgf-device-btn" data-device="tablet" title="<?php esc_attr_e( 'Tablet View (768px)', 'lead-generation-form' ); ?>"><i class="fa-solid fa-tablet-screen-button"></i> <span><?php esc_html_e( 'Tablet', 'lead-generation-form' ); ?></span></button>
 					<button type="button" class="wlgf-device-btn" data-device="mobile" title="<?php esc_attr_e( 'Mobile View (375px)', 'lead-generation-form' ); ?>"><i class="fa-solid fa-mobile-screen-button"></i> <span><?php esc_html_e( 'Mobile', 'lead-generation-form' ); ?></span></button>
 				</div>
-				<button type="button" class="wlgf-modal__close-btn" id="wlgf-close-preview-btn">&times;</button>
+				<button type="button" class="wlgf-modal__close-btn" id="wlgf-close-preview-btn" title="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>" aria-label="<?php esc_attr_e( 'Close', 'lead-generation-form' ); ?>"><i class="fa-solid fa-xmark"></i></button>
 			</div>
 			<div class="wlgf-preview-body">
 				<div class="wlgf-preview-card" id="wlgf-preview-render-mount">
