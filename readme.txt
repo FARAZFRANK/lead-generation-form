@@ -199,7 +199,7 @@ The Free version is ideal for contact forms, inquiry forms, lead capture, and su
 7. Anti-Spam Security – Effortlessly set up Google reCAPTCHA v3 and honeypot traps.
 8. Live Form Theme Customizer – Customize colors, rounded corners, fonts, and dark mode without code.
 9. Visual Analytics Dashboard – Monitor form impressions, conversion rates, and device breakdowns.
-10. Gutenberg Block & Elementor Widget – Seamlessly embed forms into your favorite page builder.
+10. 100% Mobile-Responsive Live Form – Clean, modern, high-converting contact and inquiry forms on any screen.
 
 ---
 
@@ -215,6 +215,8 @@ The Free version is ideal for contact forms, inquiry forms, lead capture, and su
 * Data Sanitization: Standardized unslashing and sanitization for all AJAX request handlers, settings mutations, and analytics pings.
 * Performance: Enqueued external scripts with explicit version identifiers and set in_footer parameters for faster page rendering.
 * Clean Packaging: Cleaned up hidden development dotfiles and redundant build artifacts to ensure pristine distribution archives.
+* UI & Documentation: Reviewed Help & Documentation knowledge base and added distinct PRO feature badges across advanced modules, integration guides, and architectural breakdowns.
+* Core & Maintenance: Hardened Factory Reset engine with automatic object cache flushing (wp_cache_flush), Pro coexistence protection, and license key preservation for seamless Free-plan maintenance.
 
 = 1.3.2 =
 * Release Date: 24 Oct 2026

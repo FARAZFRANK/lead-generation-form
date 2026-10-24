@@ -272,6 +272,8 @@ Refer to [readme.txt](readme.txt) for the full changelog history.
 * **Data Sanitization:** Standardized unslashing and sanitization for all AJAX request handlers, settings mutations, and analytics pings.
 * **Performance:** Enqueued external scripts with explicit version identifiers and set `in_footer` parameters for faster page rendering.
 * **Clean Packaging:** Cleaned up hidden development dotfiles and redundant build artifacts to ensure pristine distribution archives.
+* **UI & Documentation:** Comprehensive review of Help & Documentation tab with dedicated PRO badges on advanced modules, setup guides, and architectural breakdowns.
+* **Core & Maintenance:** Hardened Factory Reset engine with automatic object cache flushing (`wp_cache_flush()`), Pro coexistence protection, and license key preservation for seamless Free-plan maintenance.
 
 ### Version 1.3.2 (24 Oct 2026)
 * **Improved:** Modernized Lead Details modal close button with an accessible squircle button, refined typography, and smooth rotational hover effects.

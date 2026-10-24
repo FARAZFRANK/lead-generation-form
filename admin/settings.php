@@ -1610,7 +1610,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-calculator text-primary"></i> <?php esc_html_e( 'Formula Price Estimator', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-calculator text-primary"></i> <?php esc_html_e( 'Formula Price Estimator', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1623,7 +1623,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-credit-card text-primary"></i> <?php esc_html_e( 'Payments & Checkout', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-credit-card text-primary"></i> <?php esc_html_e( 'Payments & Checkout', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1636,7 +1636,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-code text-primary"></i> <?php esc_html_e( 'Headless REST API', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-code text-primary"></i> <?php esc_html_e( 'Headless REST API', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1675,7 +1675,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-comment-dots text-primary"></i> <?php esc_html_e( 'Floating WhatsApp & Contact Launcher', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-comment-dots text-primary"></i> <?php esc_html_e( 'Floating WhatsApp & Contact Launcher', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1765,7 +1765,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-network-wired text-primary"></i> <?php esc_html_e( 'Real-Time Outgoing Webhooks (PRO-007)', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-network-wired text-primary"></i> <?php esc_html_e( 'Real-Time Outgoing Webhooks', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1804,7 +1804,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-shoe-prints text-primary"></i> <?php esc_html_e( 'Multi-Step Form Wizard & Progress Bar (PRO-002)', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-shoe-prints text-primary"></i> <?php esc_html_e( 'Multi-Step Form Wizard & Progress Bar', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1817,7 +1817,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-signature text-purple" style="color: #8b5cf6;"></i> <?php esc_html_e( 'HTML5 Digital E-Signature Pad (PRO-018 / v3.4.5)', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-signature text-purple" style="color: #8b5cf6;"></i> <?php esc_html_e( 'HTML5 Digital E-Signature Pad', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1830,7 +1830,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<i class="fa-solid fa-cloud-arrow-up text-primary"></i> <?php esc_html_e( 'Drag & Drop Multi-File Upload Dropzone (PRO-003)', 'lead-generation-form' ); ?>
+									<i class="fa-solid fa-cloud-arrow-up text-primary"></i> <?php esc_html_e( 'Drag & Drop Multi-File Upload Dropzone', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -1872,7 +1872,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-step">
 							<span class="wlgf-step__num">2</span>
 							<div class="wlgf-step__content">
-								<strong class="wlgf-step__title"><?php esc_html_e( 'Safe Math Calculation Engine (Zero eval):', 'lead-generation-form' ); ?></strong>
+								<strong class="wlgf-step__title"><?php esc_html_e( 'Safe Math Calculation Engine (Zero eval):', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span></strong>
 								<span class="wlgf-step__desc">
 									<?php esc_html_e( 'Formula evaluation uses an AST-based recursive-descent math tokenizer in PHP without eval() or create_function(). It replaces bracketed tokens like {quantity} with sanitized numbers, strips non-math characters, and safely evaluates arithmetic (+, -, *, /, parentheses). Tampering with client numbers is impossible because the server independently computes the final price.', 'lead-generation-form' ); ?>
 								</span>
@@ -1882,7 +1882,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-step">
 							<span class="wlgf-step__num">3</span>
 							<div class="wlgf-step__content">
-								<strong class="wlgf-step__title"><?php esc_html_e( 'Visual Conditional Logic Engine:', 'lead-generation-form' ); ?></strong>
+								<strong class="wlgf-step__title"><?php esc_html_e( 'Visual Conditional Logic Engine:', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span></strong>
 								<span class="wlgf-step__desc">
 									<?php esc_html_e( 'Conditional rules attach real-time event listeners to form input fields. When a trigger field changes, the engine evaluates conditions using AND/OR logic and toggles the visibility and "required" state of dependent fields dynamically on the client canvas.', 'lead-generation-form' ); ?>
 								</span>
@@ -1892,7 +1892,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-step">
 							<span class="wlgf-step__num">4</span>
 							<div class="wlgf-step__content">
-								<strong class="wlgf-step__title"><?php esc_html_e( 'Pure-PHP Vector PDF Generator Engine:', 'lead-generation-form' ); ?></strong>
+								<strong class="wlgf-step__title"><?php esc_html_e( 'Pure-PHP Vector PDF Generator Engine:', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span></strong>
 								<span class="wlgf-step__desc">
 									<?php esc_html_e( 'Generates vector-sharp PDF summaries and invoice receipts using raw PDF stream primitives (Type1 fonts, re/f/S coordinate paths). Runs 100% in pure PHP with zero heavy binary dependencies (no DOMPDF, no TCPDF, no WKHTMLTOPDF), executing in under 25ms with minimal memory consumption.', 'lead-generation-form' ); ?>
 								</span>
@@ -1931,7 +1931,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-step">
 							<span class="wlgf-step__num">8</span>
 							<div class="wlgf-step__content">
-								<strong class="wlgf-step__title"><?php esc_html_e( 'Real-Time Outgoing Webhook Dispatch Engine (PRO-007):', 'lead-generation-form' ); ?></strong>
+								<strong class="wlgf-step__title"><?php esc_html_e( 'Real-Time Outgoing Webhook Dispatch Engine:', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span></strong>
 								<span class="wlgf-step__desc">
 									<?php esc_html_e( 'Executes non-blocking, asynchronous HTTP POST requests via wp_remote_post() to your configured webhook URL (Zapier, Make, n8n, Slack, or CRM). Packages sanitized lead fields, unique submission IDs, form metadata, timestamps, and payment transaction details in standard application/json headers with a strict 15-second timeout safeguard to eliminate frontend latency.', 'lead-generation-form' ); ?>
 								</span>
@@ -1951,7 +1951,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-step">
 							<span class="wlgf-step__num">10</span>
 							<div class="wlgf-step__content">
-								<strong class="wlgf-step__title"><?php esc_html_e( 'Multi-Step Client-Side State & Per-Step Validation Engine (PRO-002):', 'lead-generation-form' ); ?></strong>
+								<strong class="wlgf-step__title"><?php esc_html_e( 'Multi-Step Client-Side State & Per-Step Validation Engine:', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span></strong>
 								<span class="wlgf-step__desc">
 									<?php esc_html_e( 'Maintains active step index in client memory. When a visitor clicks "Next", validates only the visible required inputs belonging to that active step partition. If all inputs are valid, triggers smooth hardware-accelerated CSS sliding transitions, recalculates completion percentage, and scrolls the next card into view while maintaining partial draft auto-capture.', 'lead-generation-form' ); ?>
 								</span>
@@ -1961,7 +1961,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-step">
 							<span class="wlgf-step__num">11</span>
 							<div class="wlgf-step__content">
-								<strong class="wlgf-step__title"><?php esc_html_e( 'High-DPI E-Signature Pad & Pure-PHP Vector PDF Engine (PRO-018 / v3.4.5):', 'lead-generation-form' ); ?></strong>
+								<strong class="wlgf-step__title"><?php esc_html_e( 'High-DPI E-Signature Pad & Pure-PHP Vector PDF Engine:', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span></strong>
 								<span class="wlgf-step__desc">
 									<?php esc_html_e( 'Initializes HTML5 Canvas calibrated with window.devicePixelRatio (2x-3x retina scaling) to prevent pixelation on iPads, iPhones, and Android touchscreens. Records high-fidelity vector Bezier curves, serializes coordinates into compressed PNG Base64 data, and stamps verified digital signatures directly onto raw PDF receipt streams without external binary libraries.', 'lead-generation-form' ); ?>
 								</span>
@@ -2029,7 +2029,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<span class="wlgf-badge wlgf-badge--primary">Guide 3</span> <?php esc_html_e( 'Setting Up Stripe & PayPal Checkouts', 'lead-generation-form' ); ?>
+									<span class="wlgf-badge wlgf-badge--primary">Guide 3</span> <?php esc_html_e( 'Setting Up Stripe & PayPal Checkouts', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -2132,7 +2132,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<span class="wlgf-badge wlgf-badge--primary">Guide 9</span> <?php esc_html_e( 'Connecting Webhooks to Zapier, Make.com, or n8n', 'lead-generation-form' ); ?>
+									<span class="wlgf-badge wlgf-badge--primary">Guide 9</span> <?php esc_html_e( 'Connecting Webhooks to Zapier, Make.com, or n8n', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -2149,7 +2149,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 						<div class="wlgf-card wlgf-card--bordered">
 							<div class="wlgf-card__header">
 								<h3 class="wlgf-card__title" style="font-size: 15px;">
-									<span class="wlgf-badge wlgf-badge--primary">Guide 10</span> <?php esc_html_e( 'Building a Multi-Step Wizard Form with Progress Bar', 'lead-generation-form' ); ?>
+									<span class="wlgf-badge wlgf-badge--primary">Guide 10</span> <?php esc_html_e( 'Building a Multi-Step Wizard Form with Progress Bar', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span>
 								</h3>
 							</div>
 							<div class="wlgf-card__body">
@@ -2472,7 +2472,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 									<code class="wlgf-code-pill__text">[WLFG id="FORM_ID"]</code>
 								</div>
 								<p class="wlgf-help-text">
-									<?php esc_html_e( 'Pro routing parameter: [WLFG id="1" carbon_copy="sales@company.com,team@company.com"] for department notification routing.', 'lead-generation-form' ); ?>
+									<span class="wlgf-badge wlgf-badge--warning wlgf-mr-1"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO', 'lead-generation-form' ); ?></span> <?php esc_html_e( 'Routing parameter: [WLFG id="1" carbon_copy="sales@company.com,team@company.com"] for department notification routing.', 'lead-generation-form' ); ?>
 								</p>
 							</div>
 						</div>
@@ -2567,7 +2567,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 			<div class="wlgf-card wlgf-mb-4">
 				<div class="wlgf-card__header">
 					<h2 class="wlgf-card__title">
-						<i class="fa-solid fa-comment-dots text-primary"></i> <?php esc_html_e( '8. Floating Multi-Channel Contact Launcher Guide', 'lead-generation-form' ); ?>
+						<i class="fa-solid fa-comment-dots text-primary"></i> <?php esc_html_e( '8. Floating Multi-Channel Contact Launcher Guide', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-2"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO Feature', 'lead-generation-form' ); ?></span>
 					</h2>
 				</div>
 				<div class="wlgf-card__body">
@@ -2601,7 +2601,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 			<div class="wlgf-card wlgf-mb-4">
 				<div class="wlgf-card__header">
 					<h2 class="wlgf-card__title">
-						<i class="fa-solid fa-bolt text-warning"></i> <?php esc_html_e( '9. Popups, Slide-ins & Smart Behavioral Triggers Guide', 'lead-generation-form' ); ?>
+						<i class="fa-solid fa-bolt text-warning"></i> <?php esc_html_e( '9. Popups, Slide-ins & Smart Behavioral Triggers Guide', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-2"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO Feature', 'lead-generation-form' ); ?></span>
 					</h2>
 				</div>
 				<div class="wlgf-card__body">
@@ -2641,7 +2641,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 			<div class="wlgf-card wlgf-mb-4">
 				<div class="wlgf-card__header">
 					<h2 class="wlgf-card__title">
-						<i class="fa-solid fa-signature text-purple" style="color: #8b5cf6;"></i> <?php esc_html_e( '10. Digital E-Signature Pad & Vector PDF Receipts', 'lead-generation-form' ); ?>
+						<i class="fa-solid fa-signature text-purple" style="color: #8b5cf6;"></i> <?php esc_html_e( '10. Digital E-Signature Pad & Vector PDF Receipts', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-2"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO Feature', 'lead-generation-form' ); ?></span>
 					</h2>
 				</div>
 				<div class="wlgf-card__body">
@@ -2660,7 +2660,7 @@ $wlgf_wp_version_str  = get_bloginfo( 'version' );
 			<div class="wlgf-card wlgf-mb-4">
 				<div class="wlgf-card__header">
 					<h2 class="wlgf-card__title">
-						<i class="fa-solid fa-chart-gantt text-emerald" style="color: #10b981;"></i> <?php esc_html_e( '11. Abandoned Lead Recovery & Mini-CRM Kanban Pipeline', 'lead-generation-form' ); ?>
+						<i class="fa-solid fa-chart-gantt text-emerald" style="color: #10b981;"></i> <?php esc_html_e( '11. Abandoned Lead Recovery & Mini-CRM Kanban Pipeline', 'lead-generation-form' ); ?> <span class="wlgf-badge wlgf-badge--warning wlgf-ml-2"><i class="fa-solid fa-crown"></i> <?php esc_html_e( 'PRO Feature', 'lead-generation-form' ); ?></span>
 					</h2>
 				</div>
 				<div class="wlgf-card__body">

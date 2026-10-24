@@ -3459,13 +3459,22 @@ function wlgf_factory_reset_callback() {
 		wp_send_json_error( array( 'message' => __( 'Security token expired or invalid. Please refresh the page and try again.', 'lead-generation-form' ) ) );
 	}
 
+	// Coexistence guard: If Pro edition is active, block Free reset to protect enterprise configurations
+	if ( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO ) {
+		wp_send_json_error( array( 'message' => __( 'Reset operation aborted: Lead Generation Form Pro is currently active. Please manage or reset forms from your Pro dashboard.', 'lead-generation-form' ) ) );
+	}
+
 	global $wpdb;
 
-	// 1. Delete all static and dynamic wlgf options from wp_options table
+	// Preserve Pro license metadata if previously configured
+	$wlgf_preserved_license_key    = get_option( 'wlgf_pro_license_key', '' );
+	$wlgf_preserved_license_status = get_option( 'wlgf_pro_license_status', '' );
+
+	// 1. Delete all static and dynamic wlgf options from wp_options table, preserving license keys
 	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Bulk purge of plugin options on factory reset.
 	$wpdb->query(
 		$wpdb->prepare(
-			"DELETE FROM `{$wpdb->options}` WHERE `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s",
+			"DELETE FROM `{$wpdb->options}` WHERE ( `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s ) AND `option_name` NOT IN ( 'wlgf_pro_license_key', 'wlgf_pro_license_status' )",
 			$wpdb->esc_like( 'wlgf_' ) . '%',
 			$wpdb->esc_like( '_transient_wlgf_' ) . '%',
 			$wpdb->esc_like( '_transient_timeout_wlgf_' ) . '%'
@@ -3477,13 +3486,29 @@ function wlgf_factory_reset_callback() {
 	delete_transient( 'wlgf_gutenberg_forms_list' );
 	delete_transient( 'wlgf_elementor_forms_list' );
 
-	// 3. Re-run default installation script to recreate sample forms & default settings
+	// 3. Flush WordPress object cache so no stale options linger in persistent or memory cache
+	wp_cache_flush();
+
+	// 4. Re-run default installation script to recreate sample forms & default settings
 	require plugin_dir_path( __FILE__ ) . 'includes/install-script.php';
 
-	// 4. Update current version option
+	// 5. Restore Pro license metadata if previously present
+	if ( ! empty( $wlgf_preserved_license_key ) ) {
+		update_option( 'wlgf_pro_license_key', $wlgf_preserved_license_key );
+	}
+	if ( ! empty( $wlgf_preserved_license_status ) ) {
+		update_option( 'wlgf_pro_license_status', $wlgf_preserved_license_status );
+	}
+
+	// 6. Update current version option
 	if ( defined( 'WLGF_PLUGIN_VERSION' ) ) {
 		update_option( 'wlgf_current_version', WLGF_PLUGIN_VERSION );
 	}
+
+	/**
+	 * Fires immediately after Lead Generation Form factory reset is completed.
+	 */
+	do_action( 'wlgf_after_factory_reset' );
 
 	wp_send_json_success( array(
 		'message' => __( 'Plugin has been successfully reset to factory defaults. Reloading...', 'lead-generation-form' ),
