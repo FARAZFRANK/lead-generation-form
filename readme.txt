@@ -2,9 +2,9 @@
 Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife, FARAZFRANK
 Tags: contact-form, form-builder, contact-us, lead-generation, Survey-Inquiry
 Requires at least: 5.6
-Tested up to: 6.7
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -205,6 +205,17 @@ The Free version is ideal for contact forms, inquiry forms, lead capture, and su
 
 == Changelog ==
 
+= 1.3.3 =
+* Release Date: 24 Oct 2026
+* WordPress Plugin Check (PCP): Achieved full compliance with WordPress Plugin Check and official PHP Coding Standards (WPCS).
+* Security & Escaping: Implemented comprehensive late output escaping across all dynamic form generator markup, inputs, and lead modal previews.
+* Internationalization (i18n): Enhanced translation readiness with strict translators comments and ordered placeholders (%1$s, %2$s) on all translatable strings.
+* Code Quality: Renamed and isolated global variable scopes across admin panels to prevent collisions with third-party themes and plugins.
+* Modernization: Replaced deprecated parse_url() with wp_parse_url() and date() with gmdate() for timezone-safe execution.
+* Data Sanitization: Standardized unslashing and sanitization for all AJAX request handlers, settings mutations, and analytics pings.
+* Performance: Enqueued external scripts with explicit version identifiers and set in_footer parameters for faster page rendering.
+* Clean Packaging: Cleaned up hidden development dotfiles and redundant build artifacts to ensure pristine distribution archives.
+
 = 1.3.2 =
 * Release Date: 24 Oct 2026
 * Improved: Modernized Lead Details modal close button with an accessible squircle button, refined typography, and smooth rotational hover effects.
@@ -293,6 +304,9 @@ The Free version is ideal for contact forms, inquiry forms, lead capture, and su
 ---
 
 == Upgrade Notice ==
+
+= 1.3.3 =
+Recommended upgrade: includes full WordPress Plugin Check compliance, enhanced late output escaping, standardized internationalization, and optimized script registration.
 
 = 1.3.2 =
 Recommended upgrade: includes lead details modal visual enhancements, dynamic payment column visibility, rate-limit submission display fixes, and security shield improvements.

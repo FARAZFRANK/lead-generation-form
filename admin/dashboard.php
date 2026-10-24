@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Get plugin version with authoritative constant prioritization and auto DB sync
-$wlgf_display_version = defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : get_option( 'wlgf_current_version', '1.3.2' );
+$wlgf_display_version = defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : get_option( 'wlgf_current_version', '1.3.3' );
 if ( defined( 'WLGF_PLUGIN_VERSION' ) && get_option( 'wlgf_current_version' ) !== WLGF_PLUGIN_VERSION ) {
 	update_option( 'wlgf_current_version', WLGF_PLUGIN_VERSION );
 }
@@ -12,19 +12,19 @@ if ( defined( 'WLGF_PLUGIN_VERSION' ) && get_option( 'wlgf_current_version' ) !=
 // Enqueue modern design system, icons, chartjs and dashboard controller
 wp_enqueue_style( 'wlgf-admin-ui-css' );
 wp_enqueue_style( 'wlgf-fontawesome-css' );
-$dashboard_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) ? ( defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : '1.3.2' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) : '1.3.2';
-wp_enqueue_script( 'wlgf-dashboard-js', plugin_dir_url( __FILE__ ) . 'assets/js/dashboard.js', array( 'jquery', 'wlgf-chartjs' ), $dashboard_js_ver, true );
+$wlgf_dashboard_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) ? ( defined( 'WLGF_PLUGIN_VERSION' ) ? WLGF_PLUGIN_VERSION : '1.3.3' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/dashboard.js' ) : '1.3.3';
+wp_enqueue_script( 'wlgf-dashboard-js', plugin_dir_url( __FILE__ ) . 'assets/js/dashboard.js', array( 'jquery', 'wlgf-chartjs' ), $wlgf_dashboard_js_ver, true );
 
 // Calculate forms, leads counts, and rich analytics safely
 $wlgf_form_count = 0;
 $wlgf_lead_count = 0;
 
 global $wpdb;
-$wlgf_options_table_name = "{$wpdb->prefix}options";
 
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wlgf_all_forms = $wpdb->get_results(
 	$wpdb->prepare(
-		"SELECT option_name FROM `$wlgf_options_table_name` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
+		"SELECT option_name FROM {$wpdb->options} WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
 		$wpdb->esc_like( 'wlgf_form_' ) . '%',
 		$wpdb->esc_like( 'wlgf_form_views_' ) . '%'
 	)
@@ -46,36 +46,36 @@ if ( is_array( $wlgf_all_forms ) ) {
 		$wlgf_form_id     = sanitize_text_field( $wlgf_form_data['form_id'] );
 			$wlgf_form_title  = ! empty( $wlgf_form_data['form_name'] ) ? $wlgf_form_data['form_name'] : ( 'Form #' . $wlgf_form_id );
 			$wlgf_saved_data  = get_option( 'wlgf_saved_form_data_' . $wlgf_form_id );
-			$f_views          = intval( get_option( 'wlgf_form_views_' . $wlgf_form_id, 0 ) );
-			$wlgf_total_views += $f_views;
-			$f_leads          = is_array( $wlgf_saved_data ) ? count( $wlgf_saved_data ) : 0;
-			$wlgf_lead_count  += $f_leads;
+			$wlgf_f_views     = intval( get_option( 'wlgf_form_views_' . $wlgf_form_id, 0 ) );
+			$wlgf_total_views += $wlgf_f_views;
+			$wlgf_f_leads     = is_array( $wlgf_saved_data ) ? count( $wlgf_saved_data ) : 0;
+			$wlgf_lead_count  += $wlgf_f_leads;
 
 			$wlgf_forms_list[ $wlgf_form_id ] = $wlgf_form_title;
 
 			// Extract analytics record
-			$f_analytics = get_option( 'wlgf_analytics_' . $wlgf_form_id, array(
-				'total_views'       => $f_views,
-				'total_submissions' => $f_leads,
+			$wlgf_f_analytics = get_option( 'wlgf_analytics_' . $wlgf_form_id, array(
+				'total_views'       => $wlgf_f_views,
+				'total_submissions' => $wlgf_f_leads,
 				'daily'             => array(),
 				'step_views'        => array(),
 				'device_breakdown'  => array(),
 			) );
 
-			if ( empty( $f_analytics['total_views'] ) ) {
-				$f_analytics['total_views'] = $f_views;
+			if ( empty( $wlgf_f_analytics['total_views'] ) ) {
+				$wlgf_f_analytics['total_views'] = $wlgf_f_views;
 			}
-			if ( empty( $f_analytics['total_submissions'] ) ) {
-				$f_analytics['total_submissions'] = $f_leads;
+			if ( empty( $wlgf_f_analytics['total_submissions'] ) ) {
+				$wlgf_f_analytics['total_submissions'] = $wlgf_f_leads;
 			}
 
 			// Seed fallback daily analytics for clean visual charts if legacy form has no daily events yet
-			if ( empty( $f_analytics['daily'] ) && ( $f_views > 0 || $f_leads > 0 ) ) {
-				$today = gmdate( 'Y-m-d' );
-				$f_analytics['daily'][ $today ] = array( 'views' => $f_views, 'submissions' => $f_leads );
+			if ( empty( $wlgf_f_analytics['daily'] ) && ( $wlgf_f_views > 0 || $wlgf_f_leads > 0 ) ) {
+				$wlgf_today = gmdate( 'Y-m-d' );
+				$wlgf_f_analytics['daily'][ $wlgf_today ] = array( 'views' => $wlgf_f_views, 'submissions' => $wlgf_f_leads );
 			}
 
-			$wlgf_dashboard_analytics[ $wlgf_form_id ] = $f_analytics;
+			$wlgf_dashboard_analytics[ $wlgf_form_id ] = $wlgf_f_analytics;
 	}
 }
 $wlgf_overall_conversion = $wlgf_total_views > 0 ? round( ( $wlgf_lead_count / $wlgf_total_views ) * 100, 1 ) : ( $wlgf_lead_count > 0 ? 100 : 0 );
@@ -275,7 +275,10 @@ $wlgf_changelog_url = plugin_dir_url( __FILE__ ) . '../change-log.txt';
 				<h3 class="wlgf-stat-card__value"><?php echo esc_html( (string) $wlgf_form_count ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Forms Active', 'lead-generation-form' ); ?></p>
 				<p class="wlgf-stat-card__subtext">
-					<i class="fa-solid fa-circle-check text-success"></i> <?php echo esc_html( $wlgf_form_count > 0 ? sprintf( __( '%d published & ready', 'lead-generation-form' ), $wlgf_form_count ) : __( 'No forms created yet', 'lead-generation-form' ) ); ?>
+					<i class="fa-solid fa-circle-check text-success"></i> <?php
+					/* translators: %d: count of published forms */
+					echo esc_html( $wlgf_form_count > 0 ? sprintf( __( '%d published & ready', 'lead-generation-form' ), $wlgf_form_count ) : __( 'No forms created yet', 'lead-generation-form' ) );
+					?>
 				</p>
 			</div>
 		</div>
@@ -289,7 +292,10 @@ $wlgf_changelog_url = plugin_dir_url( __FILE__ ) . '../change-log.txt';
 				<h3 class="wlgf-stat-card__value"><?php echo esc_html( (string) $wlgf_lead_count ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Total Submissions', 'lead-generation-form' ); ?></p>
 				<p class="wlgf-stat-card__subtext">
-					<i class="fa-solid fa-inbox text-primary"></i> <?php echo esc_html( $wlgf_lead_count > 0 ? sprintf( __( '%d leads captured across forms', 'lead-generation-form' ), $wlgf_lead_count ) : __( 'Awaiting first lead inquiry', 'lead-generation-form' ) ); ?>
+					<i class="fa-solid fa-inbox text-primary"></i> <?php
+					/* translators: %d: count of captured leads */
+					echo esc_html( $wlgf_lead_count > 0 ? sprintf( __( '%d leads captured across forms', 'lead-generation-form' ), $wlgf_lead_count ) : __( 'Awaiting first lead inquiry', 'lead-generation-form' ) );
+					?>
 				</p>
 			</div>
 		</div>
@@ -303,7 +309,10 @@ $wlgf_changelog_url = plugin_dir_url( __FILE__ ) . '../change-log.txt';
 				<h3 class="wlgf-stat-card__value"><?php echo esc_html( $wlgf_overall_conversion . '%' ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Avg. Conversion Rate', 'lead-generation-form' ); ?></p>
 				<p class="wlgf-stat-card__subtext">
-					<i class="fa-solid fa-eye text-muted"></i> <?php echo esc_html( sprintf( __( '%s total impressions tracked', 'lead-generation-form' ), number_format_i18n( $wlgf_total_views ) ) ); ?>
+					<i class="fa-solid fa-eye text-muted"></i> <?php
+					/* translators: %s: formatted total impressions count */
+					echo esc_html( sprintf( __( '%s total impressions tracked', 'lead-generation-form' ), number_format_i18n( $wlgf_total_views ) ) );
+					?>
 				</p>
 			</div>
 		</div>
@@ -347,8 +356,8 @@ $wlgf_changelog_url = plugin_dir_url( __FILE__ ) . '../change-log.txt';
 				<div class="wlgf-analytics-toolbar__filter">
 					<select id="wlgf-analytics-form-filter" class="wlgf-analytics-select" <?php echo empty( $wlgf_forms_list ) ? 'disabled style="opacity: 0.6;"' : ''; ?>>
 						<option value="all"><?php echo empty( $wlgf_forms_list ) ? esc_html__( 'No Forms Available', 'lead-generation-form' ) : esc_html__( 'All Forms (Aggregate)', 'lead-generation-form' ); ?></option>
-						<?php foreach ( $wlgf_forms_list as $fid => $fname ) : ?>
-							<option value="<?php echo esc_attr( $fid ); ?>"><?php echo esc_html( $fname ); ?> (#<?php echo esc_html( $fid ); ?>)</option>
+						<?php foreach ( $wlgf_forms_list as $wlgf_fid => $wlgf_fname ) : ?>
+							<option value="<?php echo esc_attr( $wlgf_fid ); ?>"><?php echo esc_html( $wlgf_fname ); ?> (#<?php echo esc_html( $wlgf_fid ); ?>)</option>
 						<?php endforeach; ?>
 					</select>
 				</div>

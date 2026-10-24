@@ -30,11 +30,10 @@ wp_add_inline_script(
 
 // Fetch all forms
 global $wpdb;
-$wlgf_options_table_name = "{$wpdb->prefix}options";
-
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wlgf_all_forms = $wpdb->get_results(
 	$wpdb->prepare(
-		"SELECT option_name FROM `$wlgf_options_table_name` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
+		"SELECT option_name FROM {$wpdb->options} WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
 		$wpdb->esc_like( 'wlgf_form_' ) . '%',
 		$wpdb->esc_like( 'wlgf_form_views_' ) . '%'
 	)
@@ -71,9 +70,10 @@ $wlgf_all_forms = $wpdb->get_results(
 		</div>
 		<div class="wlgf-card__body">
 			<?php
-			$forms_list_for_dropdown = array();
-			$preselected_form_id     = isset( $_GET['form_id'] ) ? sanitize_text_field( wp_unslash( $_GET['form_id'] ) ) : '';
-			$selected_form_label     = __( '-- Choose a Form to Access Leads --', 'lead-generation-form' );
+			$wlgf_forms_list_for_dropdown = array();
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$wlgf_preselected_form_id     = isset( $_GET['form_id'] ) ? sanitize_text_field( wp_unslash( $_GET['form_id'] ) ) : '';
+			$wlgf_selected_form_label     = __( '-- Choose a Form to Access Leads --', 'lead-generation-form' );
 
 			if ( is_array( $wlgf_all_forms ) ) {
 				foreach ( $wlgf_all_forms as $wlgf_form ) {
@@ -82,14 +82,14 @@ $wlgf_all_forms = $wpdb->get_results(
 					if ( ! is_array( $wlgf_form_data ) || empty( $wlgf_form_data['form_id'] ) ) {
 						continue;
 					}
-					$f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
-					$f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $f_id );
-					$forms_list_for_dropdown[] = array(
-						'id'   => $f_id,
-						'name' => $f_name,
+					$wlgf_f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
+					$wlgf_f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $wlgf_f_id );
+					$wlgf_forms_list_for_dropdown[] = array(
+						'id'   => $wlgf_f_id,
+						'name' => $wlgf_f_name,
 					);
-					if ( (string) $preselected_form_id === (string) $f_id ) {
-						$selected_form_label = $f_name . ' (ID: #' . $f_id . ')';
+					if ( (string) $wlgf_preselected_form_id === (string) $wlgf_f_id ) {
+						$wlgf_selected_form_label = $wlgf_f_name . ' (ID: #' . $wlgf_f_id . ')';
 					}
 				}
 			}
@@ -100,16 +100,16 @@ $wlgf_all_forms = $wpdb->get_results(
 						<i class="fa-solid fa-list-check wlgf-text-primary"></i> <?php esc_html_e( 'Choose Form:', 'lead-generation-form' ); ?>
 					</label>
 					<span class="wlgf-text-xs wlgf-text-muted" id="wlgf-form-count-badge">
-						<i class="fa-solid fa-layer-group"></i> <?php echo esc_html( count( $forms_list_for_dropdown ) ); ?> <?php esc_html_e( 'Forms', 'lead-generation-form' ); ?>
+						<i class="fa-solid fa-layer-group"></i> <?php echo esc_html( count( $wlgf_forms_list_for_dropdown ) ); ?> <?php esc_html_e( 'Forms', 'lead-generation-form' ); ?>
 					</span>
 				</div>
 
 				<!-- Hidden Native Select (Kept for full backward compatibility & automated hooks) -->
 				<select class="wlgf-select wlgf-w-full" id="wlgf-form-list" name="wlgf-form-list" onchange="return WLGF(this.value, 'load', '');" style="display: none !important;">
 					<option value="0"><?php esc_html_e( '-- Choose a Form to Access Leads --', 'lead-generation-form' ); ?></option>
-					<?php foreach ( $forms_list_for_dropdown as $f_item ) : ?>
-						<option value="<?php echo esc_attr( $f_item['id'] ); ?>" <?php selected( $preselected_form_id, $f_item['id'] ); ?>>
-							<?php echo esc_html( $f_item['name'] . ' (ID: #' . $f_item['id'] . ')' ); ?>
+					<?php foreach ( $wlgf_forms_list_for_dropdown as $wlgf_f_item ) : ?>
+						<option value="<?php echo esc_attr( $wlgf_f_item['id'] ); ?>" <?php selected( $wlgf_preselected_form_id, $wlgf_f_item['id'] ); ?>>
+							<?php echo esc_html( $wlgf_f_item['name'] . ' (ID: #' . $wlgf_f_item['id'] . ')' ); ?>
 						</option>
 					<?php endforeach; ?>
 				</select>
@@ -120,7 +120,7 @@ $wlgf_all_forms = $wpdb->get_results(
 					<div class="wlgf-searchable-select__trigger" id="wlgf-form-search-trigger" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false">
 						<div class="wlgf-searchable-select__trigger-text">
 							<i class="fa-solid fa-magnifying-glass wlgf-searchable-select__icon"></i>
-							<span class="wlgf-searchable-select__current-label" id="wlgf-form-search-current-label"><?php echo esc_html( $selected_form_label ); ?></span>
+							<span class="wlgf-searchable-select__current-label" id="wlgf-form-search-current-label"><?php echo esc_html( $wlgf_selected_form_label ); ?></span>
 						</div>
 						<div class="wlgf-searchable-select__trigger-arrow">
 							<i class="fa-solid fa-chevron-down"></i>
@@ -140,23 +140,23 @@ $wlgf_all_forms = $wpdb->get_results(
 
 						<!-- Options List -->
 						<ul class="wlgf-searchable-select__options" id="wlgf-form-search-options" role="listbox">
-							<li class="wlgf-searchable-select__option wlgf-searchable-select__option--default <?php echo ( empty( $preselected_form_id ) || '0' === $preselected_form_id ) ? 'is-selected' : ''; ?>" data-value="0" data-label="<?php esc_attr_e( '-- Choose a Form to Access Leads --', 'lead-generation-form' ); ?>" data-search="" role="option">
+							<li class="wlgf-searchable-select__option wlgf-searchable-select__option--default <?php echo ( empty( $wlgf_preselected_form_id ) || '0' === $wlgf_preselected_form_id ) ? 'is-selected' : ''; ?>" data-value="0" data-label="<?php esc_attr_e( '-- Choose a Form to Access Leads --', 'lead-generation-form' ); ?>" data-search="" role="option">
 								<span class="wlgf-searchable-select__option-name">
 									<i class="fa-regular fa-circle-dot wlgf-text-muted"></i> <?php esc_html_e( '-- Choose a Form to Access Leads --', 'lead-generation-form' ); ?>
 								</span>
 							</li>
-							<?php foreach ( $forms_list_for_dropdown as $f_item ) : ?>
+							<?php foreach ( $wlgf_forms_list_for_dropdown as $wlgf_f_item ) : ?>
 								<?php
-								$is_sel       = ( (string) $preselected_form_id === (string) $f_item['id'] );
-								$option_label = $f_item['name'] . ' (ID: #' . $f_item['id'] . ')';
+								$wlgf_is_sel       = ( (string) $wlgf_preselected_form_id === (string) $wlgf_f_item['id'] );
+								$wlgf_option_label = $wlgf_f_item['name'] . ' (ID: #' . $wlgf_f_item['id'] . ')';
 								?>
-								<li class="wlgf-searchable-select__option <?php echo $is_sel ? 'is-selected' : ''; ?>" data-value="<?php echo esc_attr( $f_item['id'] ); ?>" data-label="<?php echo esc_attr( $option_label ); ?>" data-search="<?php echo esc_attr( strtolower( $f_item['name'] . ' ' . $f_item['id'] . ' #' . $f_item['id'] ) ); ?>" role="option">
+								<li class="wlgf-searchable-select__option <?php echo $wlgf_is_sel ? 'is-selected' : ''; ?>" data-value="<?php echo esc_attr( $wlgf_f_item['id'] ); ?>" data-label="<?php echo esc_attr( $wlgf_option_label ); ?>" data-search="<?php echo esc_attr( strtolower( $wlgf_f_item['name'] . ' ' . $wlgf_f_item['id'] . ' #' . $wlgf_f_item['id'] ) ); ?>" role="option">
 									<span class="wlgf-searchable-select__option-name">
 										<i class="fa-solid fa-file-lines wlgf-searchable-select__option-icon"></i>
-										<?php echo esc_html( $f_item['name'] ); ?>
+										<?php echo esc_html( $wlgf_f_item['name'] ); ?>
 									</span>
 									<span class="wlgf-searchable-select__option-badge">
-										ID: #<?php echo esc_html( $f_item['id'] ); ?>
+										ID: #<?php echo esc_html( $wlgf_f_item['id'] ); ?>
 									</span>
 								</li>
 							<?php endforeach; ?>

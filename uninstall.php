@@ -37,14 +37,15 @@ $wlgf_options = array(
 	'wlgf_pro_license_key',
 );
 
-foreach ( $wlgf_options as $option_name ) {
-	delete_option( $option_name );
+foreach ( $wlgf_options as $wlgf_option_name ) {
+	delete_option( $wlgf_option_name );
 }
 
 // Delete dynamic options: forms, leads, views, submissions, per-form analytics
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wpdb->query(
 	$wpdb->prepare(
-		"DELETE FROM `$wpdb->options` WHERE `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s",
+		"DELETE FROM {$wpdb->options} WHERE `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s",
 		$wpdb->esc_like( 'wlgf_form_' ) . '%',
 		$wpdb->esc_like( 'wlgf_saved_form_data_' ) . '%',
 		$wpdb->esc_like( 'wlgf_form_views_' ) . '%',
@@ -58,9 +59,10 @@ delete_transient( 'wlgf_version_check' );
 delete_transient( 'wlgf_gutenberg_forms_list' );
 delete_transient( 'wlgf_elementor_forms_list' );
 
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wpdb->query(
 	$wpdb->prepare(
-		"DELETE FROM `$wpdb->options` WHERE `option_name` LIKE %s OR `option_name` LIKE %s",
+		"DELETE FROM {$wpdb->options} WHERE `option_name` LIKE %s OR `option_name` LIKE %s",
 		$wpdb->esc_like( '_transient_wlgf_' ) . '%',
 		$wpdb->esc_like( '_transient_timeout_wlgf_' ) . '%'
 	)

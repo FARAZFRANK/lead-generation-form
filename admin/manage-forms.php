@@ -25,11 +25,11 @@ wp_add_inline_script(
 
 // Fetch all forms
 global $wpdb;
-$wlgf_options_table_name = "{$wpdb->prefix}options";
 
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wlgf_all_forms = $wpdb->get_results(
 	$wpdb->prepare(
-		"SELECT option_name FROM `$wlgf_options_table_name` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
+		"SELECT option_name FROM {$wpdb->options} WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
 		$wpdb->esc_like( 'wlgf_form_' ) . '%',
 		$wpdb->esc_like( 'wlgf_form_views_' ) . '%'
 	)
@@ -45,24 +45,24 @@ if ( is_array( $wlgf_all_forms ) ) {
 }
 
 // Calculate overall KPI metrics
-$total_forms = 0;
-$total_views = 0;
-$total_leads = 0;
+$wlgf_total_forms = 0;
+$wlgf_total_views = 0;
+$wlgf_total_leads = 0;
 
 if ( is_array( $wlgf_all_forms ) ) {
 	foreach ( $wlgf_all_forms as $wlgf_f_obj ) {
-		$f_raw = get_option( $wlgf_f_obj->option_name );
-		if ( ! is_array( $f_raw ) || empty( $f_raw['form_id'] ) ) {
+		$wlgf_f_raw = get_option( $wlgf_f_obj->option_name );
+		if ( ! is_array( $wlgf_f_raw ) || empty( $wlgf_f_raw['form_id'] ) ) {
 			continue;
 		}
-		$total_forms++;
-		$f_id        = sanitize_text_field( $f_raw['form_id'] );
-		$total_views += intval( get_option( 'wlgf_form_views_' . $f_id, 0 ) );
-		$saved_leads = get_option( 'wlgf_saved_form_data_' . $f_id, array() );
-		$total_leads += is_array( $saved_leads ) ? count( $saved_leads ) : 0;
+		$wlgf_total_forms++;
+		$wlgf_f_id        = sanitize_text_field( $wlgf_f_raw['form_id'] );
+		$wlgf_total_views += intval( get_option( 'wlgf_form_views_' . $wlgf_f_id, 0 ) );
+		$wlgf_saved_leads = get_option( 'wlgf_saved_form_data_' . $wlgf_f_id, array() );
+		$wlgf_total_leads += is_array( $wlgf_saved_leads ) ? count( $wlgf_saved_leads ) : 0;
 	}
 }
-$avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100, 1 ) : ( $total_leads > 0 ? 100 : 0 );
+$wlgf_avg_conv_rate = $wlgf_total_views > 0 ? round( ( $wlgf_total_leads / $wlgf_total_views ) * 100, 1 ) : ( $wlgf_total_leads > 0 ? 100 : 0 );
 ?>
 
 <div class="wlgf-admin-wrap">
@@ -96,7 +96,7 @@ $avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100
 				<i class="fa-solid fa-file-lines"></i>
 			</div>
 			<div class="wlgf-stat-card__body">
-				<h3 class="wlgf-stat-card__value" id="wlgf-total-forms-stat"><?php echo esc_html( (string) $total_forms ); ?></h3>
+				<h3 class="wlgf-stat-card__value" id="wlgf-total-forms-stat"><?php echo esc_html( (string) $wlgf_total_forms ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Total Forms', 'lead-generation-form' ); ?></p>
 			</div>
 		</div>
@@ -106,7 +106,7 @@ $avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100
 				<i class="fa-regular fa-eye"></i>
 			</div>
 			<div class="wlgf-stat-card__body">
-				<h3 class="wlgf-stat-card__value"><?php echo esc_html( number_format_i18n( $total_views ) ); ?></h3>
+				<h3 class="wlgf-stat-card__value"><?php echo esc_html( number_format_i18n( $wlgf_total_views ) ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Total Impressions', 'lead-generation-form' ); ?></p>
 			</div>
 		</div>
@@ -116,7 +116,7 @@ $avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100
 				<i class="fa-solid fa-users"></i>
 			</div>
 			<div class="wlgf-stat-card__body">
-				<h3 class="wlgf-stat-card__value"><?php echo esc_html( number_format_i18n( $total_leads ) ); ?></h3>
+				<h3 class="wlgf-stat-card__value"><?php echo esc_html( number_format_i18n( $wlgf_total_leads ) ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Captured Leads', 'lead-generation-form' ); ?></p>
 			</div>
 		</div>
@@ -126,7 +126,7 @@ $avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100
 				<i class="fa-solid fa-chart-line"></i>
 			</div>
 			<div class="wlgf-stat-card__body">
-				<h3 class="wlgf-stat-card__value"><?php echo esc_html( $avg_conv_rate . '%' ); ?></h3>
+				<h3 class="wlgf-stat-card__value"><?php echo esc_html( $wlgf_avg_conv_rate . '%' ); ?></h3>
 				<p class="wlgf-stat-card__label"><?php esc_html_e( 'Avg. Conversion Rate', 'lead-generation-form' ); ?></p>
 			</div>
 		</div>
@@ -161,23 +161,23 @@ $avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100
 						$wlgf_form_name      = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $wlgf_form_id );
 						$wlgf_form_shortcode = "[WLFG id='{$wlgf_form_id}']";
 
-						$views       = intval( get_option( 'wlgf_form_views_' . $wlgf_form_id, 0 ) );
-						$leads_array = get_option( 'wlgf_saved_form_data_' . $wlgf_form_id, array() );
-						$submissions = is_array( $leads_array ) ? count( $leads_array ) : 0;
-						$conv_rate   = $views > 0 ? round( ( $submissions / $views ) * 100, 1 ) : ( $submissions > 0 ? 100 : 0 );
-						$badge_class = $conv_rate >= 10 ? 'wlgf-badge--success' : ( $conv_rate > 0 ? 'wlgf-badge--primary' : 'wlgf-badge--muted' );
-						$dates       = wlgf_get_form_dates( $wlgf_form_id, $wlgf_form_data );
+						$wlgf_views       = intval( get_option( 'wlgf_form_views_' . $wlgf_form_id, 0 ) );
+						$wlgf_leads_array = get_option( 'wlgf_saved_form_data_' . $wlgf_form_id, array() );
+						$wlgf_submissions = is_array( $wlgf_leads_array ) ? count( $wlgf_leads_array ) : 0;
+						$wlgf_conv_rate   = $wlgf_views > 0 ? round( ( $wlgf_submissions / $wlgf_views ) * 100, 1 ) : ( $wlgf_submissions > 0 ? 100 : 0 );
+						$wlgf_badge_class = $wlgf_conv_rate >= 10 ? 'wlgf-badge--success' : ( $wlgf_conv_rate > 0 ? 'wlgf-badge--primary' : 'wlgf-badge--muted' );
+						$wlgf_dates       = wlgf_get_form_dates( $wlgf_form_id, $wlgf_form_data );
 
 						// Display Mode metadata
 						$mode = ! empty( $wlgf_form_data['display_mode'] ) ? $wlgf_form_data['display_mode'] : 'inline';
-						$mode_meta = array(
+						$wlgf_mode_meta = array(
 							'inline'          => array( 'label' => __( 'Inline Embed', 'lead-generation-form' ), 'badge' => 'wlgf-badge--muted', 'icon' => 'fa-code' ),
 							'popup'           => array( 'label' => __( 'Lightbox Popup', 'lead-generation-form' ), 'badge' => 'wlgf-badge--primary', 'icon' => 'fa-window-restore' ),
 							'slidein'         => array( 'label' => __( 'Slide-in', 'lead-generation-form' ), 'badge' => 'wlgf-badge--info', 'icon' => 'fa-square-caret-up' ),
 							'sticky_bar'      => array( 'label' => __( 'Sticky Bar', 'lead-generation-form' ), 'badge' => 'wlgf-badge--warning', 'icon' => 'fa-window-maximize' ),
 							'floating_widget' => array( 'label' => __( 'Floating Widget', 'lead-generation-form' ), 'badge' => 'wlgf-badge--success', 'icon' => 'fa-comment-dots' ),
 						);
-						$curr_m = isset( $mode_meta[ $mode ] ) ? $mode_meta[ $mode ] : $mode_meta['inline'];
+						$wlgf_curr_m = isset( $wlgf_mode_meta[ $mode ] ) ? $wlgf_mode_meta[ $mode ] : $wlgf_mode_meta['inline'];
 						?>
 						<tr id="<?php echo esc_attr( $wlgf_form_id ); ?>">
 							<td data-order="<?php echo esc_attr( intval( $wlgf_form_id ) ); ?>">
@@ -187,31 +187,31 @@ $avg_conv_rate = $total_views > 0 ? round( ( $total_leads / $total_views ) * 100
 								<div style="display: flex; flex-direction: column; gap: 4px;">
 									<strong style="color: #0f172a; font-size: 14px;"><?php echo esc_html( $wlgf_form_name ); ?></strong>
 									<div>
-										<span class="wlgf-badge <?php echo esc_attr( $curr_m['badge'] ); ?>" style="font-size: 11px; padding: 2px 7px;">
-											<i class="fa-solid <?php echo esc_attr( $curr_m['icon'] ); ?>"></i> <?php echo esc_html( $curr_m['label'] ); ?>
+										<span class="wlgf-badge <?php echo esc_attr( $wlgf_curr_m['badge'] ); ?>" style="font-size: 11px; padding: 2px 7px;">
+											<i class="fa-solid <?php echo esc_attr( $wlgf_curr_m['icon'] ); ?>"></i> <?php echo esc_html( $wlgf_curr_m['label'] ); ?>
 										</span>
 									</div>
 								</div>
 							</td>
-							<td data-order="<?php echo esc_attr( intval( $views ) ); ?>">
-								<span class="wlgf-badge wlgf-badge--muted"><i class="fa-regular fa-eye"></i> <?php echo esc_html( number_format_i18n( $views ) ); ?></span>
+							<td data-order="<?php echo esc_attr( intval( $wlgf_views ) ); ?>">
+								<span class="wlgf-badge wlgf-badge--muted"><i class="fa-regular fa-eye"></i> <?php echo esc_html( number_format_i18n( $wlgf_views ) ); ?></span>
 							</td>
-							<td data-order="<?php echo esc_attr( intval( $submissions ) ); ?>">
-								<span class="wlgf-badge wlgf-badge--muted"><i class="fa-solid fa-users"></i> <?php echo esc_html( number_format_i18n( $submissions ) ); ?></span>
+							<td data-order="<?php echo esc_attr( intval( $wlgf_submissions ) ); ?>">
+								<span class="wlgf-badge wlgf-badge--muted"><i class="fa-solid fa-users"></i> <?php echo esc_html( number_format_i18n( $wlgf_submissions ) ); ?></span>
 							</td>
-							<td data-order="<?php echo esc_attr( floatval( $conv_rate ) ); ?>">
-								<span class="wlgf-badge <?php echo esc_attr( $badge_class ); ?>"><i class="fa-solid fa-chart-line"></i> <?php echo esc_html( $conv_rate . '%' ); ?></span>
+							<td data-order="<?php echo esc_attr( floatval( $wlgf_conv_rate ) ); ?>">
+								<span class="wlgf-badge <?php echo esc_attr( $wlgf_badge_class ); ?>"><i class="fa-solid fa-chart-line"></i> <?php echo esc_html( $wlgf_conv_rate . '%' ); ?></span>
 							</td>
-							<td data-order="<?php echo esc_attr( $dates['created_time'] ); ?>">
+							<td data-order="<?php echo esc_attr( $wlgf_dates['created_time'] ); ?>">
 								<div class="wlgf-date-cell">
-									<span class="wlgf-date-main"><i class="fa-regular fa-calendar-plus"></i> <?php echo esc_html( $dates['created_formatted'] ); ?></span>
-									<span class="wlgf-date-sub"><?php echo esc_html( $dates['created_time_fmt'] ); ?></span>
+									<span class="wlgf-date-main"><i class="fa-regular fa-calendar-plus"></i> <?php echo esc_html( $wlgf_dates['created_formatted'] ); ?></span>
+									<span class="wlgf-date-sub"><?php echo esc_html( $wlgf_dates['created_time_fmt'] ); ?></span>
 								</div>
 							</td>
-							<td data-order="<?php echo esc_attr( $dates['updated_time'] ); ?>">
+							<td data-order="<?php echo esc_attr( $wlgf_dates['updated_time'] ); ?>">
 								<div class="wlgf-date-cell">
-									<span class="wlgf-date-main"><i class="fa-solid fa-clock-rotate-left"></i> <?php echo esc_html( $dates['updated_formatted'] ); ?></span>
-									<span class="wlgf-date-sub"><?php echo esc_html( $dates['updated_human'] ); ?></span>
+									<span class="wlgf-date-main"><i class="fa-solid fa-clock-rotate-left"></i> <?php echo esc_html( $wlgf_dates['updated_formatted'] ); ?></span>
+									<span class="wlgf-date-sub"><?php echo esc_html( $wlgf_dates['updated_human'] ); ?></span>
 								</div>
 							</td>
 							<td>

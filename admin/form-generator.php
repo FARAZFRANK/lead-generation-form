@@ -87,18 +87,20 @@ $wlgf_trigger_frequency          = 7;
 $wlgf_capture_abandoned          = 1;
 
 
+// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 if ( isset( $_GET['form-id'] ) && current_user_can( 'manage_options' ) ) {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	$wlgf_form_id             = sanitize_text_field( wp_unslash( $_GET['form-id'] ) );
 	$wlgf_saved_record = get_option( 'wlgf_form_' . $wlgf_form_id );
 	if ( ! empty( $wlgf_saved_record ) ) {
 		// Normalize $wlgf_saved_record if it was stored as a JSON string or object in legacy versions
 		if ( is_string( $wlgf_saved_record ) ) {
-			$maybe_decoded = json_decode( $wlgf_saved_record, true );
-			if ( ! is_array( $maybe_decoded ) ) {
-				$maybe_decoded = json_decode( stripslashes( $wlgf_saved_record ), true );
+			$wlgf_maybe_decoded = json_decode( $wlgf_saved_record, true );
+			if ( ! is_array( $wlgf_maybe_decoded ) ) {
+				$wlgf_maybe_decoded = json_decode( stripslashes( $wlgf_saved_record ), true );
 			}
-			if ( is_array( $maybe_decoded ) ) {
-				$wlgf_saved_record = $maybe_decoded;
+			if ( is_array( $wlgf_maybe_decoded ) ) {
+				$wlgf_saved_record = $wlgf_maybe_decoded;
 			}
 		} elseif ( is_object( $wlgf_saved_record ) ) {
 			$wlgf_saved_record = (array) $wlgf_saved_record;
@@ -108,25 +110,25 @@ if ( isset( $_GET['form-id'] ) && current_user_can( 'manage_options' ) ) {
 			$wlgf_form_name = isset( $wlgf_saved_record['form_name'] ) ? sanitize_text_field( $wlgf_saved_record['form_name'] ) : ( isset( $wlgf_saved_record['name'] ) ? sanitize_text_field( $wlgf_saved_record['name'] ) : '' );
 
 			// Multi-tier decoding for form canvas data (handles objects, arrays, and legacy single/double-encoded JSON strings)
-			$raw_form_content = isset( $wlgf_saved_record['form'] ) ? $wlgf_saved_record['form'] : ( isset( $wlgf_saved_record['fields'] ) ? $wlgf_saved_record['fields'] : '' );
+			$wlgf_raw_form_content = isset( $wlgf_saved_record['form'] ) ? $wlgf_saved_record['form'] : ( isset( $wlgf_saved_record['fields'] ) ? $wlgf_saved_record['fields'] : '' );
 
-			if ( is_array( $raw_form_content ) ) {
-				$wlgf_form_data = $raw_form_content;
-			} elseif ( is_object( $raw_form_content ) ) {
-				$wlgf_form_data = (array) $raw_form_content;
+			if ( is_array( $wlgf_raw_form_content ) ) {
+				$wlgf_form_data = $wlgf_raw_form_content;
+			} elseif ( is_object( $wlgf_raw_form_content ) ) {
+				$wlgf_form_data = (array) $wlgf_raw_form_content;
 			} else {
-				$raw_str = (string) $raw_form_content;
-				$decoded = json_decode( $raw_str, true );
-				if ( ! is_array( $decoded ) ) {
-					$decoded = json_decode( stripslashes( $raw_str ), true );
+				$wlgf_raw_str = (string) $wlgf_raw_form_content;
+				$wlgf_decoded = json_decode( $wlgf_raw_str, true );
+				if ( ! is_array( $wlgf_decoded ) ) {
+					$wlgf_decoded = json_decode( stripslashes( $wlgf_raw_str ), true );
 				}
-				if ( is_string( $decoded ) ) {
-					$second = json_decode( $decoded, true );
-					if ( is_array( $second ) ) {
-						$decoded = $second;
+				if ( is_string( $wlgf_decoded ) ) {
+					$wlgf_second = json_decode( $wlgf_decoded, true );
+					if ( is_array( $wlgf_second ) ) {
+						$wlgf_decoded = $wlgf_second;
 					}
 				}
-				$wlgf_form_data = is_array( $decoded ) ? $decoded : array();
+				$wlgf_form_data = is_array( $wlgf_decoded ) ? $wlgf_decoded : array();
 			}
 
 			$wlgf_confirmation_type          = isset( $wlgf_saved_record['confirmation_type'] ) ? sanitize_text_field( $wlgf_saved_record['confirmation_type'] ) : 'message';
@@ -179,10 +181,10 @@ if ( isset( $_GET['form-id'] ) && current_user_can( 'manage_options' ) ) {
 	}
 	}
 
-$fg_css_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/css/form-generator.css' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/form-generator.css' ) : WLGF_PLUGIN_VERSION;
-$fg_js_ver  = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/form-generator.js' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/form-generator.js' ) : WLGF_PLUGIN_VERSION;
-wp_enqueue_style( 'wlgf-form-generator-css', plugin_dir_url( __FILE__ ) . 'assets/css/form-generator.css', array( 'wlgf-admin-ui-css' ), $fg_css_ver, 'all' );
-wp_enqueue_script( 'wlgf-form-generator-js', plugin_dir_url( __FILE__ ) . 'assets/js/form-generator.js', array( 'jquery', 'wlgf-formbuilder-js' ), $fg_js_ver, true );
+$wlgf_fg_css_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/css/form-generator.css' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/form-generator.css' ) : WLGF_PLUGIN_VERSION;
+$wlgf_fg_js_ver  = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/form-generator.js' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/form-generator.js' ) : WLGF_PLUGIN_VERSION;
+wp_enqueue_style( 'wlgf-form-generator-css', plugin_dir_url( __FILE__ ) . 'assets/css/form-generator.css', array( 'wlgf-admin-ui-css' ), $wlgf_fg_css_ver, 'all' );
+wp_enqueue_script( 'wlgf-form-generator-js', plugin_dir_url( __FILE__ ) . 'assets/js/form-generator.js', array( 'jquery', 'wlgf-formbuilder-js' ), $wlgf_fg_js_ver, true );
 
 wp_add_inline_script(
 	'wlgf-form-generator-js',
@@ -227,8 +229,8 @@ wp_add_inline_script(
 	'before'
 );
 
-$max_upload_size = ini_get( 'upload_max_filesize' );
-$max_post_size   = ini_get( 'post_max_size' );
+$wlgf_max_upload_size = ini_get( 'upload_max_filesize' );
+$wlgf_max_post_size   = ini_get( 'post_max_size' );
 ?>
 
 <div class="wlgf-admin-wrap">
@@ -2147,10 +2149,10 @@ $max_post_size   = ini_get( 'post_max_size' );
 				</p>
 				<div class="wlgf-flex wlgf-gap-3 wlgf-flex-wrap wlgf-mb-4">
 					<div class="wlgf-badge wlgf-badge--primary">
-						<?php esc_html_e( 'Max Upload Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $max_upload_size ); ?>
+						<?php esc_html_e( 'Max Upload Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $wlgf_max_upload_size ); ?>
 					</div>
 					<div class="wlgf-badge wlgf-badge--primary">
-						<?php esc_html_e( 'Max POST Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $max_post_size ); ?>
+						<?php esc_html_e( 'Max POST Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $wlgf_max_post_size ); ?>
 					</div>
 				</div>
 

@@ -274,6 +274,7 @@ function wlgf_validate_required_submission_fields( $form_fields, $post_data, $fi
 			if ( $is_req && ! $has_file ) {
 				return array(
 					'valid'   => false,
+					/* translators: %s: Field label */
 					'message' => sprintf( __( 'Field "%s" is required.', 'lead-generation-form' ), wp_strip_all_tags( $label ) ),
 				);
 			}
@@ -306,6 +307,7 @@ function wlgf_validate_required_submission_fields( $form_fields, $post_data, $fi
 					if ( in_array( $ext, $dangerous_exts, true ) || ! in_array( $ext, $allowed_exts, true ) ) {
 						return array(
 							'valid'   => false,
+							/* translators: 1: File extension, 2: Field label, 3: Allowed formats */
 							'message' => sprintf( __( 'File type ".%1$s" is not allowed for "%2$s". Allowed formats: %3$s', 'lead-generation-form' ), esc_html( $ext ), wp_strip_all_tags( $label ), strtoupper( implode( ', ', $allowed_exts ) ) ),
 						);
 					}
@@ -315,6 +317,7 @@ function wlgf_validate_required_submission_fields( $form_fields, $post_data, $fi
 				if ( $total_size > $max_size_bytes ) {
 					return array(
 						'valid'   => false,
+						/* translators: 1: Maximum file size in MB, 2: Field label */
 						'message' => sprintf( __( 'File size exceeds maximum allowed limit of %1$sMB for "%2$s".', 'lead-generation-form' ), esc_html( $max_size_mb ), wp_strip_all_tags( $label ) ),
 					);
 				}
@@ -342,6 +345,7 @@ function wlgf_validate_required_submission_fields( $form_fields, $post_data, $fi
 			if ( ! $has_checked ) {
 				return array(
 					'valid'   => false,
+					/* translators: %s: Field label */
 					'message' => sprintf( __( 'Field "%s" is required.', 'lead-generation-form' ), wp_strip_all_tags( $label ) ),
 				);
 			}
@@ -363,6 +367,7 @@ function wlgf_validate_required_submission_fields( $form_fields, $post_data, $fi
 		if ( $is_empty ) {
 			return array(
 				'valid'   => false,
+				/* translators: %s: Field label */
 				'message' => sprintf( __( 'Field "%s" is required.', 'lead-generation-form' ), wp_strip_all_tags( $label ) ),
 			);
 		}
@@ -405,7 +410,8 @@ function wlgf_shortcode_callback( $atts ) {
 			ob_end_clean();
 			if ( current_user_can( 'manage_options' ) ) {
 				$manage_url = admin_url( 'admin.php?page=wlgf-manage-forms' );
-				return '<div class="wlgf-container wlgf-my-3"><div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-triangle-exclamation"></i> <div><strong>' . esc_html__( 'Lead Generation Form Notice:', 'lead-generation-form' ) . '</strong> ' . sprintf( esc_html__( 'Form #%s does not exist or has been deleted. Please check your form shortcode in %sManage Forms%s.', 'lead-generation-form' ), esc_html( $wlgf_form_id ), '<a href="' . esc_url( $manage_url ) . '">', '</a>' ) . '</div></div></div>';
+				/* translators: 1: Form ID, 2: Opening anchor tag for Manage Forms link, 3: Closing anchor tag */
+				return '<div class="wlgf-container wlgf-my-3"><div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-triangle-exclamation"></i> <div><strong>' . esc_html__( 'Lead Generation Form Notice:', 'lead-generation-form' ) . '</strong> ' . sprintf( esc_html__( 'Form #%1$s does not exist or has been deleted. Please check your form shortcode in %2$sManage Forms%3$s.', 'lead-generation-form' ), esc_html( $wlgf_form_id ), '<a href="' . esc_url( $manage_url ) . '">', '</a>' ) . '</div></div></div>';
 			}
 			return '';
 		}
@@ -479,16 +485,16 @@ function wlgf_shortcode_callback( $atts ) {
 		$form_js_deps = array( 'jquery', 'wlgf-dialog-js', 'wlgf-flatpickr-js' );
 		if ($is_payments_enabled && $is_form_payment && (defined('WLGF_IS_PRO') && WLGF_IS_PRO)) {
 			if ($is_stripe_enabled && !empty($stripe_pub_key)) {
-				wp_enqueue_script('wlgf-stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
+				wp_enqueue_script('wlgf-stripe-js', 'https://js.stripe.com/v3/', array(), '3.0', true);
 				$form_js_deps[] = 'wlgf-stripe-js';
 			}
 			if ($is_paypal_enabled && !empty($paypal_client_id)) {
-				wp_enqueue_script('wlgf-paypal-sdk', 'https://www.paypal.com/sdk/js?client-id=' . esc_attr($paypal_client_id) . '&currency=' . esc_attr($payment_currency), array(), null, true);
+				wp_enqueue_script('wlgf-paypal-sdk', 'https://www.paypal.com/sdk/js?client-id=' . esc_attr($paypal_client_id) . '&currency=' . esc_attr($payment_currency), array(), '5.0', true);
 				$form_js_deps[] = 'wlgf-paypal-sdk';
 			}
 		}
 
-		$wlgf_form_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) ? ( defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) : null;
+		$wlgf_form_js_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) ? ( defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.3' ) . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/wlgf-shortcode-form.js' ) : null;
 		wp_enqueue_script('wlgf-shortcode-form-js', plugin_dir_url(__FILE__). 'assets/js/wlgf-shortcode-form.js', $form_js_deps, $wlgf_form_js_ver, true); // load in footer
 
 		$wlgf_shortcode_config = array(
@@ -534,10 +540,11 @@ function wlgf_shortcode_callback( $atts ) {
 		);
           
 		if ( 'turnstile' === $wlgf_captcha_provider && $wlgf_turnstile_sitekey && $wlgf_turnstile_secretkey ) {
-			wp_enqueue_script( 'wlgf-cloudflare-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', array(), null, true );
+			// phpcs:ignore PluginCheck.CodeAnalysis.EnqueuedResourceOffloading.OffloadedContent -- Cloudflare Turnstile official API script.
+			wp_enqueue_script( 'wlgf-cloudflare-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', array(), '1.0', true );
 			$wlgf_form_data[] = array( 'type' => 'turnstile', 'sitekey' => $wlgf_turnstile_sitekey );
 		} elseif ( ( 'recaptcha' === $wlgf_captcha_provider || $wlgf_recaptcha == 1 ) && $wlgf_sitekey && $wlgf_secretkey ) {
-			wp_enqueue_script( 'wlgf-google-recaptcha', 'https://www.google.com/recaptcha/api.js?render=' . esc_attr($wlgf_sitekey), array(), null, true );
+			wp_enqueue_script( 'wlgf-google-recaptcha', 'https://www.google.com/recaptcha/api.js?render=' . esc_attr($wlgf_sitekey), array(), '3.0', true );
 			$wlgf_form_data[] = array( 'type' => 'recaptcha', 'sitekey' => $wlgf_sitekey );
 		}
 		
@@ -550,6 +557,7 @@ function wlgf_shortcode_callback( $atts ) {
 
           if ( $schedule_start && $now_timestamp < $schedule_start ) {
               $start_date_formatted = date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $schedule_start );
+              /* translators: %s: Form opening date and time */
               return '<div class="wlgf-container"><div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-clock"></i> ' . sprintf( esc_html__( 'This form will open for submissions on %s.', 'lead-generation-form' ), esc_html( $start_date_formatted ) ) . '</div></div>';
           }
 
@@ -586,6 +594,7 @@ function wlgf_shortcode_callback( $atts ) {
               foreach ( $wlgf_form_data as $f ) {
                   if ( isset( $f['type'] ) && 'step-break' === $f['type'] ) {
                       $wlgf_step_breaks++;
+                      /* translators: %d: Step number */
                       $step_titles[] = ! empty( $f['label'] ) ? $f['label'] : sprintf( __( 'Step %d', 'lead-generation-form' ), $wlgf_step_breaks );
                   }
               }
@@ -609,7 +618,8 @@ function wlgf_shortcode_callback( $atts ) {
                        $initial_pct = round( 100 / $total_steps );
                        echo "<div class='wlgf-step-progress mb-4'>";
                        echo "<div class='wlgf-step-progress__info mb-1 d-flex justify-content-between'>";
-                       echo "<span class='wlgf-step-progress__text'>" . sprintf( esc_html__( 'Step 1 of %d', 'lead-generation-form' ), $total_steps ) . "</span> ";
+                       /* translators: %d: Total number of steps */
+                       echo "<span class='wlgf-step-progress__text'>" . esc_html( sprintf( __( 'Step 1 of %d', 'lead-generation-form' ), $total_steps ) ) . "</span> ";
                        echo "<span class='wlgf-step-progress__pct'>" . esc_html( $initial_pct ) . "%</span>";
                        echo "</div>";
                        echo "<div class='wlgf-step-progress__track'><div class='wlgf-step-progress__fill' style='width: " . esc_attr( $initial_pct ) . "%;'></div></div>";
@@ -618,6 +628,7 @@ function wlgf_shortcode_callback( $atts ) {
                        echo "<div class='wlgf-step-indicators wlgf-step-indicators--breadcrumbs mb-4'>";
                        for ( $s = 1; $s <= $total_steps; $s++ ) {
                            $active_cls = ( 1 === $s ) ? 'wlgf-step-indicator--active' : '';
+                           /* translators: %d: Step number */
                            $title_txt  = ( 1 === $s ) ? $wizard_step_1_title : ( isset( $step_titles[ $s - 2 ] ) ? $step_titles[ $s - 2 ] : sprintf( __( 'Step %d', 'lead-generation-form' ), $s ) );
                            echo "<div class='wlgf-step-indicator " . esc_attr( $active_cls ) . "' data-step='" . esc_attr( $s ) . "' role='tab' aria-label='" . esc_attr( $title_txt ) . "'>";
                            echo "<span class='wlgf-step-indicator__badge'>";
@@ -636,6 +647,7 @@ function wlgf_shortcode_callback( $atts ) {
                        echo "<div class='wlgf-step-indicators wlgf-step-indicators--circles mb-4'>";
                        for ( $s = 1; $s <= $total_steps; $s++ ) {
                            $active_cls = ( 1 === $s ) ? 'wlgf-step-indicator--active' : '';
+                           /* translators: %d: Step number */
                            $title_txt  = ( 1 === $s ) ? $wizard_step_1_title : ( isset( $step_titles[ $s - 2 ] ) ? $step_titles[ $s - 2 ] : sprintf( __( 'Step %d', 'lead-generation-form' ), $s ) );
                            echo "<div class='wlgf-step-indicator " . esc_attr( $active_cls ) . "' data-step='" . esc_attr( $s ) . "'>";
                            echo "<span class='wlgf-step-indicator__badge'><span class='wlgf-step-indicator__num'>" . esc_html( $s ) . "</span><i class='fa-solid fa-check wlgf-step-indicator__check'></i></span>";
@@ -743,9 +755,9 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldLabel = isset($field['label']) ? esc_html($field['label']) : '';
                               $fieldClassName = isset($field['className']) ? esc_html($field['className']) : '';
 
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' " . $data_required_attr . ">";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html( $fieldLabel ) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
-                              echo "<input type='" . esc_attr( $inputType ) . "' id='" . $fieldId . "' name='" . esc_attr( $fieldName ) . "' class='" . esc_attr( $fieldClassName ) . "' value='" . esc_attr( $wlgf_field_value ) . "' placeholder='" . esc_attr( $placeholder ) . "' maxlength='" . esc_attr( $maxLength ) . "' " . esc_attr( $required ) . ">";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html( $fieldLabel ) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<input type='" . esc_attr( $inputType ) . "' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr( $fieldName ) . "' class='" . esc_attr( $fieldClassName ) . "' value='" . esc_attr( $wlgf_field_value ) . "' placeholder='" . esc_attr( $placeholder ) . "' maxlength='" . esc_attr( $maxLength ) . "' " . esc_attr( $required ) . ">";
                               echo "</div>";
                               break;
 
@@ -772,13 +784,13 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldLabel = isset($field['label']) ? esc_html($field['label']) : '';
                               $fieldClassName = isset($field['className']) ? esc_html($field['className']) : '';
 
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' " . $data_required_attr . ">";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses($wlgfDescription, $wlgf_tooltip) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses($wlgfDescription, $wlgf_tooltip) . "</label>";
                               if ($inputType === 'range') {
-                                   echo "<div class='range-value-display' id='range-value-display-" . $fieldId . "'>" . esc_html($wlgf_field_value) . "</div>";
-                                   echo "<input type='" . esc_attr($inputType) . "' id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' value='" . esc_attr($wlgf_field_value) . "' placeholder='" . esc_attr($placeholder) . "' min='" . esc_attr($min) . "' max='" . esc_attr($max) . "' step='" . esc_attr($step) . "' " . esc_attr($required) . ">";
+                                   echo "<div class='range-value-display' id='range-value-display-" . esc_attr( $fieldId ) . "'>" . esc_html($wlgf_field_value) . "</div>";
+                                   echo "<input type='" . esc_attr($inputType) . "' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' value='" . esc_attr($wlgf_field_value) . "' placeholder='" . esc_attr($placeholder) . "' min='" . esc_attr($min) . "' max='" . esc_attr($max) . "' step='" . esc_attr($step) . "' " . esc_attr($required) . ">";
                               } else {
-                                   echo "<input type='" . esc_attr($inputType) . "' id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' value='" . esc_attr($wlgf_field_value) . "' placeholder='" . esc_attr($placeholder) . "' min='" . esc_attr($min) . "' max='" . esc_attr($max) . "' step='" . esc_attr($step) . "' " . esc_attr($required) . ">";
+                                   echo "<input type='" . esc_attr($inputType) . "' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' value='" . esc_attr($wlgf_field_value) . "' placeholder='" . esc_attr($placeholder) . "' min='" . esc_attr($min) . "' max='" . esc_attr($max) . "' step='" . esc_attr($step) . "' " . esc_attr($required) . ">";
                               }
                               echo "</div>";
                               break;
@@ -794,15 +806,13 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldLabel = isset($field['label']) ? esc_html($field['label']) : '';
                               $fieldClassName = isset($field['className']) ? esc_html($field['className']) : '';
                               
-                              $min = isset($field['min']) && '' !== trim($field['min']) ? esc_attr($field['min']) : date('Y-m-d');
+                              $min = isset($field['min']) && '' !== trim($field['min']) ? esc_attr($field['min']) : gmdate('Y-m-d');
                               $max = isset($field['max']) && '' !== trim($field['max']) ? esc_attr($field['max']) : '';
-                              $min_attr = "min='" . $min . "'";
-                              $max_attr = $max !== '' ? "max='" . $max . "'" : "";
 
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' " . $data_required_attr . ">";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
                               echo "<div class='wlgf-date-input-wrap'>";
-                              echo "<input type='date' id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' value='" . esc_attr($wlgf_field_value) . "' placeholder='" . esc_attr($placeholder) . "' " . $min_attr . " " . $max_attr . " " . esc_attr($required) . ">";
+                              echo "<input type='date' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' value='" . esc_attr($wlgf_field_value) . "' placeholder='" . esc_attr($placeholder) . "' min='" . esc_attr($min) . "' " . ( $max !== '' ? "max='" . esc_attr($max) . "'" : '' ) . " " . esc_attr($required) . ">";
                               echo "<span class='wlgf-date-icon' role='button' tabindex='-1' aria-label='Choose date'><i class='fa-regular fa-calendar-days'></i></span>";
                               echo "</div>";
                               echo "</div>";
@@ -824,7 +834,7 @@ function wlgf_shortcode_callback( $atts ) {
                                   $raw_exts_arr = array( 'pdf', 'doc', 'docx', 'png', 'jpg' );
                               }
                               $allowed_types_clean = implode( ',', $raw_exts_arr );
-                              $accept_attr = 'accept="' . esc_attr( implode( ',', array_map( function( $ext ) { return '.' . $ext; }, $raw_exts_arr ) ) ) . '"';
+                              $accept_types_val    = implode( ',', array_map( function( $ext ) { return '.' . $ext; }, $raw_exts_arr ) );
                               $display_types_label = strtoupper( implode( ', ', $raw_exts_arr ) );
 
                               $max_size_mb = ( isset( $field['max_file_size'] ) && '' !== (string) $field['max_file_size'] && floatval( $field['max_file_size'] ) > 0 )
@@ -833,14 +843,15 @@ function wlgf_shortcode_callback( $atts ) {
                               $max_size_bytes = intval( $max_size_mb * 1024 * 1024 );
                               $max_size_label = ( $max_size_mb == intval( $max_size_mb ) ? intval( $max_size_mb ) : $max_size_mb ) . 'MB';
 
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' " . $data_required_attr . ">";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
                               echo "<div class='wlgf-dropzone-wrap' data-field-name='" . esc_attr( $fieldName ) . "' data-max-size='" . esc_attr( $max_size_bytes ) . "' data-allowed-types='" . esc_attr( $allowed_types_clean ) . "'>";
                               echo "<div class='wlgf-dropzone' tabindex='0' role='button' aria-label='" . esc_attr__( 'Drag and drop files here or click to browse', 'lead-generation-form' ) . "'>";
                               echo "<i class='fa-solid fa-cloud-arrow-up wlgf-dropzone__icon'></i>";
                               echo "<p class='wlgf-dropzone__text'>" . esc_html__( 'Drag & drop files here or', 'lead-generation-form' ) . " <span class='wlgf-dropzone__browse'>" . esc_html__( 'Browse', 'lead-generation-form' ) . "</span></p>";
-                              echo "<span class='wlgf-dropzone__hint'>" . sprintf( esc_html__( 'Accepted formats: %s (Max %s total)', 'lead-generation-form' ), esc_html( $display_types_label ), esc_html( $max_size_label ) ) . "</span>";
-                              echo "<input type='file' id='" . $fieldId . "' name='" . $input_name . "' class='wlgf-dropzone__input wlgf-d-none " . esc_attr($fieldClassName) . "' " . $accept_attr . " " . esc_attr($multiple_attr) . " " . esc_attr($required) . ">";
+                              /* translators: 1: Allowed file formats, 2: Maximum total file size */
+                              echo "<span class='wlgf-dropzone__hint'>" . sprintf( esc_html__( 'Accepted formats: %1$s (Max %2$s total)', 'lead-generation-form' ), esc_html( $display_types_label ), esc_html( $max_size_label ) ) . "</span>";
+                              echo "<input type='file' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr( $input_name ) . "' class='wlgf-dropzone__input wlgf-d-none " . esc_attr($fieldClassName) . "' accept='" . esc_attr( $accept_types_val ) . "' " . esc_attr($multiple_attr) . " " . esc_attr($required) . ">";
                               echo "</div>";
                               echo "<div class='wlgf-file-list' aria-live='polite'></div>";
                               echo "</div>";
@@ -856,13 +867,14 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldName = esc_attr($field['name']);
                               $fieldLabel = isset($field['label']) ? esc_html($field['label']) : '';
 
-                              $required_badge = $is_field_required ? '<span class="wlgf-required">*</span>' : '';
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='star-rating' " . $data_required_attr . ">";
-                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='star-rating' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
                               echo "<div class='wlgf-star-rating' role='radiogroup' aria-label='" . esc_attr( $fieldLabel ? $fieldLabel : __( 'Star Rating', 'lead-generation-form' ) ) . "' data-field-name='" . esc_attr( $fieldName ) . "'>";
                               for ($star = 1; $star <= 5; $star++) {
-                                  echo "<input type='radio' name='" . esc_attr( $fieldName ) . "' id='" . esc_attr( $fieldName ) . "_star_" . $star . "_" . esc_attr( $wlgf_form_id ) . "' value='" . $star . "' class='wlgf-star-radio wlgf-d-none' " . esc_attr($required) . ">";
-                                  echo "<span class='wlgf-star' data-value='" . $star . "' role='radio' aria-checked='false' tabindex='0' aria-label='" . sprintf( esc_attr__( '%d star', 'lead-generation-form' ), $star ) . "'><i class='fa-solid fa-star'></i></span>";
+                                  /* translators: %d: Star rating count */
+                                  $star_label = sprintf( esc_attr__( '%d star', 'lead-generation-form' ), $star );
+                                  echo "<input type='radio' name='" . esc_attr( $fieldName ) . "' id='" . esc_attr( $fieldName ) . "_star_" . esc_attr( $star ) . "_" . esc_attr( $wlgf_form_id ) . "' value='" . esc_attr( $star ) . "' class='wlgf-star-radio wlgf-d-none' " . esc_attr($required) . ">";
+                                  echo "<span class='wlgf-star' data-value='" . esc_attr( $star ) . "' role='radio' aria-checked='false' tabindex='0' aria-label='" . esc_attr( $star_label ) . "'><i class='fa-solid fa-star'></i></span>";
                               }
                               echo "</div>";
                               echo "</div>";
@@ -877,15 +889,17 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldName = esc_attr($field['name']);
                               $fieldLabel = isset($field['label']) ? esc_html($field['label']) : '';
 
-                              $required_badge = $is_field_required ? '<span class="wlgf-required">*</span>' : '';
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='nps-matrix' " . $data_required_attr . ">";
-                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='nps-matrix' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
                               echo "<div class='wlgf-nps-matrix' role='radiogroup' aria-label='" . esc_attr( $fieldLabel ? $fieldLabel : __( 'Net Promoter Score', 'lead-generation-form' ) ) . "' data-field-name='" . esc_attr( $fieldName ) . "'>";
                               echo "<div class='wlgf-nps-chips-group'>";
                               for ($score = 0; $score <= 10; $score++) {
-                                  echo "<input type='radio' name='" . esc_attr( $fieldName ) . "' id='" . esc_attr( $fieldName ) . "_nps_" . $score . "_" . esc_attr( $wlgf_form_id ) . "' value='" . $score . "' class='wlgf-nps-radio wlgf-d-none' " . esc_attr($required) . ">";
-                                  echo "<button type='button' class='wlgf-nps-btn' data-value='" . $score . "' role='radio' aria-checked='false' aria-label='" . sprintf( esc_attr__( 'Score %d', 'lead-generation-form' ), $score ) . "'>" . $score . "</button>";
+                                  /* translators: %d: NPS score rating number */
+                                  $score_label = sprintf( esc_attr__( 'Score %d', 'lead-generation-form' ), $score );
+                                  echo "<input type='radio' name='" . esc_attr( $fieldName ) . "' id='" . esc_attr( $fieldName ) . "_nps_" . esc_attr( $score ) . "_" . esc_attr( $wlgf_form_id ) . "' value='" . esc_attr( $score ) . "' class='wlgf-nps-radio wlgf-d-none' " . esc_attr($required) . ">";
+                                  echo "<button type='button' class='wlgf-nps-btn' data-value='" . esc_attr( $score ) . "' role='radio' aria-checked='false' aria-label='" . esc_attr( $score_label ) . "'>" . esc_html( $score ) . "</button>";
                               }
+                              echo "</div>";
                               echo "</div>";
                               echo "<div class='wlgf-nps-labels d-flex justify-content-between mt-1 text-muted small'>";
                               echo "<span>" . esc_html__( '0 - Not at all likely', 'lead-generation-form' ) . "</span>";
@@ -911,7 +925,7 @@ function wlgf_shortcode_callback( $atts ) {
                               echo "<div class='wlgf-field-wrap wlgf-calc-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr($fieldName) . "' data-field-type='calculation' data-formula='" . esc_attr($formula) . "' data-prefix='" . esc_attr($prefix) . "' data-postfix='" . esc_attr($postfix) . "' data-decimals='" . esc_attr($decimals) . "'>";
                               echo "<label class='form-label'>" . esc_html($fieldLabel) . " " . wp_kses($wlgfDescription, $wlgf_tooltip) . "</label>";
                               echo "<div class='wlgf-calc-display'><span class='wlgf-calc-prefix'>" . esc_html($prefix) . "</span><span class='wlgf-calc-val'>0.00</span><span class='wlgf-calc-postfix'>" . esc_html($postfix) . "</span></div>";
-                              echo "<input type='hidden' id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='wlgf-calc-hidden-input' value='0.00'>";
+                              echo "<input type='hidden' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='wlgf-calc-hidden-input' value='0.00'>";
                               echo "</div>";
                               break;
 
@@ -928,9 +942,9 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldLabel = isset($field['label']) ? esc_html($field['label']) : '';
                               $fieldClassName = isset($field['className']) ? esc_html($field['className']) : '';
 
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' " . $data_required_attr . ">";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
-                              echo "<textarea id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' placeholder='" . esc_attr($placeholder) . "' rows='" . esc_attr($rows) . "' maxlength='" . esc_attr($maxlength) . "' " . esc_attr($required) . ">" . esc_textarea($wlgf_field_value) . "</textarea>";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<textarea id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' placeholder='" . esc_attr($placeholder) . "' rows='" . esc_attr($rows) . "' maxlength='" . esc_attr($maxlength) . "' " . esc_attr($required) . ">" . esc_textarea($wlgf_field_value) . "</textarea>";
                               echo "</div>";
                               break;
 
@@ -945,9 +959,9 @@ function wlgf_shortcode_callback( $atts ) {
 
                               $placeholder = isset($field['placeholder']) ? esc_html($field['placeholder']) : "Select An Option";
 
-                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' " . $data_required_attr . ">";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
-                              echo "<select id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' " . esc_attr($required) . ">";
+                              echo "<div class='wlgf-field-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='" . esc_attr( $field['type'] ) . "' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<select id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='" . esc_attr($fieldClassName) . "' " . esc_attr($required) . ">";
                               echo "<option value='' disabled selected>" . esc_html($placeholder) . "</option>";
                               if ( isset( $field['values'] ) && is_array( $field['values'] ) ) {
                                    foreach ($field['values'] as $option) {
@@ -972,8 +986,8 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldClassName = isset($field['className']) ? esc_html($field['className']) : '';
                               $wlgfDescription = ( isset($field['description']) && '' !== trim($field['description']) ) ? "<span class='wlgf-tooltip-icon' data-wlgf-tooltip='" . esc_attr($field['description']) . "' data-bs-toggle='tooltip' title='" . esc_attr($field['description']) . "'>?</span>" : '';
 
-                              echo "<div class='wlgf-field-wrap mb-3 wlgf-cb-group " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='checkbox-group' " . $data_required_attr . ">";
-                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 wlgf-cb-group " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='checkbox-group' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
                               $wlgf_cbc = 1;
                               if ( isset( $field['values'] ) && is_array( $field['values'] ) ) {
                                    foreach ($field['values'] as $checkbox) {
@@ -982,8 +996,8 @@ function wlgf_shortcode_callback( $atts ) {
                                         $checked = isset($checkbox['selected']) && $checkbox['selected'] ? "checked" : "";
                                         $cb_input_id = esc_attr($fieldName . '_' . $wlgf_cbc . '_' . $wlgf_form_id);
                                         echo "<div class='wlgf-checkbox-option'>";
-                                        echo "<label class='form-check-label wlgf-checkbox-label' for='" . $cb_input_id . "'>";
-                                        echo "<input type='checkbox' class='form-check-input wlgf-checkbox-input' id='" . $cb_input_id . "' name='" . esc_attr($fieldName . '[' . $wlgf_cbc . ']') . "' value='" . esc_attr($checkboxValue) . "' " . esc_attr($checked) . ">";
+                                        echo "<label class='form-check-label wlgf-checkbox-label' for='" . esc_attr( $cb_input_id ) . "'>";
+                                        echo "<input type='checkbox' class='form-check-input wlgf-checkbox-input' id='" . esc_attr( $cb_input_id ) . "' name='" . esc_attr($fieldName . '[' . $wlgf_cbc . ']') . "' value='" . esc_attr($checkboxValue) . "' " . esc_attr($checked) . ">";
                                         echo "<span class='wlgf-checkbox-text'>" . esc_html($checkboxLabel) . "</span>";
                                         echo "</label>";
                                         echo "</div>";
@@ -1028,8 +1042,8 @@ function wlgf_shortcode_callback( $atts ) {
                                    break;
                               }
 
-                              echo "<div class='wlgf-field-wrap mb-3 wlgf-rd-group " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='radio-group' " . $data_required_attr . ">";
-                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
+                              echo "<div class='wlgf-field-wrap mb-3 wlgf-rd-group " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='radio-group' data-required='" . ( $is_field_required ? '1' : '0' ) . "'>";
+                              echo "<label class='form-label d-block'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses( $wlgfDescription, $wlgf_tooltip ) . "</label>";
                               if ( isset( $field['values'] ) && is_array( $field['values'] ) ) {
                                    $wlgf_rd_idx = 0;
                                    foreach ($field['values'] as $radio) {
@@ -1055,9 +1069,9 @@ function wlgf_shortcode_callback( $atts ) {
                               $fieldId     = esc_attr( $fieldName . '_' . $wlgf_form_id );
                               $required    = ( isset( $field['required'] ) && 0 == $field['required'] ) ? '' : 'required';
                               echo "<div class='wlgf-field-wrap wlgf-terms-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr( $fieldName ) . "' data-field-type='terms'>";
-                              echo "<label class='wlgf-terms-label' for='" . $fieldId . "'>";
-                              echo "<input type='checkbox' class='wlgf-terms-input' id='" . $fieldId . "' name='" . esc_attr( $fieldName ) . "' value='agreed' " . esc_attr( $required ) . "> ";
-                              echo "<span class='wlgf-terms-text'>" . $terms_label . " <span class='wlgf-text-danger'>*</span></span>";
+                              echo "<label class='wlgf-terms-label' for='" . esc_attr( $fieldId ) . "'>";
+                              echo "<input type='checkbox' class='wlgf-terms-input' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr( $fieldName ) . "' value='agreed' " . esc_attr( $required ) . "> ";
+                              echo "<span class='wlgf-terms-text'>" . wp_kses_post( $terms_label ) . " <span class='wlgf-text-danger'>*</span></span>";
                               echo "</label>";
                               echo "</div>";
                               break;
@@ -1165,8 +1179,8 @@ function wlgf_shortcode_callback( $atts ) {
                                         $nl_checked = ( ! empty( $wlgf_form_info['newsletter_default_checked'] ) && 1 === (int) $wlgf_form_info['newsletter_default_checked'] ) ? 'checked' : '';
                                         $nl_input_id = 'wlgf_newsletter_optin_' . esc_attr( $wlgf_form_id );
                                         echo "<div class='wlgf-field-wrap wlgf-newsletter-optin-wrap wlgf-checkbox-option mb-3' data-field-type='newsletter-optin'>";
-                                        echo "<label class='form-check-label wlgf-checkbox-label' for='" . $nl_input_id . "'>";
-                                        echo "<input type='checkbox' class='form-check-input wlgf-checkbox-input' id='" . $nl_input_id . "' name='wlgf_newsletter_optin' value='1' " . esc_attr( $nl_checked ) . ">";
+                                        echo "<label class='form-check-label wlgf-checkbox-label' for='" . esc_attr( $nl_input_id ) . "'>";
+                                        echo "<input type='checkbox' class='form-check-input wlgf-checkbox-input' id='" . esc_attr( $nl_input_id ) . "' name='wlgf_newsletter_optin' value='1' " . esc_attr( $nl_checked ) . ">";
                                         echo "<span class='wlgf-checkbox-text'>" . esc_html( $nl_label ) . "</span>";
                                         echo "</label>";
                                         echo "</div>";
@@ -1203,14 +1217,14 @@ function wlgf_shortcode_callback( $atts ) {
                               $wlgfDescription = ( isset($field['description']) && '' !== trim($field['description']) ) ? "<span class='wlgf-tooltip-icon' data-wlgf-tooltip='" . esc_attr($field['description']) . "' data-bs-toggle='tooltip' title='" . esc_attr($field['description']) . "'>?</span>" : '';
 
                               echo "<div class='wlgf-field-wrap wlgf-signature-wrap mb-3 " . esc_attr( $col_class ) . "' data-field-name='" . esc_attr($fieldName) . "' data-field-type='signature'>";
-                              echo "<label for='" . $fieldId . "' class='form-label'>" . esc_html($fieldLabel) . $required_badge . " " . wp_kses($wlgfDescription, $wlgf_tooltip) . "</label>";
+                              echo "<label for='" . esc_attr( $fieldId ) . "' class='form-label'>" . esc_html($fieldLabel) . ( $is_field_required ? '<span class="wlgf-required">*</span>' : '' ) . " " . wp_kses($wlgfDescription, $wlgf_tooltip) . "</label>";
                               echo "<div class='wlgf-signature-container'>";
                               echo "<canvas class='wlgf-signature-canvas' width='500' height='160'></canvas>";
                               echo "<div class='wlgf-signature-actions'>";
                               echo "<span class='wlgf-signature-hint'><i class='fa-solid fa-pen-nib'></i> " . esc_html__('Sign above using finger or mouse', 'lead-generation-form') . "</span>";
                               echo "<button type='button' class='wlgf-signature-clear-btn wlgf-signature-pad-clear'><i class='fa-solid fa-rotate-left'></i> " . esc_html__('Clear', 'lead-generation-form') . "</button>";
                               echo "</div>";
-                              echo "<input type='hidden' id='" . $fieldId . "' name='" . esc_attr($fieldName) . "' class='wlgf-signature-input' value='' " . esc_attr($required) . ">";
+                              echo "<input type='hidden' id='" . esc_attr( $fieldId ) . "' name='" . esc_attr($fieldName) . "' class='wlgf-signature-input' value='' " . esc_attr($required) . ">";
                               echo "</div>";
                               echo "</div>";
                               break;
@@ -1286,6 +1300,7 @@ function wlgf_shortcode_callback( $atts ) {
                if ($wlgf_hp_sub_active !== '2' && !empty($_POST['wlgf_hp_website_confirm'])) {
                     $success_msg = !empty($wlgf_user_message) ? $wlgf_user_message : __('Thank you! Your query has been successfully submitted.', 'lead-generation-form');
                     if (function_exists('wlgf_get_confirmation_html')) {
+                         // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is fully escaped confirmation HTML from wlgf_get_confirmation_html.
                          echo wlgf_get_confirmation_html($success_msg, $wlgf_settings);
                     } else {
                          echo '<div class="wlgf-alert wlgf-alert--success">' . wp_kses_post($success_msg) . '</div>';
@@ -1294,10 +1309,12 @@ function wlgf_shortcode_callback( $atts ) {
                }
 
                // 2. Vulnerability Scanner & SQLi Exploit Shield (drops sqlmap / Acunetix / fuzzing probes)
+               // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Early honeypot and exploit shield runs before nonce verification to silently drop bot probes.
                $exploit_check = function_exists('wlgf_detect_exploit_payload') ? wlgf_detect_exploit_payload($_POST) : array('is_exploit' => false);
                if (!empty($exploit_check['is_exploit'])) {
                     $success_msg = !empty($wlgf_user_message) ? $wlgf_user_message : __('Thank you! Your query has been successfully submitted.', 'lead-generation-form');
                     if (function_exists('wlgf_get_confirmation_html')) {
+                         // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is fully escaped confirmation HTML from wlgf_get_confirmation_html.
                          echo wlgf_get_confirmation_html($success_msg, $wlgf_settings);
                     } else {
                          echo '<div class="wlgf-alert wlgf-alert--success">' . wp_kses_post($success_msg) . '</div>';
@@ -1389,7 +1406,8 @@ function wlgf_shortcode_callback( $atts ) {
                     // Check for a WP_Error
                      if (is_wp_error($wlgf_recaptcha_result)) {
                           $error_message = esc_html($wlgf_recaptcha_result->get_error_message());
-                          echo '<div class="wlgf-alert wlgf-alert--danger"><i class="fa-solid fa-triangle-exclamation"></i> ' . sprintf( esc_html__( 'reCAPTCHA verification error: %s', 'lead-generation-form' ), $error_message ) . '</div>';
+                          /* translators: %s: Error message details */
+                           echo '<div class="wlgf-alert wlgf-alert--danger"><i class="fa-solid fa-triangle-exclamation"></i> ' . sprintf( esc_html__( 'reCAPTCHA verification error: %s', 'lead-generation-form' ), esc_html( $error_message ) ) . '</div>';
                           return;
                      } else {
                          // Decode the JSON response
@@ -1417,7 +1435,8 @@ function wlgf_shortcode_callback( $atts ) {
 
                                    if ( $schedule_start && $now_timestamp < $schedule_start ) {
                                        $start_date_formatted = date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $schedule_start );
-                                       echo '<div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-clock"></i> ' . sprintf( esc_html__( 'This form will open for submissions on %s.', 'lead-generation-form' ), esc_html( $start_date_formatted ) ) . '</div>';
+                                       /* translators: %s: Date and time when the form will open */
+                                        echo '<div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-clock"></i> ' . sprintf( esc_html__( 'This form will open for submissions on %s.', 'lead-generation-form' ), esc_html( $start_date_formatted ) ) . '</div>';
                                        return;
                                    }
                                    if ( $schedule_end && $now_timestamp > $schedule_end ) {
@@ -1494,6 +1513,7 @@ function wlgf_shortcode_callback( $atts ) {
                                        if ( 'silent_drop' === $blacklist_check['action'] ) {
                                            $success_msg = ! empty( $wlgf_form_info['custom_message'] ) ? $wlgf_form_info['custom_message'] : ( ! empty( $wlgf_settings['user_message'] ) ? $wlgf_settings['user_message'] : __( 'Thank you! Your query has been successfully submitted.', 'lead-generation-form' ) );
                                            if ( function_exists( 'wlgf_get_confirmation_html' ) ) {
+                                               // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is fully escaped confirmation HTML from wlgf_get_confirmation_html.
                                                echo wlgf_get_confirmation_html( $success_msg, $wlgf_settings );
                                            } else {
                                                echo '<div class="wlgf-alert wlgf-alert--success">' . wp_kses_post( $success_msg ) . '</div>';
@@ -1539,7 +1559,7 @@ function wlgf_shortcode_callback( $atts ) {
                                              if ( 'automatic' === $nl_mode ) {
                                                   $is_newsletter_optin = true;
                                              } else {
-                                                  $is_newsletter_optin = ( isset( $_POST['wlgf_newsletter_optin'] ) && '1' === (string) $_POST['wlgf_newsletter_optin'] );
+                                                  $is_newsletter_optin = ( isset( $_POST['wlgf_newsletter_optin'] ) && '1' === (string) sanitize_text_field( wp_unslash( $_POST['wlgf_newsletter_optin'] ) ) );
                                              }
                                         }
 
@@ -1735,7 +1755,8 @@ function wlgf_shortcode_callback( $atts ) {
                                                    $amt_ref = isset( $sanitized_data['wlgf_payment_amount_paid'] ) ? esc_html( $sanitized_data['wlgf_payment_amount_paid'] ) : '';
                                                    $gw_ref  = isset( $sanitized_data['wlgf_payment_gateway'] ) ? strtoupper( esc_html( $sanitized_data['wlgf_payment_gateway'] ) ) : 'PAYMENT';
                                                    $custom_payment_msg = sprintf(
-                                                        __( 'Payment Successful! We have received your %s payment of %s (Transaction ID: %s). Your order has been placed.', 'lead-generation-form' ),
+                                                        /* translators: 1: Payment gateway name, 2: Amount paid, 3: Transaction ID */
+                                                        __( 'Payment Successful! We have received your %1$s payment of %2$s (Transaction ID: %3$s). Your order has been placed.', 'lead-generation-form' ),
                                                         $gw_ref,
                                                         ( ! empty( $amt_ref ) ? '$' . $amt_ref : '' ),
                                                         $txn_ref
@@ -1747,7 +1768,10 @@ function wlgf_shortcode_callback( $atts ) {
                                                    $conf_fadeout_sec = isset( $wlgf_settings['confirmation_fadeout'] ) ? max( 5, min( 50, intval( $wlgf_settings['confirmation_fadeout'] ) ) ) : 10;
                                                    $conf_card_html = function_exists( 'wlgf_get_confirmation_html' ) ? wlgf_get_confirmation_html( $base_msg, $wlgf_settings ) : esc_html( $base_msg );
                                               }
-                                              echo '<div id="' . esc_attr('wlgf-msg') . '"' . $redirect_attr . ' data-fadeout="' . esc_attr( $conf_fadeout_sec ) . '" data-is-paid="' . ( $is_paid ? '1' : '0' ) . '">' . $conf_card_html . '</div>';
+                                              echo '<div id="' . esc_attr('wlgf-msg') . '"' . ( ! empty( $final_redirect_url ) ? ' data-redirect-url="' . esc_url( $final_redirect_url ) . '"' : '' ) . ' data-fadeout="' . esc_attr( $conf_fadeout_sec ) . '" data-is-paid="' . ( $is_paid ? '1' : '0' ) . '">';
+                                               // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is fully escaped confirmation card HTML.
+                                               echo $conf_card_html;
+                                               echo '</div>';
                                          }
                                         
                                         // saving post data into database end
@@ -1785,7 +1809,8 @@ function wlgf_shortcode_callback( $atts ) {
 
                           if ( $schedule_start && $now_timestamp < $schedule_start ) {
                               $start_date_formatted = date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $schedule_start );
-                              echo '<div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-clock"></i> ' . sprintf( esc_html__( 'This form will open for submissions on %s.', 'lead-generation-form' ), esc_html( $start_date_formatted ) ) . '</div>';
+                              /* translators: %s: Date and time when the form will open */
+                                        echo '<div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-clock"></i> ' . sprintf( esc_html__( 'This form will open for submissions on %s.', 'lead-generation-form' ), esc_html( $start_date_formatted ) ) . '</div>';
                               return;
                           }
                           if ( $schedule_end && $now_timestamp > $schedule_end ) {
@@ -1858,6 +1883,7 @@ function wlgf_shortcode_callback( $atts ) {
                              if ( 'silent_drop' === $blacklist_check['action'] ) {
                                  $success_msg = ! empty( $wlgf_form_info['custom_message'] ) ? $wlgf_form_info['custom_message'] : ( ! empty( $wlgf_settings['user_message'] ) ? $wlgf_settings['user_message'] : __( 'Thank you! Your query has been successfully submitted.', 'lead-generation-form' ) );
                                  if ( function_exists( 'wlgf_get_confirmation_html' ) ) {
+                                     // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is fully escaped confirmation HTML from wlgf_get_confirmation_html.
                                      echo wlgf_get_confirmation_html( $success_msg, $wlgf_settings );
                                  } else {
                                      echo '<div class="wlgf-alert wlgf-alert--success">' . wp_kses_post( $success_msg ) . '</div>';
@@ -1894,7 +1920,7 @@ function wlgf_shortcode_callback( $atts ) {
                                    if ( 'automatic' === $nl_mode ) {
                                         $is_newsletter_optin = true;
                                    } else {
-                                        $is_newsletter_optin = ( isset( $_POST['wlgf_newsletter_optin'] ) && '1' === (string) $_POST['wlgf_newsletter_optin'] );
+                                        $is_newsletter_optin = ( isset( $_POST['wlgf_newsletter_optin'] ) && '1' === (string) sanitize_text_field( wp_unslash( $_POST['wlgf_newsletter_optin'] ) ) );
                                    }
                               }
 
@@ -2082,7 +2108,8 @@ function wlgf_shortcode_callback( $atts ) {
                                         $amt_ref = isset( $sanitized_data['wlgf_payment_amount_paid'] ) ? esc_html( $sanitized_data['wlgf_payment_amount_paid'] ) : '';
                                         $gw_ref  = isset( $sanitized_data['wlgf_payment_gateway'] ) ? strtoupper( esc_html( $sanitized_data['wlgf_payment_gateway'] ) ) : 'PAYMENT';
                                         $custom_payment_msg = sprintf(
-                                             __( 'Payment Successful! We have received your %s payment of %s (Transaction ID: %s). Your order has been placed.', 'lead-generation-form' ),
+                                             /* translators: 1: Payment gateway name, 2: Amount paid, 3: Transaction ID */
+                                             __( 'Payment Successful! We have received your %1$s payment of %2$s (Transaction ID: %3$s). Your order has been placed.', 'lead-generation-form' ),
                                              $gw_ref,
                                              ( ! empty( $amt_ref ) ? '$' . $amt_ref : '' ),
                                              $txn_ref
@@ -2094,7 +2121,10 @@ function wlgf_shortcode_callback( $atts ) {
                                         $conf_fadeout_sec = isset( $wlgf_settings['confirmation_fadeout'] ) ? max( 5, min( 50, intval( $wlgf_settings['confirmation_fadeout'] ) ) ) : 10;
                                         $conf_card_html = function_exists( 'wlgf_get_confirmation_html' ) ? wlgf_get_confirmation_html( $base_msg, $wlgf_settings ) : esc_html( $base_msg );
                                    }
-                                   echo '<div id="' . esc_attr('wlgf-msg') . '"' . $redirect_attr . ' data-fadeout="' . esc_attr( $conf_fadeout_sec ) . '" data-is-paid="' . ( $is_paid ? '1' : '0' ) . '">' . $conf_card_html . '</div>';
+                                   echo '<div id="' . esc_attr('wlgf-msg') . '"' . ( ! empty( $final_redirect_url ) ? ' data-redirect-url="' . esc_url( $final_redirect_url ) . '"' : '' ) . ' data-fadeout="' . esc_attr( $conf_fadeout_sec ) . '" data-is-paid="' . ( $is_paid ? '1' : '0' ) . '">';
+                                               // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is fully escaped confirmation card HTML.
+                                               echo $conf_card_html;
+                                               echo '</div>';
                               }
                               // saving post data into database end
                          }
@@ -2242,6 +2272,7 @@ function wlgf_shortcode_callback( $atts ) {
                      }
                      $wlgf_sent = wp_mail( $wlgf_email_to, $wlgf_email_subject, $wlgf_email_body, $wlgf_headers );
                      if ( ! $wlgf_sent && defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+                          // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log -- Safe fallback debug logging when WP_DEBUG is active.
                           error_log( 'WLGF: Admin lead notification email failed to dispatch via wp_mail() to ' . $wlgf_email_to . ' for Form ID #' . $wlgf_form_id );
                      }
                      if ( '2' === (string) $wlgf_email_engine ) {

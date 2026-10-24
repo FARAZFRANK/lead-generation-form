@@ -23,11 +23,10 @@ wp_add_inline_script(
 
 // Fetch all forms
 global $wpdb;
-$wlgf_options_table_name = "{$wpdb->prefix}options";
-
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wlgf_all_forms = $wpdb->get_results(
 	$wpdb->prepare(
-		"SELECT option_name FROM `$wlgf_options_table_name` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
+		"SELECT option_name FROM {$wpdb->options} WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
 		$wpdb->esc_like( 'wlgf_form_' ) . '%',
 		$wpdb->esc_like( 'wlgf_form_views_' ) . '%'
 	)
@@ -79,11 +78,11 @@ $wlgf_all_forms = $wpdb->get_results(
 								if ( ! is_array( $wlgf_form_data ) || empty( $wlgf_form_data['form_id'] ) ) {
 									continue;
 								}
-								$f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
-								$f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $f_id );
+								$wlgf_f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
+								$wlgf_f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $wlgf_f_id );
 								?>
-								<option value="<?php echo esc_attr( $f_id ); ?>">
-									<?php echo esc_html( $f_name . ' (#' . $f_id . ')' ); ?>
+								<option value="<?php echo esc_attr( $wlgf_f_id ); ?>">
+									<?php echo esc_html( $wlgf_f_name . ' (#' . $wlgf_f_id . ')' ); ?>
 								</option>
 								<?php
 							}
@@ -156,11 +155,11 @@ $wlgf_all_forms = $wpdb->get_results(
 								if ( ! is_array( $wlgf_form_data ) || empty( $wlgf_form_data['form_id'] ) ) {
 									continue;
 								}
-								$f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
-								$f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $f_id );
+								$wlgf_f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
+								$wlgf_f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $wlgf_f_id );
 								?>
-								<option value="<?php echo esc_attr( $f_id ); ?>">
-									<?php echo esc_html( $f_name ); ?>
+								<option value="<?php echo esc_attr( $wlgf_f_id ); ?>">
+									<?php echo esc_html( $wlgf_f_name ); ?>
 								</option>
 								<?php
 							}
@@ -180,11 +179,11 @@ $wlgf_all_forms = $wpdb->get_results(
 								if ( ! is_array( $wlgf_form_data ) || empty( $wlgf_form_data['form_id'] ) ) {
 									continue;
 								}
-								$f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
-								$f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $f_id );
+								$wlgf_f_id   = sanitize_text_field( $wlgf_form_data['form_id'] );
+								$wlgf_f_name = ! empty( $wlgf_form_data['form_name'] ) ? sanitize_text_field( $wlgf_form_data['form_name'] ) : ( 'Form #' . $wlgf_f_id );
 								?>
-								<option value="<?php echo esc_attr( $f_id ); ?>">
-									<?php echo esc_html( $f_name ); ?>
+								<option value="<?php echo esc_attr( $wlgf_f_id ); ?>">
+									<?php echo esc_html( $wlgf_f_name ); ?>
 								</option>
 								<?php
 							}

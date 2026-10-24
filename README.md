@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://wordpress.org/plugins/lead-generation-form/"><img src="https://img.shields.io/badge/WordPress.org-Plugin-0073aa?logo=wordpress&logoColor=white" alt="WordPress Plugin" /></a>
-  <a href="https://github.com/FARAZFRANK/lead-generation-form/releases/tag/v1.3.2"><img src="https://img.shields.io/badge/Release-v1.3.2-blue.svg?logo=github" alt="Latest Release" /></a>
+  <a href="https://github.com/FARAZFRANK/lead-generation-form/releases/tag/v1.3.3"><img src="https://img.shields.io/badge/Release-v1.3.3-blue.svg?logo=github" alt="Latest Release" /></a>
   <a href="https://wordpress.org/"><img src="https://img.shields.io/badge/WordPress-5.6%20to%206.7%2B-21759b.svg?logo=wordpress" alt="WordPress Compatibility" /></a>
   <a href="https://www.php.net/"><img src="https://img.shields.io/badge/PHP-7.4%20--%208.3-777bb4.svg?logo=php&logoColor=white" alt="PHP Compatibility" /></a>
   <a href="http://www.gnu.org/licenses/gpl-2.0.html"><img src="https://img.shields.io/badge/License-GPL%20v2%2B-green.svg" alt="License" /></a>
@@ -262,6 +262,16 @@ Lead Generation Form follows enterprise WordPress security guidelines:
 ## 📋 Changelog
 
 Refer to [readme.txt](readme.txt) for the full changelog history.
+
+### Version 1.3.3 (24 Oct 2026)
+* **WordPress Plugin Check (PCP):** Achieved 100% compliance with WordPress Plugin Check and official PHP Coding Standards (WPCS).
+* **Security & Output Escaping:** Implemented comprehensive late output escaping across all dynamic form generator markup, inputs, and lead modal previews.
+* **Internationalization (i18n):** Enhanced translation readiness with strict translators comments and ordered placeholders (`%1$s, %2$s`) on all translatable strings.
+* **Code Quality & Namespacing:** Renamed and isolated global variable scopes across admin panels to prevent collisions with third-party themes and plugins.
+* **Modernization:** Replaced deprecated `parse_url()` with `wp_parse_url()` and `date()` with `gmdate()` for timezone-safe execution.
+* **Data Sanitization:** Standardized unslashing and sanitization for all AJAX request handlers, settings mutations, and analytics pings.
+* **Performance:** Enqueued external scripts with explicit version identifiers and set `in_footer` parameters for faster page rendering.
+* **Clean Packaging:** Cleaned up hidden development dotfiles and redundant build artifacts to ensure pristine distribution archives.
 
 ### Version 1.3.2 (24 Oct 2026)
 * **Improved:** Modernized Lead Details modal close button with an accessible squircle button, refined typography, and smooth rotational hover effects.

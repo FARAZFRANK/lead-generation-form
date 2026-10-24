@@ -2,7 +2,7 @@
 /**
  * Lead Generation Form - 1-Click Starter Template Library
  * Provides pre-built high-converting starter form templates for Free edition.
- * Version: 1.3.2
+ * Version: 1.3.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

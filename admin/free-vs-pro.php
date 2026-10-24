@@ -9,12 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$upgrade_url = 'https://wpfrank.com/wordpress-plugins/lead-generation-form-pro/';
-$demo_url    = 'https://wpfrank.com/demo/lead-generation-form-pro/';
-$is_tab_embed = ! empty( $is_wlgf_tab_embed );
+$wlgf_upgrade_url = 'https://wpfrank.com/wordpress-plugins/lead-generation-form-pro/';
+$wlgf_demo_url    = 'https://wpfrank.com/demo/lead-generation-form-pro/';
+$wlgf_is_tab_embed = ! empty( $is_wlgf_tab_embed );
 ?>
 
-<?php if ( ! $is_tab_embed ) : ?>
+<?php if ( ! $wlgf_is_tab_embed ) : ?>
 <div class="wlgf-admin-wrap">
 	<!-- Page Header -->
 	<header class="wlgf-header">
@@ -28,10 +28,10 @@ $is_tab_embed = ! empty( $is_wlgf_tab_embed );
 			</div>
 		</div>
 		<div class="wlgf-header__actions">
-			<a href="<?php echo esc_url( $demo_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--secondary">
+			<a href="<?php echo esc_url( $wlgf_demo_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--secondary">
 				<i class="fa-solid fa-arrow-up-right-from-square"></i> <?php esc_html_e( 'Live Demo', 'lead-generation-form' ); ?>
 			</a>
-			<a href="<?php echo esc_url( $upgrade_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--primary" style="background: #f59e0b; border-color: #d97706; color: #1e1b4b; font-weight: 700;">
+			<a href="<?php echo esc_url( $wlgf_upgrade_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--primary" style="background: #f59e0b; border-color: #d97706; color: #1e1b4b; font-weight: 700;">
 				<i class="fa-solid fa-rocket"></i> <?php esc_html_e( 'Upgrade to Pro — $49', 'lead-generation-form' ); ?>
 			</a>
 		</div>
@@ -52,10 +52,10 @@ $is_tab_embed = ! empty( $is_wlgf_tab_embed );
 
 		<!-- Callout Action Buttons -->
 		<div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; align-items: center; margin-bottom: 24px;">
-			<a href="<?php echo esc_url( $upgrade_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-upgrade-hero__cta" style="font-size: 16px; padding: 14px 32px;">
+			<a href="<?php echo esc_url( $wlgf_upgrade_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-upgrade-hero__cta" style="font-size: 16px; padding: 14px 32px;">
 				<i class="fa-solid fa-crown"></i> <?php esc_html_e( 'Get Lead Generation Form Pro — $49 (One-Time)', 'lead-generation-form' ); ?>
 			</a>
-			<a href="<?php echo esc_url( $demo_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-weight: 700; padding: 14px 24px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+			<a href="<?php echo esc_url( $wlgf_demo_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); font-weight: 700; padding: 14px 24px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
 				<i class="fa-solid fa-laptop"></i> <?php esc_html_e( 'Explore Live Interactive Demo', 'lead-generation-form' ); ?>
 			</a>
 		</div>
@@ -533,14 +533,14 @@ $is_tab_embed = ! empty( $is_wlgf_tab_embed );
 			<?php esc_html_e( 'Join smart business owners and marketing agencies who have eliminated expensive monthly subscriptions. Instant delivery, lifetime updates, and priority support.', 'lead-generation-form' ); ?>
 		</p>
 		<div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-			<a href="<?php echo esc_url( $upgrade_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--primary" style="background: #f59e0b; border-color: #d97706; color: #1e1b4b; font-weight: 800; font-size: 16px; padding: 14px 32px; box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);">
+			<a href="<?php echo esc_url( $wlgf_upgrade_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--primary" style="background: #f59e0b; border-color: #d97706; color: #1e1b4b; font-weight: 800; font-size: 16px; padding: 14px 32px; box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);">
 				<i class="fa-solid fa-rocket"></i> <?php esc_html_e( 'Get Lead Generation Form Pro — $49 (One-Time)', 'lead-generation-form' ); ?>
 			</a>
-			<a href="<?php echo esc_url( $demo_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--secondary" style="font-size: 16px; padding: 14px 24px;">
+			<a href="<?php echo esc_url( $wlgf_demo_url ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-btn wlgf-btn--secondary" style="font-size: 16px; padding: 14px 24px;">
 				<i class="fa-solid fa-arrow-up-right-from-square"></i> <?php esc_html_e( 'Explore Live Demo', 'lead-generation-form' ); ?>
 			</a>
 		</div>
 	</div>
-<?php if ( ! $is_tab_embed ) : ?>
+<?php if ( ! $wlgf_is_tab_embed ) : ?>
 </div>
 <?php endif; ?>

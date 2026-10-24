@@ -8,15 +8,15 @@ wp_enqueue_media();
 wp_enqueue_style( 'wlgf-admin-ui-css' );
 wp_enqueue_style( 'wlgf-fontawesome-css', plugins_url( 'assets/fontawesome-free-6.4.2-web/css/all.min.css', __FILE__ ), array(), '6.4.2', 'all' );
 
-$settings_css_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/css/settings.css' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/settings.css' ) : WLGF_PLUGIN_VERSION;
-$settings_js_ver  = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/settings.js' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/settings.js' ) : WLGF_PLUGIN_VERSION;
+$wlgf_settings_css_ver = file_exists( plugin_dir_path( __FILE__ ) . 'assets/css/settings.css' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/settings.css' ) : WLGF_PLUGIN_VERSION;
+$wlgf_settings_js_ver  = file_exists( plugin_dir_path( __FILE__ ) . 'assets/js/settings.js' ) ? WLGF_PLUGIN_VERSION . '.' . filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/settings.js' ) : WLGF_PLUGIN_VERSION;
 
 wp_deregister_style( 'wlgf-settings-css' );
-wp_register_style( 'wlgf-settings-css', plugin_dir_url( __FILE__ ) . 'assets/css/settings.css', array( 'wlgf-admin-ui-css' ), $settings_css_ver, 'all' );
+wp_register_style( 'wlgf-settings-css', plugin_dir_url( __FILE__ ) . 'assets/css/settings.css', array( 'wlgf-admin-ui-css' ), $wlgf_settings_css_ver, 'all' );
 wp_enqueue_style( 'wlgf-settings-css' );
 
 wp_deregister_script( 'wlgf-settings-js' );
-wp_register_script( 'wlgf-settings-js', plugin_dir_url( __FILE__ ) . 'assets/js/settings.js', array( 'jquery', 'wlgf-dialog-js' ), $settings_js_ver, true );
+wp_register_script( 'wlgf-settings-js', plugin_dir_url( __FILE__ ) . 'assets/js/settings.js', array( 'jquery', 'wlgf-dialog-js' ), $wlgf_settings_js_ver, true );
 wp_enqueue_script( 'wlgf-settings-js' );
 
 wp_add_inline_script(
@@ -70,7 +70,7 @@ $wlgf_email_body_greeting     = isset( $wlgf_settings['email_body_greeting'] ) &
 $wlgf_email_body_bg           = isset( $wlgf_settings['email_body_bg'] ) && '' !== $wlgf_settings['email_body_bg'] ? sanitize_hex_color( $wlgf_settings['email_body_bg'] ) : '#f1f5f9';
 $wlgf_email_card_bg           = isset( $wlgf_settings['email_card_bg'] ) && '' !== $wlgf_settings['email_card_bg'] ? sanitize_hex_color( $wlgf_settings['email_card_bg'] ) : '#ffffff';
 $wlgf_email_text_color        = isset( $wlgf_settings['email_text_color'] ) && '' !== $wlgf_settings['email_text_color'] ? sanitize_hex_color( $wlgf_settings['email_text_color'] ) : '#334155';
-$wlgf_email_footer_text       = isset( $wlgf_settings['email_footer_text'] ) && '' !== $wlgf_settings['email_footer_text'] ? sanitize_textarea_field( $wlgf_settings['email_footer_text'] ) : sprintf( ( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO ? __( 'This notification was automatically sent by Lead Generation Form Pro on %s.', 'lead-generation-form' ) : __( 'This notification was automatically sent by Lead Generation Form on %s.', 'lead-generation-form' ) ), '{site_title}' );
+$wlgf_email_footer_text       = isset( $wlgf_settings['email_footer_text'] ) && '' !== $wlgf_settings['email_footer_text'] ? sanitize_textarea_field( $wlgf_settings['email_footer_text'] ) : sprintf( ( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO ? /* translators: %s: Site title */ __( 'This notification was automatically sent by Lead Generation Form Pro on %s.', 'lead-generation-form' ) : /* translators: %s: Site title */ __( 'This notification was automatically sent by Lead Generation Form on %s.', 'lead-generation-form' ) ), '{site_title}' );
 $wlgf_email_footer_bg         = isset( $wlgf_settings['email_footer_bg'] ) && '' !== $wlgf_settings['email_footer_bg'] ? sanitize_hex_color( $wlgf_settings['email_footer_bg'] ) : '#f8fafc';
 $wlgf_email_footer_color      = isset( $wlgf_settings['email_footer_color'] ) && '' !== $wlgf_settings['email_footer_color'] ? sanitize_hex_color( $wlgf_settings['email_footer_color'] ) : '#64748b';
 $wlgf_email_show_dashboard    = isset( $wlgf_settings['email_show_dashboard_btn'] ) ? sanitize_text_field( $wlgf_settings['email_show_dashboard_btn'] ) : '1';
@@ -90,7 +90,7 @@ $wlgf_confirmation_text_color    = isset( $wlgf_settings['confirmation_text_colo
 $wlgf_confirmation_icon_color    = isset( $wlgf_settings['confirmation_icon_color'] ) && '' !== $wlgf_settings['confirmation_icon_color'] ? sanitize_hex_color( $wlgf_settings['confirmation_icon_color'] ) : '#16a34a';
 $wlgf_confirmation_icon_bg       = isset( $wlgf_settings['confirmation_icon_bg'] ) && '' !== $wlgf_settings['confirmation_icon_bg'] ? sanitize_hex_color( $wlgf_settings['confirmation_icon_bg'] ) : '#dcfce7';
 
-$admin_email          = get_option( 'admin_email' );
+$wlgf_admin_email     = get_option( 'admin_email' );
 
 // Newsletter & Integrations Settings (PRO-008)
 $wlgf_newsletter_provider    = isset( $wlgf_settings['newsletter_provider'] ) ? sanitize_text_field( $wlgf_settings['newsletter_provider'] ) : 'local';
@@ -139,10 +139,10 @@ $wlgf_floating_email          = isset( $wlgf_settings['floating_email'] ) ? sani
 $wlgf_floating_form_id        = isset( $wlgf_settings['floating_form_id'] ) ? sanitize_text_field( $wlgf_settings['floating_form_id'] ) : '';
 
 global $wpdb;
-$wlgf_options_table_name = "{$wpdb->prefix}options";
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 $wlgf_forms_dropdown = $wpdb->get_results(
 	$wpdb->prepare(
-		"SELECT option_name FROM `$wlgf_options_table_name` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
+		"SELECT option_name FROM {$wpdb->options} WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
 		$wpdb->esc_like( 'wlgf_form_' ) . '%',
 		$wpdb->esc_like( 'wlgf_form_views_' ) . '%'
 	)
@@ -151,10 +151,10 @@ $wlgf_forms_dropdown = $wpdb->get_results(
 $wlgf_changelog_url = defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO ? plugins_url( 'change-log.txt', dirname( __FILE__ ) ) : 'https://wordpress.org/plugins/lead-generation-form/#developers';
 $wlgf_support_url   = defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO ? 'https://wpfrank.com/contact/' : 'https://wordpress.org/support/plugin/lead-generation-form/';
 $wlgf_docs_url      = 'https://wpfrank.com/wordpress-plugins/lead-generation-form-pro/';
-$max_upload_size    = size_format( wp_max_upload_size() );
-$max_post_size      = ini_get( 'post_max_size' ) ? ini_get( 'post_max_size' ) : 'N/A';
-$memory_limit       = ini_get( 'memory_limit' ) ? ini_get( 'memory_limit' ) : 'N/A';
-$wp_version_str     = get_bloginfo( 'version' );
+$wlgf_max_upload_size = size_format( wp_max_upload_size() );
+$wlgf_max_post_size   = ini_get( 'post_max_size' ) ? ini_get( 'post_max_size' ) : 'N/A';
+$wlgf_memory_limit    = ini_get( 'memory_limit' ) ? ini_get( 'memory_limit' ) : 'N/A';
+$wlgf_wp_version_str  = get_bloginfo( 'version' );
 ?>
 
 <div class="wlgf-admin-wrap">
@@ -400,7 +400,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 					<div class="wlgf-card__body wlgf-conf-preview-container">
 						<div class="wlgf-conf-preview-wrapper">
 							<div id="wlgf-conf-live-preview">
-								<?php echo wlgf_get_confirmation_html( '', $wlgf_settings ); ?>
+								<?php echo wlgf_get_confirmation_html( '', $wlgf_settings ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							</div>
 						</div>
 						<p class="wlgf-conf-preview-note">
@@ -430,7 +430,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 							<p class="wlgf-help-text">
 								<?php
 								/* translators: %s: admin email */
-								printf( esc_html__( 'When enabled, emails are dispatched to %s with full submission data.', 'lead-generation-form' ), '<code>' . esc_html( $admin_email ) . '</code>' );
+								printf( esc_html__( 'When enabled, emails are dispatched to %s with full submission data.', 'lead-generation-form' ), '<code>' . esc_html( $wlgf_admin_email ) . '</code>' );
 								?>
 							</p>
 						</div>
@@ -472,7 +472,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 								<span class="wlgf-text-muted" style="font-size: 11px; font-weight: normal;"><?php esc_html_e( 'Verify email dispatch & deliverability', 'lead-generation-form' ); ?></span>
 							</label>
 							<div class="wlgf-flex wlgf-gap-2">
-								<input type="email" class="wlgf-input" id="wlgf_quick_test_email" value="<?php echo esc_attr( $admin_email ); ?>" placeholder="test-recipient@domain.com">
+								<input type="email" class="wlgf-input" id="wlgf_quick_test_email" value="<?php echo esc_attr( $wlgf_admin_email ); ?>" placeholder="test-recipient@domain.com">
 								<button type="button" id="wlgf-quick-test-email-btn" class="wlgf-btn wlgf-btn--outline" style="white-space: nowrap;">
 									<i class="fa-solid fa-paper-plane"></i> <?php esc_html_e( 'Send Test Email', 'lead-generation-form' ); ?>
 								</button>
@@ -534,7 +534,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 						<div class="wlgf-form-group">
 							<label for="wlgf_test_email" class="wlgf-label"><?php esc_html_e( 'Test SMTP Connection', 'lead-generation-form' ); ?></label>
 							<div class="wlgf-flex wlgf-gap-2">
-								<input type="email" class="wlgf-input" id="wlgf_test_email" value="<?php echo esc_attr( $admin_email ); ?>" placeholder="test-recipient@domain.com">
+								<input type="email" class="wlgf-input" id="wlgf_test_email" value="<?php echo esc_attr( $wlgf_admin_email ); ?>" placeholder="test-recipient@domain.com">
 								<button type="button" id="wlgf-test-smtp-btn" class="wlgf-btn wlgf-btn--outline">
 									<i class="fa-solid fa-paper-plane"></i> <?php esc_html_e( 'Send Test Email', 'lead-generation-form' ); ?>
 								</button>
@@ -740,7 +740,8 @@ $wp_version_str     = get_bloginfo( 'version' );
 						<?php else : ?>
 							<div class="wlgf-alert wlgf-alert--info wlgf-mb-3">
 								<i class="fa-brands fa-cloudflare"></i>
-								<span><?php esc_html_e( 'Cloudflare Turnstile provides smart, non-interactive verification that stops spam bots without annoying user challenges.', 'lead-generation-form' ); ?> <a href="https://dash.cloudflare.com/?to=/:account/turnstile" target="_blank" rel="noopener noreferrer" class="wlgf-link-external"><?php esc_html_e( 'Get Free Turnstile Keys', 'lead-generation-form' ); ?> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
+								<?php // phpcs:ignore PluginCheck.CodeAnalysis.Offloading.OffloadedContent -- External link to Cloudflare dashboard. ?>
+								<span><?php esc_html_e( 'Cloudflare Turnstile provides smart, non-interactive verification that stops spam bots without annoying user challenges.', 'lead-generation-form' ); ?> <a href="<?php echo esc_url( 'https://dash.cloudflare.com/?to=/:account/turnstile' ); ?>" target="_blank" rel="noopener noreferrer" class="wlgf-link-external"><?php esc_html_e( 'Get Free Turnstile Keys', 'lead-generation-form' ); ?> <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span>
 							</div>
 						<?php endif; ?>
 						<fieldset <?php echo ( ! defined( 'WLGF_IS_PRO' ) || ! WLGF_IS_PRO ) ? 'disabled' : ''; ?> style="border:none;padding:0;margin:0;">
@@ -1503,16 +1504,16 @@ $wp_version_str     = get_bloginfo( 'version' );
 							<option value=""><?php esc_html_e( '-- None (Communication Channels Only) --', 'lead-generation-form' ); ?></option>
 							<?php
 							if ( is_array( $wlgf_forms_dropdown ) ) {
-								foreach ( $wlgf_forms_dropdown as $f_row ) {
-									$f_data = get_option( $f_row->option_name );
-									if ( ! is_array( $f_data ) || empty( $f_data['form_id'] ) ) {
+								foreach ( $wlgf_forms_dropdown as $wlgf_f_row ) {
+									$wlgf_f_data = get_option( $wlgf_f_row->option_name );
+									if ( ! is_array( $wlgf_f_data ) || empty( $wlgf_f_data['form_id'] ) ) {
 										continue;
 									}
-									$id   = sanitize_text_field( $f_data['form_id'] );
-									$name = ! empty( $f_data['form_name'] ) ? sanitize_text_field( $f_data['form_name'] ) : ( 'Form #' . $id );
+									$wlgf_fid  = sanitize_text_field( $wlgf_f_data['form_id'] );
+									$wlgf_name = ! empty( $wlgf_f_data['form_name'] ) ? sanitize_text_field( $wlgf_f_data['form_name'] ) : ( 'Form #' . $wlgf_fid );
 									?>
-									<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $id, $wlgf_floating_form_id ); ?>>
-										<?php echo esc_html( $name . ' (ID: #' . $id . ')' ); ?>
+									<option value="<?php echo esc_attr( $wlgf_fid ); ?>" <?php selected( $wlgf_fid, $wlgf_floating_form_id ); ?>>
+										<?php echo esc_html( $wlgf_name . ' (ID: #' . $wlgf_fid . ')' ); ?>
 									</option>
 									<?php
 								}
@@ -2541,7 +2542,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 					</p>
 					<div class="wlgf-flex wlgf-gap-3 wlgf-flex-wrap">
 						<div class="wlgf-badge wlgf-badge--primary">
-							<?php esc_html_e( 'WordPress:', 'lead-generation-form' ); ?> v<?php echo esc_html( $wp_version_str ); ?>
+							<?php esc_html_e( 'WordPress:', 'lead-generation-form' ); ?> v<?php echo esc_html( $wlgf_wp_version_str ); ?>
 						</div>
 						<div class="wlgf-badge wlgf-badge--primary">
 							<?php esc_html_e( 'PHP Version:', 'lead-generation-form' ); ?> v<?php echo esc_html( PHP_VERSION ); ?>
@@ -2550,13 +2551,13 @@ $wp_version_str     = get_bloginfo( 'version' );
 							<?php esc_html_e( 'Plugin Version:', 'lead-generation-form' ); ?> v<?php echo esc_html( WLGF_PLUGIN_VERSION ); ?>
 						</div>
 						<div class="wlgf-badge wlgf-badge--secondary">
-							<?php esc_html_e( 'Memory Limit:', 'lead-generation-form' ); ?> <?php echo esc_html( $memory_limit ); ?>
+							<?php esc_html_e( 'Memory Limit:', 'lead-generation-form' ); ?> <?php echo esc_html( $wlgf_memory_limit ); ?>
 						</div>
 						<div class="wlgf-badge wlgf-badge--secondary">
-							<?php esc_html_e( 'Max Upload Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $max_upload_size ); ?>
+							<?php esc_html_e( 'Max Upload Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $wlgf_max_upload_size ); ?>
 						</div>
 						<div class="wlgf-badge wlgf-badge--secondary">
-							<?php esc_html_e( 'Max POST Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $max_post_size ); ?>
+							<?php esc_html_e( 'Max POST Size:', 'lead-generation-form' ); ?> <?php echo esc_html( $wlgf_max_post_size ); ?>
 						</div>
 					</div>
 				</div>
@@ -2691,10 +2692,22 @@ $wp_version_str     = get_bloginfo( 'version' );
 							<strong><?php esc_html_e( 'Important: Take a Data Backup First!', 'lead-generation-form' ); ?></strong><br>
 							<?php esc_html_e( 'Performing a factory reset will permanently erase all custom forms, captured lead records, customer notes, tracking analytics, and custom configuration settings. This action cannot be reversed.', 'lead-generation-form' ); ?><br>
 							<?php
-							printf(
-								/* translators: %s: Link to Import & Export page */
-								__( 'We strongly advise you to download a backup of your forms and leads before proceeding. Visit the %s to export your data.', 'lead-generation-form' ),
-								'<a href="' . esc_url( admin_url( 'admin.php?page=wlgf-import-export' ) ) . '" target="_blank" class="wlgf-reset-backup-notice__link">' . esc_html__( 'Import & Export Page', 'lead-generation-form' ) . ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>'
+							echo wp_kses(
+								sprintf(
+									/* translators: %s: Link to Import & Export page */
+									__( 'We strongly advise you to download a backup of your forms and leads before proceeding. Visit the %s to export your data.', 'lead-generation-form' ),
+									'<a href="' . esc_url( admin_url( 'admin.php?page=wlgf-import-export' ) ) . '" target="_blank" class="wlgf-reset-backup-notice__link">' . esc_html__( 'Import & Export Page', 'lead-generation-form' ) . ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>'
+								),
+								array(
+									'a' => array(
+										'href'   => array(),
+										'target' => array(),
+										'class'  => array(),
+									),
+									'i' => array(
+										'class'  => array(),
+									),
+								)
 							);
 							?>
 						</div>
@@ -2722,7 +2735,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 		<!-- TAB 7: Upgrade to Pro (Comparison Table) -->
 		<div id="wlgf-tab-upgrade" class="wlgf-tab-content">
 			<?php
-			$is_wlgf_tab_embed = true;
+			$wlgf_is_tab_embed = true;
 			require plugin_dir_path( __FILE__ ) . 'free-vs-pro.php';
 			?>
 		</div>
@@ -2783,7 +2796,7 @@ $wp_version_str     = get_bloginfo( 'version' );
 				</p>
 				<div class="wlgf-form-group wlgf-mb-3">
 					<label for="wlgf_modal_test_email" class="wlgf-label"><?php esc_html_e( 'Recipient Email Address', 'lead-generation-form' ); ?> <span class="wlgf-label__required">*</span></label>
-					<input type="email" class="wlgf-input wlgf-w-full" id="wlgf_modal_test_email" value="<?php echo esc_attr( $admin_email ); ?>" placeholder="your-email@domain.com">
+					<input type="email" class="wlgf-input wlgf-w-full" id="wlgf_modal_test_email" value="<?php echo esc_attr( $wlgf_admin_email ); ?>" placeholder="your-email@domain.com">
 				</div>
 				<div class="wlgf-card-hint" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #64748b; margin-bottom: 16px;">
 					<i class="fa-solid fa-circle-info text-primary" style="margin-right: 6px;"></i>

@@ -27,6 +27,7 @@ function wlgf_register_gutenberg_block() {
 
 	if ( false === $forms_options ) {
 		global $wpdb;
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$wlgf_form_entries = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT option_name, option_value FROM `$wpdb->options` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",

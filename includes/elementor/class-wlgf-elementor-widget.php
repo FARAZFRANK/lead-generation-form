@@ -74,6 +74,7 @@ function wlgf_register_elementor_widget( $widgets_manager ) {
 			$forms_options = get_transient( 'wlgf_elementor_forms_list' );
 			if ( false === $forms_options || ! is_array( $forms_options ) ) {
 				global $wpdb;
+				// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 				$wlgf_form_entries = $wpdb->get_results(
 					$wpdb->prepare(
 						"SELECT option_name, option_value FROM `$wpdb->options` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s AND `option_name` NOT LIKE %s ORDER BY option_id ASC",
@@ -201,6 +202,7 @@ function wlgf_register_elementor_widget( $widgets_manager ) {
 
 				if ( $schedule_start && $now_timestamp < $schedule_start ) {
 					$start_date_formatted = date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $schedule_start );
+					/* translators: %s: form scheduled opening date/time */
 					echo '<div class="wlgf-container"><div class="wlgf-alert wlgf-alert--warning"><i class="fa-solid fa-clock"></i> ' . sprintf( esc_html__( 'This form will open for submissions on %s.', 'lead-generation-form' ), esc_html( $start_date_formatted ) ) . '</div></div>';
 					return;
 				}

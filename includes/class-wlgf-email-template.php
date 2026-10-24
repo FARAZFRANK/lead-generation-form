@@ -43,7 +43,14 @@ class WLGF_Email_Template {
 			'email_body_bg'            => '#f1f5f9',
 			'email_card_bg'            => '#ffffff',
 			'email_text_color'         => '#334155',
-			'email_footer_text'        => sprintf( ( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO ? __( 'This notification was automatically sent by Lead Generation Form Pro on %s.', 'lead-generation-form' ) : __( 'This notification was automatically sent by Lead Generation Form on %s.', 'lead-generation-form' ) ), '{site_title}' ),
+			'email_footer_text'        => sprintf(
+				( defined( 'WLGF_IS_PRO' ) && WLGF_IS_PRO )
+					/* translators: %s: site title */
+					? __( 'This notification was automatically sent by Lead Generation Form Pro on %s.', 'lead-generation-form' )
+					/* translators: %s: site title */
+					: __( 'This notification was automatically sent by Lead Generation Form on %s.', 'lead-generation-form' ),
+				'{site_title}'
+			),
 			'email_footer_bg'          => '#f8fafc',
 			'email_footer_color'       => '#64748b',
 			'email_show_dashboard_btn' => '1',
@@ -248,7 +255,7 @@ class WLGF_Email_Template {
 			} elseif ( ( 0 === strpos( $str_val, 'http://' ) || 0 === strpos( $str_val, 'https://' ) ) && preg_match( '/\.(jpg|jpeg|png|gif|webp)$/i', $str_val ) ) {
 				$img_url       = esc_url( $str_val );
 				$img_src       = $img_url;
-				$file_name     = esc_html( basename( parse_url( $str_val, PHP_URL_PATH ) ) );
+				$file_name     = esc_html( basename( wp_parse_url( $str_val, PHP_URL_PATH ) ) );
 				$is_preview    = ! empty( $custom_settings['is_preview'] );
 				$dirs          = wp_upload_dir();
 				$is_local_host = ( false !== strpos( $str_val, 'localhost' ) || false !== strpos( $str_val, '127.0.0.1' ) );
@@ -471,6 +478,7 @@ class WLGF_Email_Template {
 			$form_name = 'Form #' . $form_id;
 		}
 		if ( empty( $subject ) ) {
+			/* translators: %s: site title */
 			$subject = sprintf( __( '[%s] We received your submission', 'lead-generation-form' ), $site_title );
 		}
 

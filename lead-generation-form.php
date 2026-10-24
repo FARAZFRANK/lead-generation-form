@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
  * Plugin Name:       Lead Generation Form
  * Plugin URI:        https://wpfrank.com/wordpress-plugins/lead-generation-form-pro/
  * Description:       Clean, responsive drag-and-drop lead capture and contact form builder for WordPress with anti-spam, custom SMTP delivery, and CSV export.
- * Version:           1.3.2
+ * Version:           1.3.3
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            WP Frank
@@ -45,7 +45,7 @@ if (!defined('WLGF_IS_PRO')) {
 
 // Global Plugin Version Constant
 if (!defined('WLGF_PLUGIN_VERSION')) {
-	define('WLGF_PLUGIN_VERSION', '1.3.2');
+	define('WLGF_PLUGIN_VERSION', '1.3.3');
 }
 
 /* activation */
@@ -120,7 +120,7 @@ register_deactivation_hook(__FILE__, 'wlgf_deactivation');
 if (!function_exists('wlgf_check_version')) {
 	function wlgf_check_version()
 	{
-		$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2';
+		$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.3';
 		$current_db_version = sanitize_text_field(get_option('wlgf_current_version', '1.0'));
 
 		if (version_compare($current_db_version, $plugin_version, '<')) {
@@ -156,6 +156,7 @@ add_action('admin_init', 'wlgf_check_version');
 // load translation
 function wlgf_load_translation()
 {
+	// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Backwards compatibility translation loader.
 	load_plugin_textdomain('lead-generation-form', false, dirname(plugin_basename(__FILE__)) . '/languages');
 }
 add_action('plugins_loaded', 'wlgf_load_translation');
@@ -163,9 +164,9 @@ add_action('plugins_loaded', 'wlgf_load_translation');
 // register styles and scripts for frontend
 function wlgf_user_register_scripts()
 {
-	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2';
+	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.3';
 	wp_enqueue_script('jquery');
-	wp_register_script('wlgf-bootstrap-bundle-min-js', plugin_dir_url(__FILE__) . 'admin/assets/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.3');
+	wp_register_script('wlgf-bootstrap-bundle-min-js', plugin_dir_url(__FILE__) . 'admin/assets/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.3.3', true);
 	$fa_css_path = plugin_dir_path(__FILE__) . 'admin/assets/fontawesome-free-6.4.2-web/css/all.min.css';
 	$fa_css_ver  = file_exists($fa_css_path) ? '6.4.2.' . filemtime($fa_css_path) : '6.4.2.1';
 	wp_register_style('wlgf-fontawesome-css', plugin_dir_url(__FILE__) . 'admin/assets/fontawesome-free-6.4.2-web/css/all.min.css', array(), $fa_css_ver, 'all');
@@ -184,7 +185,7 @@ function wlgf_user_register_scripts()
 	wp_register_style('wlgf-flatpickr-css', plugin_dir_url(__FILE__) . 'admin/assets/css/flatpickr.min.css', array(), '4.6.13', 'all');
 	wp_register_script('wlgf-flatpickr-js', plugin_dir_url(__FILE__) . 'admin/assets/js/flatpickr.min.js', array('jquery'), '4.6.13', true);
 
-	wp_register_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), null, true); // load in footer
+	wp_register_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js', array(), '3.0', true); // load in footer
 	wp_register_script('wlgf-shortcode-form-js', plugin_dir_url(__FILE__) . 'includes/assets/js/wlgf-shortcode-form.js', array('jquery', 'wlgf-dialog-js', 'wlgf-flatpickr-js'), $form_js_ver, true); // load in footer
 	wp_register_script('wlgf-shortcode-ajax-script', plugin_dir_url(__FILE__) . 'includes/assets/js/wlgf-shortcode-ajax-script.js', array('jquery'), $ajax_js_ver, true);
 	wp_localize_script('wlgf-shortcode-ajax-script', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
@@ -194,7 +195,8 @@ add_action('wp_enqueue_scripts', 'wlgf_user_register_scripts');
 // register styles and scripts for backend
 function wlgf_admin_register_scripts($hook = '')
 {
-	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.2';
+	$plugin_version = defined('WLGF_PLUGIN_VERSION') ? WLGF_PLUGIN_VERSION : '1.3.3';
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Page routing check for admin asset enqueuing only.
 	$is_wlgf_page = isset($_GET['page']) && in_array(sanitize_text_field(wp_unslash($_GET['page'])), array(
 		'lead-generation-form',
 		'wlgf-manage-forms',
@@ -260,6 +262,7 @@ function wlgf_admin_register_scripts($hook = '')
 		wp_enqueue_script('wlgf-dialog-js');
 		wp_enqueue_style('wlgf-admin-ui-css');
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Page routing check for admin asset enqueuing only.
 		$current_page = isset($_GET['page']) ? sanitize_text_field(wp_unslash($_GET['page'])) : '';
 		if ('wlgf-form-generator' === $current_page) {
 			wp_enqueue_style('wlgf-form-generator-css');
@@ -348,9 +351,10 @@ function wlgf_free_vs_pro()
 function wlgf_get_next_id()
 {
 	global $wpdb;
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Custom ID sequence generation from options table.
 	$all_options = $wpdb->get_col(
 		$wpdb->prepare(
-			"SELECT option_name FROM `$wpdb->options` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s",
+			"SELECT option_name FROM `{$wpdb->options}` WHERE `option_name` LIKE %s AND `option_name` NOT LIKE %s",
 			$wpdb->esc_like('wlgf_form_') . '%',
 			$wpdb->esc_like('wlgf_form_views_') . '%'
 		)
@@ -427,6 +431,7 @@ if (!function_exists('wlgf_get_form_dates')) {
 		if ($diff_sec < 60) {
 			$updated_human = __('Just now', 'lead-generation-form');
 		} else {
+			/* translators: %s: Relative human-readable time difference */
 			$updated_human = sprintf(__('%s ago', 'lead-generation-form'), human_time_diff($updated_time, current_time('timestamp')));
 		}
 
@@ -603,6 +608,7 @@ function wlgf_form_save_callback()
 		if ($wlgf_is_save || $wlgf_is_modify) {
 			$wlgf_form_id = isset($_POST['id']) ? sanitize_text_field(wp_unslash($_POST['id'])) : '';
 			$wlgf_form_name = isset($_POST['name']) ? sanitize_text_field(wp_unslash($_POST['name'])) : '';
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Raw FormBuilder JSON schema validated and recursively sanitized via json_decode and schema sanitization below.
 			$raw_form_json = isset($_POST['form']) ? wp_unslash($_POST['form']) : '';
 
 			// Safely decode JSON without wp_kses_post corrupting quote boundaries or JSON syntax
@@ -797,7 +803,8 @@ function wlgf_form_save_callback()
 			$allowed_logics = array('all', 'any');
 
 			if (isset($_POST['conditions']) && is_array($_POST['conditions'])) {
-				foreach ($_POST['conditions'] as $target_field => $cond_data) {
+				$raw_conditions = wp_unslash($_POST['conditions']); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Processed and sanitized in loop below.
+				foreach ($raw_conditions as $target_field => $cond_data) {
 					$target_name = sanitize_text_field($target_field);
 					if (empty($target_name) || !is_array($cond_data)) {
 						continue;
@@ -972,7 +979,7 @@ function wlgf_lead_loader_callback()
 					$structure = is_array($wlgf_form) ? $wlgf_form : (is_string($wlgf_form) ? json_decode($wlgf_form) : array());
 
 					$wlgf_form_data = get_option('wlgf_saved_form_data_' . $wlgf_form_id);
-					$wlgf_newsletter_only = (isset($_POST['newsletter_only']) && '1' === (string) $_POST['newsletter_only']);
+					$wlgf_newsletter_only = (isset($_POST['newsletter_only']) && '1' === (string) sanitize_text_field(wp_unslash($_POST['newsletter_only'])));
 					$wlgf_download_url = admin_url('admin-ajax.php?action=wlgf_export_leads_csv&wlgf_form_id=' . $wlgf_form_id . '&nonce=' . wp_create_nonce('wlgf-export-csv-' . $wlgf_form_id));
 					$wlgf_download_subscribers_url = admin_url('admin-ajax.php?action=wlgf_export_leads_csv&wlgf_form_id=' . $wlgf_form_id . '&newsletter_only=1&nonce=' . wp_create_nonce('wlgf-export-csv-' . $wlgf_form_id));
 
@@ -1094,7 +1101,7 @@ function wlgf_lead_loader_callback()
 										);
 										$th_class = $is_msg_col ? ' class="wlgf-th-message"' : '';
 									?>
-										<th<?php echo $th_class; ?>><?php echo esc_html($col['label']); ?></th>
+										<th class="<?php echo $is_msg_col ? 'wlgf-th-message' : ''; ?>"><?php echo esc_html($col['label']); ?></th>
 									<?php endforeach; ?>
 									<th class="wlgf-th-datetime"><?php esc_html_e('Date Time', 'lead-generation-form'); ?></th>
 									<th><?php esc_html_e('Newsletter', 'lead-generation-form'); ?></th>
@@ -1201,28 +1208,27 @@ function wlgf_lead_loader_callback()
 															echo '<div class="wlgf-file-previews-wrap wlgf-flex wlgf-gap-1 wlgf-flex-wrap wlgf-items-center">';
 															foreach ($urls as $file_url) {
 																if (empty($file_url) || !is_string($file_url)) continue;
-																$escaped_url = esc_url($file_url);
-																$filename = basename(parse_url($file_url, PHP_URL_PATH));
+																$filename = basename((string) wp_parse_url($file_url, PHP_URL_PATH));
 																$ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 																$is_img = in_array($ext, array('jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp', 'avif'), true);
 																$is_vid = in_array($ext, array('mp4', 'webm', 'ogg', 'mov', 'm4v'), true);
 																$is_pdf = ('pdf' === $ext);
 
 																if ($is_img) {
-																	echo '<a href="' . $escaped_url . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap" data-preview-type="image" data-file-url="' . $escaped_url . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview in lightbox', 'lead-generation-form')) . '">';
-																	echo '<img src="' . $escaped_url . '" class="wlgf-lead-img-thumb" alt="' . esc_attr($filename) . '">';
+																	echo '<a href="' . esc_url($file_url) . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap" data-preview-type="image" data-file-url="' . esc_url($file_url) . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview in lightbox', 'lead-generation-form')) . '">';
+																	echo '<img src="' . esc_url($file_url) . '" class="wlgf-lead-img-thumb" alt="' . esc_attr($filename) . '">';
 																	echo '<span class="wlgf-thumb-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>';
 																	echo '</a>';
 																} elseif ($is_vid) {
-																	echo '<a href="' . $escaped_url . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap wlgf-file-thumb-video" data-preview-type="video" data-file-url="' . $escaped_url . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to play recording in lightbox', 'lead-generation-form')) . '">';
+																	echo '<a href="' . esc_url($file_url) . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap wlgf-file-thumb-video" data-preview-type="video" data-file-url="' . esc_url($file_url) . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to play recording in lightbox', 'lead-generation-form')) . '">';
 																	echo '<div class="wlgf-thumb-video-placeholder"><i class="fa-solid fa-circle-play"></i><span class="wlgf-thumb-video-ext">' . esc_html(strtoupper($ext ? $ext : 'VID')) . '</span></div>';
 																	echo '</a>';
 																} elseif ($is_pdf) {
-																	echo '<a href="' . $escaped_url . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap wlgf-file-thumb-pdf" data-preview-type="pdf" data-file-url="' . $escaped_url . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview PDF in lightbox', 'lead-generation-form')) . '">';
+																	echo '<a href="' . esc_url($file_url) . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap wlgf-file-thumb-pdf" data-preview-type="pdf" data-file-url="' . esc_url($file_url) . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview PDF in lightbox', 'lead-generation-form')) . '">';
 																	echo '<div class="wlgf-thumb-pdf-placeholder"><i class="fa-solid fa-file-pdf"></i><span class="wlgf-thumb-pdf-ext">PDF</span></div>';
 																	echo '</a>';
 																} else {
-																	echo '<a href="' . $escaped_url . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap wlgf-file-thumb-doc" data-preview-type="file" data-file-url="' . $escaped_url . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview file', 'lead-generation-form')) . '">';
+																	echo '<a href="' . esc_url($file_url) . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap wlgf-file-thumb-doc" data-preview-type="file" data-file-url="' . esc_url($file_url) . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview file', 'lead-generation-form')) . '">';
 																	echo '<div class="wlgf-thumb-doc-placeholder"><i class="fa-solid fa-file-lines"></i><span class="wlgf-thumb-doc-ext">' . esc_html(strtoupper($ext ? $ext : 'FILE')) . '</span></div>';
 																	echo '</a>';
 																}
@@ -1238,10 +1244,9 @@ function wlgf_lead_loader_callback()
 												} elseif ('signature' === $field_type || (is_string($val) && 0 === strpos($val, 'data:image'))) {
 													echo '<td class="wlgf-signature-cell">';
 													if (!empty($val) && is_string($val) && 0 === strpos($val, 'data:image')) {
-														$escaped_data_uri = esc_attr($val);
-														echo '<div class="wlgf-signature-card" data-signature="' . $escaped_data_uri . '" title="' . esc_attr__('Click to view full digital signature', 'lead-generation-form') . '">';
+														echo '<div class="wlgf-signature-card" data-signature="' . esc_attr($val) . '" title="' . esc_attr__('Click to view full digital signature', 'lead-generation-form') . '">';
 														echo '<div class="wlgf-signature-img-wrap">';
-														echo '<img src="' . $escaped_data_uri . '" class="wlgf-signature-thumb" alt="' . esc_attr__('Digital Signature', 'lead-generation-form') . '">';
+														echo '<img src="' . esc_attr($val) . '" class="wlgf-signature-thumb" alt="' . esc_attr__('Digital Signature', 'lead-generation-form') . '">';
 														echo '</div>';
 														echo '<span class="wlgf-signature-badge"><i class="fa-solid fa-signature"></i> ' . esc_html__('Signed', 'lead-generation-form') . '</span>';
 														echo '</div>';
@@ -1427,9 +1432,9 @@ function wlgf_lead_loader_callback()
 
 				// Delete Multiple Selected Leads
 				if ($wlgf_do === 'multiple') {
-					$raw_ids = isset($_POST['row_id']) ? $_POST['row_id'] : (isset($_POST['wlgf_row_id']) ? $_POST['wlgf_row_id'] : null);
+					$raw_ids = isset($_POST['row_id']) ? wp_unslash($_POST['row_id']) : (isset($_POST['wlgf_row_id']) ? wp_unslash($_POST['wlgf_row_id']) : null); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Array of lead IDs sanitized in loop below.
 					if (is_array($raw_ids)) {
-						$unslashed_row_ids = wp_unslash($raw_ids);
+						$unslashed_row_ids = $raw_ids;
 						$wlgf_saved_form_data = get_option('wlgf_saved_form_data_' . $wlgf_form_id);
 						if (is_array($wlgf_saved_form_data)) {
 							foreach ($unslashed_row_ids as $row_id) {
@@ -1762,9 +1767,8 @@ function wlgf_get_lead_details_callback()
 								<td class="wlgf-field-lbl" style="vertical-align: top; line-height: 1.5;"><?php echo esc_html($display_label); ?></td>
 								<td class="wlgf-field-val" style="vertical-align: top; line-height: 1.5; white-space: normal;"><?php
 									if ('signature' === $field_type || (is_string($raw_v) && 0 === strpos($raw_v, 'data:image'))) {
-										$data_uri = esc_attr($raw_v);
 										echo '<div class="wlgf-detail-signature-box">';
-										echo '<img src="' . $data_uri . '" alt="' . esc_attr__('Signature', 'lead-generation-form') . '" class="wlgf-detail-signature-img">';
+										echo '<img src="' . esc_attr($raw_v) . '" alt="' . esc_attr__('Signature', 'lead-generation-form') . '" class="wlgf-detail-signature-img">';
 										echo '<div class="wlgf-detail-signature-footer"><i class="fa-solid fa-circle-check"></i> ' . esc_html__('Verified Digital Signature', 'lead-generation-form') . '</div>';
 										echo '</div>';
 									} elseif ('file' === $field_type || (is_string($raw_v) && (false !== strpos($raw_v, 'http://') || false !== strpos($raw_v, 'https://')) && preg_match('/\.(jpg|jpeg|png|gif|webp|pdf|doc|docx|mp4|webm|mov)$/i', $raw_v))) {
@@ -1779,21 +1783,20 @@ function wlgf_get_lead_details_callback()
 										echo '<div class="wlgf-flex wlgf-gap-2 wlgf-flex-wrap wlgf-items-center">';
 										foreach ($files as $f_url) {
 											if (empty($f_url) || !is_string($f_url)) continue;
-											$esc_f = esc_url($f_url);
-											$filename = basename(parse_url($esc_f, PHP_URL_PATH));
+											$filename = basename((string) wp_parse_url($f_url, PHP_URL_PATH));
 											$ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
 											$is_img = in_array($ext, array('jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp', 'avif'), true);
 											$is_vid = in_array($ext, array('mp4', 'webm', 'ogg', 'mov', 'm4v'), true);
 											$is_pdf = ('pdf' === $ext);
 
 											if ($is_img) {
-												echo '<a href="' . $esc_f . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap" data-preview-type="image" data-file-url="' . $esc_f . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview in lightbox', 'lead-generation-form')) . '"><img src="' . $esc_f . '" class="wlgf-lead-img-thumb" alt="' . esc_attr($filename) . '"><span class="wlgf-thumb-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a>';
+												echo '<a href="' . esc_url($f_url) . '" class="wlgf-lightbox-trigger wlgf-file-thumb-wrap" data-preview-type="image" data-file-url="' . esc_url($f_url) . '" data-file-name="' . esc_attr($filename) . '" title="' . esc_attr($filename . ' - ' . __('Click to preview in lightbox', 'lead-generation-form')) . '"><img src="' . esc_url($f_url) . '" class="wlgf-lead-img-thumb" alt="' . esc_attr($filename) . '"><span class="wlgf-thumb-zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span></a>';
 											} elseif ($is_vid) {
-												echo '<a href="' . $esc_f . '" class="wlgf-lightbox-trigger wlgf-btn wlgf-btn--sm wlgf-btn--outline" data-preview-type="video" data-file-url="' . $esc_f . '" data-file-name="' . esc_attr($filename) . '"><i class="fa-solid fa-video"></i> ' . esc_html($filename) . '</a>';
+												echo '<a href="' . esc_url($f_url) . '" class="wlgf-lightbox-trigger wlgf-btn wlgf-btn--sm wlgf-btn--outline" data-preview-type="video" data-file-url="' . esc_url($f_url) . '" data-file-name="' . esc_attr($filename) . '"><i class="fa-solid fa-video"></i> ' . esc_html($filename) . '</a>';
 											} elseif ($is_pdf) {
-												echo '<a href="' . $esc_f . '" class="wlgf-lightbox-trigger wlgf-btn wlgf-btn--sm wlgf-btn--outline" data-preview-type="pdf" data-file-url="' . $esc_f . '" data-file-name="' . esc_attr($filename) . '"><i class="fa-solid fa-file-pdf wlgf-text-danger"></i> ' . esc_html($filename) . '</a>';
+												echo '<a href="' . esc_url($f_url) . '" class="wlgf-lightbox-trigger wlgf-btn wlgf-btn--sm wlgf-btn--outline" data-preview-type="pdf" data-file-url="' . esc_url($f_url) . '" data-file-name="' . esc_attr($filename) . '"><i class="fa-solid fa-file-pdf wlgf-text-danger"></i> ' . esc_html($filename) . '</a>';
 											} else {
-												echo '<a href="' . $esc_f . '" class="wlgf-lightbox-trigger wlgf-btn wlgf-btn--sm wlgf-btn--outline" data-preview-type="file" data-file-url="' . $esc_f . '" data-file-name="' . esc_attr($filename) . '"><i class="fa-solid fa-paperclip"></i> ' . esc_html($filename) . '</a>';
+												echo '<a href="' . esc_url($f_url) . '" class="wlgf-lightbox-trigger wlgf-btn wlgf-btn--sm wlgf-btn--outline" data-preview-type="file" data-file-url="' . esc_url($f_url) . '" data-file-name="' . esc_attr($filename) . '"><i class="fa-solid fa-paperclip"></i> ' . esc_html($filename) . '</a>';
 											}
 										}
 										echo '</div>';
@@ -1892,7 +1895,7 @@ function wlgf_export_leads_csv_callback()
 	$structure = is_array($wlgf_form) ? $wlgf_form : (is_string($wlgf_form) ? json_decode($wlgf_form) : array());
 
 	$wlgf_form_data = get_option('wlgf_saved_form_data_' . $wlgf_form_id);
-	$wlgf_newsletter_only = (isset($_GET['newsletter_only']) && '1' === (string) $_GET['newsletter_only']);
+	$wlgf_newsletter_only = (isset($_GET['newsletter_only']) && '1' === (string) sanitize_text_field(wp_unslash($_GET['newsletter_only'])));
 
 	if (ob_get_level()) {
 		ob_end_clean();
@@ -2063,6 +2066,7 @@ function wlgf_export_leads_csv_callback()
 		}
 	}
 
+	// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- Direct output stream closure for CSV download.
 	fclose($output);
 	exit;
 }
@@ -2092,6 +2096,7 @@ function wlgf_import_export_callback()
 			// Import Form
 			if ($wlgf_do_action === 'import') {
 				$wlgf_form_name = isset($_POST['wlgf_form_name']) ? sanitize_text_field(wp_unslash($_POST['wlgf_form_name'])) : '';
+				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Validated via json_decode and schema check below.
 				$raw_json = isset($_POST['wlgf_form_data']) ? wp_unslash($_POST['wlgf_form_data']) : '';
 				$decoded = json_decode($raw_json, true);
 
@@ -2122,7 +2127,8 @@ function wlgf_import_export_callback()
 				);
 
 				update_option('wlgf_form_' . $wlgf_form_id, $wlgf_form_details);
-				wp_send_json_success(array('message' => sprintf(__('Form "%s" (ID: #%s) imported successfully!', 'lead-generation-form'), esc_html($wlgf_form_details['form_name']), esc_html($wlgf_form_id))));
+				/* translators: 1: Form title, 2: Form ID */
+				wp_send_json_success(array('message' => sprintf(__('Form "%1$s" (ID: #%2$s) imported successfully!', 'lead-generation-form'), esc_html($wlgf_form_details['form_name']), esc_html($wlgf_form_id))));
 			}
 
 			// Combine Forms
@@ -2160,7 +2166,8 @@ function wlgf_import_export_callback()
 				);
 
 				update_option('wlgf_form_' . $wlgf_form_id_new, $wlgf_form_details_new);
-				wp_send_json_success(array('message' => sprintf(__('Combined form "%s" (ID: #%s) created successfully!', 'lead-generation-form'), esc_html($wlgf_form_name_new), esc_html($wlgf_form_id_new))));
+				/* translators: 1: Form title, 2: Form ID */
+				wp_send_json_success(array('message' => sprintf(__('Combined form "%1$s" (ID: #%2$s) created successfully!', 'lead-generation-form'), esc_html($wlgf_form_name_new), esc_html($wlgf_form_id_new))));
 			}
 		}
 		wp_die();
@@ -2214,7 +2221,7 @@ function wlgf_save_settings_callback()
 			$wlgf_smtp_username = isset($_POST['smtp_username']) ? sanitize_text_field(wp_unslash($_POST['smtp_username'])) : '';
 
 			// SMTP Password preservation rule (R5)
-			$wlgf_smtp_password = isset($_POST['smtp_password']) ? trim(wp_unslash($_POST['smtp_password'])) : '';
+			$wlgf_smtp_password = isset($_POST['smtp_password']) ? trim(sanitize_text_field(wp_unslash($_POST['smtp_password']))) : '';
 			if ((empty($wlgf_smtp_password) || false !== strpos($wlgf_smtp_password, '••')) && !empty($existing_settings['smtp_password'])) {
 				$wlgf_smtp_password = $existing_settings['smtp_password'];
 			}
@@ -2236,7 +2243,8 @@ function wlgf_save_settings_callback()
 			$wlgf_user_message = wp_kses($wlgf_user_message, $wlgf_msg_allowed_tags);
 
 			// Submission Confirmation Appearance Settings (PRO)
-			$wlgf_confirmation_heading       = isset($_POST['confirmation_heading']) && '' !== trim($_POST['confirmation_heading']) ? sanitize_text_field(wp_unslash($_POST['confirmation_heading'])) : __('Thank you! Submission Received', 'lead-generation-form');
+			$raw_conf_heading                = isset($_POST['confirmation_heading']) ? sanitize_text_field(wp_unslash($_POST['confirmation_heading'])) : '';
+			$wlgf_confirmation_heading       = '' !== trim($raw_conf_heading) ? $raw_conf_heading : __('Thank you! Submission Received', 'lead-generation-form');
 			$wlgf_confirmation_style         = isset($_POST['confirmation_style']) ? sanitize_key(wp_unslash($_POST['confirmation_style'])) : 'modern-card';
 			$wlgf_confirmation_icon          = isset($_POST['confirmation_icon']) ? sanitize_text_field(wp_unslash($_POST['confirmation_icon'])) : 'circle-check';
 			$wlgf_confirmation_animated      = isset($_POST['confirmation_animated']) ? sanitize_text_field(wp_unslash($_POST['confirmation_animated'])) : '1';
@@ -2310,7 +2318,9 @@ function wlgf_save_settings_callback()
 				$wlgf_paypal_live_secret = isset($existing_settings['paypal_live_secret']) ? $existing_settings['paypal_live_secret'] : '';
 			} else {
 				$wlgf_enable_payments = isset($_POST['enable_payments']) ? sanitize_text_field(wp_unslash($_POST['enable_payments'])) : '0';
-				if ( '0' === $wlgf_enable_payments && ( ( isset( $_POST['stripe_enabled'] ) && '1' === (string) $_POST['stripe_enabled'] ) || ( isset( $_POST['paypal_enabled'] ) && '1' === (string) $_POST['paypal_enabled'] ) ) ) {
+				$is_stripe_enabled = isset( $_POST['stripe_enabled'] ) && '1' === (string) sanitize_text_field( wp_unslash( $_POST['stripe_enabled'] ) );
+				$is_paypal_enabled = isset( $_POST['paypal_enabled'] ) && '1' === (string) sanitize_text_field( wp_unslash( $_POST['paypal_enabled'] ) );
+				if ( '0' === $wlgf_enable_payments && ( $is_stripe_enabled || $is_paypal_enabled ) ) {
 					$wlgf_enable_payments = '1';
 				}
 				$wlgf_payment_currency = isset($_POST['payment_currency']) ? sanitize_text_field(wp_unslash($_POST['payment_currency'])) : 'USD';
@@ -2420,7 +2430,8 @@ function wlgf_save_settings_callback()
 			$wlgf_blacklist_domains = implode("\n", $domains_clean);
 
 			$wlgf_blacklist_action = isset($_POST['blacklist_action']) && in_array($_POST['blacklist_action'], array('reject_error', 'silent_drop'), true) ? sanitize_text_field(wp_unslash($_POST['blacklist_action'])) : 'reject_error';
-			$wlgf_blacklist_message = isset($_POST['blacklist_message']) && '' !== trim($_POST['blacklist_message']) ? sanitize_text_field(wp_unslash($_POST['blacklist_message'])) : __('Sorry! Your email address or domain is not permitted to submit this form.', 'lead-generation-form');
+			$raw_blacklist_msg      = isset($_POST['blacklist_message']) ? sanitize_text_field(wp_unslash($_POST['blacklist_message'])) : '';
+			$wlgf_blacklist_message = '' !== trim($raw_blacklist_msg) ? $raw_blacklist_msg : __('Sorry! Your email address or domain is not permitted to submit this form.', 'lead-generation-form');
 
 			$wlgf_settings = array(
 				'recaptcha' => $wlgf_recaptcha,
@@ -2774,6 +2785,7 @@ function wlgf_verify_turnstile_response($response_token, $secret_key, $remote_ip
 		$remote_ip = sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR']));
 	}
 
+	// phpcs:ignore PluginCheck.CodeAnalysis.Offloading.OffloadedContent -- Official server-side Cloudflare Turnstile token verification endpoint.
 	$verify_url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 	$post_data = array(
 		'secret'   => $secret_key,
@@ -2791,6 +2803,7 @@ function wlgf_verify_turnstile_response($response_token, $secret_key, $remote_ip
 	if (is_wp_error($response)) {
 		return array(
 			'success' => false,
+			/* translators: %s: Error message details */
 			'message' => sprintf(__('Cloudflare Turnstile connection error: %s', 'lead-generation-form'), $response->get_error_message()),
 		);
 	}
@@ -2803,6 +2816,7 @@ function wlgf_verify_turnstile_response($response_token, $secret_key, $remote_ip
 	$error_codes = isset($body['error-codes']) ? implode(', ', (array)$body['error-codes']) : 'verification_failed';
 	return array(
 		'success' => false,
+		/* translators: %s: Turnstile error code details */
 		'message' => sprintf(__('Cloudflare Turnstile verification failed (%s).', 'lead-generation-form'), esc_html($error_codes)),
 	);
 }
@@ -2900,7 +2914,7 @@ function wlgf_get_confirmation_html($custom_msg = '', $settings = null)
 				<h4 class="wlgf-confirmation-title" style="color: <?php echo esc_attr($heading_color); ?> !important;"><?php echo esc_html($heading); ?></h4>
 			<?php endif; ?>
 			<div class="wlgf-confirmation-desc">
-				<?php echo $msg_html; ?>
+				<?php echo wp_kses_post($msg_html); ?>
 			</div>
 		</div>
 	</div>
@@ -3002,7 +3016,8 @@ function wlgf_smtp_test_mail_callback()
 	$from_name    = function_exists('wlgf_get_from_name') ? wlgf_get_from_name() : wp_specialchars_decode( $blog_name, ENT_QUOTES );
 	$from_email   = function_exists('wlgf_get_from_email') ? wlgf_get_from_email( $email_engine ) : $admin_email;
 	$engine_label = ('2' === (string) $email_engine) ? 'Custom SMTP' : 'Default WordPress Mail (wp_mail)';
-	$subject      = wp_specialchars_decode( sprintf(__('[%s] Lead Generation Form - Test Notification (%s)', 'lead-generation-form'), $blog_name, $engine_label), ENT_QUOTES );
+	/* translators: 1: Site title, 2: Mail engine label */
+	$subject      = wp_specialchars_decode( sprintf(__('[%1$s] Lead Generation Form - Test Notification (%2$s)', 'lead-generation-form'), $blog_name, $engine_label), ENT_QUOTES );
 
 	$headers = array(
 		'Content-Type: text/html; charset=UTF-8',
@@ -3012,9 +3027,9 @@ function wlgf_smtp_test_mail_callback()
 	// If SMTP engine selected, configure PHPMailer on the fly
 	$smtp_hook = null;
 	if ('2' === (string) $email_engine) {
-		$smtp_host       = isset($_POST['smtp_host']) && '' !== trim($_POST['smtp_host']) ? sanitize_text_field(wp_unslash($_POST['smtp_host'])) : (isset($wlgf_settings['smtp_host']) ? $wlgf_settings['smtp_host'] : '');
-		$smtp_username   = isset($_POST['smtp_username']) && '' !== trim($_POST['smtp_username']) ? sanitize_text_field(wp_unslash($_POST['smtp_username'])) : (isset($wlgf_settings['smtp_username']) ? $wlgf_settings['smtp_username'] : '');
-		$raw_smtp_pw     = isset($_POST['smtp_password']) ? trim(wp_unslash($_POST['smtp_password'])) : '';
+		$smtp_host       = isset($_POST['smtp_host']) ? sanitize_text_field(wp_unslash($_POST['smtp_host'])) : (isset($wlgf_settings['smtp_host']) ? $wlgf_settings['smtp_host'] : '');
+		$smtp_username   = isset($_POST['smtp_username']) ? sanitize_text_field(wp_unslash($_POST['smtp_username'])) : (isset($wlgf_settings['smtp_username']) ? $wlgf_settings['smtp_username'] : '');
+		$raw_smtp_pw     = isset($_POST['smtp_password']) ? trim(sanitize_text_field(wp_unslash($_POST['smtp_password']))) : '';
 		if (empty($raw_smtp_pw) || false !== strpos($raw_smtp_pw, '••')) {
 			$smtp_password = isset($wlgf_settings['smtp_password']) ? $wlgf_settings['smtp_password'] : '';
 		} else {
@@ -3086,6 +3101,7 @@ function wlgf_smtp_test_mail_callback()
 
 	if ($sent) {
 		wp_send_json_success(array(
+			/* translators: 1: Test recipient email, 2: Mail engine label */
 			'message' => sprintf(__('Test email successfully sent to %1$s via %2$s! Please check your inbox (and spam folder).', 'lead-generation-form'), esc_html($test_email), $engine_label)
 		));
 	} else {
@@ -3107,7 +3123,8 @@ function wlgf_smtp_test_mail_callback()
 		}
 
 		wp_send_json_error(array(
-			'message' => sprintf(__('Failed to dispatch test email: %s%s', 'lead-generation-form'), esc_html($error_msg), esc_html($hint))
+			/* translators: 1: Error message details, 2: Actionable troubleshooting guidance */
+			'message' => sprintf(__('Failed to dispatch test email: %1$s%2$s', 'lead-generation-form'), esc_html($error_msg), esc_html($hint))
 		));
 	}
 }
@@ -3330,9 +3347,11 @@ add_action('wp_ajax_wlgf_preview_email_template', 'wlgf_preview_email_template_c
 // 9. Visual Analytics & Drop-off Funnel Tracking (PRO-017)
 function wlgf_track_analytics_callback()
 {
-	$form_id = isset($_POST['form_id']) ? absint($_POST['form_id']) : 0;
-	$step = isset($_POST['step']) ? max(1, absint($_POST['step'])) : 1;
+	// phpcs:disable WordPress.Security.NonceVerification.Missing -- Public analytics ping endpoint with transient rate limiting and input sanitization.
+	$form_id = isset($_POST['form_id']) ? absint(wp_unslash($_POST['form_id'])) : 0;
+	$step = isset($_POST['step']) ? max(1, absint(wp_unslash($_POST['step']))) : 1;
 	$device = isset($_POST['device']) ? sanitize_text_field(wp_unslash($_POST['device'])) : 'desktop';
+	// phpcs:enable WordPress.Security.NonceVerification.Missing
 
 	if (empty($form_id)) {
 		wp_send_json_error(array('message' => 'Missing form ID'));
@@ -3443,6 +3462,7 @@ function wlgf_factory_reset_callback() {
 	global $wpdb;
 
 	// 1. Delete all static and dynamic wlgf options from wp_options table
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Bulk purge of plugin options on factory reset.
 	$wpdb->query(
 		$wpdb->prepare(
 			"DELETE FROM `{$wpdb->options}` WHERE `option_name` LIKE %s OR `option_name` LIKE %s OR `option_name` LIKE %s",

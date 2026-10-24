@@ -97,9 +97,11 @@ class WLGF_Newsletter {
 
 				if ( 200 === $code ) {
 					$member_count = ( isset( $body['stats']['member_count'] ) ) ? intval( $body['stats']['member_count'] ) : 0;
-					$msg = ! empty( $body['name'] ) ? sprintf( __( 'Connected to audience: %s (%d members)', 'lead-generation-form' ), esc_html( $body['name'] ), $member_count ) : __( 'Mailchimp API connection verified successfully!', 'lead-generation-form' );
+					/* translators: 1: audience name, 2: member count */
+					$msg = ! empty( $body['name'] ) ? sprintf( __( 'Connected to audience: %1$s (%2$d members)', 'lead-generation-form' ), esc_html( $body['name'] ), $member_count ) : __( 'Mailchimp API connection verified successfully!', 'lead-generation-form' );
 					return array( 'success' => true, 'message' => $msg );
 				}
+				/* translators: %d: HTTP status code */
 				return array( 'success' => false, 'message' => isset( $body['detail'] ) ? $body['detail'] : sprintf( __( 'API returned HTTP %d', 'lead-generation-form' ), $code ) );
 
 			case 'brevo':
@@ -121,9 +123,11 @@ class WLGF_Newsletter {
 
 				if ( 200 === $code ) {
 					$sub_count = isset( $body['totalSubscribers'] ) ? intval( $body['totalSubscribers'] ) : 0;
-					$msg = ! empty( $body['name'] ) ? sprintf( __( 'Connected to Brevo list: %s (%d subscribers)', 'lead-generation-form' ), esc_html( $body['name'] ), $sub_count ) : __( 'Brevo API connection verified successfully!', 'lead-generation-form' );
+					/* translators: 1: list name, 2: subscriber count */
+					$msg = ! empty( $body['name'] ) ? sprintf( __( 'Connected to Brevo list: %1$s (%2$d subscribers)', 'lead-generation-form' ), esc_html( $body['name'] ), $sub_count ) : __( 'Brevo API connection verified successfully!', 'lead-generation-form' );
 					return array( 'success' => true, 'message' => $msg );
 				}
+				/* translators: %d: HTTP status code */
 				return array( 'success' => false, 'message' => isset( $body['message'] ) ? $body['message'] : sprintf( __( 'API returned HTTP %d', 'lead-generation-form' ), $code ) );
 
 			case 'mailerlite':
@@ -145,9 +149,11 @@ class WLGF_Newsletter {
 
 				if ( 200 === $code ) {
 					$active_count = ( isset( $body['data']['active_count'] ) ) ? intval( $body['data']['active_count'] ) : 0;
-					$msg = ( ! empty( $body['data']['name'] ) ) ? sprintf( __( 'Connected to MailerLite group: %s (%d active subscribers)', 'lead-generation-form' ), esc_html( $body['data']['name'] ), $active_count ) : __( 'MailerLite API connection verified successfully!', 'lead-generation-form' );
+					/* translators: 1: group name, 2: active subscriber count */
+					$msg = ( ! empty( $body['data']['name'] ) ) ? sprintf( __( 'Connected to MailerLite group: %1$s (%2$d active subscribers)', 'lead-generation-form' ), esc_html( $body['data']['name'] ), $active_count ) : __( 'MailerLite API connection verified successfully!', 'lead-generation-form' );
 					return array( 'success' => true, 'message' => $msg );
 				}
+				/* translators: %d: HTTP status code */
 				return array( 'success' => false, 'message' => isset( $body['message'] ) ? $body['message'] : sprintf( __( 'API returned HTTP %d', 'lead-generation-form' ), $code ) );
 
 			case 'sendgrid':
@@ -170,9 +176,11 @@ class WLGF_Newsletter {
 				if ( 200 === $code ) {
 					$contact_count = isset( $body['contact_count'] ) ? intval( $body['contact_count'] ) : ( isset( $body['result'][0]['contact_count'] ) ? intval( $body['result'][0]['contact_count'] ) : 0 );
 					$list_name     = isset( $body['name'] ) ? $body['name'] : ( isset( $body['result'][0]['name'] ) ? $body['result'][0]['name'] : '' );
-					$msg = ! empty( $list_name ) ? sprintf( __( 'Connected to SendGrid list: %s (%d contacts)', 'lead-generation-form' ), esc_html( $list_name ), $contact_count ) : __( 'SendGrid Marketing API connection verified successfully!', 'lead-generation-form' );
+					/* translators: 1: list name, 2: contact count */
+					$msg = ! empty( $list_name ) ? sprintf( __( 'Connected to SendGrid list: %1$s (%2$d contacts)', 'lead-generation-form' ), esc_html( $list_name ), $contact_count ) : __( 'SendGrid Marketing API connection verified successfully!', 'lead-generation-form' );
 					return array( 'success' => true, 'message' => $msg );
 				}
+				/* translators: %d: HTTP status code */
 				$err_msg = isset( $body['errors'][0]['message'] ) ? $body['errors'][0]['message'] : sprintf( __( 'API returned HTTP %d', 'lead-generation-form' ), $code );
 				return array( 'success' => false, 'message' => $err_msg );
 
@@ -196,9 +204,11 @@ class WLGF_Newsletter {
 
 				if ( 200 === $code ) {
 					$list_name = isset( $body['list']['name'] ) ? $body['list']['name'] : '';
+					/* translators: %s: list name */
 					$msg = ! empty( $list_name ) ? sprintf( __( 'Connected to ActiveCampaign list: %s', 'lead-generation-form' ), esc_html( $list_name ) ) : __( 'ActiveCampaign API connection verified successfully!', 'lead-generation-form' );
 					return array( 'success' => true, 'message' => $msg );
 				}
+				/* translators: %d: HTTP status code */
 				return array( 'success' => false, 'message' => isset( $body['message'] ) ? $body['message'] : sprintf( __( 'API returned HTTP %d', 'lead-generation-form' ), $code ) );
 
 			default:
