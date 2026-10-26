@@ -18,7 +18,7 @@ Looking for the real **Form Builder** free tool that can create multiple types o
 
 As a lightweight, user-friendly alternative to Contact Form 7, WPForms, Ninja Forms, and Formidable Forms, Lead Generation Form combines a visual drag-and-drop builder with a built-in Mini-CRM lead manager, Google reCAPTCHA v3 spam protection, authenticated SMTP email delivery, Mailchimp newsletter integration, and 1-click Gutenberg block and Elementor widget embedding.
 
-[View Live Demos](https://wpfrank.com/demo/lead-generation-form-pro/) | [Plugin Documentation](https://wpfrank.com/wordpress-plugins/lead-generation-form-pro/) | [Get Support](https://wordpress.org/support/plugin/lead-generation-form/) | [Upgrade to Pro](https://wpfrank.com/account/signup/lead-generation-form-pro)
+[View Live Demos](https://wpfrank.com/demo/lead-generation-form-pro/) | [Get Support](https://wordpress.org/support/plugin/lead-generation-form/) | [Upgrade to Pro](https://wpfrank.com/account/signup/lead-generation-form-pro)
 
 ---
 
