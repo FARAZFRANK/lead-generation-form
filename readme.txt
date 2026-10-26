@@ -38,8 +38,8 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 * **1-Click CSV & Excel Export:** Export captured form submissions to CSV spreadsheets with full UTF-8 BOM encoding and formula injection protection.
 * **Pre-Built Form Templates:** Launch contact forms instantly using starter templates for quotes, consultations, real estate, bookings, and feedback.
 * **Visual Theme & Style Customizer:** Change primary accent colors, border radius, dark mode, font typography, field spacing, and button styles per form.
-* **Asynchronous Webhooks:** Connect your forms to Zapier, Make, Pabbly, or custom CRMs via automated background JSON webhooks with authorization headers.
 * **Form Scheduling & Submission Quotas:** Set automatic open/close dates and maximum submission limits for time-sensitive campaigns.
+* **One-Click Form Cloning & JSON Migration:** Duplicate forms in seconds or export form schemas as JSON to import across sites.
 
 ---
 
@@ -50,7 +50,7 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 * **Request a Quote Forms:** Collect project requirements, budgets, timelines, and specifications.
 * **Inquiry & Enquiry Forms:** General customer inquiries, product questions, and service inquiries.
 * **Appointment & Booking Forms:** Schedule consultations, service calls, and meetings with native date pickers and preferred time slots.
-* **Feedback & Customer Satisfaction Surveys:** Gather ratings with interactive 5-star rating bars and Net Promoter Score (NPS 0-10) matrix chips.
+* **Feedback & Customer Satisfaction Surveys:** Gather valuable client feedback, suggestions, and customer ratings using dropdown or radio scales (or upgrade to Pro for interactive 5-star rating bars and NPS 0-10 matrix chips).
 * **Job Application & Resume Upload Forms:** Secure file upload dropzones for PDF, DOC, and image attachments.
 * **Support & Helpdesk Ticket Forms:** Client support requests with priority selectors, issue descriptions, and screenshot uploads.
 * **Real Estate & Property Tour Forms:** Schedule home walkthroughs with financing status and buyer preference filters.
@@ -64,25 +64,26 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 * **Unlimited Forms & Fields:** Create as many forms as you need with zero limits on field counts.
 * **Unlimited Database Lead Capture:** Every single lead is stored safely in your own WordPress database.
 * **Drag-and-Drop Form Builder:** Drag fields, reorder items, and customize labels, placeholders, and required rules.
-* **18 Comprehensive Field Types:**
+* **15 Essential Field Types:**
   * Single Line Text, Paragraph Textarea, Number, Range Slider (with dynamic value display)
   * Email, Phone Number (`tel`), Website URL, Color Picker, Native Date Picker
   * Dropdown Select, Multiple Checkboxes, Radio Buttons
-  * Drag & Drop File Upload Dropzone (with file removal chips)
-  * 5-Star Interactive Rating, 0-10 NPS Score Matrix, Calculation Display
-  * Section Dividers, GDPR / Terms of Service Agreement Checkbox, Hidden Fields (with UTM auto-capture)
-  * Submit Buttons with customizable styles and alignment
-* **Pre-Built Form Template Library:** Choose from core starter templates or build from a blank canvas.
-* **Mini-CRM Lead Pipeline:** Track leads with statuses: `New`, `In Review`, `Contacted`, `Qualified`, `Won`, and `Lost`.
+  * Drag & Drop File Upload Dropzone (up to 5MB attachments with file removal chips)
+  * Section Dividers (Headers & Paragraph blocks), GDPR / Terms of Service Agreement Checkbox, Hidden Fields (with URL/UTM auto-capture)
+  * Submit Buttons with customizable styles, width, and alignment
+* **Pre-Built Form Template Library:** Choose from 5 core starter templates (Contact Us, Service Quote, Feedback, Inquiry, Newsletter) or build from a blank canvas.
+* **Single-Column Responsive Forms:** Clean, mobile-first single column layouts for high readability across all devices.
+* **Mini-CRM Lead Pipeline (Table View):** Track leads inside WordPress with 6 statuses: `New`, `In Review`, `Contacted`, `Qualified`, `Won`, and `Lost`.
 * **Lead Sticky Notes:** Keep internal team notes on client conversations directly within the lead detail view.
-* **Full CSV Export:** Export captured leads to spreadsheet formats with Excel compatibility and CSV injection protection.
+* **Full CSV Export:** Export captured leads to spreadsheet formats with Excel compatibility and CSV formula injection protection.
+* **Form Scheduling & Submission Quotas:** Set automatic open/close dates and maximum submission limits for time-sensitive campaigns.
 * **Google reCAPTCHA v3:** Invisible bot protection without annoying image puzzles or captcha checkboxes.
 * **Honeypot Anti-Spam Trap:** Invisible form trap that catches automated bots without bothering real visitors.
 * **Anti-Spam Submission Speed Guard:** Rejects bot submissions completed in under 2 seconds.
 * **Email & Domain Blacklist:** Filter out disposable emails or known spam domains.
 * **Built-In Custom SMTP Engine:** Send lead notifications reliably through Gmail, Outlook, Amazon SES, SendGrid, Mailgun, or custom SMTP servers.
 * **Live SMTP Test Dispatcher:** Verify your SMTP credentials directly from the settings panel before going live.
-* **Submitter Auto-Responder Email:** Automatically send confirmation emails to users who submit inquiries.
+* **Submitter Auto-Responder Email:** Automatically send instant confirmation emails to users who submit inquiries.
 * **Mailchimp Newsletter Sync:** Connect your Mailchimp API to grow your email marketing audience.
 * **Native Gutenberg Block:** Search `/lead-form` in the block editor and choose your form from the dropdown.
 * **Native Elementor Widget:** Drag the "Lead Generation Form" widget into any Elementor container.
@@ -98,16 +99,23 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 
 Need online payments, multi-step funnels, or dynamic quote estimators? Upgrade to **Lead Generation Form Pro**:
 
-* **Live Stripe & PayPal Payments:** Accept credit cards, Apple Pay, Google Pay, and PayPal Smart Buttons upon form submission.
+* **Live Stripe & PayPal Payments:** Accept credit cards, Apple Pay, Google Pay, and PayPal Smart Buttons (with Pay in 4) upon form submission.
 * **Dynamic Math Calculations & Price Estimators:** Create real-time price calculators, quote estimators, and dynamic totals using algebraic formulas (e.g., `[quantity] * 25 + [addon]`).
-* **Multi-Step Form Wizard Funnels:** Break long forms into multi-step cards with progress percentage bars, circular step numbers, and breadcrumbs.
+* **Interactive 5-Star Rating & 0-10 NPS Score Matrix:** Collect visual star ratings and Net Promoter Score surveys with interactive touch and mouse feedback.
+* **Multi-Step Form Wizard Funnels:** Break long forms into multi-step cards with progress percentage bars, circular step numbers, breadcrumbs, and per-step validation.
 * **Visual Conditional Logic Engine:** Dynamically show or hide fields based on user answers with multi-condition rules (AND/OR logic).
-* **Automated PDF Invoices & Receipts:** Automatically generate vector-sharp, downloadable PDF summaries and legal invoice receipts for every submission.
-* **HTML5 E-Signature Pad:** Capture touch, mouse, and stylus signatures directly inside form entries.
-* **Floating Contact Launcher & Widget:** Add WhatsApp chat and phone call launcher buttons across your website.
-* **Exit-Intent & Scroll Popups:** Display high-converting popup forms when users attempt to leave or reach scroll depths.
-* **Real-Time Abandoned Lead Recovery:** Automatically capture email addresses and names as users type before they navigate away.
-* **Interactive Mini-CRM Kanban Pipeline:** Drag and drop lead cards across sales stages (`New`, `Contacted`, `Qualified`, `Proposal`, `Won`, `Lost`).
+* **HTML5 Digital E-Signature Pad:** Capture touch, mouse, and stylus signatures directly inside form entries for contracts, waivers, and approvals.
+* **Automated PDF Invoices & Receipts:** Automatically generate vector-sharp, downloadable PDF summaries and legal invoice receipts for every submission with legal signature certification.
+* **1-Click Multi-Column Grid Switcher (1/2, 1/3, 1/4):** Build compact 2-column (50%), 3-column (33%), or 4-column (25%) field rows without writing CSS code.
+* **Floating Contact Launcher & Widget:** Add a pulsing multi-channel contact bubble with 1-tap WhatsApp chat and direct phone call buttons across your website.
+* **Exit-Intent, Timed & Scroll Popups:** Display high-converting popup forms when users attempt to leave or reach scroll depths.
+* **Real-Time Abandoned Lead Auto-Capture:** Silently capture email addresses and phone numbers as users type before they navigate away.
+* **Interactive Mini-CRM Kanban Pipeline:** Drag and drop lead cards across 6 visual sales stages with 1-click WhatsApp and phone outreach directly from lead records.
+* **Asynchronous Webhooks & Headless REST API:** Stream lead data to Zapier, Make, n8n, Pabbly, mobile apps, or custom CRMs via background JSON webhooks with authorization headers.
+* **25+ Enterprise Niche Templates:** Instant access to 25+ conversion-optimized templates for booking, medical intake, real estate, and quote calculators.
+* **Cloudflare Turnstile & Advanced Security:** Modern privacy-first Turnstile bot prevention, server-side IP rate limiting (5 submissions / 120s), and SQL injection exploit shield.
+* **Multi-Admin CC Email Routing & Branded HTML Templates:** Carbon copy (Cc:) notifications to multiple team members and send polished, branded HTML confirmation emails with custom logos.
+* **50MB High-Capacity File Attachments:** Increased upload dropzone limit up to 50MB per submission for high-res images and documents.
 * **Extended Email Marketing Connectors:** Direct API integration with Brevo (Sendinblue), MailerLite, SendGrid Marketing, and ActiveCampaign.
 * **Priority 24/7 Support:** Dedicated support ticket helpdesk, 1-year priority assistance, and lifetime updates.
 
@@ -184,7 +192,7 @@ Yes! The built-in **Live Form Theme & Design Styler** lets you configure primary
 Yes! The plugin features a dedicated Gutenberg Block (`wlgf/lead-form`) with live preview controls, a custom Elementor Widget (`wlgf_lead_form`), and universal shortcode support compatible with Divi, Beaver Builder, Astra, and all WordPress themes.
 
 = What is the difference between Free and Pro? =
-The Free version is ideal for contact forms, inquiry forms, lead capture, and surveys. **Lead Generation Form Pro** adds live online payments (Stripe & PayPal), dynamic math calculations & price estimators, multi-step wizard funnels, visual conditional logic, automated PDF receipts, and extended email marketing connectors (Brevo, MailerLite, SendGrid, ActiveCampaign).
+The Free version is ideal for contact forms, inquiry forms, lead capture, and surveys. **Lead Generation Form Pro** adds live online payments (Stripe & PayPal), dynamic math calculations & price estimators, 5-star rating & NPS matrix, multi-step wizard funnels, visual conditional logic, digital e-signatures, automated PDF receipts, multi-column grid layouts, outgoing webhooks, and extended email marketing connectors (Brevo, MailerLite, SendGrid, ActiveCampaign).
 
 ---
 

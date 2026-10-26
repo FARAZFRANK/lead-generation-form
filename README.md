@@ -65,7 +65,7 @@ Designed as a modern, clean, and bloat-free alternative to Contact Form 7, WPFor
 * **Custom Authenticated SMTP:** Built-in SMTP engine (TLS/SSL) with instant live test email delivery tool.
 * **Dynamic Auto-Responder:** Send automated, personalized customer confirmations using smart tags (`{Name}`, `{Email}`, `{Form_Name}`).
 * **Mailchimp Audience Sync:** Automatically push new leads into your Mailchimp marketing lists with custom tag routing and double opt-in.
-* **Webhook Dispatcher:** Push lead submission payloads to Zapier, Make, Pabbly, or custom webhooks.
+* **Form Scheduling & Quotas:** Set open/close schedules and limit submission quotas for time-sensitive campaigns.
 
 ### 🧩 Embedding & Page Builder Integration
 * **Gutenberg Block:** Native `/lead-form` block with live form preview and dropdown selector.
@@ -140,22 +140,27 @@ Place the shortcode anywhere on your pages, posts, or custom post types:
 |:---|:---:|:---:|
 | **Drag & Drop Visual Form Builder** | ✅ Full Access | ✅ Full Access |
 | **Mobile-Responsive Forms** | ✅ Full Access | ✅ Full Access |
-| **Starter Form Templates** | ✅ 5 Templates | ✅ 25+ Industry Templates |
+| **Starter Form Templates** | ✅ 5 Core Templates | ✅ 25+ Industry Templates |
 | **Mini-CRM Lead Manager** | ✅ Table View | ✅ Table + Kanban Pipeline |
 | **Searchable Form Selector in Leads** | ✅ Real-Time Search | ✅ Real-Time Search |
 | **Internal Team Follow-Up Notes** | ✅ Unlimited | ✅ Unlimited |
 | **CSV & Excel Export** | ✅ RFC-4180 Compliant | ✅ Advanced Filters & Columns |
-| **Spam Protection (reCAPTCHA v3 & Honeypot)** | ✅ Standard | ✅ Advanced AI Shield |
+| **Spam Protection (reCAPTCHA v3 & Honeypot)** | ✅ Standard | ✅ Advanced AI Shield + Turnstile |
 | **Custom Authenticated SMTP Delivery** | ✅ Included | ✅ Included |
 | **Mailchimp Audience Sync** | ✅ Single List | ✅ Multi-List & Conditional |
 | **Gutenberg Block & Elementor Widget** | ✅ Included | ✅ Included |
 | **Multi-Column Responsive Grid Layouts** | ❌ 1-Column | ✅ 2, 3, 4 Columns |
-| **E-Signature Drawing Pad** | ❌ Pro Only | ✅ Canvas + PDF Export |
+| **Interactive 5-Star Rating & NPS Matrix** | ❌ Pro Only | ✅ Visual Star & NPS Chips |
 | **Math Formula & Dynamic Cost Estimator** | ❌ Pro Only | ✅ Live Calculation Engine |
 | **Multi-Step Form Wizard & Progress Bars** | ❌ Pro Only | ✅ Unlimited Steps |
+| **Visual Conditional Logic (AND / OR)** | ❌ Pro Only | ✅ Dynamic Branching Rules |
+| **HTML5 E-Signature Drawing Pad** | ❌ Pro Only | ✅ Canvas + PDF Export |
+| **Pure-PHP PDF Invoices & Receipts** | ❌ Pro Only | ✅ Automated Vector PDFs |
 | **Online Payment Collection (Stripe & PayPal)** | ❌ Pro Only | ✅ SCA & PCI Compliant |
-| **Floating Contact Launcher & Exit-Intent Popups**| ❌ Pro Only | ✅ Interactive Triggers |
-| **Headless REST API & Webhooks** | ❌ Basic Webhook | ✅ Full REST Endpoints |
+| **Floating Contact Launcher & Exit Popups** | ❌ Pro Only | ✅ WhatsApp, Call & Popups |
+| **Real-Time Abandoned Lead Auto-Capture** | ❌ Pro Only | ✅ Capture Leads on Blur |
+| **Headless REST API & Webhooks** | ❌ Pro Only | ✅ Full JSON REST & Webhooks |
+| **File Upload Size Limit** | ✅ Up to 5MB | ✅ Up to 50MB |
 
 ---
 
