@@ -263,10 +263,13 @@ Lead Generation Form follows enterprise WordPress security guidelines:
 
 Refer to [readme.txt](readme.txt) for the full changelog history.
 
-### Version 1.3.3 (24 Oct 2026)
+### Version 1.3.3 (26 Oct 2026)
+* **Screenshots & Visual Assets:** Added 13 official high-resolution screenshots showcasing dashboard analytics, drag-and-drop form builder, template library, mini-CRM captured leads, email customizer with brand logo, and responsive previews.
+* **Documentation & Readme:** Updated `readme.txt` screenshot references with clear descriptive labels across all 13 official UI states.
+* **Internationalization (i18n):** Synchronized master POT translation template and compiled MO/PO language catalogs for Arabic, German, Spanish, Finnish, French, and more.
 * **WordPress Plugin Check (PCP):** Achieved 100% compliance with WordPress Plugin Check and official PHP Coding Standards (WPCS).
 * **Security & Output Escaping:** Implemented comprehensive late output escaping across all dynamic form generator markup, inputs, and lead modal previews.
-* **Internationalization (i18n):** Enhanced translation readiness with strict translators comments and ordered placeholders (`%1$s, %2$s`) on all translatable strings.
+* **Internationalization Readiness:** Added strict translators comments and ordered placeholders (`%1$s, %2$s`) on all translatable strings.
 * **Code Quality & Namespacing:** Renamed and isolated global variable scopes across admin panels to prevent collisions with third-party themes and plugins.
 * **Modernization:** Replaced deprecated `parse_url()` with `wp_parse_url()` and `date()` with `gmdate()` for timezone-safe execution.
 * **Data Sanitization:** Standardized unslashing and sanitization for all AJAX request handlers, settings mutations, and analytics pings.

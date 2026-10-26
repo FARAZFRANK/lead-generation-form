@@ -1,0 +1,5918 @@
+# Copyright (C) 2026 WP Frank
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lead Generation Form 1.3.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lead-generation-form\n"
+"Last-Translator: WP Frank <support@wpfrank.com>\n"
+"Language-Team: English <support@wpfrank.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-24 11:32:36+00:00\n"
+"PO-Revision-Date: 2026-10-24 11:32:36+00:00\n"
+"X-Generator: WP Frank i18n Generator\n"
+"X-Domain: lead-generation-form\n"
+
+#: lead-generation-form.php:297 lead-generation-form.php:297
+msgid "Dashboard"
+msgstr ""
+
+#: lead-generation-form.php:298 lead-generation-form.php:298
+#: admin/dashboard.php:126 admin/import-export.php:55 admin/manage-forms.php:76
+#: admin/settings.php:1587
+msgid "Manage Forms"
+msgstr ""
+
+#: lead-generation-form.php:299 lead-generation-form.php:299
+#: admin/form-generator.php:1225 admin/settings.php:1574
+msgid "Form Builder"
+msgstr ""
+
+#: lead-generation-form.php:300 lead-generation-form.php:300
+#: lead-generation-form.php:1058
+msgid "All Captured Leads"
+msgstr ""
+
+#: lead-generation-form.php:301 lead-generation-form.php:301
+msgid "Import & Export"
+msgstr ""
+
+#: lead-generation-form.php:302 lead-generation-form.php:302
+msgid "Settings"
+msgstr ""
+
+#: lead-generation-form.php:303 admin/dashboard.php:119
+#: admin/form-generator.php:1241 admin/import-export.php:51 admin/leads.php:58
+#: admin/manage-forms.php:83 admin/settings.php:175
+msgid "Free vs Pro"
+msgstr ""
+
+#: lead-generation-form.php:303
+msgid "Free vs Pro ★"
+msgstr ""
+
+#: lead-generation-form.php:432
+msgid "Just now"
+msgstr ""
+
+#: lead-generation-form.php:435
+msgid "%s ago"
+msgstr ""
+
+#: lead-generation-form.php:532 lead-generation-form.php:948
+#: lead-generation-form.php:950 admin/form-generator.php:1884
+#: admin/form-generator.php:1886 admin/manage-forms.php:220
+#: admin/manage-forms.php:339 admin/manage-forms.php:341
+msgid "Copy Shortcode"
+msgstr ""
+
+#: lead-generation-form.php:536 lead-generation-form.php:952
+#: admin/form-generator.php:1888 admin/manage-forms.php:223
+msgid "Copied!"
+msgstr ""
+
+#: lead-generation-form.php:543 admin/manage-forms.php:228
+msgid "Clone Form"
+msgstr ""
+
+#: lead-generation-form.php:544 admin/manage-forms.php:229
+msgid "Clone"
+msgstr ""
+
+#: lead-generation-form.php:548 admin/manage-forms.php:231
+msgid "Edit Form"
+msgstr ""
+
+#: lead-generation-form.php:549 admin/manage-forms.php:232
+msgid "Edit"
+msgstr ""
+
+#: lead-generation-form.php:553 admin/manage-forms.php:234
+#: admin/manage-forms.php:296
+msgid "Delete Form"
+msgstr ""
+
+#: lead-generation-form.php:554 admin/manage-forms.php:235
+msgid "Delete"
+msgstr ""
+
+#: lead-generation-form.php:573 lead-generation-form.php:591
+msgid "Nonce verification failed."
+msgstr ""
+
+#: lead-generation-form.php:754 admin/form-generator.php:43
+#: admin/form-generator.php:1350 includes/class-wlgf-email-template.php:613
+msgid "Thank you for your inquiry! We received your message."
+msgstr ""
+
+#: lead-generation-form.php:789 admin/form-generator.php:73
+#: admin/form-generator.php:164 admin/form-generator.php:1684
+#: includes/shortcode-ajax.php:608
+msgid "Previous"
+msgstr ""
+
+#: lead-generation-form.php:790 admin/form-generator.php:74
+#: admin/form-generator.php:165 admin/form-generator.php:1688
+#: includes/shortcode-ajax.php:609
+msgid "Next Step"
+msgstr ""
+
+#: lead-generation-form.php:925
+msgid "Form saved successfully! You can copy the shortcode below or continue updating."
+msgstr ""
+
+#: lead-generation-form.php:931 admin/form-generator.php:1249
+#: admin/form-generator.php:1867
+msgid "Update Form"
+msgstr ""
+
+#: lead-generation-form.php:942 admin/form-generator.php:1878
+#: admin/manage-forms.php:335
+msgid "Form Shortcode"
+msgstr ""
+
+#: lead-generation-form.php:943 admin/form-generator.php:1879
+msgid "Copy & paste into any page, post, or block widget."
+msgstr ""
+
+#: lead-generation-form.php:957
+msgid "Security check failed. Please refresh and try again."
+msgstr ""
+
+#: lead-generation-form.php:1064
+msgid "Newsletter Subscribers Only"
+msgstr ""
+
+#: lead-generation-form.php:1070
+msgid "Delete Selected Leads"
+msgstr ""
+
+#: lead-generation-form.php:1071
+msgid "Delete Selected"
+msgstr ""
+
+#: lead-generation-form.php:1074
+msgid "Export all captured form submissions with complete field data"
+msgstr ""
+
+#: lead-generation-form.php:1076
+msgid "Export All Leads (CSV)"
+msgstr ""
+
+#: lead-generation-form.php:1080
+msgid "Export only contacts opted-in to the newsletter"
+msgstr ""
+
+#: lead-generation-form.php:1082
+msgid "Export Subscribers (CSV)"
+msgstr ""
+
+#: lead-generation-form.php:1106 lead-generation-form.php:1984
+msgid "Date Time"
+msgstr ""
+
+#: lead-generation-form.php:1107
+msgid "Newsletter"
+msgstr ""
+
+#: lead-generation-form.php:1109
+msgid "Payment"
+msgstr ""
+
+#: lead-generation-form.php:1111
+msgid "Status"
+msgstr ""
+
+#: lead-generation-form.php:1112 admin/manage-forms.php:148
+msgid "Actions"
+msgstr ""
+
+#: lead-generation-form.php:1115
+msgid "Select All"
+msgstr ""
+
+#: lead-generation-form.php:1218 lead-generation-form.php:1793
+msgid "Click to preview in lightbox"
+msgstr ""
+
+#: lead-generation-form.php:1223
+msgid "Click to play recording in lightbox"
+msgstr ""
+
+#: lead-generation-form.php:1227
+msgid "Click to preview PDF in lightbox"
+msgstr ""
+
+#: lead-generation-form.php:1231
+msgid "Click to preview file"
+msgstr ""
+
+#: lead-generation-form.php:1247
+msgid "Click to view full digital signature"
+msgstr ""
+
+#: lead-generation-form.php:1249 admin/leads.php:435
+#: includes/class-wlgf-email-template.php:252 includes/shortcode-ajax.php:1216
+msgid "Digital Signature"
+msgstr ""
+
+#: lead-generation-form.php:1251
+msgid "Signed"
+msgstr ""
+
+#: lead-generation-form.php:1289
+msgid "Click to read full message in lead details"
+msgstr ""
+
+#: lead-generation-form.php:1321
+msgid "Opted-in to newsletter"
+msgstr ""
+
+#: lead-generation-form.php:1327 admin/free-vs-pro.php:133
+#: admin/free-vs-pro.php:181 admin/free-vs-pro.php:384
+#: admin/free-vs-pro.php:424
+msgid "Yes"
+msgstr ""
+
+#: lead-generation-form.php:1356 lead-generation-form.php:1718
+#: admin/leads.php:270
+msgid "New Lead"
+msgstr ""
+
+#: lead-generation-form.php:1358 lead-generation-form.php:1719
+#: admin/leads.php:279
+msgid "Contacted"
+msgstr ""
+
+#: lead-generation-form.php:1360 lead-generation-form.php:1720
+#: admin/leads.php:288
+msgid "Follow-Up"
+msgstr ""
+
+#: lead-generation-form.php:1362 lead-generation-form.php:1721
+#: admin/leads.php:297
+msgid "Qualified"
+msgstr ""
+
+#: lead-generation-form.php:1364 lead-generation-form.php:1722
+#: admin/leads.php:306
+msgid "Won / Converted"
+msgstr ""
+
+#: lead-generation-form.php:1366 lead-generation-form.php:1723
+#: admin/leads.php:315
+msgid "Abandoned / Draft"
+msgstr ""
+
+#: lead-generation-form.php:1374
+msgid "View Lead Details"
+msgstr ""
+
+#: lead-generation-form.php:1379
+msgid "Download PDF Summary / Invoice"
+msgstr ""
+
+#: lead-generation-form.php:1379
+msgid "Download PDF Summary [PRO Feature]"
+msgstr ""
+
+#: lead-generation-form.php:1387
+msgid "Internal Notes"
+msgstr ""
+
+#: lead-generation-form.php:1394
+msgid "Delete Entry"
+msgstr ""
+
+#: lead-generation-form.php:1401
+msgid "Select Lead"
+msgstr ""
+
+#: lead-generation-form.php:1464 lead-generation-form.php:1522
+#: lead-generation-form.php:1562 lead-generation-form.php:1885
+#: lead-generation-form.php:2982 lead-generation-form.php:3432
+msgid "Unauthorized access."
+msgstr ""
+
+#: lead-generation-form.php:1467 lead-generation-form.php:1525
+#: lead-generation-form.php:1565 lead-generation-form.php:2932
+#: lead-generation-form.php:2985 lead-generation-form.php:3319
+msgid "Security verification failed."
+msgstr ""
+
+#: lead-generation-form.php:1475
+msgid "Invalid parameters."
+msgstr ""
+
+#: lead-generation-form.php:1511
+msgid "Lead status updated successfully."
+msgstr ""
+
+#: lead-generation-form.php:1514 lead-generation-form.php:1554
+msgid "Lead not found."
+msgstr ""
+
+#: lead-generation-form.php:1533
+msgid "Invalid parameters or empty note."
+msgstr ""
+
+#: lead-generation-form.php:1572
+msgid "Missing form ID or lead index."
+msgstr ""
+
+#: lead-generation-form.php:1592
+msgid "Lead record not found."
+msgstr ""
+
+#: lead-generation-form.php:1658
+msgid "Lead #"
+msgstr ""
+
+#: lead-generation-form.php:1698
+msgid "WhatsApp Chat"
+msgstr ""
+
+#: lead-generation-form.php:1699
+msgid "WhatsApp"
+msgstr ""
+
+#: lead-generation-form.php:1701 lead-generation-form.php:1702
+msgid "Call"
+msgstr ""
+
+#: lead-generation-form.php:1706 lead-generation-form.php:1707
+msgid "Email"
+msgstr ""
+
+#: lead-generation-form.php:1716
+msgid "Lead Pipeline Stage:"
+msgstr ""
+
+#: lead-generation-form.php:1728
+msgid "Newsletter Subscriber"
+msgstr ""
+
+#: lead-generation-form.php:1739
+msgid "Form Submission Answers"
+msgstr ""
+
+#: lead-generation-form.php:1771
+msgid "Signature"
+msgstr ""
+
+#: lead-generation-form.php:1772 admin/leads.php:427
+msgid "Verified Digital Signature"
+msgstr ""
+
+#: lead-generation-form.php:1825
+msgid "Internal Follow-up Notes"
+msgstr ""
+
+#: lead-generation-form.php:1829
+msgid "No internal notes recorded yet for this lead."
+msgstr ""
+
+#: lead-generation-form.php:1844
+msgid "Add quick follow-up note..."
+msgstr ""
+
+#: lead-generation-form.php:1846
+msgid "Add"
+msgstr ""
+
+#: lead-generation-form.php:1889
+msgid "Security check failed."
+msgstr ""
+
+#: lead-generation-form.php:1985
+msgid "Newsletter Opt-in"
+msgstr ""
+
+#: lead-generation-form.php:1987
+msgid "Payment Status"
+msgstr ""
+
+#: lead-generation-form.php:1988
+msgid "Transaction ID"
+msgstr ""
+
+#: lead-generation-form.php:1989
+msgid "Amount Paid"
+msgstr ""
+
+#: lead-generation-form.php:1991
+msgid "Lead Status"
+msgstr ""
+
+#: lead-generation-form.php:2040
+msgid "Yes (Digitally Signed)"
+msgstr ""
+
+#: lead-generation-form.php:2040 lead-generation-form.php:2049
+#: admin/free-vs-pro.php:169 admin/free-vs-pro.php:179
+#: admin/free-vs-pro.php:196 admin/free-vs-pro.php:206
+#: admin/free-vs-pro.php:216 admin/free-vs-pro.php:236
+#: admin/free-vs-pro.php:253 admin/free-vs-pro.php:263
+#: admin/free-vs-pro.php:273 admin/free-vs-pro.php:283
+#: admin/free-vs-pro.php:300 admin/free-vs-pro.php:310
+#: admin/free-vs-pro.php:327 admin/free-vs-pro.php:347
+#: admin/free-vs-pro.php:357 admin/free-vs-pro.php:404
+#: admin/free-vs-pro.php:414 admin/free-vs-pro.php:434
+msgid "No"
+msgstr ""
+
+#: lead-generation-form.php:2049
+msgid "Yes (Opted-in)"
+msgstr ""
+
+#: lead-generation-form.php:2091
+msgid "Error: Form data not found."
+msgstr ""
+
+#: lead-generation-form.php:2104
+msgid "Invalid JSON format. Please paste valid form schema JSON."
+msgstr ""
+
+#: lead-generation-form.php:2119
+msgid "No valid form fields found in the imported JSON payload."
+msgstr ""
+
+#: lead-generation-form.php:2131
+msgid "Form \"%1$s\" (ID: #%2$s) imported successfully!"
+msgstr ""
+
+#: lead-generation-form.php:2143
+msgid "Please select two valid forms to combine."
+msgstr ""
+
+#: lead-generation-form.php:2170
+msgid "Combined form \"%1$s\" (ID: #%2$s) created successfully!"
+msgstr ""
+
+#: lead-generation-form.php:2247 lead-generation-form.php:2837
+#: admin/settings.php:81 admin/settings.php:252
+msgid "Thank you! Submission Received"
+msgstr ""
+
+#: lead-generation-form.php:2434 lead-generation-form.php:2580
+#: admin/settings.php:61 admin/settings.php:933 includes/install-script.php:43
+#: includes/shortcode-ajax.php:1523 includes/shortcode-ajax.php:1893
+msgid "Sorry! Your email address or domain is not permitted to submit this form."
+msgstr ""
+
+#: lead-generation-form.php:2527
+msgid "Settings updated successfully."
+msgstr ""
+
+#: lead-generation-form.php:2701 includes/shortcode-ajax.php:1329
+msgid "Too many submissions detected from your IP address. Please wait a moment before trying again."
+msgstr ""
+
+#: lead-generation-form.php:2780
+msgid "Missing Cloudflare Turnstile token or secret key."
+msgstr ""
+
+#: lead-generation-form.php:2807
+msgid "Cloudflare Turnstile connection error: %s"
+msgstr ""
+
+#: lead-generation-form.php:2820
+msgid "Cloudflare Turnstile verification failed (%s)."
+msgstr ""
+
+#: lead-generation-form.php:2840
+msgid "Your query has been successfully submitted. We will get back to you shortly."
+msgstr ""
+
+#: lead-generation-form.php:2929 lead-generation-form.php:3315
+msgid "Unauthorized user action."
+msgstr ""
+
+#: lead-generation-form.php:2972
+msgid "Verification failed."
+msgstr ""
+
+#: lead-generation-form.php:3020
+msgid "[%1$s] Lead Generation Form - Test Notification (%2$s)"
+msgstr ""
+
+#: lead-generation-form.php:3105
+msgid "Test email successfully sent to %1$s via %2$s! Please check your inbox (and spam folder)."
+msgstr ""
+
+#: lead-generation-form.php:3109
+msgid "Mail dispatch failed. Please verify your server email settings or SMTP credentials."
+msgstr ""
+
+#: lead-generation-form.php:3115
+msgid "Important for Gmail: Standard Google Account passwords are not accepted. You must generate a dedicated 16-character App Password at myaccount.google.com/apppasswords (2-Step Verification must be enabled). Note that changing your Google password automatically revokes previous App Passwords."
+msgstr ""
+
+#: lead-generation-form.php:3117
+msgid "Please check your SMTP Username and Password. Many providers require a dedicated App Password or API key."
+msgstr ""
+
+#: lead-generation-form.php:3120
+msgid "Your hosting server does not have a configured local mail transfer agent (sendmail/postfix) or PHP mail() is blocked. To guarantee email delivery on live servers, switch Dispatch Method to \"Custom SMTP Server\" and configure SMTP credentials (such as Gmail SMTP, SendGrid, Brevo, or Mailgun)."
+msgstr ""
+
+#: lead-generation-form.php:3122
+msgid "Please verify the recipient and sender email addresses for correct syntax."
+msgstr ""
+
+#: lead-generation-form.php:3127
+msgid "Failed to dispatch test email: %1$s%2$s"
+msgstr ""
+
+#: lead-generation-form.php:3438
+msgid "PDF Invoices & Receipts with E-Signatures is a Pro Feature"
+msgstr ""
+
+#: lead-generation-form.php:3439
+msgid "Upgrade to Lead Generation Form Pro to generate pure-PHP vector PDF receipts with legal signature certificates, client verification boxes, and automatic download links."
+msgstr ""
+
+#: lead-generation-form.php:3440
+msgid "Upgrade to Pro — $49 (One-Time)"
+msgstr ""
+
+#: lead-generation-form.php:3441
+msgid "View Free vs Pro Comparison Table"
+msgstr ""
+
+#: lead-generation-form.php:3443
+msgid "Available in Pro Edition"
+msgstr ""
+
+#: lead-generation-form.php:3455
+msgid "Unauthorized access. Only administrators can perform a factory reset."
+msgstr ""
+
+#: lead-generation-form.php:3459
+msgid "Security token expired or invalid. Please refresh the page and try again."
+msgstr ""
+
+#: lead-generation-form.php:3464
+msgid "Reset operation aborted: Lead Generation Form Pro is currently active. Please manage or reset forms from your Pro dashboard."
+msgstr ""
+
+#: lead-generation-form.php:3514
+msgid "Plugin has been successfully reset to factory defaults. Reloading..."
+msgstr ""
+
+#: admin/dashboard.php:106
+msgid "Lead Generation Form Pro"
+msgstr ""
+
+#: admin/dashboard.php:109
+#: includes/elementor/class-wlgf-elementor-widget.php:49
+msgid "Lead Generation Form"
+msgstr ""
+
+#: admin/dashboard.php:113
+msgid "Create dynamic lead capture forms, manage incoming inquiries, and export data seamlessly."
+msgstr ""
+
+#: admin/dashboard.php:123 admin/manage-forms.php:87
+msgid "Create New Form"
+msgstr ""
+
+#: admin/dashboard.php:141
+msgid "Quick-Start & Feature Navigator Guide"
+msgstr ""
+
+#: admin/dashboard.php:144
+msgid "4 Easy Steps"
+msgstr ""
+
+#: admin/dashboard.php:148
+msgid "Master your lead generation suite: Create high-converting forms, customize multi-column layouts, embed anywhere, and close deals in your visual CRM."
+msgstr ""
+
+#: admin/dashboard.php:154
+msgid "Full Knowledge Base"
+msgstr ""
+
+#: admin/dashboard.php:156
+msgid "Toggle guide view"
+msgstr ""
+
+#: admin/dashboard.php:169
+msgid "Create Your Form"
+msgstr ""
+
+#: admin/dashboard.php:173
+msgid "Pick a pre-built industry template (Real Estate, Gym, Valuation, Booking) or drag fields onto the canvas in Form Builder."
+msgstr ""
+
+#: admin/dashboard.php:178
+msgid "Build Form"
+msgstr ""
+
+#: admin/dashboard.php:188
+msgid "Columns & Logic"
+msgstr ""
+
+#: admin/dashboard.php:192
+msgid "Click 50% or 33% on canvas cards for side-by-side fields. Add step-breaks for multi-step pacing, formulas, or conditional logic."
+msgstr ""
+
+#: admin/dashboard.php:205
+msgid "Publish & Display"
+msgstr ""
+
+#: admin/dashboard.php:209
+msgid "Embed via shortcode [WLFG id=\"X\"], trigger exit-intent popups, slide-ins, or enable the bottom Floating WhatsApp widget."
+msgstr ""
+
+#: admin/dashboard.php:214
+msgid "Forms List"
+msgstr ""
+
+#: admin/dashboard.php:224
+msgid "Close Leads in CRM"
+msgstr ""
+
+#: admin/dashboard.php:228
+msgid "Track incoming leads on the Kanban board (New ➔ Contacted ➔ Qualified ➔ Won), write notes, call/WhatsApp clients, and export CSV/PDFs."
+msgstr ""
+
+#: admin/dashboard.php:233
+msgid "Open CRM"
+msgstr ""
+
+#: admin/dashboard.php:244
+msgid "Jump Directly to Feature:"
+msgstr ""
+
+#: admin/dashboard.php:248
+msgid "Form Builder & Templates"
+msgstr ""
+
+#: admin/dashboard.php:251 admin/dashboard.php:396
+msgid "Manage Forms & Shortcodes"
+msgstr ""
+
+#: admin/dashboard.php:254
+msgid "Kanban Pipeline CRM"
+msgstr ""
+
+#: admin/dashboard.php:257
+msgid "SMTP & Integrations"
+msgstr ""
+
+#: admin/dashboard.php:260 admin/settings.php:219
+msgid "Help & Documentation"
+msgstr ""
+
+#: admin/dashboard.php:276
+msgid "Forms Active"
+msgstr ""
+
+#: admin/dashboard.php:280
+msgid "%d published & ready"
+msgstr ""
+
+#: admin/dashboard.php:280
+msgid "No forms created yet"
+msgstr ""
+
+#: admin/dashboard.php:293
+msgid "Total Submissions"
+msgstr ""
+
+#: admin/dashboard.php:297
+msgid "%d leads captured across forms"
+msgstr ""
+
+#: admin/dashboard.php:297
+msgid "Awaiting first lead inquiry"
+msgstr ""
+
+#: admin/dashboard.php:310 admin/manage-forms.php:130
+msgid "Avg. Conversion Rate"
+msgstr ""
+
+#: admin/dashboard.php:314
+msgid "%s total impressions tracked"
+msgstr ""
+
+#: admin/dashboard.php:325
+msgid "Honeypot and submission time traps are active."
+msgstr ""
+
+#: admin/dashboard.php:326
+msgid "Spam Trap:"
+msgstr ""
+
+#: admin/dashboard.php:326
+msgid "Active"
+msgstr ""
+
+#: admin/dashboard.php:331 admin/dashboard.php:334
+msgid "reCAPTCHA:"
+msgstr ""
+
+#: admin/dashboard.php:331
+msgid "v3 Active"
+msgstr ""
+
+#: admin/dashboard.php:334
+msgid "Disabled"
+msgstr ""
+
+#: admin/dashboard.php:339
+msgid "Email Engine:"
+msgstr ""
+
+#: admin/dashboard.php:339
+msgid "Custom SMTP"
+msgstr ""
+
+#: admin/dashboard.php:339
+msgid "PHP Mailer"
+msgstr ""
+
+#: admin/dashboard.php:344
+msgid "Configure System Settings"
+msgstr ""
+
+#: admin/dashboard.php:354
+msgid "Visual Analytics & Drop-off Funnel"
+msgstr ""
+
+#: admin/dashboard.php:358
+msgid "No Forms Available"
+msgstr ""
+
+#: admin/dashboard.php:358
+msgid "All Forms (Aggregate)"
+msgstr ""
+
+#: admin/dashboard.php:366
+msgid "7 Days"
+msgstr ""
+
+#: admin/dashboard.php:367
+msgid "30 Days"
+msgstr ""
+
+#: admin/dashboard.php:368
+msgid "90 Days"
+msgstr ""
+
+#: admin/dashboard.php:379
+msgid "Start Tracking Form Conversions"
+msgstr ""
+
+#: admin/dashboard.php:379
+msgid "No Forms Created Yet"
+msgstr ""
+
+#: admin/dashboard.php:384
+msgid "Embed your form shortcode on any page or post to automatically track visitor views, submission velocity, and step drop-offs."
+msgstr ""
+
+#: admin/dashboard.php:386
+msgid "You have not created any forms yet. Create your first lead generation form using our drag & drop builder or pre-built templates to start capturing leads and tracking conversions."
+msgstr ""
+
+#: admin/dashboard.php:391
+msgid "Active Shortcode:"
+msgstr ""
+
+#: admin/dashboard.php:399
+msgid "Create Another Form"
+msgstr ""
+
+#: admin/dashboard.php:399
+msgid "Create Your First Form"
+msgstr ""
+
+#: admin/dashboard.php:408
+msgid "Impression & Lead Conversion Velocity"
+msgstr ""
+
+#: admin/dashboard.php:414
+msgid "Device Distribution"
+msgstr ""
+
+#: admin/dashboard.php:425
+msgid "Step Progression & Drop-off Funnel"
+msgstr ""
+
+#: admin/dashboard.php:426
+msgid "Identifies bottleneck steps where users drop off before completing the form."
+msgstr ""
+
+#: admin/form-generator.php:68 admin/form-generator.php:159
+#: includes/shortcode-ajax.php:1178
+msgid "Subscribe to our newsletter for exclusive updates and offers"
+msgstr ""
+
+#: admin/form-generator.php:1223
+msgid "Edit Form: %s"
+msgstr ""
+
+#: admin/form-generator.php:1232
+msgid "New Form"
+msgstr ""
+
+#: admin/form-generator.php:1235
+msgid "Drag and drop fields onto the canvas to customize your form structure and validation rules."
+msgstr ""
+
+#: admin/form-generator.php:1245
+msgid "Live Preview"
+msgstr ""
+
+#: admin/form-generator.php:1251 admin/form-generator.php:1893
+msgid "Save Form"
+msgstr ""
+
+#: admin/form-generator.php:1255
+msgid "Back to Forms"
+msgstr ""
+
+#: admin/form-generator.php:1267
+msgid "Form Configuration & Canvas"
+msgstr ""
+
+#: admin/form-generator.php:1274
+msgid "Pro Tip"
+msgstr ""
+
+#: admin/form-generator.php:1275
+msgid "Save time! Start with a pre-built industry template (Lead Gen, Real Estate, Dental, Fitness, Cost Estimator) instead of building from scratch."
+msgstr ""
+
+#: admin/form-generator.php:1277
+msgid "Browse 20+ ready-to-use high-converting form templates"
+msgstr ""
+
+#: admin/form-generator.php:1279
+msgid "Template Library"
+msgstr ""
+
+#: admin/form-generator.php:1281
+msgid "5 Starter + Pro"
+msgstr ""
+
+#: admin/form-generator.php:1283
+msgid "25+ Ready"
+msgstr ""
+
+#: admin/form-generator.php:1291
+msgid "Form Name"
+msgstr ""
+
+#: admin/form-generator.php:1293
+msgid "e.g. Contact Us Form / Lead Inquiry"
+msgstr ""
+
+#: admin/form-generator.php:1294
+msgid "Give your form a recognizable title to identify it in submissions and shortcodes."
+msgstr ""
+
+#: admin/form-generator.php:1306
+msgid "Submission Actions, Redirect & Submitter Auto-Responder"
+msgstr ""
+
+#: admin/form-generator.php:1314
+msgid "Submission Confirmation Action"
+msgstr ""
+
+#: admin/form-generator.php:1316
+msgid "Display Inline Thank You Message"
+msgstr ""
+
+#: admin/form-generator.php:1317
+msgid "Redirect to Custom URL (e.g. Booking / Thank You Page)"
+msgstr ""
+
+#: admin/form-generator.php:1321
+msgid "Custom Redirect URL"
+msgstr ""
+
+#: admin/form-generator.php:1325
+msgid "Custom Thank You Message"
+msgstr ""
+
+#: admin/form-generator.php:1326
+msgid "Thank you! Your submission has been received."
+msgstr ""
+
+#: admin/form-generator.php:1327
+msgid "Leave blank to use the default message from Settings. Supports {Name}, {Email}, {Site_Name}, {Form_Name}, {Submission_Date}."
+msgstr ""
+
+#: admin/form-generator.php:1337
+msgid "Send Instant Confirmation Email to Submitter (Auto-Responder)"
+msgstr ""
+
+#: admin/form-generator.php:1339
+msgid "Automatically dispatch a personalized confirmation email to the user when they submit an inquiry."
+msgstr ""
+
+#: admin/form-generator.php:1349
+msgid "Email Subject Line"
+msgstr ""
+
+#: admin/form-generator.php:1354
+msgid "Email Message Body"
+msgstr ""
+
+#: admin/form-generator.php:1355
+msgid "Hi {Name}, thank you for reaching out to us..."
+msgstr ""
+
+#: admin/form-generator.php:1357
+msgid "Insert dynamic merge tags:"
+msgstr ""
+
+#: admin/form-generator.php:1358
+msgid "Insert Submitter Name"
+msgstr ""
+
+#: admin/form-generator.php:1359
+msgid "Insert Submitter Email"
+msgstr ""
+
+#: admin/form-generator.php:1360
+msgid "Insert Website / Brand Name"
+msgstr ""
+
+#: admin/form-generator.php:1361
+msgid "Insert Form Name"
+msgstr ""
+
+#: admin/form-generator.php:1362
+msgid "Insert Submission Date & Time"
+msgstr ""
+
+#: admin/form-generator.php:1368
+msgid "Merge Tags Information (Click any tag above to insert):"
+msgstr ""
+
+#: admin/form-generator.php:1373
+msgid "Submitter's Name (captured from Name field)"
+msgstr ""
+
+#: admin/form-generator.php:1377
+msgid "Submitter's Email address"
+msgstr ""
+
+#: admin/form-generator.php:1381
+msgid "Website / Business Name (e.g. WP Frank)"
+msgstr ""
+
+#: admin/form-generator.php:1385
+msgid "Current Form Name (e.g. Classic Contact Form)"
+msgstr ""
+
+#: admin/form-generator.php:1389
+msgid "Form Submission Date & Time"
+msgstr ""
+
+#: admin/form-generator.php:1395
+msgid "Auto-responder emails automatically use your global Brand Logo, colors, and responsive email template configured under Settings → Email Notification Template & Branding."
+msgstr ""
+
+#: admin/form-generator.php:1409
+msgid "Live Form Theme & Design Styler"
+msgstr ""
+
+#: admin/form-generator.php:1415
+msgid "Customize the button colors, corner radius, background, and typography for this form when published on your live website."
+msgstr ""
+
+#: admin/form-generator.php:1418
+#: includes/elementor/class-wlgf-elementor-widget.php:146
+msgid "Primary Accent Color"
+msgstr ""
+
+#: admin/form-generator.php:1424
+msgid "Royal Blue"
+msgstr ""
+
+#: admin/form-generator.php:1425
+msgid "Teal"
+msgstr ""
+
+#: admin/form-generator.php:1426
+msgid "Purple"
+msgstr ""
+
+#: admin/form-generator.php:1427
+msgid "Orange"
+msgstr ""
+
+#: admin/form-generator.php:1428
+msgid "Emerald"
+msgstr ""
+
+#: admin/form-generator.php:1429
+msgid "Rose"
+msgstr ""
+
+#: admin/form-generator.php:1430
+msgid "Slate Dark"
+msgstr ""
+
+#: admin/form-generator.php:1435
+msgid "Corner Border Radius"
+msgstr ""
+
+#: admin/form-generator.php:1437
+msgid "Square (0px)"
+msgstr ""
+
+#: admin/form-generator.php:1438
+msgid "Subtle Rounded (4px)"
+msgstr ""
+
+#: admin/form-generator.php:1439
+msgid "Default Modern (6px)"
+msgstr ""
+
+#: admin/form-generator.php:1440
+msgid "Soft Rounded (12px)"
+msgstr ""
+
+#: admin/form-generator.php:1441
+msgid "Pill / Ultra Rounded (24px)"
+msgstr ""
+
+#: admin/form-generator.php:1446
+msgid "Form Container Background"
+msgstr ""
+
+#: admin/form-generator.php:1448
+msgid "White Card with Subtle Shadow"
+msgstr ""
+
+#: admin/form-generator.php:1449
+msgid "Transparent / Theme Default"
+msgstr ""
+
+#: admin/form-generator.php:1454
+msgid "Font Family"
+msgstr ""
+
+#: admin/form-generator.php:1456
+msgid "Inherit from Active WordPress Theme"
+msgstr ""
+
+#: admin/form-generator.php:1465
+msgid "Button Width & Alignment"
+msgstr ""
+
+#: admin/form-generator.php:1467
+msgid "Auto / Inline (Default)"
+msgstr ""
+
+#: admin/form-generator.php:1468
+msgid "Full Width (100% Block)"
+msgstr ""
+
+#: admin/form-generator.php:1469
+msgid "Center Aligned"
+msgstr ""
+
+#: admin/form-generator.php:1474
+msgid "Field Size & Density"
+msgstr ""
+
+#: admin/form-generator.php:1476
+msgid "Default Modern (44px)"
+msgstr ""
+
+#: admin/form-generator.php:1477
+msgid "Compact (36px)"
+msgstr ""
+
+#: admin/form-generator.php:1478
+msgid "Comfortable / Large (52px)"
+msgstr ""
+
+#: admin/form-generator.php:1483
+msgid "Color Scheme / Dark Mode"
+msgstr ""
+
+#: admin/form-generator.php:1485
+msgid "Clean Light (Default)"
+msgstr ""
+
+#: admin/form-generator.php:1486
+msgid "Sleek Dark Mode"
+msgstr ""
+
+#: admin/form-generator.php:1487
+msgid "Auto (System Preference)"
+msgstr ""
+
+#: admin/form-generator.php:1492
+msgid "Input Field Style"
+msgstr ""
+
+#: admin/form-generator.php:1494
+msgid "Classic Bordered (Default)"
+msgstr ""
+
+#: admin/form-generator.php:1495
+msgid "Soft Tint / Filled"
+msgstr ""
+
+#: admin/form-generator.php:1496
+msgid "Underline / Material"
+msgstr ""
+
+#: admin/form-generator.php:1501
+msgid "Form Maximum Width"
+msgstr ""
+
+#: admin/form-generator.php:1503
+msgid "Standard Form (640px) (Default)"
+msgstr ""
+
+#: admin/form-generator.php:1504
+msgid "Compact Card (480px)"
+msgstr ""
+
+#: admin/form-generator.php:1505
+msgid "Wide Hero (800px)"
+msgstr ""
+
+#: admin/form-generator.php:1506
+msgid "100% Full Width"
+msgstr ""
+
+#: admin/form-generator.php:1511
+msgid "Button Shadow & Hover Effect"
+msgstr ""
+
+#: admin/form-generator.php:1513
+msgid "Subtle Elevation (Default)"
+msgstr ""
+
+#: admin/form-generator.php:1514
+msgid "Accent Glow (Matches Accent Color)"
+msgstr ""
+
+#: admin/form-generator.php:1515
+msgid "Flat / Minimalist (No Shadow)"
+msgstr ""
+
+#: admin/form-generator.php:1520
+msgid "Label Typography Style"
+msgstr ""
+
+#: admin/form-generator.php:1522
+msgid "Standard (Default)"
+msgstr ""
+
+#: admin/form-generator.php:1523
+msgid "Bold & Semibold"
+msgstr ""
+
+#: admin/form-generator.php:1524
+msgid "Uppercase Micro-Text"
+msgstr ""
+
+#: admin/form-generator.php:1536
+msgid "Webhooks & Automation (Zapier, Make, Pabbly)"
+msgstr ""
+
+#: admin/form-generator.php:1541
+msgid "Stream submitted lead data asynchronously to external webhook endpoints, Zapier, Make, or CRM systems upon submission."
+msgstr ""
+
+#: admin/form-generator.php:1544
+msgid "Webhook Endpoint URL"
+msgstr ""
+
+#: admin/form-generator.php:1548
+msgid "Authorization Header / Secret Key (Optional)"
+msgstr ""
+
+#: admin/form-generator.php:1560 admin/settings.php:1781
+msgid "Form Scheduling & Submission Quotas"
+msgstr ""
+
+#: admin/form-generator.php:1567
+msgid "Open Form Date (Start)"
+msgstr ""
+
+#: admin/form-generator.php:1571
+msgid "Close Form Date (Expiration)"
+msgstr ""
+
+#: admin/form-generator.php:1575
+msgid "Maximum Submission Quota (0 = Unlimited)"
+msgstr ""
+
+#: admin/form-generator.php:1579
+msgid "Custom Form Closed / Inactive Message"
+msgstr ""
+
+#: admin/form-generator.php:1580
+#: includes/elementor/class-wlgf-elementor-widget.php:201
+#: includes/shortcode-ajax.php:556 includes/shortcode-ajax.php:1434
+#: includes/shortcode-ajax.php:1808
+msgid "This form is currently closed for new submissions."
+msgstr ""
+
+#: admin/form-generator.php:1591
+msgid "Newsletter & Audience Sync (Mailchimp / ESP)"
+msgstr ""
+
+#: admin/form-generator.php:1599
+msgid "Enable Newsletter & Audience Sync for this form"
+msgstr ""
+
+#: admin/form-generator.php:1606
+msgid "Opt-In Mode"
+msgstr ""
+
+#: admin/form-generator.php:1608
+msgid "Explicit (Add Opt-in Checkbox to form - Recommended for GDPR)"
+msgstr ""
+
+#: admin/form-generator.php:1609
+msgid "Automatic (Silently subscribe all valid submitters)"
+msgstr ""
+
+#: admin/form-generator.php:1612
+msgid "Ensure your website privacy policy and applicable local laws (GDPR, CAN-SPAM, CCPA) permit automatic subscription."
+msgstr ""
+
+#: admin/form-generator.php:1616
+msgid "Audience Subscriber Tag / Group"
+msgstr ""
+
+#: admin/form-generator.php:1617
+msgid "e.g. contact-form, newsletter-lead"
+msgstr ""
+
+#: admin/form-generator.php:1618
+msgid "Tag applied to subscriber in your selected newsletter provider."
+msgstr ""
+
+#: admin/form-generator.php:1624
+msgid "Checkbox Label Text"
+msgstr ""
+
+#: admin/form-generator.php:1630
+msgid "Pre-checked by default"
+msgstr ""
+
+#: admin/form-generator.php:1643
+msgid "Multi-Step Wizard & Progress Navigation"
+msgstr ""
+
+#: admin/form-generator.php:1645 admin/form-generator.php:1702
+#: admin/settings.php:843 admin/settings.php:1140 admin/settings.php:1290
+#: admin/settings.php:1369 admin/settings.php:2570 admin/settings.php:2604
+#: admin/settings.php:2644 admin/settings.php:2663
+msgid "PRO Feature"
+msgstr ""
+
+#: admin/form-generator.php:1656
+msgid "Multi-Step Form Wizard is a Pro Feature"
+msgstr ""
+
+#: admin/form-generator.php:1657
+msgid "Divide your forms into interactive multi-step wizard cards with progress indicators and per-step validation. Upgrade to unlock."
+msgstr ""
+
+#: admin/form-generator.php:1661 admin/form-generator.php:1718
+#: admin/settings.php:223 admin/settings.php:463
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: admin/form-generator.php:1666
+msgid "Add \"Step Break (Page Break)\" fields onto the canvas to divide your form into multi-step wizard cards. In Free, step breaks render as clean section dividers."
+msgstr ""
+
+#: admin/form-generator.php:1671
+msgid "Progress Indicator Style"
+msgstr ""
+
+#: admin/form-generator.php:1673
+msgid "Numbered Step Circles"
+msgstr ""
+
+#: admin/form-generator.php:1674
+msgid "Progress Percentage Bar"
+msgstr ""
+
+#: admin/form-generator.php:1675
+msgid "Step Breadcrumb Tabs"
+msgstr ""
+
+#: admin/form-generator.php:1679
+msgid "Initial Step 1 Title"
+msgstr ""
+
+#: admin/form-generator.php:1680
+msgid "Step 1 (or custom name)"
+msgstr ""
+
+#: admin/form-generator.php:1683
+msgid "Previous Button Label"
+msgstr ""
+
+#: admin/form-generator.php:1687
+msgid "Next Button Label"
+msgstr ""
+
+#: admin/form-generator.php:1700
+msgid "Visual Conditional Logic Rules"
+msgstr ""
+
+#: admin/form-generator.php:1713
+msgid "Visual Conditional Logic is a Pro Feature"
+msgstr ""
+
+#: admin/form-generator.php:1714
+msgid "Dynamically show or hide fields based on user selections in previous fields. Upgrade to unlock."
+msgstr ""
+
+#: admin/form-generator.php:1723
+msgid "Dynamically show or hide fields based on user selections in previous fields."
+msgstr ""
+
+#: admin/form-generator.php:1731
+msgid "Add Field Condition Rule"
+msgstr ""
+
+#: admin/form-generator.php:1743
+msgid "Payment Collection & Online Checkout"
+msgstr ""
+
+#: admin/form-generator.php:1745
+msgid "Pro Feature"
+msgstr ""
+
+#: admin/form-generator.php:1754
+msgid "Enable Payment Collection on this form"
+msgstr ""
+
+#: admin/form-generator.php:1761
+msgid "Payment Amount Type"
+msgstr ""
+
+#: admin/form-generator.php:1763 admin/form-generator.php:1768
+msgid "Fixed Amount"
+msgstr ""
+
+#: admin/form-generator.php:1764
+msgid "Dynamic (Calculated from Formula Field)"
+msgstr ""
+
+#: admin/form-generator.php:1772
+msgid "Linked Calculation Field"
+msgstr ""
+
+#: admin/form-generator.php:1774
+msgid "-- Select Calculation Field --"
+msgstr ""
+
+#: admin/form-generator.php:1778
+msgid "Item Description / Charge Label"
+msgstr ""
+
+#: admin/form-generator.php:1779
+msgid "e.g. Booking Deposit / Consultation Fee"
+msgstr ""
+
+#: admin/form-generator.php:1792
+msgid "Display Modes & Smart Conversion Triggers"
+msgstr ""
+
+#: admin/form-generator.php:1793
+msgid "Exit-Intent / Popups"
+msgstr ""
+
+#: admin/form-generator.php:1799
+msgid "Choose how and when this form is displayed: standard static embed, exit-intent popup modal, slide-in box, sticky notification bar, or floating WhatsApp/contact bubble widget."
+msgstr ""
+
+#: admin/form-generator.php:1803
+msgid "Form Display Mode"
+msgstr ""
+
+#: admin/form-generator.php:1805
+msgid "Standard Inline Embed (Shortcode / Elementor / Gutenberg)"
+msgstr ""
+
+#: admin/form-generator.php:1806
+msgid "Lightbox Modal Popup ★ PRO"
+msgstr ""
+
+#: admin/form-generator.php:1807
+msgid "Slide-in Corner Box ★ PRO"
+msgstr ""
+
+#: admin/form-generator.php:1808
+msgid "Sticky Notification Bar ★ PRO"
+msgstr ""
+
+#: admin/form-generator.php:1809
+msgid "Floating WhatsApp & Contact Launcher ★ PRO"
+msgstr ""
+
+#: admin/form-generator.php:1814
+msgid "Placement Position"
+msgstr ""
+
+#: admin/form-generator.php:1816
+msgid "Bottom Right / Top Bar"
+msgstr ""
+
+#: admin/form-generator.php:1817
+msgid "Bottom Left / Bottom Bar"
+msgstr ""
+
+#: admin/form-generator.php:1824
+msgid "Behavioral Trigger"
+msgstr ""
+
+#: admin/form-generator.php:1826
+msgid "Time Delay (Seconds on page)"
+msgstr ""
+
+#: admin/form-generator.php:1827
+msgid "Exit-Intent (Mouse departs top/close)"
+msgstr ""
+
+#: admin/form-generator.php:1828 admin/settings.php:2620
+msgid "Scroll Depth %"
+msgstr ""
+
+#: admin/form-generator.php:1829
+msgid "Click Trigger Only (MonsterLink)"
+msgstr ""
+
+#: admin/form-generator.php:1834
+msgid "Delay / Inactivity (Seconds)"
+msgstr ""
+
+#: admin/form-generator.php:1839
+msgid "Scroll Percentage (%)"
+msgstr ""
+
+#: admin/form-generator.php:1849
+msgid "Capture Partial / Abandoned Leads Automatically"
+msgstr ""
+
+#: admin/form-generator.php:1851 admin/leads.php:189 admin/settings.php:203
+#: admin/settings.php:209 admin/settings.php:215 admin/settings.php:224
+#: admin/settings.php:454 admin/settings.php:1613 admin/settings.php:1626
+#: admin/settings.php:1639 admin/settings.php:1678 admin/settings.php:1768
+#: admin/settings.php:1807 admin/settings.php:1820 admin/settings.php:1833
+#: admin/settings.php:1875 admin/settings.php:1885 admin/settings.php:1895
+#: admin/settings.php:1934 admin/settings.php:1954 admin/settings.php:1964
+#: admin/settings.php:2032 admin/settings.php:2135 admin/settings.php:2152
+#: admin/settings.php:2475
+msgid "PRO"
+msgstr ""
+
+#: admin/form-generator.php:1855
+msgid "When enabled, if a visitor starts filling their name/email and leaves without submitting, their partial entry is saved to the CRM marked as \"Abandoned\" so you can follow up."
+msgstr ""
+
+#: admin/form-generator.php:1906
+msgid "Form Builder Tips & Field Guide"
+msgstr ""
+
+#: admin/form-generator.php:1908
+msgid "Pro Tips"
+msgstr ""
+
+#: admin/form-generator.php:1916
+msgid "Adding & Customizing Fields"
+msgstr ""
+
+#: admin/form-generator.php:1917
+msgid "Drag elements from the right toolbar directly onto the form canvas. Click any field on the canvas to customize its label, placeholder, column width, and required status."
+msgstr ""
+
+#: admin/form-generator.php:1923
+msgid "Submit Button Requirement"
+msgstr ""
+
+#: admin/form-generator.php:1924
+msgid "Every form requires at least one Submit button to validate inputs and capture leads into your database and email dispatch."
+msgstr ""
+
+#: admin/form-generator.php:1933
+msgid "Special & Advanced Fields Guide"
+msgstr ""
+
+#: admin/form-generator.php:1936
+msgid "5 Special Fields"
+msgstr ""
+
+#: admin/form-generator.php:1937
+msgid "Expand or collapse all field guides"
+msgstr ""
+
+#: admin/form-generator.php:1938
+msgid "Expand All"
+msgstr ""
+
+#: admin/form-generator.php:1943
+msgid "Click any field below to view what it is, how to configure it, and practical examples:"
+msgstr ""
+
+#: admin/form-generator.php:1954
+msgid "Star Rating (1-5)"
+msgstr ""
+
+#: admin/form-generator.php:1955
+msgid "Customer Feedback"
+msgstr ""
+
+#: admin/form-generator.php:1962 admin/form-generator.php:1999
+#: admin/form-generator.php:2036 admin/form-generator.php:2076
+#: admin/form-generator.php:2112
+msgid "What is it?"
+msgstr ""
+
+#: admin/form-generator.php:1963
+msgid "An interactive 1-to-5 star rating widget with smooth hover states and instant click selection. It allows website visitors to rate customer satisfaction, review products, or rate service quality intuitively on desktop and mobile devices."
+msgstr ""
+
+#: admin/form-generator.php:1966 admin/form-generator.php:2003
+#: admin/form-generator.php:2040 admin/form-generator.php:2080
+#: admin/form-generator.php:2116
+msgid "How to Use & Configure:"
+msgstr ""
+
+#: admin/form-generator.php:1968
+msgid "Drag \"Star Rating (1-5)\" from the right toolbar onto the form canvas."
+msgstr ""
+
+#: admin/form-generator.php:1969
+msgid "Click the field to customize the Label (e.g. \"Rate your experience with our team\")."
+msgstr ""
+
+#: admin/form-generator.php:1970
+msgid "Toggle \"Required\" if rating is mandatory before form submission."
+msgstr ""
+
+#: admin/form-generator.php:1971
+msgid "Star colors and hover highlights automatically match your form primary color chosen in Theme Styler."
+msgstr ""
+
+#: admin/form-generator.php:1976 admin/form-generator.php:2013
+#: admin/form-generator.php:2126
+msgid "Example Use Case:"
+msgstr ""
+
+#: admin/form-generator.php:1978
+msgid "Post-Service Feedback: \"How would you rate the responsiveness of our support engineer?\" (Submits numerical score 1 to 5 saved directly in your Leads database)."
+msgstr ""
+
+#: admin/form-generator.php:1991
+msgid "NPS Score Matrix (0-10)"
+msgstr ""
+
+#: admin/form-generator.php:1992
+msgid "Loyalty Benchmark"
+msgstr ""
+
+#: admin/form-generator.php:2000
+msgid "Industry-standard 0 to 10 Net Promoter Score matrix. Renders responsive numbered chip buttons that measure customer loyalty and categorize respondents into Detractors (0-6), Passives (7-8), and Promoters (9-10)."
+msgstr ""
+
+#: admin/form-generator.php:2005
+msgid "Drag \"NPS Score Matrix (0-10)\" onto the form canvas."
+msgstr ""
+
+#: admin/form-generator.php:2006
+msgid "Set the question label (e.g. \"How likely are you to recommend us to a colleague?\")."
+msgstr ""
+
+#: admin/form-generator.php:2007
+msgid "Visitors see clickable pills numbered 0 to 10 with clear \"Not at all likely\" to \"Extremely likely\" guide indicators."
+msgstr ""
+
+#: admin/form-generator.php:2008
+msgid "Pair with Conditional Logic: Trigger a testimonial request textarea if score is 9-10, or an issue resolution box if score is 0-6."
+msgstr ""
+
+#: admin/form-generator.php:2015
+msgid "SaaS or Client Exit Survey: \"On a scale of 0 to 10, how likely are you to recommend our services?\" (Benchmark score tracked per lead entry)."
+msgstr ""
+
+#: admin/form-generator.php:2028
+msgid "Calculation / Price Estimator"
+msgstr ""
+
+#: admin/form-generator.php:2029
+msgid "Real-time Math"
+msgstr ""
+
+#: admin/form-generator.php:2037
+msgid "A dynamic real-time mathematical formula evaluator that calculates instant estimates, quotes, loan projections, or service totals live in the browser as visitors type or select options."
+msgstr ""
+
+#: admin/form-generator.php:2042
+msgid "First add input fields (Number, Dropdown, or Checkboxes) and note their field names (e.g. \"hours\", \"qty\", or \"rooms\")."
+msgstr ""
+
+#: admin/form-generator.php:2043
+msgid "Drag \"Calculation / Price Estimator\" onto the form canvas and click it to open settings."
+msgstr ""
+
+#: admin/form-generator.php:2044
+msgid "Calculation Formula: Reference input field names inside square brackets, e.g. ([hours] * 50) + 100. Supports +, -, *, /, and parentheses."
+msgstr ""
+
+#: admin/form-generator.php:2045
+msgid "Prefix: Enter your currency symbol (e.g. \"$\", \"₹\", \"€\")."
+msgstr ""
+
+#: admin/form-generator.php:2046
+msgid "Postfix: Enter a duration or unit suffix (e.g. \"/month\", \" total\")."
+msgstr ""
+
+#: admin/form-generator.php:2047
+msgid "Decimal Precision: Set 2 for standard decimals (e.g. $150.00) or 0 for rounded integers."
+msgstr ""
+
+#: admin/form-generator.php:2052
+msgid "Example Formula:"
+msgstr ""
+
+#: admin/form-generator.php:2055
+msgid "When visitor enters quantity = 4, the field immediately displays \"$200.00 total\" live before submit."
+msgstr ""
+
+#: admin/form-generator.php:2068
+msgid "GDPR / Terms Checkbox"
+msgstr ""
+
+#: admin/form-generator.php:2069
+msgid "Legal & Privacy"
+msgstr ""
+
+#: admin/form-generator.php:2077
+msgid "A mandatory legal compliance checkbox required by GDPR, CCPA, and data privacy regulations. Submissions are strictly blocked until the visitor explicitly checks the agreement box."
+msgstr ""
+
+#: admin/form-generator.php:2082
+msgid "Drag \"GDPR / Terms Checkbox\" to the bottom of the form (typically right before the Submit button)."
+msgstr ""
+
+#: admin/form-generator.php:2083
+msgid "Click the field to customize the agreement text. HTML anchor links are fully supported inside the label."
+msgstr ""
+
+#: admin/form-generator.php:2084
+msgid "The checkbox remains mandatory by default, protecting your website from non-compliant data collection."
+msgstr ""
+
+#: admin/form-generator.php:2089
+msgid "Example Label with HTML Links:"
+msgstr ""
+
+#: admin/form-generator.php:2104
+msgid "Digital Signature Pad"
+msgstr ""
+
+#: admin/form-generator.php:2105
+msgid "E-Signature Canvas"
+msgstr ""
+
+#: admin/form-generator.php:2113
+msgid "An interactive HTML5 canvas signature pad that lets respondents draw their e-signature using finger touch (mobile/tablet) or mouse (desktop). Features smooth vector line smoothing and an instant \"Clear\" reset button."
+msgstr ""
+
+#: admin/form-generator.php:2118
+msgid "Drag \"Digital Signature Pad\" from the right toolbar onto your form canvas."
+msgstr ""
+
+#: admin/form-generator.php:2119
+msgid "Set field label (e.g. \"Authorized Representative Signature\" or \"Client Sign-off\")."
+msgstr ""
+
+#: admin/form-generator.php:2120
+msgid "Upon submission, the signature is converted into a high-resolution transparent PNG base64 string and stored securely with the lead record."
+msgstr ""
+
+#: admin/form-generator.php:2121
+msgid "Admins can view verified signatures directly in the Leads Table and include them in PDF download receipts."
+msgstr ""
+
+#: admin/form-generator.php:2128
+msgid "Service Contracts, NDA Agreements, Equipment Rentals, and Maintenance Authorisations requiring legal sign-off before dispatch."
+msgstr ""
+
+#: admin/form-generator.php:2142
+msgid "Server File Upload Limits & Best Practices"
+msgstr ""
+
+#: admin/form-generator.php:2144
+msgid "Server Health"
+msgstr ""
+
+#: admin/form-generator.php:2148
+msgid "If you use File Upload fields on your form, submissions will be bound by your hosting server thresholds:"
+msgstr ""
+
+#: admin/form-generator.php:2152 admin/settings.php:2557
+msgid "Max Upload Size:"
+msgstr ""
+
+#: admin/form-generator.php:2155 admin/settings.php:2560
+msgid "Max POST Size:"
+msgstr ""
+
+#: admin/form-generator.php:2162
+msgid "Lead Form Best Practices"
+msgstr ""
+
+#: admin/form-generator.php:2169
+msgid "Multi-Column Grid Layouts"
+msgstr ""
+
+#: admin/form-generator.php:2170
+msgid "Use 50% width on First & Last Name or Email & Phone to create clean 2-column horizontal rows that increase form conversions."
+msgstr ""
+
+#: admin/form-generator.php:2176
+msgid "Smart Conditional Logic"
+msgstr ""
+
+#: admin/form-generator.php:2177
+msgid "Keep initial forms short. Use the Conditional Logic accordion above to reveal secondary questions only when relevant options are selected."
+msgstr ""
+
+#: admin/form-generator.php:2183
+msgid "Multi-Step Wizard Breakers"
+msgstr ""
+
+#: admin/form-generator.php:2184
+msgid "For forms with 6+ fields, insert Step Break elements to split questions into bite-sized steps with animated progress bars."
+msgstr ""
+
+#: admin/form-generator.php:2200
+msgid "Form Template Library"
+msgstr ""
+
+#: admin/form-generator.php:2201 admin/form-generator.php:2201
+#: admin/form-generator.php:2867 admin/form-generator.php:2867
+#: admin/form-generator.php:2901 admin/leads.php:371 admin/leads.php:371
+#: admin/leads.php:398 admin/leads.php:398 admin/leads.php:413
+#: admin/leads.php:429 admin/leads.php:429 admin/leads.php:446
+#: admin/leads.php:469 admin/leads.php:469 admin/leads.php:486
+#: admin/leads.php:500 admin/leads.php:500 admin/leads.php:524
+#: admin/manage-forms.php:317
+msgid "Close"
+msgstr ""
+
+#: admin/form-generator.php:2204
+msgid "Choose from 20+ conversion-optimized, pre-built templates or start with a clean slate to rapidly build your custom form structure."
+msgstr ""
+
+#: admin/form-generator.php:2209
+msgid "Search templates (e.g. quote, consultation, booking, demo, survey)..."
+msgstr ""
+
+#: admin/form-generator.php:2212
+msgid "All Templates"
+msgstr ""
+
+#: admin/form-generator.php:2213
+msgid "Lead Gen & Sales"
+msgstr ""
+
+#: admin/form-generator.php:2214
+msgid "Surveys & Feedback"
+msgstr ""
+
+#: admin/form-generator.php:2215
+msgid "Events & Bookings"
+msgstr ""
+
+#: admin/form-generator.php:2216
+msgid "HR & Support"
+msgstr ""
+
+#: admin/form-generator.php:2217
+msgid "Orders & Payments"
+msgstr ""
+
+#: admin/form-generator.php:2228
+msgid "Blank Canvas"
+msgstr ""
+
+#: admin/form-generator.php:2231
+msgid "Start from Scratch"
+msgstr ""
+
+#: admin/form-generator.php:2232
+msgid "Begin with a clean slate and build your own tailored form using the drag-and-drop field palette."
+msgstr ""
+
+#: admin/form-generator.php:2234
+msgid "0 Fields"
+msgstr ""
+
+#: admin/form-generator.php:2235
+msgid "Clean Canvas"
+msgstr ""
+
+#: admin/form-generator.php:2237
+msgid "Create Blank Form"
+msgstr ""
+
+#: admin/form-generator.php:2246
+msgid "Popular"
+msgstr ""
+
+#: admin/form-generator.php:2249 includes/class-wlgf-templates.php:25
+msgid "Classic Contact Form"
+msgstr ""
+
+#: admin/form-generator.php:2250
+msgid "Essential inquiry layout with Full Name, Business Email, Subject line, and Message area."
+msgstr ""
+
+#: admin/form-generator.php:2252 admin/form-generator.php:2358
+#: admin/form-generator.php:2424 admin/form-generator.php:2476
+#: admin/form-generator.php:2554 admin/form-generator.php:2606
+#: admin/form-generator.php:2736
+msgid "6 Fields"
+msgstr ""
+
+#: admin/form-generator.php:2253 includes/class-wlgf-templates.php:35
+msgid "Lead Gen"
+msgstr ""
+
+#: admin/form-generator.php:2255 admin/form-generator.php:2278
+#: admin/form-generator.php:2299 admin/form-generator.php:2317
+#: admin/form-generator.php:2340 admin/form-generator.php:2361
+#: admin/form-generator.php:2379 admin/form-generator.php:2402
+#: admin/form-generator.php:2428 admin/form-generator.php:2454
+#: admin/form-generator.php:2480 admin/form-generator.php:2506
+#: admin/form-generator.php:2532 admin/form-generator.php:2558
+#: admin/form-generator.php:2584 admin/form-generator.php:2610
+#: admin/form-generator.php:2636 admin/form-generator.php:2662
+#: admin/form-generator.php:2688 admin/form-generator.php:2714
+#: admin/form-generator.php:2740 admin/form-generator.php:2766
+#: admin/form-generator.php:2792 admin/form-generator.php:2818
+#: admin/form-generator.php:2844
+msgid "Use Template"
+msgstr ""
+
+#: admin/form-generator.php:2265 admin/form-generator.php:2275
+msgid "Calculation"
+msgstr ""
+
+#: admin/form-generator.php:2267 admin/form-generator.php:2703
+#: admin/form-generator.php:2807
+msgid "PRO • Calc"
+msgstr ""
+
+#: admin/form-generator.php:2271
+msgid "Request a Quote & Cost Estimator"
+msgstr ""
+
+#: admin/form-generator.php:2272
+msgid "Multi-step scope wizard with Service dropdown, Budget range, Target Date, and Dynamic Price Calculation."
+msgstr ""
+
+#: admin/form-generator.php:2274 admin/form-generator.php:2528
+msgid "3 Steps • 8 Fields"
+msgstr ""
+
+#: admin/form-generator.php:2280 admin/form-generator.php:2342
+#: admin/form-generator.php:2404 admin/form-generator.php:2430
+#: admin/form-generator.php:2456 admin/form-generator.php:2482
+#: admin/form-generator.php:2508 admin/form-generator.php:2534
+#: admin/form-generator.php:2560 admin/form-generator.php:2586
+#: admin/form-generator.php:2612 admin/form-generator.php:2638
+#: admin/form-generator.php:2664 admin/form-generator.php:2690
+#: admin/form-generator.php:2716 admin/form-generator.php:2742
+#: admin/form-generator.php:2768 admin/form-generator.php:2794
+#: admin/form-generator.php:2820 admin/form-generator.php:2846
+msgid "Unlock with Pro"
+msgstr ""
+
+#: admin/form-generator.php:2290
+msgid "High Converting"
+msgstr ""
+
+#: admin/form-generator.php:2293
+msgid "B2B Demo Booking & Discovery"
+msgstr ""
+
+#: admin/form-generator.php:2294
+msgid "Qualify prospective clients with Work Email, Company Name, Team Size, and Current Toolset."
+msgstr ""
+
+#: admin/form-generator.php:2296 admin/form-generator.php:2314
+#: admin/form-generator.php:2580
+msgid "7 Fields"
+msgstr ""
+
+#: admin/form-generator.php:2297
+msgid "B2B Sales"
+msgstr ""
+
+#: admin/form-generator.php:2308
+msgid "Real Estate"
+msgstr ""
+
+#: admin/form-generator.php:2311
+msgid "Real Estate Property Tour & Inquiry"
+msgstr ""
+
+#: admin/form-generator.php:2312
+msgid "Capture prospective buyer interest with Property Type, Budget, Financing status, and Tour Date."
+msgstr ""
+
+#: admin/form-generator.php:2315
+msgid "Property"
+msgstr ""
+
+#: admin/form-generator.php:2327 admin/form-generator.php:2519
+#: admin/form-generator.php:2545
+msgid "Multi-Step"
+msgstr ""
+
+#: admin/form-generator.php:2329 admin/form-generator.php:2521
+#: admin/form-generator.php:2547
+msgid "PRO • Wizard"
+msgstr ""
+
+#: admin/form-generator.php:2333
+msgid "Agency Client Intake & Project Scope"
+msgstr ""
+
+#: admin/form-generator.php:2334
+msgid "Organized 3-step intake covering Client Brand, Deliverable Selection, Budget, and Target Launch Date."
+msgstr ""
+
+#: admin/form-generator.php:2336
+msgid "3 Steps • 9 Fields"
+msgstr ""
+
+#: admin/form-generator.php:2337
+msgid "Agency"
+msgstr ""
+
+#: admin/form-generator.php:2352 admin/form-generator.php:2788
+msgid "Booking"
+msgstr ""
+
+#: admin/form-generator.php:2355
+msgid "Free Consultation Scheduling"
+msgstr ""
+
+#: admin/form-generator.php:2356
+msgid "Appointment intake with Topic interest, Preferred Date, Morning/Afternoon slot, and Phone contact."
+msgstr ""
+
+#: admin/form-generator.php:2359
+msgid "Consulting"
+msgstr ""
+
+#: admin/form-generator.php:2370
+msgid "Lead Magnet"
+msgstr ""
+
+#: admin/form-generator.php:2373
+msgid "Gated E-Book & Whitepaper Download"
+msgstr ""
+
+#: admin/form-generator.php:2374
+msgid "High-conversion opt-in collecting Business Email, Job Title, Company, and Industry."
+msgstr ""
+
+#: admin/form-generator.php:2376 admin/form-generator.php:2398
+msgid "5 Fields"
+msgstr ""
+
+#: admin/form-generator.php:2377
+msgid "Opt-In"
+msgstr ""
+
+#: admin/form-generator.php:2389
+msgid "Waitlist"
+msgstr ""
+
+#: admin/form-generator.php:2391
+msgid "PRO • Waitlist"
+msgstr ""
+
+#: admin/form-generator.php:2395
+msgid "SaaS Early Access & Beta Waitlist"
+msgstr ""
+
+#: admin/form-generator.php:2396
+msgid "Build pre-launch excitement with Email, Role, Primary Use Case, and Referral Source."
+msgstr ""
+
+#: admin/form-generator.php:2399
+msgid "Pre-Launch"
+msgstr ""
+
+#: admin/form-generator.php:2415
+msgid "NPS Survey"
+msgstr ""
+
+#: admin/form-generator.php:2417
+msgid "PRO • NPS"
+msgstr ""
+
+#: admin/form-generator.php:2421
+msgid "CSAT & Net Promoter Score (NPS)"
+msgstr ""
+
+#: admin/form-generator.php:2422
+msgid "Measure client loyalty with 0-10 NPS Matrix, 5-Star Service Rating, and Open Feedback."
+msgstr ""
+
+#: admin/form-generator.php:2425
+msgid "NPS Matrix"
+msgstr ""
+
+#: admin/form-generator.php:2441 admin/form-generator.php:2623
+msgid "File Upload"
+msgstr ""
+
+#: admin/form-generator.php:2443
+msgid "PRO • File"
+msgstr ""
+
+#: admin/form-generator.php:2447
+msgid "Website UX Feedback & Bug Report"
+msgstr ""
+
+#: admin/form-generator.php:2448
+msgid "Capture usability friction with Page URL, Issue Category, Severity, and Screenshot Upload."
+msgstr ""
+
+#: admin/form-generator.php:2450
+msgid "6 Fields • Upload"
+msgstr ""
+
+#: admin/form-generator.php:2451
+msgid "QA / UX"
+msgstr ""
+
+#: admin/form-generator.php:2467
+msgid "Team Pulse"
+msgstr ""
+
+#: admin/form-generator.php:2469
+msgid "PRO • Pulse"
+msgstr ""
+
+#: admin/form-generator.php:2473
+msgid "Employee Pulse & Team Feedback"
+msgstr ""
+
+#: admin/form-generator.php:2474
+msgid "Gather internal sentiment with Department selection, Work Environment Rating, and Wellness checks."
+msgstr ""
+
+#: admin/form-generator.php:2477
+msgid "HR Pulse"
+msgstr ""
+
+#: admin/form-generator.php:2493 admin/form-generator.php:2502
+msgid "5-Star Rating"
+msgstr ""
+
+#: admin/form-generator.php:2495
+msgid "PRO • Rating"
+msgstr ""
+
+#: admin/form-generator.php:2499
+msgid "Product Review & Testimonial Collector"
+msgstr ""
+
+#: admin/form-generator.php:2500
+msgid "Collect authentic social proof with Product Name, 5-Star Rating, Review Headline, and Permission toggle."
+msgstr ""
+
+#: admin/form-generator.php:2503
+msgid "Testimonials"
+msgstr ""
+
+#: admin/form-generator.php:2525
+msgid "Conference & Webinar Registration"
+msgstr ""
+
+#: admin/form-generator.php:2526
+msgid "Step 1 Attendee Profile, Step 2 Session Track Selection, Step 3 Special Accessibility / Dietary notes."
+msgstr ""
+
+#: admin/form-generator.php:2529
+msgid "Webinar"
+msgstr ""
+
+#: admin/form-generator.php:2551
+msgid "Workshop & Masterclass Enrollment"
+msgstr ""
+
+#: admin/form-generator.php:2552
+msgid "Course registration with Participant Name, Experience Level, Workshop Slot, and Learning Goals."
+msgstr ""
+
+#: admin/form-generator.php:2555
+msgid "Workshop"
+msgstr ""
+
+#: admin/form-generator.php:2571
+msgid "VIP Booking"
+msgstr ""
+
+#: admin/form-generator.php:2573
+msgid "PRO • VIP"
+msgstr ""
+
+#: admin/form-generator.php:2577
+msgid "Restaurant Table & VIP Reservation"
+msgstr ""
+
+#: admin/form-generator.php:2578
+msgid "Table booking with Guest Count, Reservation Date/Time, Seating Area (Patio/Dining/VIP), and Requests."
+msgstr ""
+
+#: admin/form-generator.php:2581
+msgid "Reservation"
+msgstr ""
+
+#: admin/form-generator.php:2597
+msgid "Non-Profit"
+msgstr ""
+
+#: admin/form-generator.php:2599
+msgid "PRO • Non-Profit"
+msgstr ""
+
+#: admin/form-generator.php:2603
+msgid "Community Volunteer Signup"
+msgstr ""
+
+#: admin/form-generator.php:2604
+msgid "Onboard volunteers with Skill Checklist, Availability Slots (Weekdays/Weekends), and Emergency Contact."
+msgstr ""
+
+#: admin/form-generator.php:2607
+msgid "Volunteer"
+msgstr ""
+
+#: admin/form-generator.php:2625
+msgid "PRO • File Upload"
+msgstr ""
+
+#: admin/form-generator.php:2629
+msgid "Job Application & Resume Uploader"
+msgstr ""
+
+#: admin/form-generator.php:2630
+msgid "Streamline recruiting with Applicant Info, Role Applied For, Portfolio URL, and Resume File Upload."
+msgstr ""
+
+#: admin/form-generator.php:2632 admin/form-generator.php:2658
+msgid "7 Fields • Upload"
+msgstr ""
+
+#: admin/form-generator.php:2633
+msgid "Careers"
+msgstr ""
+
+#: admin/form-generator.php:2649
+msgid "Helpdesk"
+msgstr ""
+
+#: admin/form-generator.php:2651
+msgid "PRO • Support"
+msgstr ""
+
+#: admin/form-generator.php:2655
+msgid "IT Helpdesk & Priority Support Ticket"
+msgstr ""
+
+#: admin/form-generator.php:2656
+msgid "Technical ticketing with Severity Matrix, Affected System, Issue Description, and Error Logs."
+msgstr ""
+
+#: admin/form-generator.php:2659
+msgid "Support"
+msgstr ""
+
+#: admin/form-generator.php:2675
+msgid "Instant Checkout"
+msgstr ""
+
+#: admin/form-generator.php:2677 admin/form-generator.php:2729
+msgid "PRO • Checkout"
+msgstr ""
+
+#: admin/form-generator.php:2681
+msgid "Digital Product Order & Instant Checkout"
+msgstr ""
+
+#: admin/form-generator.php:2682
+msgid "Product package selection, License Tier, Dynamic Total Calculation, and Stripe / PayPal checkout."
+msgstr ""
+
+#: admin/form-generator.php:2684
+msgid "Calc & Checkout"
+msgstr ""
+
+#: admin/form-generator.php:2685
+msgid "E-Commerce"
+msgstr ""
+
+#: admin/form-generator.php:2701 admin/form-generator.php:2710
+msgid "Dynamic Pricing"
+msgstr ""
+
+#: admin/form-generator.php:2707
+msgid "Monthly Service Retainer Agreement"
+msgstr ""
+
+#: admin/form-generator.php:2708
+msgid "Client Retainer Plan, Monthly Hours slider, Calculation Badge, and Payment Method."
+msgstr ""
+
+#: admin/form-generator.php:2711
+msgid "Retainer"
+msgstr ""
+
+#: admin/form-generator.php:2727
+msgid "Donations"
+msgstr ""
+
+#: admin/form-generator.php:2733
+msgid "Nonprofit Donation & Contribution"
+msgstr ""
+
+#: admin/form-generator.php:2734
+msgid "Donor Details, Giving Tier radio presets ($25, $50, $100, Custom), and Dedication Message."
+msgstr ""
+
+#: admin/form-generator.php:2737
+msgid "Giving"
+msgstr ""
+
+#: admin/form-generator.php:2753 admin/form-generator.php:2762
+msgid "E-Signature"
+msgstr ""
+
+#: admin/form-generator.php:2755
+msgid "PRO • E-Sign"
+msgstr ""
+
+#: admin/form-generator.php:2759
+msgid "Gym & Fitness Membership Application"
+msgstr ""
+
+#: admin/form-generator.php:2760
+msgid "Membership tier selection, contact details, medical consent, and digital touch signature pad."
+msgstr ""
+
+#: admin/form-generator.php:2763
+msgid "Fitness"
+msgstr ""
+
+#: admin/form-generator.php:2779
+msgid "Healthcare"
+msgstr ""
+
+#: admin/form-generator.php:2781
+msgid "PRO • Medical"
+msgstr ""
+
+#: admin/form-generator.php:2785
+msgid "Dental & Medical Appointment Booking"
+msgstr ""
+
+#: admin/form-generator.php:2786
+msgid "Patient appointment scheduling with treatment concern, date picker, and symptom notes."
+msgstr ""
+
+#: admin/form-generator.php:2789
+msgid "Medical"
+msgstr ""
+
+#: admin/form-generator.php:2805
+msgid "Math Formula"
+msgstr ""
+
+#: admin/form-generator.php:2811
+msgid "Website & Project Cost Estimator"
+msgstr ""
+
+#: admin/form-generator.php:2812
+msgid "Interactive cost calculator with dynamic math formula, add-on checkboxes, and instant total quote."
+msgstr ""
+
+#: admin/form-generator.php:2814
+msgid "Math Engine"
+msgstr ""
+
+#: admin/form-generator.php:2815
+msgid "Instant Quote"
+msgstr ""
+
+#: admin/form-generator.php:2831 admin/form-generator.php:2841
+msgid "Automotive"
+msgstr ""
+
+#: admin/form-generator.php:2833
+msgid "PRO • Upload"
+msgstr ""
+
+#: admin/form-generator.php:2837
+msgid "Automotive Repair & Service Quote"
+msgstr ""
+
+#: admin/form-generator.php:2838
+msgid "Vehicle make/model, repair service dropdown, photo upload of issue, and instant quote dispatch."
+msgstr ""
+
+#: admin/form-generator.php:2840
+msgid "Quote"
+msgstr ""
+
+#: admin/form-generator.php:2861
+msgid "Live Form Preview"
+msgstr ""
+
+#: admin/form-generator.php:2863
+msgid "Desktop View (100%)"
+msgstr ""
+
+#: admin/form-generator.php:2863 admin/settings.php:2755
+msgid "Desktop"
+msgstr ""
+
+#: admin/form-generator.php:2864
+msgid "Tablet View (768px)"
+msgstr ""
+
+#: admin/form-generator.php:2864
+msgid "Tablet"
+msgstr ""
+
+#: admin/form-generator.php:2865
+msgid "Mobile View (375px)"
+msgstr ""
+
+#: admin/form-generator.php:2865 admin/settings.php:2758
+msgid "Mobile"
+msgstr ""
+
+#: admin/form-generator.php:2875
+msgid "Close Preview"
+msgstr ""
+
+#: admin/form-generator.php:2886
+msgid "Unlock Pro Template & Advanced Controls"
+msgstr ""
+
+#: admin/form-generator.php:2888
+msgid "This high-converting funnel requires Lead Generation Form Pro to unlock interactive wizards, dynamic math calculations, live payments, and unlimited lead capture."
+msgstr ""
+
+#: admin/form-generator.php:2891
+msgid "Interactive Multi-Step Form Wizards & Progress Bars"
+msgstr ""
+
+#: admin/form-generator.php:2892
+msgid "Real-Time Dynamic Math Calculations & Price Estimators"
+msgstr ""
+
+#: admin/form-generator.php:2893
+msgid "Live Stripe & PayPal Payments with Instant Checkout"
+msgstr ""
+
+#: admin/form-generator.php:2894
+msgid "Unlimited Lead Submissions & CSV Spreadsheet Exports"
+msgstr ""
+
+#: admin/form-generator.php:2898
+msgid "Get Lead Generation Form Pro"
+msgstr ""
+
+#: admin/free-vs-pro.php:26
+msgid "Free vs. Pro Comparison"
+msgstr ""
+
+#: admin/free-vs-pro.php:27
+msgid "Discover how upgrading to Lead Generation Form Pro unlocks enterprise lead recovery, WhatsApp contact hubs, e-signatures, and instant payments."
+msgstr ""
+
+#: admin/free-vs-pro.php:32
+msgid "Live Demo"
+msgstr ""
+
+#: admin/free-vs-pro.php:35
+msgid "Upgrade to Pro — $49"
+msgstr ""
+
+#: admin/free-vs-pro.php:44
+msgid "One-Time Payment • Zero Monthly Fees"
+msgstr ""
+
+#: admin/free-vs-pro.php:47
+msgid "Stop Losing 70% of Your Website Visitors. Turn Every Click into a Qualified Lead."
+msgstr ""
+
+#: admin/free-vs-pro.php:50
+msgid "Most WordPress forms sit quietly on contact pages while 97% of visitors browse and leave. Pro gives you 1-tap WhatsApp chat, exit-intent popups, abandoned lead auto-capture, digital signature pads, and visual Kanban sales pipelines — all inside your WordPress dashboard."
+msgstr ""
+
+#: admin/free-vs-pro.php:56 admin/free-vs-pro.php:537
+msgid "Get Lead Generation Form Pro — $49 (One-Time)"
+msgstr ""
+
+#: admin/free-vs-pro.php:59
+msgid "Explore Live Interactive Demo"
+msgstr ""
+
+#: admin/free-vs-pro.php:65
+msgid "One-Time Payment ($49)"
+msgstr ""
+
+#: admin/free-vs-pro.php:66
+msgid "Lifetime Free Updates"
+msgstr ""
+
+#: admin/free-vs-pro.php:67 admin/free-vs-pro.php:118
+msgid "1 Year Priority Direct Support"
+msgstr ""
+
+#: admin/free-vs-pro.php:68
+msgid "100% GDPR Compliant (Zero SaaS tracking)"
+msgstr ""
+
+#: admin/free-vs-pro.php:77
+msgid "Feature / Capability"
+msgstr ""
+
+#: admin/free-vs-pro.php:78
+msgid "Free Edition"
+msgstr ""
+
+#: admin/free-vs-pro.php:81
+msgid "Pro Edition ($49 One-Time)"
+msgstr ""
+
+#: admin/free-vs-pro.php:90
+msgid "Pricing & Licensing"
+msgstr ""
+
+#: admin/free-vs-pro.php:95
+msgid "Pricing & License Model"
+msgstr ""
+
+#: admin/free-vs-pro.php:96
+msgid "License terms and renewal cost."
+msgstr ""
+
+#: admin/free-vs-pro.php:98
+msgid "$0 (WordPress.org)"
+msgstr ""
+
+#: admin/free-vs-pro.php:100
+msgid "$49 (One-Time, Lifetime Updates)"
+msgstr ""
+
+#: admin/free-vs-pro.php:105
+msgid "Website Usage"
+msgstr ""
+
+#: admin/free-vs-pro.php:106
+msgid "Permitted domain usage per license."
+msgstr ""
+
+#: admin/free-vs-pro.php:108
+msgid "1 Website"
+msgstr ""
+
+#: admin/free-vs-pro.php:109
+msgid "1 Website (Upgrades Available)"
+msgstr ""
+
+#: admin/free-vs-pro.php:113
+msgid "Customer Support Level"
+msgstr ""
+
+#: admin/free-vs-pro.php:114
+msgid "Direct assistance and turnaround SLA."
+msgstr ""
+
+#: admin/free-vs-pro.php:116
+msgid "Community Forum"
+msgstr ""
+
+#: admin/free-vs-pro.php:125
+msgid "Form Builder & Column Layouts"
+msgstr ""
+
+#: admin/free-vs-pro.php:130
+msgid "Visual Drag-and-Drop Builder"
+msgstr ""
+
+#: admin/free-vs-pro.php:131
+msgid "Intuitive layout builder with real-time field reordering."
+msgstr ""
+
+#: admin/free-vs-pro.php:134
+msgid "Yes (Enhanced UI)"
+msgstr ""
+
+#: admin/free-vs-pro.php:138
+msgid "Unlimited Forms & Fields"
+msgstr ""
+
+#: admin/free-vs-pro.php:139
+msgid "Create as many lead forms and questions as your site needs."
+msgstr ""
+
+#: admin/free-vs-pro.php:141 admin/free-vs-pro.php:142
+msgid "Yes (Unlimited)"
+msgstr ""
+
+#: admin/free-vs-pro.php:146
+msgid "1-Click Multi-Column Switcher (1/2, 1/3, 1/4)"
+msgstr ""
+
+#: admin/free-vs-pro.php:147
+msgid "Build compact, professional side-by-side field grids without CSS code."
+msgstr ""
+
+#: admin/free-vs-pro.php:149
+msgid "Single Column Only"
+msgstr ""
+
+#: admin/free-vs-pro.php:151
+msgid "Yes (Instant 100%, 50%, 33%, 25%)"
+msgstr ""
+
+#: admin/free-vs-pro.php:156
+msgid "Pre-Built Industry Templates Marketplace"
+msgstr ""
+
+#: admin/free-vs-pro.php:157
+msgid "Ready-to-deploy lead forms optimized for conversion."
+msgstr ""
+
+#: admin/free-vs-pro.php:159
+msgid "5 Basic Forms"
+msgstr ""
+
+#: admin/free-vs-pro.php:161
+msgid "25+ Enterprise Niche Templates"
+msgstr ""
+
+#: admin/free-vs-pro.php:166 admin/settings.php:1807
+msgid "Multi-Step Form Wizard & Progress Bar"
+msgstr ""
+
+#: admin/free-vs-pro.php:167
+msgid "Break complex forms into interactive step cards (Circles, Bars, Breadcrumbs)."
+msgstr ""
+
+#: admin/free-vs-pro.php:171
+msgid "Yes (Circles, Bar & Breadcrumbs)"
+msgstr ""
+
+#: admin/free-vs-pro.php:176
+msgid "Per-Step Client-Side Validation"
+msgstr ""
+
+#: admin/free-vs-pro.php:177
+msgid "Validates required inputs before allowing users to advance to the next step."
+msgstr ""
+
+#: admin/free-vs-pro.php:188
+msgid "Traffic Capture, CRO & Sales Acceleration"
+msgstr ""
+
+#: admin/free-vs-pro.php:193 admin/settings.php:1362
+msgid "Floating Multi-Channel Contact Launcher"
+msgstr ""
+
+#: admin/free-vs-pro.php:194
+msgid "Pulsing corner contact button with 1-tap WhatsApp chat & phone calling."
+msgstr ""
+
+#: admin/free-vs-pro.php:198
+msgid "Yes (7 Positions, WhatsApp, Call)"
+msgstr ""
+
+#: admin/free-vs-pro.php:203
+msgid "Exit-Intent & Scroll Depth Popups"
+msgstr ""
+
+#: admin/free-vs-pro.php:204
+msgid "Capture abandoning visitors right as their mouse moves toward the exit button."
+msgstr ""
+
+#: admin/free-vs-pro.php:208
+msgid "Yes (Exit, Timed, Scroll Depth)"
+msgstr ""
+
+#: admin/free-vs-pro.php:213
+msgid "Real-Time Abandoned Lead Auto-Capture"
+msgstr ""
+
+#: admin/free-vs-pro.php:214
+msgid "Silently captures email and phone the moment typed, even if they never hit submit."
+msgstr ""
+
+#: admin/free-vs-pro.php:218
+msgid "Yes (Instant Auto-Save on Blur)"
+msgstr ""
+
+#: admin/free-vs-pro.php:223
+msgid "Mini-CRM Kanban Sales Pipeline"
+msgstr ""
+
+#: admin/free-vs-pro.php:224
+msgid "Track prospects across 6 visual draggable stages from New to Converted."
+msgstr ""
+
+#: admin/free-vs-pro.php:226
+msgid "Table View Only"
+msgstr ""
+
+#: admin/free-vs-pro.php:228
+msgid "Yes (6 Draggable Sales Stages)"
+msgstr ""
+
+#: admin/free-vs-pro.php:233
+msgid "1-Click WhatsApp & Phone from Lead Cards"
+msgstr ""
+
+#: admin/free-vs-pro.php:234
+msgid "Launch instant sales outreach directly from lead records."
+msgstr ""
+
+#: admin/free-vs-pro.php:238
+msgid "Yes (Instant Outreach)"
+msgstr ""
+
+#: admin/free-vs-pro.php:245
+msgid "E-Signatures, Dynamic Math & Conditional Logic"
+msgstr ""
+
+#: admin/free-vs-pro.php:250
+msgid "HTML5 Canvas Digital E-Signature Pad"
+msgstr ""
+
+#: admin/free-vs-pro.php:251
+msgid "High-DPI touch, mouse, and stylus signature capture for waivers and contracts."
+msgstr ""
+
+#: admin/free-vs-pro.php:255
+msgid "Yes (Touch, Mouse & Stylus)"
+msgstr ""
+
+#: admin/free-vs-pro.php:260
+msgid "Pure-PHP Vector PDF Invoices & Receipts"
+msgstr ""
+
+#: admin/free-vs-pro.php:261
+msgid "Automated PDF generation with legal verification certificate and signature box."
+msgstr ""
+
+#: admin/free-vs-pro.php:265
+msgid "Yes (With Legal Signature Box)"
+msgstr ""
+
+#: admin/free-vs-pro.php:270
+msgid "Real-Time Dynamic Math & Price Estimator"
+msgstr ""
+
+#: admin/free-vs-pro.php:271
+msgid "Zero-eval secure formula engine for price quotes, loan rates, and calculators."
+msgstr ""
+
+#: admin/free-vs-pro.php:275
+msgid "Yes (Zero-eval Secure Parser)"
+msgstr ""
+
+#: admin/free-vs-pro.php:280
+msgid "Visual Conditional Logic (AND / OR)"
+msgstr ""
+
+#: admin/free-vs-pro.php:281
+msgid "Show or hide fields dynamically based on user selections."
+msgstr ""
+
+#: admin/free-vs-pro.php:285
+msgid "Yes (Multi-Rule Branching)"
+msgstr ""
+
+#: admin/free-vs-pro.php:292
+msgid "Online Payments & Checkout"
+msgstr ""
+
+#: admin/free-vs-pro.php:297
+msgid "Stripe Elements Live Payments (SCA 3D Secure)"
+msgstr ""
+
+#: admin/free-vs-pro.php:298
+msgid "Accept Credit Cards, Apple Pay, and Google Pay directly inside forms."
+msgstr ""
+
+#: admin/free-vs-pro.php:302
+msgid "Yes (Credit Card, Apple/Google Pay)"
+msgstr ""
+
+#: admin/free-vs-pro.php:307
+msgid "PayPal Smart Buttons Checkout"
+msgstr ""
+
+#: admin/free-vs-pro.php:308
+msgid "Accept PayPal balance, Pay in 4, and major debit/credit cards."
+msgstr ""
+
+#: admin/free-vs-pro.php:312
+msgid "Yes (PayPal, Pay in 4)"
+msgstr ""
+
+#: admin/free-vs-pro.php:319
+msgid "Enterprise Anti-Abuse & Security Suite"
+msgstr ""
+
+#: admin/free-vs-pro.php:324
+msgid "Server-Side Automated IP Rate Limiting"
+msgstr ""
+
+#: admin/free-vs-pro.php:325
+msgid "Strict limit of 5 submissions per 120s per IP to halt brute-force bot flood."
+msgstr ""
+
+#: admin/free-vs-pro.php:329
+msgid "Yes (5 submissions / 120s limit)"
+msgstr ""
+
+#: admin/free-vs-pro.php:334
+msgid "Smart Decoy Honeypot Trap"
+msgstr ""
+
+#: admin/free-vs-pro.php:335
+msgid "Invisible bot field that silently discards automated spam without human friction."
+msgstr ""
+
+#: admin/free-vs-pro.php:337
+msgid "Basic Honeypot"
+msgstr ""
+
+#: admin/free-vs-pro.php:339
+msgid "Yes (Stealth Silent Drop)"
+msgstr ""
+
+#: admin/free-vs-pro.php:344
+msgid "Exploit & SQLi Heuristic Fuzzing Filter"
+msgstr ""
+
+#: admin/free-vs-pro.php:345
+msgid "Detects and drops malicious SQL injection and attack payloads automatically."
+msgstr ""
+
+#: admin/free-vs-pro.php:349
+msgid "Yes (Active Attack Drop)"
+msgstr ""
+
+#: admin/free-vs-pro.php:354
+msgid "Cloudflare Turnstile Bot Prevention"
+msgstr ""
+
+#: admin/free-vs-pro.php:355
+msgid "Modern privacy-first, frictionless verification without image puzzles."
+msgstr ""
+
+#: admin/free-vs-pro.php:359
+msgid "Yes (Native Turnstile)"
+msgstr ""
+
+#: admin/free-vs-pro.php:364
+msgid "Google reCAPTCHA v3"
+msgstr ""
+
+#: admin/free-vs-pro.php:365
+msgid "Invisible score-based bot defense."
+msgstr ""
+
+#: admin/free-vs-pro.php:367
+msgid "Basic reCAPTCHA v3"
+msgstr ""
+
+#: admin/free-vs-pro.php:369
+msgid "Yes (With Admin Verification Logs)"
+msgstr ""
+
+#: admin/free-vs-pro.php:376
+msgid "Email Delivery & Notifications"
+msgstr ""
+
+#: admin/free-vs-pro.php:381
+msgid "Custom Authenticated SMTP Engine"
+msgstr ""
+
+#: admin/free-vs-pro.php:382
+msgid "Bypass flaky hosting wp_mail with custom SMTP (Gmail, Outlook, Host)."
+msgstr ""
+
+#: admin/free-vs-pro.php:386
+msgid "Yes (DMARC-Safe Header Engine)"
+msgstr ""
+
+#: admin/free-vs-pro.php:391
+msgid "Branded Responsive HTML Auto-Responder"
+msgstr ""
+
+#: admin/free-vs-pro.php:392
+msgid "Send polished, modern branded email receipts with logo and custom colors."
+msgstr ""
+
+#: admin/free-vs-pro.php:394
+msgid "Plain Text"
+msgstr ""
+
+#: admin/free-vs-pro.php:396
+msgid "Yes (Branded HTML Template)"
+msgstr ""
+
+#: admin/free-vs-pro.php:401
+msgid "Dynamic Email Merge Tags ({Name}, {Form})"
+msgstr ""
+
+#: admin/free-vs-pro.php:402
+msgid "Personalize notification subject lines and greetings automatically."
+msgstr ""
+
+#: admin/free-vs-pro.php:406
+msgid "Yes (Full Token Resolver)"
+msgstr ""
+
+#: admin/free-vs-pro.php:411
+msgid "Multi-Admin CC Notification Routing"
+msgstr ""
+
+#: admin/free-vs-pro.php:412
+msgid "Deliver copies of new leads to multiple team emails or via shortcode."
+msgstr ""
+
+#: admin/free-vs-pro.php:416
+msgid "Yes (Global + Shortcode CC)"
+msgstr ""
+
+#: admin/free-vs-pro.php:421
+msgid "Excel & CSV Lead Data Export"
+msgstr ""
+
+#: admin/free-vs-pro.php:422
+msgid "Export captured leads with clean column formatting."
+msgstr ""
+
+#: admin/free-vs-pro.php:426
+msgid "Yes (With Filtered Views)"
+msgstr ""
+
+#: admin/free-vs-pro.php:431
+msgid "Headless REST API & Webhooks"
+msgstr ""
+
+#: admin/free-vs-pro.php:432
+msgid "Connect forms to Next.js, mobile applications, Zapier, and custom CRMs."
+msgstr ""
+
+#: admin/free-vs-pro.php:436
+msgid "Yes (Full JSON REST Suite)"
+msgstr ""
+
+#: admin/free-vs-pro.php:441
+msgid "Drop-off Funnel Diagnostics & Analytics"
+msgstr ""
+
+#: admin/free-vs-pro.php:442
+msgid "Visualize conversion drop-offs and device performance in native charts."
+msgstr ""
+
+#: admin/free-vs-pro.php:444
+msgid "Basic Counts"
+msgstr ""
+
+#: admin/free-vs-pro.php:446
+msgid "Yes (Chart.js Funnels)"
+msgstr ""
+
+#: admin/free-vs-pro.php:457
+msgid "Replace $1,500+/Year in Fragmented SaaS Subscriptions"
+msgstr ""
+
+#: admin/free-vs-pro.php:459
+msgid "Save $1,479 in Year 1"
+msgstr ""
+
+#: admin/free-vs-pro.php:463
+msgid "Why pay monthly recurring subscription fees to 5 different software companies when Lead Generation Form Pro includes everything inside your WordPress site for a single one-time payment?"
+msgstr ""
+
+#: admin/free-vs-pro.php:470
+msgid "Independent SaaS Tool"
+msgstr ""
+
+#: admin/free-vs-pro.php:471
+msgid "What It Does"
+msgstr ""
+
+#: admin/free-vs-pro.php:472
+msgid "Typical Cost / Year"
+msgstr ""
+
+#: admin/free-vs-pro.php:473
+msgid "Included in Lead Generation Form Pro?"
+msgstr ""
+
+#: admin/free-vs-pro.php:479
+msgid "Exit-Intent Popups & Floating Bars"
+msgstr ""
+
+#: admin/free-vs-pro.php:481 admin/free-vs-pro.php:487
+#: admin/free-vs-pro.php:493 admin/free-vs-pro.php:499
+#: admin/free-vs-pro.php:505 admin/free-vs-pro.php:511
+msgid "Included ($0 recurring)"
+msgstr ""
+
+#: admin/free-vs-pro.php:485
+msgid "Floating WhatsApp & Call Launcher"
+msgstr ""
+
+#: admin/free-vs-pro.php:491
+msgid "Abandoned Lead Auto-Recovery"
+msgstr ""
+
+#: admin/free-vs-pro.php:497
+msgid "Digital E-Signatures & PDF Invoices"
+msgstr ""
+
+#: admin/free-vs-pro.php:503
+msgid "Visual Kanban Pipeline & Lead Tracking"
+msgstr ""
+
+#: admin/free-vs-pro.php:509
+msgid "Cost Estimators & Online Payments"
+msgstr ""
+
+#: admin/free-vs-pro.php:514
+msgid "TOTAL ANNUAL SOFTWARE COST"
+msgstr ""
+
+#: admin/free-vs-pro.php:516
+msgid "Only $49 One-Time Payment"
+msgstr ""
+
+#: admin/free-vs-pro.php:527
+msgid "Real Form Builder All You Need"
+msgstr ""
+
+#: admin/free-vs-pro.php:530
+msgid "Ready to Triple Your Website Lead Conversion Rates?"
+msgstr ""
+
+#: admin/free-vs-pro.php:533
+msgid "Join smart business owners and marketing agencies who have eliminated expensive monthly subscriptions. Instant delivery, lifetime updates, and priority support."
+msgstr ""
+
+#: admin/free-vs-pro.php:540
+msgid "Explore Live Demo"
+msgstr ""
+
+#: admin/import-export.php:44
+msgid "Import, Export & Combine Forms"
+msgstr ""
+
+#: admin/import-export.php:45
+msgid "Transfer form schemas across websites, backup templates, or combine two existing forms into one composite structure."
+msgstr ""
+
+#: admin/import-export.php:66
+msgid "Export Form Schema"
+msgstr ""
+
+#: admin/import-export.php:71
+msgid "Select Form to Export"
+msgstr ""
+
+#: admin/import-export.php:73
+msgid "-- Choose a Form --"
+msgstr ""
+
+#: admin/import-export.php:94
+msgid "Generate Export Payload"
+msgstr ""
+
+#: admin/import-export.php:98
+msgid "Schema JSON Payload:"
+msgstr ""
+
+#: admin/import-export.php:101
+msgid "Copy Payload to Clipboard"
+msgstr ""
+
+#: admin/import-export.php:104
+msgid "Copied schema payload to clipboard!"
+msgstr ""
+
+#: admin/import-export.php:114
+msgid "Import Form Schema"
+msgstr ""
+
+#: admin/import-export.php:120
+msgid "New Form Name"
+msgstr ""
+
+#: admin/import-export.php:127
+msgid "Paste JSON Schema Payload"
+msgstr ""
+
+#: admin/import-export.php:133
+msgid "Import & Create Form"
+msgstr ""
+
+#: admin/import-export.php:143
+msgid "Combine Two Forms"
+msgstr ""
+
+#: admin/import-export.php:148
+msgid "First Form (Top Fields)"
+msgstr ""
+
+#: admin/import-export.php:150
+msgid "-- Choose First Form --"
+msgstr ""
+
+#: admin/import-export.php:172
+msgid "Second Form (Bottom Fields)"
+msgstr ""
+
+#: admin/import-export.php:174
+msgid "-- Choose Second Form --"
+msgstr ""
+
+#: admin/import-export.php:196
+msgid "Merge Forms into New Form"
+msgstr ""
+
+#: admin/import-export.php:207
+msgid "Import/Export & Merge Guide"
+msgstr ""
+
+#: admin/import-export.php:215
+msgid "How does Export work?"
+msgstr ""
+
+#: admin/import-export.php:216
+msgid "Exporting extracts the complete field configuration, labels, validation parameters, and subtypes into portable JSON without including any private lead submissions."
+msgstr ""
+
+#: admin/import-export.php:222
+msgid "How does Import work?"
+msgstr ""
+
+#: admin/import-export.php:223
+msgid "Paste the JSON schema and provide a new form name. The plugin verifies the syntax and creates a brand-new form with a unique ID."
+msgstr ""
+
+#: admin/leads.php:51 admin/manage-forms.php:120
+msgid "Captured Leads"
+msgstr ""
+
+#: admin/leads.php:52
+msgid "Filter, manage, inspect entries, and export captured lead submissions."
+msgstr ""
+
+#: admin/leads.php:68
+msgid "Select Form to View Leads"
+msgstr ""
+
+#: admin/leads.php:76 admin/leads.php:109 admin/leads.php:143
+#: admin/leads.php:145
+msgid "-- Choose a Form to Access Leads --"
+msgstr ""
+
+#: admin/leads.php:100
+msgid "Choose Form:"
+msgstr ""
+
+#: admin/leads.php:103
+msgid "Forms"
+msgstr ""
+
+#: admin/leads.php:135
+msgid "Search form by name or ID (e.g. Real Estate, #3)..."
+msgstr ""
+
+#: admin/leads.php:136
+msgid "Clear search"
+msgstr ""
+
+#: admin/leads.php:168
+msgid "No matching forms found"
+msgstr ""
+
+#: admin/leads.php:169
+msgid "Try typing a different name or form ID number"
+msgstr ""
+
+#: admin/leads.php:181
+msgid "Table View"
+msgstr ""
+
+#: admin/leads.php:185 admin/leads.php:189
+msgid "Kanban Pipeline"
+msgstr ""
+
+#: admin/leads.php:188
+msgid "Kanban Pipeline is available in Pro Edition"
+msgstr ""
+
+#: admin/leads.php:195
+msgid "Unlock Kanban & E-Signatures with Pro"
+msgstr ""
+
+#: admin/leads.php:208
+msgid "Loading Captured Leads..."
+msgstr ""
+
+#: admin/leads.php:209
+msgid "Retrieving inquiries, form submission data, and contact records"
+msgstr ""
+
+#: admin/leads.php:247
+msgid "No Form Selected"
+msgstr ""
+
+#: admin/leads.php:249
+msgid "Select a form from the dropdown selector above to inspect, search, and export its captured lead inquiries."
+msgstr ""
+
+#: admin/leads.php:260
+msgid "Select a form above to populate the Kanban pipeline"
+msgstr ""
+
+#: admin/leads.php:262
+msgid "Choose a form from the dropdown selector above to visualize and manage captured leads across sales pipeline stages."
+msgstr ""
+
+#: admin/leads.php:327
+msgid "Leads Management Guide & Tips"
+msgstr ""
+
+#: admin/leads.php:335
+msgid "Visual Kanban Pipeline (Mini-CRM)"
+msgstr ""
+
+#: admin/leads.php:336
+msgid "Switch from Table View to \"Kanban Pipeline\" to visualize your sales funnel. Each captured inquiry becomes an interactive card with lead details and quick actions (1-click WhatsApp Chat, Direct Phone Call, PDF Summary Download). Easily drag-and-drop cards across the 6 checkpoint stages (New Lead, Contacted, Follow-Up, Qualified, Won / Converted, Abandoned / Draft)—all status updates save automatically in real time without refreshing."
+msgstr ""
+
+#: admin/leads.php:342
+msgid "Searching & Sorting Leads"
+msgstr ""
+
+#: admin/leads.php:343
+msgid "Use the real-time search box above the table to search any field (name, email, phone). Click any column header to sort in ascending or descending order."
+msgstr ""
+
+#: admin/leads.php:349
+msgid "Instant CSV Export"
+msgstr ""
+
+#: admin/leads.php:350
+msgid "Click \"Download All Leads (CSV)\" to stream a fully formatted, RFC-4180 compliant CSV spreadsheet ready for Microsoft Excel, Google Sheets, or CRM import."
+msgstr ""
+
+#: admin/leads.php:356
+msgid "Bulk Deletion"
+msgstr ""
+
+#: admin/leads.php:357
+msgid "Use the checkboxes to select multiple entries and click the red trash icon in the table header to delete multiple leads simultaneously."
+msgstr ""
+
+#: admin/leads.php:369
+msgid "Confirm Lead Deletion"
+msgstr ""
+
+#: admin/leads.php:377
+msgid "Are you sure you want to permanently delete this lead record? This action cannot be undone."
+msgstr ""
+
+#: admin/leads.php:382 admin/manage-forms.php:293 admin/settings.php:2809
+msgid "Cancel"
+msgstr ""
+
+#: admin/leads.php:385
+msgid "Yes, Delete Permanently"
+msgstr ""
+
+#: admin/leads.php:396
+msgid "Lead Internal Notes & Follow-up"
+msgstr ""
+
+#: admin/leads.php:407
+msgid "Add Internal Note / Follow-up Comment:"
+msgstr ""
+
+#: admin/leads.php:408
+msgid "Spoke with client on phone, interested in enterprise package..."
+msgstr ""
+
+#: admin/leads.php:416
+msgid "Save Note"
+msgstr ""
+
+#: admin/leads.php:438
+msgid "Digitally Signed & Verified via Touch/Mouse Canvas"
+msgstr ""
+
+#: admin/leads.php:443
+msgid "Download PNG"
+msgstr ""
+
+#: admin/leads.php:453
+msgid "Media Preview"
+msgstr ""
+
+#: admin/leads.php:461
+msgid "Attachment Preview"
+msgstr ""
+
+#: admin/leads.php:466
+msgid "Open in new tab"
+msgstr ""
+
+#: admin/leads.php:483
+msgid "Download File"
+msgstr ""
+
+#: admin/leads.php:498
+msgid "Lead Submission Details"
+msgstr ""
+
+#: admin/leads.php:510
+msgid "Print Lead"
+msgstr ""
+
+#: admin/leads.php:512
+msgid "Download PDF Summary [Pro Feature]"
+msgstr ""
+
+#: admin/leads.php:513
+msgid "Download PDF"
+msgstr ""
+
+#: admin/leads.php:517
+msgid "Previous Lead"
+msgstr ""
+
+#: admin/leads.php:518
+msgid "Prev Lead"
+msgstr ""
+
+#: admin/leads.php:520 admin/leads.php:521
+msgid "Next Lead"
+msgstr ""
+
+#: admin/manage-forms.php:77
+msgid "View, clone, edit, inspect conversion rates, or copy shortcodes for your published forms."
+msgstr ""
+
+#: admin/manage-forms.php:100
+msgid "Total Forms"
+msgstr ""
+
+#: admin/manage-forms.php:110
+msgid "Total Impressions"
+msgstr ""
+
+#: admin/manage-forms.php:140
+msgid "ID"
+msgstr ""
+
+#: admin/manage-forms.php:141
+msgid "Form Name & Display Mode"
+msgstr ""
+
+#: admin/manage-forms.php:142
+msgid "Views"
+msgstr ""
+
+#: admin/manage-forms.php:143
+msgid "Submissions"
+msgstr ""
+
+#: admin/manage-forms.php:144
+msgid "Conversion Rate"
+msgstr ""
+
+#: admin/manage-forms.php:145
+msgid "Created"
+msgstr ""
+
+#: admin/manage-forms.php:146
+msgid "Last Updated"
+msgstr ""
+
+#: admin/manage-forms.php:147
+msgid "Shortcode"
+msgstr ""
+
+#: admin/manage-forms.php:174
+msgid "Inline Embed"
+msgstr ""
+
+#: admin/manage-forms.php:175
+msgid "Lightbox Popup"
+msgstr ""
+
+#: admin/manage-forms.php:176
+msgid "Slide-in"
+msgstr ""
+
+#: admin/manage-forms.php:177
+msgid "Sticky Bar"
+msgstr ""
+
+#: admin/manage-forms.php:178
+msgid "Floating Widget"
+msgstr ""
+
+#: admin/manage-forms.php:252
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: admin/manage-forms.php:260
+msgid "How does cloning a form work?"
+msgstr ""
+
+#: admin/manage-forms.php:261
+msgid "Cloning creates an exact duplicate of the form fields, labels, and settings with a new unique Form ID so you can tweak it without affecting the original."
+msgstr ""
+
+#: admin/manage-forms.php:267
+msgid "What happens when I delete a form?"
+msgstr ""
+
+#: admin/manage-forms.php:268
+msgid "Deleting a form permanently removes the form configuration and all captured leads associated with that Form ID."
+msgstr ""
+
+#: admin/manage-forms.php:281
+msgid "Confirm Form Deletion"
+msgstr ""
+
+#: admin/manage-forms.php:288
+msgid "All captured leads and submission records for this form will be permanently deleted."
+msgstr ""
+
+#: admin/manage-forms.php:312
+msgid "Form Cloned Successfully!"
+msgstr ""
+
+#: admin/manage-forms.php:325
+msgid "Cloned Form Name"
+msgstr ""
+
+#: admin/manage-forms.php:349
+msgid "The cloned form has been added to your table. You can embed this shortcode anywhere or start customizing its fields immediately."
+msgstr ""
+
+#: admin/manage-forms.php:354
+msgid "Done"
+msgstr ""
+
+#: admin/manage-forms.php:357
+msgid "Edit Cloned Form"
+msgstr ""
+
+#: admin/settings.php:69 includes/class-wlgf-email-template.php:42
+msgid "Hello Admin, a new inquiry has just been submitted on your website. Below are the complete submission details:"
+msgstr ""
+
+#: admin/settings.php:73 includes/class-wlgf-email-template.php:49
+msgid "This notification was automatically sent by Lead Generation Form Pro on %s."
+msgstr ""
+
+#: admin/settings.php:73 includes/class-wlgf-email-template.php:51
+msgid "This notification was automatically sent by Lead Generation Form on %s."
+msgstr ""
+
+#: admin/settings.php:78 includes/install-script.php:19
+#: includes/shortcode-ajax.php:1301 includes/shortcode-ajax.php:1315
+#: includes/shortcode-ajax.php:1514 includes/shortcode-ajax.php:1884
+msgid "Thank you! Your query has been successfully submitted."
+msgstr ""
+
+#: admin/settings.php:168
+msgid "Global Settings"
+msgstr ""
+
+#: admin/settings.php:169
+msgid "Configure user messages, email dispatch engine, SMTP credentials, anti-spam verification, and payments."
+msgstr ""
+
+#: admin/settings.php:179
+msgid "Save Settings"
+msgstr ""
+
+#: admin/settings.php:189
+msgid "General & Confirmation"
+msgstr ""
+
+#: admin/settings.php:192
+msgid "Email & SMTP"
+msgstr ""
+
+#: admin/settings.php:195
+msgid "Anti-Spam & Security"
+msgstr ""
+
+#: admin/settings.php:198
+msgid "Newsletter & Integrations"
+msgstr ""
+
+#: admin/settings.php:201 admin/settings.php:1626
+msgid "Payments & Checkout"
+msgstr ""
+
+#: admin/settings.php:207 admin/settings.php:1639
+msgid "Headless REST API"
+msgstr ""
+
+#: admin/settings.php:213
+msgid "Floating Contact Widget"
+msgstr ""
+
+#: admin/settings.php:238
+msgid "Confirmation Message Designer"
+msgstr ""
+
+#: admin/settings.php:240
+msgid "Interactive"
+msgstr ""
+
+#: admin/settings.php:244
+msgid "Customize the design, layout style, animated badge, headline, message, and color scheme for the Thank You confirmation card displayed upon successful form submission."
+msgstr ""
+
+#: admin/settings.php:250
+msgid "Confirmation Heading / Title"
+msgstr ""
+
+#: admin/settings.php:253
+msgid "Bold primary headline displayed inside the confirmation card."
+msgstr ""
+
+#: admin/settings.php:259
+msgid "Success Message Body"
+msgstr ""
+
+#: admin/settings.php:263
+msgid "The supporting message body text. Allowed HTML: <p>, <strong>, <i>, <br>, <a>, <hr>, <span>."
+msgstr ""
+
+#: admin/settings.php:270
+msgid "Visual Layout Preset"
+msgstr ""
+
+#: admin/settings.php:272
+msgid "Modern Centered Card (Recommended)"
+msgstr ""
+
+#: admin/settings.php:273
+msgid "Accent Left Banner"
+msgstr ""
+
+#: admin/settings.php:274
+msgid "Minimal Inline Pill"
+msgstr ""
+
+#: admin/settings.php:275
+msgid "Glassmorphism Blur Card"
+msgstr ""
+
+#: admin/settings.php:280
+msgid "Badge Icon"
+msgstr ""
+
+#: admin/settings.php:298
+msgid "Enable Pop & Pulse Entry Animation on Badge"
+msgstr ""
+
+#: admin/settings.php:300
+msgid "Creates an interactive spring pop-in effect when the confirmation message appears."
+msgstr ""
+
+#: admin/settings.php:306
+msgid "Confirmation Message Fadeout Duration"
+msgstr ""
+
+#: admin/settings.php:312
+msgid "sec"
+msgstr ""
+
+#: admin/settings.php:315
+msgid "Adjust how long the confirmation message stays visible before automatically fading out (5 to 50 seconds, default: 10s)."
+msgstr ""
+
+#: admin/settings.php:323
+msgid "Color Palette & Styling"
+msgstr ""
+
+#: admin/settings.php:329
+msgid "Card Background"
+msgstr ""
+
+#: admin/settings.php:338
+msgid "Border Color"
+msgstr ""
+
+#: admin/settings.php:347
+msgid "Icon Accent Color"
+msgstr ""
+
+#: admin/settings.php:356
+msgid "Icon Badge BG"
+msgstr ""
+
+#: admin/settings.php:365
+msgid "Heading Color"
+msgstr ""
+
+#: admin/settings.php:374 admin/settings.php:657
+msgid "Body Text Color"
+msgstr ""
+
+#: admin/settings.php:384
+msgid "Reset to Modern Defaults"
+msgstr ""
+
+#: admin/settings.php:394
+msgid "Live Frontend Preview"
+msgstr ""
+
+#: admin/settings.php:396
+msgid "Test the pop animation"
+msgstr ""
+
+#: admin/settings.php:397
+msgid "Replay Animation"
+msgstr ""
+
+#: admin/settings.php:407
+msgid "This interactive preview reflects changes in real-time and matches what users see after form submission."
+msgstr ""
+
+#: admin/settings.php:420
+msgid "Admin Email Notifications"
+msgstr ""
+
+#: admin/settings.php:425
+msgid "Send Lead Notifications to Admin"
+msgstr ""
+
+#: admin/settings.php:427
+msgid "ON - Send instant email per lead submission"
+msgstr ""
+
+#: admin/settings.php:428
+msgid "OFF - Store leads silently in dashboard only"
+msgstr ""
+
+#: admin/settings.php:433
+msgid "When enabled, emails are dispatched to %s with full submission data."
+msgstr ""
+
+#: admin/settings.php:439
+msgid "Dispatch Method"
+msgstr ""
+
+#: admin/settings.php:441
+msgid "Default WordPress Mail (wp_mail)"
+msgstr ""
+
+#: admin/settings.php:442
+msgid "Custom SMTP Server"
+msgstr ""
+
+#: admin/settings.php:445
+msgid "wp_mail relies on your web hosting mail service. If your server blocks PHP mail() or emails land in spam, switch to Custom SMTP Server for authenticated, 100% reliable deliverability."
+msgstr ""
+
+#: admin/settings.php:452
+msgid "CC Additional Admin Email(s)"
+msgstr ""
+
+#: admin/settings.php:456
+msgid "Multi-Recipient"
+msgstr ""
+
+#: admin/settings.php:461
+msgid "Send a carbon copy (Cc:) of each new lead notification to additional team members. Enter valid email addresses separated by commas or line breaks."
+msgstr ""
+
+#: admin/settings.php:463
+msgid "Multi-Admin CC Routing is available in Lead Generation Form Pro."
+msgstr ""
+
+#: admin/settings.php:471 admin/settings.php:477 admin/settings.php:539
+#: admin/settings.php:556 admin/settings.php:2764
+msgid "Send Test Email"
+msgstr ""
+
+#: admin/settings.php:472
+msgid "Verify email dispatch & deliverability"
+msgstr ""
+
+#: admin/settings.php:489
+msgid "SMTP Server Credentials"
+msgstr ""
+
+#: admin/settings.php:494
+msgid "SMTP Host"
+msgstr ""
+
+#: admin/settings.php:499
+msgid "SMTP Username"
+msgstr ""
+
+#: admin/settings.php:504
+msgid "SMTP Password / App Password"
+msgstr ""
+
+#: admin/settings.php:506
+msgid "•••••••••••• (Leave blank to keep existing)"
+msgstr ""
+
+#: admin/settings.php:506
+msgid "Enter SMTP App Password"
+msgstr ""
+
+#: admin/settings.php:507
+msgid "Show/Hide Password"
+msgstr ""
+
+#: admin/settings.php:512
+msgid "For Gmail, standard account passwords will not work. Generate a 16-character App Password at myaccount.google.com/apppasswords with 2-Step Verification enabled."
+msgstr ""
+
+#: admin/settings.php:518
+msgid "Encryption"
+msgstr ""
+
+#: admin/settings.php:526
+msgid "SMTP Port"
+msgstr ""
+
+#: admin/settings.php:535
+msgid "Test SMTP Connection"
+msgstr ""
+
+#: admin/settings.php:552 admin/settings.php:1742
+msgid "Email Notification Template & Branding"
+msgstr ""
+
+#: admin/settings.php:559
+msgid "Live Template Preview"
+msgstr ""
+
+#: admin/settings.php:565
+msgid "Customize the visual layout, branding colors, custom logo, header, body greeting, and footer disclaimer for incoming lead notification emails."
+msgstr ""
+
+#: admin/settings.php:572
+msgid "Brand Logo & Header Design"
+msgstr ""
+
+#: admin/settings.php:577
+msgid "Custom Brand Logo"
+msgstr ""
+
+#: admin/settings.php:584
+msgid "Select / Upload Logo"
+msgstr ""
+
+#: admin/settings.php:587
+msgid "Remove"
+msgstr ""
+
+#: admin/settings.php:592
+msgid "Displayed centered in the email header. Supports PNG, SVG, or JPG."
+msgstr ""
+
+#: admin/settings.php:597
+msgid "Logo Display Max Width (px)"
+msgstr ""
+
+#: admin/settings.php:603
+msgid "Header Title / Subject"
+msgstr ""
+
+#: admin/settings.php:605
+msgid "Smart tags: {form_name}, {site_title}, {form_id}"
+msgstr ""
+
+#: admin/settings.php:611
+msgid "Header Background"
+msgstr ""
+
+#: admin/settings.php:618
+msgid "Header Text Color"
+msgstr ""
+
+#: admin/settings.php:630
+msgid "Body Content & Footer Styling"
+msgstr ""
+
+#: admin/settings.php:635
+msgid "Email Body Greeting Text"
+msgstr ""
+
+#: admin/settings.php:637
+msgid "Appears above the lead fields table in notification emails."
+msgstr ""
+
+#: admin/settings.php:643
+msgid "Email Outer BG"
+msgstr ""
+
+#: admin/settings.php:650
+msgid "Content Card BG"
+msgstr ""
+
+#: admin/settings.php:667
+msgid "Footer Disclaimer & Copyright Note"
+msgstr ""
+
+#: admin/settings.php:674
+msgid "Footer BG"
+msgstr ""
+
+#: admin/settings.php:681
+msgid "Footer Text Color"
+msgstr ""
+
+#: admin/settings.php:693
+msgid "Include \"View Lead in Dashboard\" button in notification emails"
+msgstr ""
+
+#: admin/settings.php:707
+msgid "CAPTCHA & Bot Protection"
+msgstr ""
+
+#: admin/settings.php:712
+msgid "Spam & CAPTCHA Provider"
+msgstr ""
+
+#: admin/settings.php:714
+msgid "None / Disabled"
+msgstr ""
+
+#: admin/settings.php:715
+msgid "Google reCAPTCHA v3 (Invisible)"
+msgstr ""
+
+#: admin/settings.php:717
+msgid "Cloudflare Turnstile (Recommended - Privacy-First, 100% Free)"
+msgstr ""
+
+#: admin/settings.php:719
+msgid "Cloudflare Turnstile [PRO - Upgrade to Unlock]"
+msgstr ""
+
+#: admin/settings.php:731
+msgid "Cloudflare Turnstile is a Pro Feature"
+msgstr ""
+
+#: admin/settings.php:732
+msgid "Frictionless, privacy-first bot detection with zero user puzzles. Upgrade to Pro to activate Cloudflare Turnstile verification."
+msgstr ""
+
+#: admin/settings.php:735 admin/settings.php:860 admin/settings.php:1381
+msgid "Upgrade to Pro to Unlock"
+msgstr ""
+
+#: admin/settings.php:744
+msgid "Cloudflare Turnstile provides smart, non-interactive verification that stops spam bots without annoying user challenges."
+msgstr ""
+
+#: admin/settings.php:744
+msgid "Get Free Turnstile Keys"
+msgstr ""
+
+#: admin/settings.php:749
+msgid "Turnstile Site Key"
+msgstr ""
+
+#: admin/settings.php:754
+msgid "Turnstile Secret Key"
+msgstr ""
+
+#: admin/settings.php:763
+msgid "Google reCAPTCHA v3 Site Key"
+msgstr ""
+
+#: admin/settings.php:768
+msgid "Google reCAPTCHA v3 Secret Key"
+msgstr ""
+
+#: admin/settings.php:771
+msgid "Register your domain at Google reCAPTCHA Admin console to obtain your v3 keys."
+msgstr ""
+
+#: admin/settings.php:782
+msgid "Automated Abuse & Flood Shields"
+msgstr ""
+
+#: admin/settings.php:785
+msgid "Core Defense Active"
+msgstr ""
+
+#: admin/settings.php:790
+msgid "Protect your mail server and database from scripted email flooding, automated pentest fuzzers, and headless browser bots."
+msgstr ""
+
+#: admin/settings.php:796
+msgid "IP Rate Limiting (Anti-Flood)"
+msgstr ""
+
+#: admin/settings.php:799 admin/settings.php:812 admin/settings.php:825
+msgid "ON - Enabled (Default)"
+msgstr ""
+
+#: admin/settings.php:800 admin/settings.php:813 admin/settings.php:826
+msgid "OFF - Disabled"
+msgstr ""
+
+#: admin/settings.php:803
+msgid "Limits rapid submissions to max 3 per 2 mins per IP. Protects inbox and mail server from script loops."
+msgstr ""
+
+#: admin/settings.php:809
+msgid "Smart CSS Decoy Honeypot Trap"
+msgstr ""
+
+#: admin/settings.php:816
+msgid "Injects an invisible off-screen decoy trap. Bots autofill it and are silently dropped without sending emails."
+msgstr ""
+
+#: admin/settings.php:822
+msgid "Vulnerability Scanner & SQLi Shield"
+msgstr ""
+
+#: admin/settings.php:829
+msgid "Auto-detects and drops automated pentest probes testing sleep(), PG_SLEEP, waitfor delay, or UNION SELECT."
+msgstr ""
+
+#: admin/settings.php:840 admin/settings.php:1690
+msgid "Email & Domain Blacklist Protection"
+msgstr ""
+
+#: admin/settings.php:847
+msgid "Active & Blocking"
+msgstr ""
+
+#: admin/settings.php:847
+msgid "Enforcement Paused"
+msgstr ""
+
+#: admin/settings.php:856
+msgid "Email & Domain Blacklist Protection is a Pro Feature"
+msgstr ""
+
+#: admin/settings.php:857 admin/settings.php:868
+msgid "Prevent spam bots, disposable temporary mailboxes, phishing entries, and competitor emails from submitting your forms by filtering specific email addresses or entire domain names."
+msgstr ""
+
+#: admin/settings.php:873
+msgid "Blacklist Enforcement Status"
+msgstr ""
+
+#: admin/settings.php:875
+msgid "ON - Actively block blacklisted emails and domains"
+msgstr ""
+
+#: admin/settings.php:876
+msgid "OFF - Disabled / Paused (Keep list saved, allow all submissions)"
+msgstr ""
+
+#: admin/settings.php:882
+msgid "Enforcement is currently Paused. You can add and manage blocked emails/domains below; they will be enforced once status is set to ON and saved."
+msgstr ""
+
+#: admin/settings.php:890
+msgid "Blocked Email Addresses"
+msgstr ""
+
+#: admin/settings.php:894
+msgid "Exact email addresses to prohibit from submitting. Enter one email per line or separate with commas."
+msgstr ""
+
+#: admin/settings.php:900
+msgid "Blocked Domains & TLDs"
+msgstr ""
+
+#: admin/settings.php:904
+msgid "Block temporary/disposable mail domains, competitor domains, or high-risk TLDs (e.g. mailinator.com, tempmail.com, .xyz, *.ru). One per line or comma-separated."
+msgstr ""
+
+#: admin/settings.php:907
+msgid "Quick Add:"
+msgstr ""
+
+#: admin/settings.php:921
+msgid "Action When Blocked"
+msgstr ""
+
+#: admin/settings.php:923
+msgid "Show Error Notice (Rejects submission with alert)"
+msgstr ""
+
+#: admin/settings.php:924
+msgid "Silent Drop / Honeypot (Pretend success, but silently discard data & send no emails)"
+msgstr ""
+
+#: admin/settings.php:927
+msgid "Silent Drop prevents spam bots and phishers from knowing they have been filtered."
+msgstr ""
+
+#: admin/settings.php:932
+msgid "Custom Rejection Notice"
+msgstr ""
+
+#: admin/settings.php:935
+msgid "Message displayed to frontend visitor when \"Show Error Notice\" is active."
+msgstr ""
+
+#: admin/settings.php:950
+msgid "Email Marketing & Newsletter Integration"
+msgstr ""
+
+#: admin/settings.php:956
+msgid "Primary Newsletter Provider"
+msgstr ""
+
+#: admin/settings.php:959
+msgid "Local WordPress CRM (No External API Required)"
+msgstr ""
+
+#: admin/settings.php:960
+msgid "Mailchimp"
+msgstr ""
+
+#: admin/settings.php:962
+msgid "Brevo (formerly Sendinblue)"
+msgstr ""
+
+#: admin/settings.php:963
+msgid "MailerLite"
+msgstr ""
+
+#: admin/settings.php:964
+msgid "SendGrid Marketing"
+msgstr ""
+
+#: admin/settings.php:965
+msgid "ActiveCampaign"
+msgstr ""
+
+#: admin/settings.php:967
+msgid "Brevo (Sendinblue) [Pro]"
+msgstr ""
+
+#: admin/settings.php:968
+msgid "MailerLite [Pro]"
+msgstr ""
+
+#: admin/settings.php:969
+msgid "SendGrid Marketing [Pro]"
+msgstr ""
+
+#: admin/settings.php:970
+msgid "ActiveCampaign [Pro]"
+msgstr ""
+
+#: admin/settings.php:974
+msgid "Select the service where newsletter subscribers will be pushed when they opt-in upon form submission."
+msgstr ""
+
+#: admin/settings.php:982
+msgid "Built-in Local Subscriber Hub Active"
+msgstr ""
+
+#: admin/settings.php:983
+msgid "Opted-in contacts are tagged with an \"Opted-in\" badge in your Captured Leads table. You can filter and export subscribers anytime in 1-click."
+msgstr ""
+
+#: admin/settings.php:990
+msgid "Mailchimp Configuration"
+msgstr ""
+
+#: admin/settings.php:995
+msgid "Mailchimp API Key"
+msgstr ""
+
+#: admin/settings.php:996
+msgid "e.g. abcd1234efgh5678-us1"
+msgstr ""
+
+#: admin/settings.php:997
+msgid "Leave blank to preserve your currently saved key."
+msgstr ""
+
+#: admin/settings.php:1000
+msgid "Audience / List ID"
+msgstr ""
+
+#: admin/settings.php:1001
+msgid "e.g. 1a2b3c4d5e"
+msgstr ""
+
+#: admin/settings.php:1002
+msgid "Found under Audience > Settings > Audience name and defaults in Mailchimp."
+msgstr ""
+
+#: admin/settings.php:1008
+msgid "Enable Double Opt-In"
+msgstr ""
+
+#: admin/settings.php:1008
+msgid "Mailchimp will send a confirmation link email before adding the contact to your audience."
+msgstr ""
+
+#: admin/settings.php:1013
+msgid "Test Mailchimp Connection"
+msgstr ""
+
+#: admin/settings.php:1024
+msgid "Brevo (Sendinblue) Configuration"
+msgstr ""
+
+#: admin/settings.php:1029
+msgid "Brevo v3 API Key"
+msgstr ""
+
+#: admin/settings.php:1030
+msgid "e.g. xkeysib-..."
+msgstr ""
+
+#: admin/settings.php:1031 admin/settings.php:1057 admin/settings.php:1083
+msgid "Leave blank to preserve currently saved key."
+msgstr ""
+
+#: admin/settings.php:1034 admin/settings.php:1115
+msgid "Target List ID (Numeric)"
+msgstr ""
+
+#: admin/settings.php:1040
+msgid "Test Brevo Connection"
+msgstr ""
+
+#: admin/settings.php:1050
+msgid "MailerLite Configuration"
+msgstr ""
+
+#: admin/settings.php:1055
+msgid "MailerLite API Token"
+msgstr ""
+
+#: admin/settings.php:1056
+msgid "Enter API token..."
+msgstr ""
+
+#: admin/settings.php:1060
+msgid "Target Group ID"
+msgstr ""
+
+#: admin/settings.php:1066
+msgid "Test MailerLite Connection"
+msgstr ""
+
+#: admin/settings.php:1076
+msgid "SendGrid Marketing Configuration"
+msgstr ""
+
+#: admin/settings.php:1081
+msgid "SendGrid API Key"
+msgstr ""
+
+#: admin/settings.php:1082
+msgid "e.g. SG.xxxx..."
+msgstr ""
+
+#: admin/settings.php:1086
+msgid "Target List ID (UUID)"
+msgstr ""
+
+#: admin/settings.php:1092
+msgid "Test SendGrid Connection"
+msgstr ""
+
+#: admin/settings.php:1102
+msgid "ActiveCampaign Configuration"
+msgstr ""
+
+#: admin/settings.php:1107
+msgid "API URL"
+msgstr ""
+
+#: admin/settings.php:1111
+msgid "API Key / Token"
+msgstr ""
+
+#: admin/settings.php:1112
+msgid "API token..."
+msgstr ""
+
+#: admin/settings.php:1121
+msgid "Test ActiveCampaign Connection"
+msgstr ""
+
+#: admin/settings.php:1137
+msgid "Payment Gateway Integrations"
+msgstr ""
+
+#: admin/settings.php:1148
+msgid "Unlock Online Payments in Pro"
+msgstr ""
+
+#: admin/settings.php:1149
+msgid "Collect credit cards via Stripe Elements and PayPal Smart Checkout directly on your forms. Upgrade to Pro to activate payment processing."
+msgstr ""
+
+#: admin/settings.php:1157
+msgid "Enable Global Payments"
+msgstr ""
+
+#: admin/settings.php:1159
+msgid "Disabled (Standard Lead Forms)"
+msgstr ""
+
+#: admin/settings.php:1160
+msgid "Enabled (Allow Payments on Forms)"
+msgstr ""
+
+#: admin/settings.php:1162
+msgid "Master toggle to activate checkout features across published forms."
+msgstr ""
+
+#: admin/settings.php:1166
+msgid "Default Currency"
+msgstr ""
+
+#: admin/settings.php:1181
+msgid "Currency code used when initializing payment transactions."
+msgstr ""
+
+#: admin/settings.php:1188
+msgid "Stripe Elements Integration"
+msgstr ""
+
+#: admin/settings.php:1194
+msgid "Enable Stripe"
+msgstr ""
+
+#: admin/settings.php:1199
+msgid "Stripe Environment Mode"
+msgstr ""
+
+#: admin/settings.php:1201
+msgid "Test Mode (Sandbox)"
+msgstr ""
+
+#: admin/settings.php:1202
+msgid "Live Mode (Production)"
+msgstr ""
+
+#: admin/settings.php:1208
+msgid "Test Publishable Key"
+msgstr ""
+
+#: admin/settings.php:1212
+msgid "Test Secret Key"
+msgstr ""
+
+#: admin/settings.php:1214 admin/settings.php:1226
+msgid "Leave blank to keep saved key."
+msgstr ""
+
+#: admin/settings.php:1220
+msgid "Live Publishable Key"
+msgstr ""
+
+#: admin/settings.php:1224
+msgid "Live Secret Key"
+msgstr ""
+
+#: admin/settings.php:1235
+msgid "PayPal Smart Checkout Integration"
+msgstr ""
+
+#: admin/settings.php:1241
+msgid "Enable PayPal"
+msgstr ""
+
+#: admin/settings.php:1246
+msgid "PayPal Environment Mode"
+msgstr ""
+
+#: admin/settings.php:1248
+msgid "Sandbox (Testing)"
+msgstr ""
+
+#: admin/settings.php:1249
+msgid "Live (Production)"
+msgstr ""
+
+#: admin/settings.php:1255
+msgid "Sandbox Client ID"
+msgstr ""
+
+#: admin/settings.php:1256
+msgid "Enter Sandbox Client ID..."
+msgstr ""
+
+#: admin/settings.php:1259
+msgid "Sandbox Secret"
+msgstr ""
+
+#: admin/settings.php:1260
+msgid "Enter Sandbox Secret..."
+msgstr ""
+
+#: admin/settings.php:1261 admin/settings.php:1273
+msgid "Leave blank to keep saved secret."
+msgstr ""
+
+#: admin/settings.php:1267
+msgid "Live Client ID"
+msgstr ""
+
+#: admin/settings.php:1268
+msgid "Enter Live Client ID..."
+msgstr ""
+
+#: admin/settings.php:1271
+msgid "Live Secret"
+msgstr ""
+
+#: admin/settings.php:1272
+msgid "Enter Live Secret..."
+msgstr ""
+
+#: admin/settings.php:1287
+msgid "Headless & External Forms REST API"
+msgstr ""
+
+#: admin/settings.php:1298
+msgid "Headless REST API & Webhooks is a Pro Feature"
+msgstr ""
+
+#: admin/settings.php:1299
+msgid "Upgrade to Lead Generation Form Pro to unlock authenticated REST endpoints, CORS support, and real-time webhook payload dispatch to Zapier, Make, and external CRMs."
+msgstr ""
+
+#: admin/settings.php:1304
+msgid "Connect custom headless applications (React, Next.js, Vue, mobile apps, or external websites) to submit leads and fetch dynamic form structures using the WordPress REST API."
+msgstr ""
+
+#: admin/settings.php:1311
+msgid "1. Fetch Form Schema"
+msgstr ""
+
+#: admin/settings.php:1315
+msgid "Returns form fields, labels, options, theme tokens, and multi-step configurations."
+msgstr ""
+
+#: admin/settings.php:1325
+msgid "2. Submit Form Data"
+msgstr ""
+
+#: admin/settings.php:1329
+msgid "Submit lead data via JSON or multipart/form-data with full spam protection and CRM storage."
+msgstr ""
+
+#: admin/settings.php:1338
+msgid "Example JavaScript Fetch Call"
+msgstr ""
+
+#: admin/settings.php:1365
+msgid "Display a modern floating contact bubble on your website giving visitors 1-click access to WhatsApp, Phone Call, Telegram, SMS, Email, and your Lead Generation Form in a modal."
+msgstr ""
+
+#: admin/settings.php:1377
+msgid "Floating Contact Launcher is a Pro Feature"
+msgstr ""
+
+#: admin/settings.php:1378
+msgid "Give mobile visitors 1-tap WhatsApp chat and phone calling buttons. Replaces standalone SaaS widgets like SiteLeads and Boei. Upgrade to Pro to activate."
+msgstr ""
+
+#: admin/settings.php:1394
+msgid "Enable Floating Contact Launcher on Website"
+msgstr ""
+
+#: admin/settings.php:1397
+msgid "When enabled, the floating contact launcher button will appear on all frontend pages."
+msgstr ""
+
+#: admin/settings.php:1404
+msgid "Screen Position"
+msgstr ""
+
+#: admin/settings.php:1406
+msgid "Bottom Right (Recommended)"
+msgstr ""
+
+#: admin/settings.php:1407
+msgid "Bottom Left"
+msgstr ""
+
+#: admin/settings.php:1408
+msgid "Middle Right (Side Tab)"
+msgstr ""
+
+#: admin/settings.php:1409
+msgid "Middle Left (Side Tab)"
+msgstr ""
+
+#: admin/settings.php:1410
+msgid "Bottom Center"
+msgstr ""
+
+#: admin/settings.php:1411
+msgid "Top Right"
+msgstr ""
+
+#: admin/settings.php:1412
+msgid "Top Left"
+msgstr ""
+
+#: admin/settings.php:1418
+msgid "Widget Accent Color"
+msgstr ""
+
+#: admin/settings.php:1428
+msgid "Speech Bubble Greeting Message"
+msgstr ""
+
+#: admin/settings.php:1430
+msgid "Visitors see this proactive welcome message next to the button. Leave blank to disable."
+msgstr ""
+
+#: admin/settings.php:1436
+msgid "Menu Header Title"
+msgstr ""
+
+#: admin/settings.php:1440
+msgid "Menu Header Subtitle / Availability"
+msgstr ""
+
+#: admin/settings.php:1447
+msgid "Communication Channels"
+msgstr ""
+
+#: admin/settings.php:1454
+msgid "WhatsApp Number (with Country Code)"
+msgstr ""
+
+#: admin/settings.php:1461
+msgid "WhatsApp Pre-filled Message"
+msgstr ""
+
+#: admin/settings.php:1468
+msgid "Direct Phone Number (Click to Call)"
+msgstr ""
+
+#: admin/settings.php:1476
+msgid "Telegram Username"
+msgstr ""
+
+#: admin/settings.php:1484
+msgid "SMS Number"
+msgstr ""
+
+#: admin/settings.php:1492
+msgid "Support Email Address"
+msgstr ""
+
+#: admin/settings.php:1501
+msgid "Connect a Lead Generation Form (Opens in Modal Lightbox)"
+msgstr ""
+
+#: admin/settings.php:1504
+msgid "-- None (Communication Channels Only) --"
+msgstr ""
+
+#: admin/settings.php:1524
+msgid "When selected, an \"Send Inquiry Form\" option is added to the floating menu. Clicking it opens the full lead form in an instant floating lightbox modal!"
+msgstr ""
+
+#: admin/settings.php:1539
+msgid "Comprehensive Documentation & Knowledge Base"
+msgstr ""
+
+#: admin/settings.php:1542
+msgid "Complete architectural reference guide: understand what each feature does, how it operates under the hood, step-by-step setup instructions, and default configuration values."
+msgstr ""
+
+#: admin/settings.php:1547
+msgid "Online Docs"
+msgstr ""
+
+#: admin/settings.php:1550
+msgid "Get Support"
+msgstr ""
+
+#: admin/settings.php:1553
+msgid "Video Tutorials"
+msgstr ""
+
+#: admin/settings.php:1556
+msgid "Changelog"
+msgstr ""
+
+#: admin/settings.php:1566
+msgid "1. Feature & Module Breakdown"
+msgstr ""
+
+#: admin/settings.php:1579
+msgid "Visual drag-and-drop builder canvas. Supports 18+ custom fields (Text, Email, Phone, Dropzone, Calculations, Star Rating, NPS Matrix, Multi-Step Breaks, Terms, Hidden). Lets you configure labels, placeholders, column widths, validation, and auto-reply emails."
+msgstr ""
+
+#: admin/settings.php:1592
+msgid "Central form directory. Displays live impression views, total lead submissions, real-time conversion rates (%), 1-click shortcode copying pill [WLFG id=\"X\"], 1-click form cloning, and form deletion."
+msgstr ""
+
+#: admin/settings.php:1600
+msgid "Captured Leads (Mini-CRM)"
+msgstr ""
+
+#: admin/settings.php:1605
+msgid "Built-in lead management hub. Filter entries per form, update lead statuses (New, In Review, Contacted, Qualified, Won, Lost), append internal sticky notes with timestamps, stream complete CSV exports, and generate 1-click PDF receipts."
+msgstr ""
+
+#: admin/settings.php:1613
+msgid "Formula Price Estimator"
+msgstr ""
+
+#: admin/settings.php:1618
+msgid "Evaluates dynamic arithmetic expressions like {base_price} + ({quantity} * 25). Automatically recalculates live on input changes and connects directly to Stripe & PayPal checkouts."
+msgstr ""
+
+#: admin/settings.php:1631
+msgid "Stripe Elements (Credit/Debit Card, Apple Pay, Google Pay) and PayPal Smart Buttons. Collect fixed or formula-calculated payments directly upon form submission with server-side validation."
+msgstr ""
+
+#: admin/settings.php:1644
+msgid "Dedicated /wp-json/wlgf/v1/ endpoints. Enables external Jamstack sites, React, Next.js, mobile apps, and third-party automations (Zapier, Make) to fetch form schemas and submit leads directly with CORS support."
+msgstr ""
+
+#: admin/settings.php:1652
+msgid "Multi-Column Responsive Grid"
+msgstr ""
+
+#: admin/settings.php:1657
+msgid "1-Click Quick Column Switcher bar (100%, 50%, 33%, 25%) directly on each canvas field card. Fields automatically render side-by-side in real-time on the builder canvas and gracefully stack into a single column on mobile devices (max-width: 640px)."
+msgstr ""
+
+#: admin/settings.php:1665
+msgid "Instant Template Library & Viewport Switcher"
+msgstr ""
+
+#: admin/settings.php:1670
+msgid "1-Click pre-built starter templates categorized by industry (Lead Gen, Contact, Survey, Booking, Feedback). Includes a Live Responsive Device Viewport Switcher (Desktop, Tablet, Mobile) allowing you to test form responsiveness without leaving the builder."
+msgstr ""
+
+#: admin/settings.php:1678
+msgid "Floating WhatsApp & Contact Launcher"
+msgstr ""
+
+#: admin/settings.php:1683
+msgid "SiteLeads challenger widget: Sleek floating corner bubble with radar pulse animation. Supports direct WhatsApp chat, one-touch phone calling, Telegram, SMS, or triggering your lead capture form in an instant popup modal."
+msgstr ""
+
+#: admin/settings.php:1695
+msgid "Enterprise Anti-Spam & Phishing barrier. Restricts spam bots, disposable temporary mailboxes (e.g. Mailinator, TempMail), competitors, and phishers from submitting forms. Supports exact email addresses, entire root domains, subdomains, and wildcard TLDs (*.xyz, *.top, .ru). Features 1-click Quick Add domain chips and a stealth \"Silent Drop / Honeypot\" mode."
+msgstr ""
+
+#: admin/settings.php:1703
+msgid "Automated Abuse Shields & Cloudflare Turnstile (v3.4.8)"
+msgstr ""
+
+#: admin/settings.php:1708
+msgid "Comprehensive automated defense suite against email flooding, scripted bot fuzzers, and scanner probes. Features Cloudflare Turnstile integration (frictionless, privacy-friendly CAPTCHA), Server-Side IP Rate Limiting (throttles rapid script loops to max 3 submissions per 2 mins per IP), Smart CSS Decoy Honeypot Trap (silently drops automated bots autofilling off-screen decoy fields), and Vulnerability Scanner Shield (auto-detects and neutralizes SQLi and pentest fuzzing payloads like sleep, PG_SLEEP, waitfor delay, UNION SELECT without sending emails)."
+msgstr ""
+
+#: admin/settings.php:1716
+msgid "Multi-Admin CC Lead Notifications"
+msgstr ""
+
+#: admin/settings.php:1721
+msgid "Multi-recipient email routing engine. Automatically carbon copies (Cc:) branded HTML lead notification emails to multiple team members, department inboxes (e.g. sales, support, management), or external stakeholders. Includes automatic syntax validation, duplicate cleanup, and primary admin deduplication across wp_mail, SMTP, and REST API submissions."
+msgstr ""
+
+#: admin/settings.php:1729
+msgid "Submitter Auto-Responder"
+msgstr ""
+
+#: admin/settings.php:1734
+msgid "Dispatches automated, high-converting HTML confirmation emails directly to users when they submit an inquiry. Supports personalized dynamic merge tags ({Name}, {Email}, {Site_Name}, {Form_Name}, {Submission_Date}), automatic logo embedding, header accents, and responsive layout styling."
+msgstr ""
+
+#: admin/settings.php:1747
+msgid "Central email branding suite. Configure your company logo (with max-width control), custom header background & text colors, header title with smart tags ({form_name}, {site_title}), body greeting, card styling, and custom footer disclaimer with live in-browser preview and test dispatches."
+msgstr ""
+
+#: admin/settings.php:1755
+msgid "Confirmation Message & Thank You Designer"
+msgstr ""
+
+#: admin/settings.php:1760
+msgid "2-Column interactive submission designer. Features 4 visual layout presets (Modern Card, Sleek Banner, Minimal Pill, Glassmorphism), 8 animated FontAwesome badge icons, dual color pickers, and configurable 5-50 second auto-fadeout durations with live instant preview."
+msgstr ""
+
+#: admin/settings.php:1768
+msgid "Real-Time Outgoing Webhooks"
+msgstr ""
+
+#: admin/settings.php:1773
+msgid "Asynchronously dispatches structured JSON payloads upon every form submission to external automation platforms (Zapier, Make.com, n8n, Pabbly, or custom REST webhooks) with non-blocking execution and server timeout protection."
+msgstr ""
+
+#: admin/settings.php:1786
+msgid "Automate form availability by configuring exact start and end dates/times (ideal for limited-time offers, events, and job postings) or capping maximum lead capacity (e.g. first 100 entries). Automatically closes the form and displays a customized friendly notice."
+msgstr ""
+
+#: admin/settings.php:1794
+msgid "Form Cloning & Import/Export Hub (v3.4.4)"
+msgstr ""
+
+#: admin/settings.php:1799
+msgid "1-Click form duplication with instant shortcode copying, row highlight animation, and real-time KPI counter sync. Includes complete JSON form schema exporting, CSV lead downloading, and single-click form importing across different WordPress installations."
+msgstr ""
+
+#: admin/settings.php:1812
+msgid "Split long, overwhelming forms into clean, interactive multi-step funnels using Step Break elements. Includes real-time percentage progress indicators, step indicator badges, customized \"Next / Back / Submit\" buttons, and per-step client-side validation."
+msgstr ""
+
+#: admin/settings.php:1820
+msgid "HTML5 Digital E-Signature Pad"
+msgstr ""
+
+#: admin/settings.php:1825
+msgid "Collect legally binding digital signatures directly on mobile touchscreens and desktop mice. Features High-DPI canvas scaling, automatic clearing upon form submission, inline validation, and automated PDF certification stamping."
+msgstr ""
+
+#: admin/settings.php:1833
+msgid "Drag & Drop Multi-File Upload Dropzone"
+msgstr ""
+
+#: admin/settings.php:1838
+msgid "Modern file uploader supporting drag-and-drop file queues, custom allowed MIME/extension whitelists, max file size restrictions (MB), and multi-file count caps. Includes secure directory execution denial (.htaccess) and admin lead attachment lightbox previews."
+msgstr ""
+
+#: admin/settings.php:1850
+msgid "2. How It Works Under the Hood"
+msgstr ""
+
+#: admin/settings.php:1858
+msgid "End-to-End Submission Pipeline:"
+msgstr ""
+
+#: admin/settings.php:1860
+msgid "When a user submits a form, it executes a strict multi-stage security pipeline:"
+msgstr ""
+
+#: admin/settings.php:1861
+msgid "Checks hidden honeypot field (must be blank) and verifies form load timestamp is >= 2 seconds (rejects rapid automated spam bots)."
+msgstr ""
+
+#: admin/settings.php:1862
+msgid "Validates wp_create_nonce(\"wlgf-form-post\") to guarantee request authenticity."
+msgstr ""
+
+#: admin/settings.php:1863
+msgid "Verifies current timestamp is within schedule_start / schedule_end and lead count has not exceeded max_submissions limit."
+msgstr ""
+
+#: admin/settings.php:1864
+msgid "Checks submitter email against form-specific or global blacklisted emails/domains."
+msgstr ""
+
+#: admin/settings.php:1865
+msgid "If enabled, validates Stripe Payment Intent (pi_...) or PayPal Order ID server-side before allowing lead creation."
+msgstr ""
+
+#: admin/settings.php:1866
+msgid "Validates extensions against strict whitelist, sanitizes filenames, and places files inside protected directories with .htaccess execution denial."
+msgstr ""
+
+#: admin/settings.php:1867
+msgid "Writes sanitized lead data to wlgf_saved_form_data_{form_id}, increments view/submission KPIs, and dispatches admin/auto-reply emails and webhooks."
+msgstr ""
+
+#: admin/settings.php:1875
+msgid "Safe Math Calculation Engine (Zero eval):"
+msgstr ""
+
+#: admin/settings.php:1877
+msgid "Formula evaluation uses an AST-based recursive-descent math tokenizer in PHP without eval() or create_function(). It replaces bracketed tokens like {quantity} with sanitized numbers, strips non-math characters, and safely evaluates arithmetic (+, -, *, /, parentheses). Tampering with client numbers is impossible because the server independently computes the final price."
+msgstr ""
+
+#: admin/settings.php:1885
+msgid "Visual Conditional Logic Engine:"
+msgstr ""
+
+#: admin/settings.php:1887
+msgid "Conditional rules attach real-time event listeners to form input fields. When a trigger field changes, the engine evaluates conditions using AND/OR logic and toggles the visibility and \"required\" state of dependent fields dynamically on the client canvas."
+msgstr ""
+
+#: admin/settings.php:1895
+msgid "Pure-PHP Vector PDF Generator Engine:"
+msgstr ""
+
+#: admin/settings.php:1897
+msgid "Generates vector-sharp PDF summaries and invoice receipts using raw PDF stream primitives (Type1 fonts, re/f/S coordinate paths). Runs 100% in pure PHP with zero heavy binary dependencies (no DOMPDF, no TCPDF, no WKHTMLTOPDF), executing in under 25ms with minimal memory consumption."
+msgstr ""
+
+#: admin/settings.php:1904
+msgid "Email & Domain Blacklist Matching Engine (Silent Drop vs. Reject):"
+msgstr ""
+
+#: admin/settings.php:1906
+msgid "Inspects submitted email fields and evaluates them against blacklisted patterns: exact email matches (case-insensitive), root domain matches (e.g. mailinator.com), subdomain hierarchies (e.g. temp.mailinator.com), and wildcard TLDs (e.g. *.xyz, *.top, .ru). If \"Show Error Notice\" is active, submissions are rejected with a customized alert. If \"Silent Drop / Honeypot\" is active, the engine returns a fake 200 HTTP success message to trick automated bots, while silently discarding data without saving leads or dispatching notification emails."
+msgstr ""
+
+#: admin/settings.php:1914
+msgid "Multi-Recipient CC Lead Notification Dispatcher:"
+msgstr ""
+
+#: admin/settings.php:1916
+msgid "Parses comma and newline separated emails configured in \"CC Additional Admin Email(s)\". Cleans each email address, validates syntax via is_email(), deduplicates redundant entries, and excludes the primary site administrator to prevent duplicate inboxes. Appends standard RFC-compliant \"Cc: <email>\" headers to outgoing wp_mail(), custom authenticated PHPMailer SMTP sessions, and headless REST API notifications."
+msgstr ""
+
+#: admin/settings.php:1924
+msgid "Submitter Auto-Responder & Dynamic Merge Tag Resolver:"
+msgstr ""
+
+#: admin/settings.php:1926
+msgid "Inspects incoming lead data to capture the submitter's name and email address. Merges personalized tags ({Name}, {Email}, {Site_Name}, {Form_Name}, {Submission_Date}) across subject and body templates. Embeds your global Brand Logo using RFC Content-ID (cid:wlgf_email_logo) inline MIME attachments for pristine webmail/Gmail rendering, wraps output in responsive HTML cards, and dispatches via authenticated PHPMailer or wp_mail without blocking the visitor experience."
+msgstr ""
+
+#: admin/settings.php:1934
+msgid "Real-Time Outgoing Webhook Dispatch Engine:"
+msgstr ""
+
+#: admin/settings.php:1936
+msgid "Executes non-blocking, asynchronous HTTP POST requests via wp_remote_post() to your configured webhook URL (Zapier, Make, n8n, Slack, or CRM). Packages sanitized lead fields, unique submission IDs, form metadata, timestamps, and payment transaction details in standard application/json headers with a strict 15-second timeout safeguard to eliminate frontend latency."
+msgstr ""
+
+#: admin/settings.php:1944
+msgid "Form Scheduling & Quota Enforcement Engine:"
+msgstr ""
+
+#: admin/settings.php:1946
+msgid "Before rendering frontend forms or accepting AJAX dispatches, evaluates current server timestamp against schedule_start and schedule_end windows. Simultaneously queries total saved submissions in wlgf_saved_form_data_{id} against max_submissions caps. If expired or limit reached, gracefully swaps form inputs for a customizable closed banner alert and rejects incoming submissions."
+msgstr ""
+
+#: admin/settings.php:1954
+msgid "Multi-Step Client-Side State & Per-Step Validation Engine:"
+msgstr ""
+
+#: admin/settings.php:1956
+msgid "Maintains active step index in client memory. When a visitor clicks \"Next\", validates only the visible required inputs belonging to that active step partition. If all inputs are valid, triggers smooth hardware-accelerated CSS sliding transitions, recalculates completion percentage, and scrolls the next card into view while maintaining partial draft auto-capture."
+msgstr ""
+
+#: admin/settings.php:1964
+msgid "High-DPI E-Signature Pad & Pure-PHP Vector PDF Engine:"
+msgstr ""
+
+#: admin/settings.php:1966
+msgid "Initializes HTML5 Canvas calibrated with window.devicePixelRatio (2x-3x retina scaling) to prevent pixelation on iPads, iPhones, and Android touchscreens. Records high-fidelity vector Bezier curves, serializes coordinates into compressed PNG Base64 data, and stamps verified digital signatures directly onto raw PDF receipt streams without external binary libraries."
+msgstr ""
+
+#: admin/settings.php:1974
+msgid "Automated Multi-Layer Anti-Abuse & Exploit Shield Pipeline (v3.4.8):"
+msgstr ""
+
+#: admin/settings.php:1976
+msgid "Executes early defensive inspection on frontend and REST API submissions before leads or emails are processed: a) Smart CSS Decoy Honeypot: Injects an invisible, off-screen decoy trap; bots autofilling it are silently dropped with a mock success response. b) Vulnerability Scanner Filter: Analyzes all POST fields for automated blind SQLi or time-based fuzzing patterns (sleep, PG_SLEEP, waitfor delay, UNION SELECT) and immediately drops the payload. c) Server-Side IP Rate Limiter: Tracks submission velocity via WordPress transients (max 3 submissions per 120s per IP) to prevent scripted email flooding. d) Cloudflare Turnstile: Asynchronously validates response tokens against Cloudflare API."
+msgstr ""
+
+#: admin/settings.php:1988
+msgid "3. Step-by-Step Setup Guides"
+msgstr ""
+
+#: admin/settings.php:1996
+msgid "Setting Up Email Notifications & SMTP"
+msgstr ""
+
+#: admin/settings.php:2001 admin/settings.php:2088
+msgid "Navigate to Settings > Email & SMTP tab."
+msgstr ""
+
+#: admin/settings.php:2002
+msgid "Set \"Send Lead Notifications to Admin\" to ON."
+msgstr ""
+
+#: admin/settings.php:2003
+msgid "Under \"Email Delivery Engine\", select \"Custom Authenticated SMTP\"."
+msgstr ""
+
+#: admin/settings.php:2004
+msgid "Enter your SMTP Host (e.g. smtp.gmail.com), Username, and App Password."
+msgstr ""
+
+#: admin/settings.php:2005
+msgid "Select Encryption: TLS (Port 587) or SSL (Port 465)."
+msgstr ""
+
+#: admin/settings.php:2006
+msgid "Click \"Save Settings\", then use \"Send Test Email\" to verify delivery in real time."
+msgstr ""
+
+#: admin/settings.php:2014
+msgid "Configuring Cloudflare Turnstile & Anti-Spam Shields"
+msgstr ""
+
+#: admin/settings.php:2019
+msgid "Log in to Cloudflare Dashboard and navigate to Turnstile > Add Site (or use Google reCAPTCHA v3 console)."
+msgstr ""
+
+#: admin/settings.php:2020
+msgid "Enter your website domain and choose Widget Mode (\"Managed\" recommended) to generate your Site Key and Secret Key."
+msgstr ""
+
+#: admin/settings.php:2021
+msgid "In WP Admin, navigate to Lead Gen Form > Global Settings > Anti-Spam & Security tab."
+msgstr ""
+
+#: admin/settings.php:2022
+msgid "Under CAPTCHA Provider, choose \"Cloudflare Turnstile\" and paste your Site Key and Secret Key."
+msgstr ""
+
+#: admin/settings.php:2023
+msgid "Ensure IP Rate Limiting, Smart Decoy Honeypot, and Scanner Exploit Shield remain ON (Enabled by default)."
+msgstr ""
+
+#: admin/settings.php:2024
+msgid "Click \"Save Settings\". Turnstile provides a frictionless, privacy-first CAPTCHA with zero user puzzles while automated shields block spam floods."
+msgstr ""
+
+#: admin/settings.php:2032
+msgid "Setting Up Stripe & PayPal Checkouts"
+msgstr ""
+
+#: admin/settings.php:2037
+msgid "Go to Settings > Payments & Checkout tab and toggle \"Enable Online Payments\" ON."
+msgstr ""
+
+#: admin/settings.php:2038
+msgid "Enter your Stripe Publishable & Secret Keys (Test mode for development, Live mode for production)."
+msgstr ""
+
+#: admin/settings.php:2039
+msgid "Enter your PayPal Client ID & Secret Key (Sandbox or Live)."
+msgstr ""
+
+#: admin/settings.php:2040
+msgid "Open Form Builder on your form, scroll to \"Online Payments & Checkout\", toggle \"Enable Payment\", and configure Fixed Amount or select a Calculation Field."
+msgstr ""
+
+#: admin/settings.php:2048
+msgid "Connecting Email Marketing (ESP Sync)"
+msgstr ""
+
+#: admin/settings.php:2053
+msgid "Go to Settings > Newsletter & Integrations tab."
+msgstr ""
+
+#: admin/settings.php:2054
+msgid "Choose your provider: Mailchimp, Brevo, MailerLite, SendGrid, or ActiveCampaign."
+msgstr ""
+
+#: admin/settings.php:2055
+msgid "Enter your API Key and List / Audience ID."
+msgstr ""
+
+#: admin/settings.php:2056
+msgid "Click \"Verify API Connection\" to ensure green status confirmation."
+msgstr ""
+
+#: admin/settings.php:2057
+msgid "In Form Builder, enable Newsletter Sync and select Explicit (opt-in checkbox) or Automatic sync mode."
+msgstr ""
+
+#: admin/settings.php:2064
+msgid "Setting Up Email & Domain Blacklist Protection"
+msgstr ""
+
+#: admin/settings.php:2069
+msgid "Navigate to Settings > Anti-Spam Security tab."
+msgstr ""
+
+#: admin/settings.php:2070
+msgid "Scroll down to the \"Email & Domain Blacklist Protection\" card."
+msgstr ""
+
+#: admin/settings.php:2071
+msgid "Set \"Blacklist Enforcement Status\" to ON (badge updates to \"Active & Blocking\")."
+msgstr ""
+
+#: admin/settings.php:2072
+msgid "Enter forbidden email addresses in \"Blocked Email Addresses\" (one per line or comma-separated)."
+msgstr ""
+
+#: admin/settings.php:2073
+msgid "Enter forbidden domains in \"Blocked Domains & TLDs\" or click 1-click Quick Add chips (+ mailinator.com, + tempmail.com, + *.xyz, etc.)."
+msgstr ""
+
+#: admin/settings.php:2074
+msgid "Select Action: \"Show Error Notice\" (shows alert) or \"Silent Drop / Honeypot\" (returns fake success to bots, discards lead)."
+msgstr ""
+
+#: admin/settings.php:2075
+msgid "Click \"Save Settings\" at the top-right to activate real-time protection."
+msgstr ""
+
+#: admin/settings.php:2083
+msgid "CC Lead Notifications to Additional Admins"
+msgstr ""
+
+#: admin/settings.php:2089
+msgid "Ensure \"Send Lead Notifications to Admin\" is set to ON."
+msgstr ""
+
+#: admin/settings.php:2090
+msgid "Under \"CC Additional Admin Email(s)\", enter email addresses for team members (comma or newline separated, e.g. sales@domain.com, manager@domain.com)."
+msgstr ""
+
+#: admin/settings.php:2091
+msgid "Click \"Save Settings\". All newly submitted leads will automatically include these recipients in the Cc: header."
+msgstr ""
+
+#: admin/settings.php:2099
+msgid "Configuring Submitter Auto-Responder & Dynamic Merge Tags"
+msgstr ""
+
+#: admin/settings.php:2104
+msgid "Open your form in the Form Builder, click the Settings icon tab."
+msgstr ""
+
+#: admin/settings.php:2105
+msgid "Toggle \"Send Instant Confirmation Email to Submitter (Auto-Responder)\" to ON."
+msgstr ""
+
+#: admin/settings.php:2106
+msgid "Enter your Email Subject Line (default pre-filled for high conversions)."
+msgstr ""
+
+#: admin/settings.php:2107
+msgid "In Email Message Body, personalize your greeting using dynamic merge tags: {Name}, {Email}, {Site_Name}, {Form_Name}, and {Submission_Date}."
+msgstr ""
+
+#: admin/settings.php:2108
+msgid "Ensure you have configured your Brand Logo under Settings > Email & SMTP for automated branded header insertion."
+msgstr ""
+
+#: admin/settings.php:2109
+msgid "Click \"Save Form\". Every valid submission automatically dispatches this personalized confirmation email."
+msgstr ""
+
+#: admin/settings.php:2117
+msgid "Designing Confirmation Messages & Thank You Cards"
+msgstr ""
+
+#: admin/settings.php:2122
+msgid "Navigate to Settings > General & Confirmation tab."
+msgstr ""
+
+#: admin/settings.php:2123
+msgid "Select a visual preset: Modern Card (default), Sleek Banner, Minimal Pill, or Glassmorphism."
+msgstr ""
+
+#: admin/settings.php:2124
+msgid "Pick a badge icon (Checkmark, Trophy, Star, Shield, Thumbs Up) and toggle the spring pop animation."
+msgstr ""
+
+#: admin/settings.php:2125
+msgid "Customize Card Background, Border, Icon Accent, Heading, and Body Text colors using live dual pickers."
+msgstr ""
+
+#: admin/settings.php:2126
+msgid "Configure Message Fadeout Duration (0 to keep permanently, or 5-50 seconds to automatically dismiss)."
+msgstr ""
+
+#: admin/settings.php:2127
+msgid "To redirect to an external thank-you page instead, set Confirmation Action to \"Redirect to URL\" in Form Builder."
+msgstr ""
+
+#: admin/settings.php:2135
+msgid "Connecting Webhooks to Zapier, Make.com, or n8n"
+msgstr ""
+
+#: admin/settings.php:2140
+msgid "In your automation platform (Zapier / Make / n8n / Pabbly), create a new scenario with a \"Webhooks\" trigger."
+msgstr ""
+
+#: admin/settings.php:2141
+msgid "Copy the generated Catch Hook URL (e.g. https://hooks.zapier.com/hooks/catch/...)."
+msgstr ""
+
+#: admin/settings.php:2142
+msgid "Edit your form in Form Builder, open the Settings tab, and find \"Real-Time Outgoing Webhook (Zapier / Make / n8n)\"."
+msgstr ""
+
+#: admin/settings.php:2143
+msgid "Paste your webhook URL and save the form."
+msgstr ""
+
+#: admin/settings.php:2144
+msgid "Submit a test entry on your live page. Your automation platform will instantly detect the test payload with all form fields."
+msgstr ""
+
+#: admin/settings.php:2152
+msgid "Building a Multi-Step Wizard Form with Progress Bar"
+msgstr ""
+
+#: admin/settings.php:2157
+msgid "In the Form Builder canvas, drag fields for your first step (e.g. Name, Email, Phone)."
+msgstr ""
+
+#: admin/settings.php:2158
+msgid "Drag a \"Step Break\" element from the sidebar palette between your field sets."
+msgstr ""
+
+#: admin/settings.php:2159
+msgid "Click the Step Break to edit its Step Title (e.g. \"Step 2: Service Details\") and optional description."
+msgstr ""
+
+#: admin/settings.php:2160
+msgid "Add additional fields for subsequent steps, repeating Step Breaks as needed."
+msgstr ""
+
+#: admin/settings.php:2161
+msgid "On the frontend, visitors experience an interactive card wizard with real-time percentage progress bar and validation per step."
+msgstr ""
+
+#: admin/settings.php:2169
+msgid "Setting Up Form Scheduling & Submission Quotas"
+msgstr ""
+
+#: admin/settings.php:2174
+msgid "Edit your form in Form Builder and scroll to the \"Scheduling & Limits\" section in the form settings drawer."
+msgstr ""
+
+#: admin/settings.php:2175
+msgid "To restrict by date: set \"Schedule Start Date\" and \"Schedule End Date\" with exact time windows."
+msgstr ""
+
+#: admin/settings.php:2176
+msgid "To restrict by quota: enter \"Maximum Submissions\" (e.g. 50 or 100 for limited-seat registrations)."
+msgstr ""
+
+#: admin/settings.php:2177
+msgid "Customize the \"Form Closed Notice\" message to inform visitors when registration has concluded."
+msgstr ""
+
+#: admin/settings.php:2178
+msgid "Save the form. When expired or full, the form automatically disables itself and displays your notice."
+msgstr ""
+
+#: admin/settings.php:2186
+msgid "1-Click Form Cloning, Backups & Migration (Import & Export)"
+msgstr ""
+
+#: admin/settings.php:2191
+msgid "To duplicate a form on the same site: navigate to \"Manage Forms\" and click \"Clone\" next to any form. A confirmation modal appears with a 1-click shortcode copy button."
+msgstr ""
+
+#: admin/settings.php:2192
+msgid "To backup your data: navigate to \"Lead Generation Form > Import & Export\"."
+msgstr ""
+
+#: admin/settings.php:2193
+msgid "Click \"Export All Forms (JSON)\" to download complete form structures, styling, and conditional rules."
+msgstr ""
+
+#: admin/settings.php:2194
+msgid "Click \"Export All Leads (CSV)\" to download all captured inquiries with notes and submission timestamps."
+msgstr ""
+
+#: admin/settings.php:2195
+msgid "To migrate to a new website: open Import & Export on the destination site, choose your backup JSON file, and click \"Import Forms\"."
+msgstr ""
+
+#: admin/settings.php:2207
+msgid "4. Master Default Settings Reference"
+msgstr ""
+
+#: admin/settings.php:2215
+msgid "Setting Name"
+msgstr ""
+
+#: admin/settings.php:2216
+msgid "Default Value"
+msgstr ""
+
+#: admin/settings.php:2217
+msgid "Available Options"
+msgstr ""
+
+#: admin/settings.php:2218
+msgid "Operational Purpose & Behavior"
+msgstr ""
+
+#: admin/settings.php:2326 admin/settings.php:2338 admin/settings.php:2344
+#: admin/settings.php:2380 admin/settings.php:2428
+msgid "\"\" (Empty)"
+msgstr ""
+
+#: admin/settings.php:2327
+msgid "Comma or newline separated valid email addresses"
+msgstr ""
+
+#: admin/settings.php:2328
+msgid "Dispatches carbon copy (Cc:) lead notification emails to additional team members and departments."
+msgstr ""
+
+#: admin/settings.php:2334
+msgid "Master enforcement switch for email and domain blacklist filtering across all forms."
+msgstr ""
+
+#: admin/settings.php:2339
+msgid "Textarea list of exact emails (one per line or comma-separated)"
+msgstr ""
+
+#: admin/settings.php:2340
+msgid "Exact email addresses prohibited from submitting any form on the site."
+msgstr ""
+
+#: admin/settings.php:2345
+msgid "Textarea list of domains and wildcard TLDs (*.xyz, .ru)"
+msgstr ""
+
+#: admin/settings.php:2346
+msgid "Prohibits temporary/disposable mailboxes, competitors, or entire high-risk TLDs."
+msgstr ""
+
+#: admin/settings.php:2352
+msgid "\"reject_error\" displays rejection alert notice; \"silent_drop\" (honeypot) pretends success to bots while discarding data."
+msgstr ""
+
+#: admin/settings.php:2356
+msgid "\"Sorry! Your email address or domain is not permitted to submit this form.\""
+msgstr ""
+
+#: admin/settings.php:2357
+msgid "Custom text notice string"
+msgstr ""
+
+#: admin/settings.php:2358
+msgid "Notice displayed to visitors on the frontend when their submission is rejected by the blacklist."
+msgstr ""
+
+#: admin/settings.php:2364
+msgid "Form-level switch dispatches instant HTML confirmation email to the submitter upon valid form submission."
+msgstr ""
+
+#: admin/settings.php:2368
+msgid "\"Thank you for your inquiry! We received your message.\""
+msgstr ""
+
+#: admin/settings.php:2369
+msgid "Custom text with merge tags"
+msgstr ""
+
+#: admin/settings.php:2370
+msgid "Email subject line delivered to submitters. Supports dynamic merge tags."
+msgstr ""
+
+#: admin/settings.php:2374
+msgid "Pre-filled greeting & closing"
+msgstr ""
+
+#: admin/settings.php:2375
+msgid "Rich text with {Name}, {Email}, {Site_Name}, {Form_Name}, {Submission_Date}"
+msgstr ""
+
+#: admin/settings.php:2376
+msgid "Confirmation email message body delivered to the inquiry submitter with automated brand logo embedding."
+msgstr ""
+
+#: admin/settings.php:2381
+msgid "Valid image URL from Media Library"
+msgstr ""
+
+#: admin/settings.php:2382
+msgid "Brand logo embedded in all admin notifications and submitter auto-responders via RFC inline CID attachments."
+msgstr ""
+
+#: admin/settings.php:2388
+msgid "Maximum display width in pixels for brand logo across desktop and mobile email clients."
+msgstr ""
+
+#: admin/settings.php:2393
+msgid "Custom text with {form_name}, {site_title}, {form_id}"
+msgstr ""
+
+#: admin/settings.php:2394
+msgid "H1 banner heading rendered at the top of admin lead notification emails."
+msgstr ""
+
+#: admin/settings.php:2399
+msgid "Any valid HEX color string"
+msgstr ""
+
+#: admin/settings.php:2400
+msgid "Background accent and text color for email header banner and cards."
+msgstr ""
+
+#: admin/settings.php:2406
+msgid "Includes a 1-click \"View Lead in Dashboard\" button inside admin notification emails."
+msgstr ""
+
+#: admin/settings.php:2412
+msgid "Visual presentation template for frontend submission success alerts."
+msgstr ""
+
+#: admin/settings.php:2418
+msgid "Central animated glowing badge icon celebrating successful form submission."
+msgstr ""
+
+#: admin/settings.php:2424
+msgid "Time elapsed before thank you message smoothly fades out and resets form view."
+msgstr ""
+
+#: admin/settings.php:2429
+msgid "Valid HTTPS Webhook Endpoint URL"
+msgstr ""
+
+#: admin/settings.php:2430
+msgid "Form-level destination for real-time JSON submission payloads (Zapier, Make, n8n)."
+msgstr ""
+
+#: admin/settings.php:2434
+msgid "\"\" (No Window)"
+msgstr ""
+
+#: admin/settings.php:2435
+msgid "Valid YYYY-MM-DD HH:MM timestamps"
+msgstr ""
+
+#: admin/settings.php:2436
+msgid "Automated time window during which the form actively accepts visitor inquiries."
+msgstr ""
+
+#: admin/settings.php:2441
+msgid "Positive integer (e.g. 50, 100, 500)"
+msgstr ""
+
+#: admin/settings.php:2442
+msgid "Maximum total submissions allowed before form automatically locks and shows closed notice."
+msgstr ""
+
+#: admin/settings.php:2455
+msgid "5. Page Builders & Shortcode Embedding Guide"
+msgstr ""
+
+#: admin/settings.php:2461
+msgid "Gutenberg Block Editor"
+msgstr ""
+
+#: admin/settings.php:2462
+msgid "Type /lead-form or search for \"Lead Generation Form\" in the block inserter, then select your form from the inspector dropdown with live preview."
+msgstr ""
+
+#: admin/settings.php:2465
+msgid "Elementor Page Builder"
+msgstr ""
+
+#: admin/settings.php:2466
+msgid "Search for the \"Lead Generation Form\" widget in the Elementor panel and drag it directly into any section or container with full typography controls."
+msgstr ""
+
+#: admin/settings.php:2469
+msgid "Standard Shortcode Syntax"
+msgstr ""
+
+#: admin/settings.php:2470
+msgid "Embed anywhere in classic editor, Divi, Beaver Builder, or widget areas:"
+msgstr ""
+
+#: admin/settings.php:2475
+msgid "Routing parameter: [WLFG id=\"1\" carbon_copy=\"sales@company.com,team@company.com\"] for department notification routing."
+msgstr ""
+
+#: admin/settings.php:2486
+msgid "6. Comprehensive Troubleshooting & Knowledge Base FAQ"
+msgstr ""
+
+#: admin/settings.php:2492
+msgid "Not receiving lead notification emails?"
+msgstr ""
+
+#: admin/settings.php:2493
+msgid "Default PHP mail() is frequently flagged as spam or dropped by hosts. Configure Custom SMTP under the \"Email & SMTP\" tab using an authenticated provider (e.g. Google Workspace, SendGrid, Amazon SES, Postmark) and send a test email."
+msgstr ""
+
+#: admin/settings.php:2496
+msgid "How does the Submitter Auto-Responder work and which merge tags are supported?"
+msgstr ""
+
+#: admin/settings.php:2497
+msgid "When enabled in Form Builder > Settings, the auto-responder dispatches a personalized HTML confirmation email directly to the submitter. It automatically embeds your Brand Logo and replaces dynamic tags: {Name} (submitter name), {Email} (submitter email), {Site_Name} (website title), {Form_Name} (current form title), and {Submission_Date} (timestamp)."
+msgstr ""
+
+#: admin/settings.php:2500
+msgid "How do I connect form submissions to Zapier, Make, or n8n?"
+msgstr ""
+
+#: admin/settings.php:2501
+msgid "In Form Builder > Settings tab, paste your webhook URL into \"Real-Time Outgoing Webhook\". The plugin dispatches non-blocking JSON payloads containing all submitted fields, submission ID, form metadata, and payment transaction details via background HTTP POST."
+msgstr ""
+
+#: admin/settings.php:2504
+msgid "Are leads saved if email delivery fails?"
+msgstr ""
+
+#: admin/settings.php:2505
+msgid "Yes! All lead submissions are immediately written to your database under \"Lead Generation Form > Captured Leads\" before any email dispatch occurs."
+msgstr ""
+
+#: admin/settings.php:2508
+msgid "Does page caching break form submissions?"
+msgstr ""
+
+#: admin/settings.php:2509
+msgid "Our forms feature dynamic timing and REST/AJAX handlers. If using aggressive full-page caching (WP Rocket, LiteSpeed, Cloudflare APO), exclude the form page URL from caching to ensure fresh CSRF nonces."
+msgstr ""
+
+#: admin/settings.php:2512
+msgid "Where are uploaded files stored and are they protected?"
+msgstr ""
+
+#: admin/settings.php:2513
+msgid "Attachments are sanitized and placed inside a dedicated uploads folder (wp-content/uploads/wlgf_uploads/). Direct execution of PHP scripts is strictly blocked via an automatic .htaccess configuration to prevent malicious exploits. Admins can preview files directly from the Leads table with the interactive lightbox."
+msgstr ""
+
+#: admin/settings.php:2516
+msgid "Does the Digital Signature Pad work on touchscreens and mobile?"
+msgstr ""
+
+#: admin/settings.php:2517
+msgid "Yes! The signature pad utilizes high-DPI canvas scaling to match your smartphone or tablet retina screen resolution. It captures smooth finger strokes on iPads, iPhones, and Android devices, and automatically stamps the signature onto downloadable vector PDF receipts."
+msgstr ""
+
+#: admin/settings.php:2520
+msgid "How does Blacklist \"Silent Drop / Honeypot\" work?"
+msgstr ""
+
+#: admin/settings.php:2521
+msgid "\"Silent Drop\" is a stealth defense mechanism. Automated spam bots and phishers receive a deceptive success confirmation on their screen, leading them to believe their submission succeeded. However, the plugin silently discards the payload—no lead is saved in the database, and no emails or webhooks are triggered. This prevents bot operators from detecting blocks and rotating email addresses."
+msgstr ""
+
+#: admin/settings.php:2524
+msgid "Can multiple admin team members receive lead alerts?"
+msgstr ""
+
+#: admin/settings.php:2525
+msgid "Yes! Under \"Email & SMTP\" settings, add comma-separated or newline-separated emails into \"CC Additional Admin Email(s)\". Every valid lead submission will automatically dispatch formatted HTML notifications with these addresses in the RFC-compliant Cc: header across wp_mail, authenticated SMTP, and REST API submissions."
+msgstr ""
+
+#: admin/settings.php:2536
+msgid "7. Server Environment & Runtime Diagnostics"
+msgstr ""
+
+#: admin/settings.php:2541
+msgid "Current server hosting parameters and WordPress runtime environment:"
+msgstr ""
+
+#: admin/settings.php:2545
+msgid "WordPress:"
+msgstr ""
+
+#: admin/settings.php:2548
+msgid "PHP Version:"
+msgstr ""
+
+#: admin/settings.php:2551
+msgid "Plugin Version:"
+msgstr ""
+
+#: admin/settings.php:2554
+msgid "Memory Limit:"
+msgstr ""
+
+#: admin/settings.php:2570
+msgid "8. Floating Multi-Channel Contact Launcher Guide"
+msgstr ""
+
+#: admin/settings.php:2575
+msgid "The Floating Contact Launcher is designed to maximize mobile and desktop conversions by providing immediate click-to-connect access to the communication channels visitors use most."
+msgstr ""
+
+#: admin/settings.php:2580
+msgid "WhatsApp Direct Chat"
+msgstr ""
+
+#: admin/settings.php:2581
+msgid "Enter your international phone number (e.g. +14155552671) and an optional pre-filled greeting. Tapping opens WhatsApp Web on desktop or WhatsApp App on mobile instantly."
+msgstr ""
+
+#: admin/settings.php:2586
+msgid "1-Tap Click-to-Call"
+msgstr ""
+
+#: admin/settings.php:2587
+msgid "Connects your sales or support phone number via tel: protocol. On mobile smartphones, one tap immediately dials your business without copy-pasting numbers."
+msgstr ""
+
+#: admin/settings.php:2592
+msgid "Modal Form Launcher"
+msgstr ""
+
+#: admin/settings.php:2593
+msgid "Select any Lead Generation Form in the \"Floating Contact Widget\" settings tab. Visitors can click \"Send Inquiry Form\" to open the form in an instant floating lightbox modal without leaving their current page."
+msgstr ""
+
+#: admin/settings.php:2604
+msgid "9. Popups, Slide-ins & Smart Behavioral Triggers Guide"
+msgstr ""
+
+#: admin/settings.php:2609
+msgid "Transform any static lead form into a high-converting lightbox modal, corner slide-in, or top notification bar with smart behavioral triggers."
+msgstr ""
+
+#: admin/settings.php:2614
+msgid "Exit-Intent Trigger"
+msgstr ""
+
+#: admin/settings.php:2615
+msgid "Monitors mouse departure towards the browser tab bar on desktop and fast upward scrolls on mobile to catch visitors right before they bounce."
+msgstr ""
+
+#: admin/settings.php:2621
+msgid "Triggers the form popup after a visitor scrolls 25%, 50%, or 75% down the article or landing page."
+msgstr ""
+
+#: admin/settings.php:2626
+msgid "Time Delay"
+msgstr ""
+
+#: admin/settings.php:2627
+msgid "Displays the popup automatically after X seconds of user engagement on your website."
+msgstr ""
+
+#: admin/settings.php:2632
+msgid "Click (MonsterLink)"
+msgstr ""
+
+#: admin/settings.php:2633
+msgid "Any link or button on your website with class=\"wlgf-trigger-popup\" data-form-id=\"1\" or href=\"#wlgf-popup-1\" opens the modal immediately on click."
+msgstr ""
+
+#: admin/settings.php:2644
+msgid "10. Digital E-Signature Pad & Vector PDF Receipts"
+msgstr ""
+
+#: admin/settings.php:2649
+msgid "Collect legally compliant digital signatures directly on your forms with touch & mouse stroke recording, and stamp them onto pure-PHP vector PDF invoices."
+msgstr ""
+
+#: admin/settings.php:2652
+msgid "How to Add:"
+msgstr ""
+
+#: admin/settings.php:2652
+msgid "In the Form Builder canvas, drag a \"Signature Pad\" control or use the Gym / Fitness Membership 1-click template."
+msgstr ""
+
+#: admin/settings.php:2653
+msgid "Smooth Touch Strokes:"
+msgstr ""
+
+#: admin/settings.php:2653
+msgid "Works seamlessly on iPhones, iPads, Android devices, and desktop trackpads/mice with built-in \"Clear Signature\" action."
+msgstr ""
+
+#: admin/settings.php:2654
+msgid "PDF Verification:"
+msgstr ""
+
+#: admin/settings.php:2654
+msgid "When viewing leads in All Captured Leads, click the PDF icon to download a branded receipt with the signed verification block."
+msgstr ""
+
+#: admin/settings.php:2663
+msgid "11. Abandoned Lead Recovery & Mini-CRM Kanban Pipeline"
+msgstr ""
+
+#: admin/settings.php:2669
+msgid "Partial / Abandoned Lead Auto-Capture"
+msgstr ""
+
+#: admin/settings.php:2670
+msgid "70% of website visitors abandon forms midway. With Abandoned Lead Capture enabled, as soon as a visitor fills their email or phone number and leaves without completing the form, a draft lead is automatically stored in your CRM under \"Abandoned / Draft\" for immediate WhatsApp or phone follow-up."
+msgstr ""
+
+#: admin/settings.php:2673
+msgid "Visual Kanban Pipeline Management"
+msgstr ""
+
+#: admin/settings.php:2674
+msgid "Switch between Table View and Kanban Pipeline on the All Captured Leads page. Drag lead cards between stages (New -> Contacted -> Follow-Up -> Qualified -> Won). Each card features 1-click WhatsApp chat, direct phone dial, and PDF receipt downloads."
+msgstr ""
+
+#: admin/settings.php:2684
+msgid "12. Danger Zone: Complete Factory Reset"
+msgstr ""
+
+#: admin/settings.php:2692
+msgid "Important: Take a Data Backup First!"
+msgstr ""
+
+#: admin/settings.php:2693
+msgid "Performing a factory reset will permanently erase all custom forms, captured lead records, customer notes, tracking analytics, and custom configuration settings. This action cannot be reversed."
+msgstr ""
+
+#: admin/settings.php:2698
+msgid "We strongly advise you to download a backup of your forms and leads before proceeding. Visit the %s to export your data."
+msgstr ""
+
+#: admin/settings.php:2699
+msgid "Import & Export Page"
+msgstr ""
+
+#: admin/settings.php:2719
+msgid "Reset Plugin to Initial Factory State"
+msgstr ""
+
+#: admin/settings.php:2722
+msgid "This will purge all custom options, leads, analytics, and restore the clean default starter forms (Contact Form & Sample Lead Form) and default settings, giving you a fresh start."
+msgstr ""
+
+#: admin/settings.php:2727
+msgid "Reset Plugin to Factory Defaults"
+msgstr ""
+
+#: admin/settings.php:2750
+msgid "Email Template Live Preview"
+msgstr ""
+
+#: admin/settings.php:2787
+msgid "Send Test Notification Email"
+msgstr ""
+
+#: admin/settings.php:2795
+msgid "Send a test email with your latest customized template styling, brand logo, and sample lead submission data to test deliverability directly in your inbox."
+msgstr ""
+
+#: admin/settings.php:2798
+msgid "Recipient Email Address"
+msgstr ""
+
+#: admin/settings.php:2803
+msgid "Active Dispatch: Custom SMTP Server"
+msgstr ""
+
+#: admin/settings.php:2803
+msgid "Active Dispatch: Default WordPress Mail (wp_mail)"
+msgstr ""
+
+#: admin/settings.php:2812
+msgid "Send Test Email Now"
+msgstr ""
+
+#: includes/blocks/lead-form-block.php:58
+msgid "Contact Form (ID: #1)"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:18
+#: includes/elementor/class-wlgf-elementor-widget.php:26
+msgid "WLGF / Lead Forms"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:69
+msgid "Form Configuration"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:101
+msgid "Default Form (ID: #1)"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:112
+msgid "Select Form"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:122
+msgid "Display Form Title"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:124
+msgid "Show"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:125
+msgid "Hide"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:138
+msgid "Form Styling (Pro)"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:158
+msgid "Border Radius (px)"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:177
+msgid "Container Background"
+msgstr ""
+
+#: includes/elementor/class-wlgf-elementor-widget.php:206
+#: includes/shortcode-ajax.php:561 includes/shortcode-ajax.php:1439
+#: includes/shortcode-ajax.php:1813
+msgid "This form will open for submissions on %s."
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:253
+msgid "Digitally Signed"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:323
+msgid "View Lead in Dashboard →"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:382
+msgid "Field"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:385
+msgid "Submitted Value"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:398
+msgid "Form ID:"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:398
+msgid "Received:"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:399
+msgid "Source Website:"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:415
+#: includes/class-wlgf-email-template.php:589
+msgid "All rights reserved."
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:451
+#: includes/class-wlgf-email-template.php:617
+msgid "Lead Inquiry & Consultation Form"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:482
+msgid "[%s] We received your submission"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:561
+msgid "Submission Successfully Received"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:574
+msgid "Date & Time:"
+msgstr ""
+
+#: includes/class-wlgf-email-template.php:575
+msgid "Website:"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:80
+msgid "Please provide a Mailchimp API Key."
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:101
+msgid "Connected to audience: %1$s (%2$d members)"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:101
+msgid "Mailchimp API connection verified successfully!"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:105
+#: includes/class-wlgf-newsletter.php:131
+#: includes/class-wlgf-newsletter.php:157
+#: includes/class-wlgf-newsletter.php:184
+#: includes/class-wlgf-newsletter.php:212
+msgid "API returned HTTP %d"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:109
+msgid "Please provide a Brevo API Key."
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:127
+msgid "Connected to Brevo list: %1$s (%2$d subscribers)"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:127
+msgid "Brevo API connection verified successfully!"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:135
+msgid "Please provide a MailerLite API Token."
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:153
+msgid "Connected to MailerLite group: %1$s (%2$d active subscribers)"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:153
+msgid "MailerLite API connection verified successfully!"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:161
+msgid "Please provide a SendGrid API Key."
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:180
+msgid "Connected to SendGrid list: %1$s (%2$d contacts)"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:180
+msgid "SendGrid Marketing API connection verified successfully!"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:189
+msgid "Please provide both ActiveCampaign API URL and API Key."
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:208
+msgid "Connected to ActiveCampaign list: %s"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:208
+msgid "ActiveCampaign API connection verified successfully!"
+msgstr ""
+
+#: includes/class-wlgf-newsletter.php:215
+msgid "Unknown newsletter provider."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:26
+msgid "Clean contact form with Name, Email, Subject, Message, and submit button."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:27
+msgid "Essential"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:33
+msgid "Simple Lead Capture Form"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:34
+msgid "High-converting lead generation form for capturing prospective client inquiries."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:41
+msgid "Service Quote Request"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:42
+msgid "Structured inquiry form allowing clients to specify service needs, timeline, and project details."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:43
+msgid "Business"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:49
+msgid "Customer Feedback Form"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:50
+msgid "Collect valuable client feedback, experience ratings, and suggestions."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:51
+msgid "Feedback"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:57
+msgid "Newsletter Subscription"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:58
+msgid "Quick subscriber sign-up form with privacy consent for building your email audience."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:59
+msgid "Marketing"
+msgstr ""
+
+#: includes/class-wlgf-templates.php:206
+msgid "Unauthorized."
+msgstr ""
+
+#: includes/class-wlgf-templates.php:215
+msgid "Template not found."
+msgstr ""
+
+#: includes/shortcode-ajax.php:278 includes/shortcode-ajax.php:349
+#: includes/shortcode-ajax.php:371
+msgid "Field \"%s\" is required."
+msgstr ""
+
+#: includes/shortcode-ajax.php:311
+msgid "File type \".%1$s\" is not allowed for \"%2$s\". Allowed formats: %3$s"
+msgstr ""
+
+#: includes/shortcode-ajax.php:321
+msgid "File size exceeds maximum allowed limit of %1$sMB for \"%2$s\"."
+msgstr ""
+
+#: includes/shortcode-ajax.php:386
+msgid "Payment collection is available in Lead Generation Form Pro."
+msgstr ""
+
+#: includes/shortcode-ajax.php:414
+msgid "Lead Generation Form Notice:"
+msgstr ""
+
+#: includes/shortcode-ajax.php:414
+msgid "Form #%1$s does not exist or has been deleted. Please check your form shortcode in %2$sManage Forms%3$s."
+msgstr ""
+
+#: includes/shortcode-ajax.php:598 includes/shortcode-ajax.php:632
+#: includes/shortcode-ajax.php:651
+msgid "Step %d"
+msgstr ""
+
+#: includes/shortcode-ajax.php:607
+msgid "Step 1"
+msgstr ""
+
+#: includes/shortcode-ajax.php:622
+msgid "Step 1 of %d"
+msgstr ""
+
+#: includes/shortcode-ajax.php:849
+msgid "Drag and drop files here or click to browse"
+msgstr ""
+
+#: includes/shortcode-ajax.php:851
+msgid "Drag & drop files here or"
+msgstr ""
+
+#: includes/shortcode-ajax.php:851
+msgid "Browse"
+msgstr ""
+
+#: includes/shortcode-ajax.php:853
+msgid "Accepted formats: %1$s (Max %2$s total)"
+msgstr ""
+
+#: includes/shortcode-ajax.php:872
+msgid "Star Rating"
+msgstr ""
+
+#: includes/shortcode-ajax.php:875
+msgid "%d star"
+msgstr ""
+
+#: includes/shortcode-ajax.php:894
+msgid "Net Promoter Score"
+msgstr ""
+
+#: includes/shortcode-ajax.php:898
+msgid "Score %d"
+msgstr ""
+
+#: includes/shortcode-ajax.php:905
+msgid "0 - Not at all likely"
+msgstr ""
+
+#: includes/shortcode-ajax.php:906
+msgid "10 - Extremely likely"
+msgstr ""
+
+#: includes/shortcode-ajax.php:918
+msgid "Estimated Total"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1038
+msgid "Payment Notice (Admin only):"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1039
+msgid "This payment method field is hidden from visitors because \"Enable Payment\" is unchecked in Form Settings."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1067
+msgid "I agree to the Terms of Service and Privacy Policy"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1118
+msgid "Total Due"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1134
+msgid "Secure Online Payment"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1146
+msgid "Credit / Debit Card"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1147
+msgid "PayPal"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1152
+msgid "Enter Card Information"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1165
+msgid "Guaranteed safe & 256-bit SSL encrypted checkout"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1224
+msgid "Sign above using finger or mouse"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1225
+msgid "Clear"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1343
+msgid "Spam bot detected."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1374
+msgid "Turnstile verification unavailable."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1377
+msgid "Cloudflare Turnstile verification failed. Please try again."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1410
+msgid "reCAPTCHA verification error: %s"
+msgstr ""
+
+#: includes/shortcode-ajax.php:1425 includes/shortcode-ajax.php:1799
+msgid "Form does not exist."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1550 includes/shortcode-ajax.php:1911
+msgid "Payment verification failed."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1759 includes/shortcode-ajax.php:2112
+msgid "Payment Successful! We have received your %1$s payment of %2$s (Transaction ID: %3$s). Your order has been placed."
+msgstr ""
+
+#: includes/shortcode-ajax.php:1787 includes/shortcode-ajax.php:1789
+msgid "Sorry! your request has not been verified."
+msgstr ""
+
+#: includes/shortcode-ajax.php:2151
+msgid "Details are as follows"
+msgstr ""
+
+#: includes/shortcode-ajax.php:2153
+msgid "Form ID"
+msgstr ""
+
+#: includes/shortcode-ajax.php:2223
+msgid "a prospective lead"
+msgstr ""
+
+#: includes/shortcode-ajax.php:2224
+msgid "A new query received by"
+msgstr ""

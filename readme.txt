@@ -31,7 +31,7 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 * **Built-in Mini-CRM Lead Manager:** Never lose an inquiry or customer message. Store, view, search, and manage leads directly inside your WordPress admin dashboard with 6 pipeline statuses.
 * **Internal Team Notes:** Add timestamped notes and client follow-up logs to any captured contact form entry.
 * **Bulletproof Anti-Spam Defenses:** Multi-layer protection including invisible Google reCAPTCHA v3, hidden honeypot spam traps, submission speed guards, and email/domain blacklists.
-* **Reliable SMTP Email Delivery:** Ensure admin notifications and customer confirmation emails land in the inbox, not the spam folder. Configure custom SMTP (TLS/SSL) with a live connection test tool.
+* **Reliable WP Email Delivery:** Ensure admin notifications and customer confirmation emails land in the inbox, not the spam folder.
 * **Automated Email Auto-Responder:** Send instant, personalized confirmation emails to visitors who submit your contact form using dynamic merge tags (`{Name}`, `{Email}`, `{Form_Name}`).
 * **Mailchimp Audience Sync:** Automatically subscribe leads to your Mailchimp email marketing audience with custom tag support and double opt-in.
 * **Gutenberg & Elementor Ready:** Easily embed forms using the dedicated **Gutenberg Block** (`/lead-form`), the native **Elementor Widget**, or standard WordPress shortcodes `[WLFG id="1"]`.
@@ -190,26 +190,32 @@ The Free version is ideal for contact forms, inquiry forms, lead capture, and su
 
 == Screenshots ==
 
-1. Visual Drag & Drop Form Builder – Easily create responsive contact forms with custom field attributes.
-2. Template Library – Conversion-optimized prebuilt form templates for quotes, inquiries, and surveys.
-3. Forms Manager – Manage, clone, edit, and copy shortcodes for all your published forms.
-4. Mini-CRM Captured Leads – Search, filter by status, and review customer submissions in real time.
-5. Internal Notes & Follow-Up – Attach timestamped notes and comments to any captured lead.
-6. Email & Custom SMTP Settings – Configure reliable email delivery with real-time SMTP test dispatch.
-7. Anti-Spam Security – Effortlessly set up Google reCAPTCHA v3 and honeypot traps.
-8. Live Form Theme Customizer – Customize colors, rounded corners, fonts, and dark mode without code.
-9. Visual Analytics Dashboard – Monitor form impressions, conversion rates, and device breakdowns.
-10. 100% Mobile-Responsive Live Form – Clean, modern, high-converting contact and inquiry forms on any screen.
+1. Lead Generation Form Dashboard - Manage all your forms and settings from one centralized location.
+2. Visual Analytics & Drop-off Funnel - Visualize your form performance with detailed analytics and identify where users drop off during the submission process.
+3. Drag & Drop Form Builder – Easily create responsive contact forms with custom field attributes.
+4. Template Library – Conversion-optimized prebuilt form templates for quotes, inquiries, and surveys.
+5. Forms Manager – Manage, clone, edit, and copy shortcodes for all your published forms.
+6. Mini-CRM Captured Leads – Search, filter by status, and review customer submissions in real time.
+7. Internal Notes & Follow-Up – Attach timestamped notes and comments to any captured lead.
+8. Email Settings & Email Template Design with Brand Logo – Configure reliable admin and customer email delivery with real-time wp_mail() test dispatch and custom brand logo and email template design.
+9. Anti-Spam Security – Effortlessly set up Google reCAPTCHA v3 and honeypot traps.
+10. Live Form Theme Customizer – Customize colors, rounded corners, fonts, and dark mode without code.
+11. 100% Mobile-Responsive Live Form – Clean, modern, high-converting contact and inquiry forms on any screen.
+12. Dynamic Email Template Tags for Admin and Customer Emails – Personalize email content with dynamic tags for admin and customer emails.
+13. Classic Contact Form Templates - Free core pre-built template frontend output. 
 
 ---
 
 == Changelog ==
 
 = 1.3.3 =
-* Release Date: 24 Oct 2026
+* Release Date: 26 Oct 2026
+* Screenshots & Visual Assets: Added 13 comprehensive official screenshots showcasing dashboard analytics, drag-and-drop form builder, template library, mini-CRM captured leads, email settings with brand logo, and responsive previews.
+* Documentation & Readme: Updated readme.txt screenshots section with detailed descriptions for all 13 official plugin screenshots.
+* Internationalization (i18n): Updated and synchronized master POT translation template (lead-generation-form.pot) and compiled dictionary catalogs (.po/.mo) for Arabic, German, Spanish, Finnish, French, and other languages with latest strings and dynamic tags.
 * WordPress Plugin Check (PCP): Achieved full compliance with WordPress Plugin Check and official PHP Coding Standards (WPCS).
 * Security & Escaping: Implemented comprehensive late output escaping across all dynamic form generator markup, inputs, and lead modal previews.
-* Internationalization (i18n): Enhanced translation readiness with strict translators comments and ordered placeholders (%1$s, %2$s) on all translatable strings.
+* Internationalization Readiness: Added strict translators comments and ordered placeholders (%1$s, %2$s) on all translatable strings.
 * Code Quality: Renamed and isolated global variable scopes across admin panels to prevent collisions with third-party themes and plugins.
 * Modernization: Replaced deprecated parse_url() with wp_parse_url() and date() with gmdate() for timezone-safe execution.
 * Data Sanitization: Standardized unslashing and sanitization for all AJAX request handlers, settings mutations, and analytics pings.
@@ -308,7 +314,7 @@ The Free version is ideal for contact forms, inquiry forms, lead capture, and su
 == Upgrade Notice ==
 
 = 1.3.3 =
-Recommended upgrade: includes full WordPress Plugin Check compliance, enhanced late output escaping, standardized internationalization, and optimized script registration.
+Recommended upgrade: includes official plugin screenshots, updated translation catalogs, full WordPress Plugin Check compliance, enhanced late output escaping, standardized internationalization, and optimized script registration.
 
 = 1.3.2 =
 Recommended upgrade: includes lead details modal visual enhancements, dynamic payment column visibility, rate-limit submission display fixes, and security shield improvements.
