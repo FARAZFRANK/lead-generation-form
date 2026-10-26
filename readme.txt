@@ -1,6 +1,6 @@
 === Lead Generation Form - Form Builder, Contact Form, Survey & Inquiry Forms ===
 Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife, FARAZFRANK
-Tags: contact-form, form-builder, contact-us, lead-generation, Survey-Inquiry
+Tags: contact-form, form-builder, forms, lead-generation, contact-us
 Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -30,7 +30,7 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 * **100% Mobile Responsive Contact Forms:** Forms adjust automatically to iPhones, iPads, Android smartphones, tablets, and desktop screens.
 * **Built-in Mini-CRM Lead Manager:** Never lose an inquiry or customer message. Store, view, search, and manage leads directly inside your WordPress admin dashboard with 6 pipeline statuses.
 * **Internal Team Notes:** Add timestamped notes and client follow-up logs to any captured contact form entry.
-* **Bulletproof Anti-Spam Defenses:** Multi-layer protection including invisible Google reCAPTCHA v3, hidden honeypot spam traps, submission speed guards, and email/domain blacklists.
+* **Bulletproof Anti-Spam Defenses:** Multi-layer protection including invisible Google reCAPTCHA v3, hidden honeypot spam traps, and submission speed guards.
 * **Reliable WP Email Delivery:** Ensure admin notifications and customer confirmation emails land in the inbox, not the spam folder.
 * **Automated Email Auto-Responder:** Send instant, personalized confirmation emails to visitors who submit your contact form using dynamic merge tags (`{Name}`, `{Email}`, `{Form_Name}`).
 * **Mailchimp Audience Sync:** Automatically subscribe leads to your Mailchimp email marketing audience with custom tag support and double opt-in.
@@ -80,7 +80,6 @@ Most WordPress contact form plugins are either too complicated, bloated, or lock
 * **Google reCAPTCHA v3:** Invisible bot protection without annoying image puzzles or captcha checkboxes.
 * **Honeypot Anti-Spam Trap:** Invisible form trap that catches automated bots without bothering real visitors.
 * **Anti-Spam Submission Speed Guard:** Rejects bot submissions completed in under 2 seconds.
-* **Email & Domain Blacklist:** Filter out disposable emails or known spam domains.
 * **Built-In Custom SMTP Engine:** Send lead notifications reliably through Gmail, Outlook, Amazon SES, SendGrid, Mailgun, or custom SMTP servers.
 * **Live SMTP Test Dispatcher:** Verify your SMTP credentials directly from the settings panel before going live.
 * **Submitter Auto-Responder Email:** Automatically send instant confirmation emails to users who submit inquiries.
@@ -111,6 +110,7 @@ Need online payments, multi-step funnels, or dynamic quote estimators? Upgrade t
 * **Exit-Intent, Timed & Scroll Popups:** Display high-converting popup forms when users attempt to leave or reach scroll depths.
 * **Real-Time Abandoned Lead Auto-Capture:** Silently capture email addresses and phone numbers as users type before they navigate away.
 * **Interactive Mini-CRM Kanban Pipeline:** Drag and drop lead cards across 6 visual sales stages with 1-click WhatsApp and phone outreach directly from lead records.
+* **Email & Domain Blacklist Protection:** Actively block or silently discard submissions from disposable temporary email providers, fraudulent domains, and competitor lists.
 * **Asynchronous Webhooks & Headless REST API:** Stream lead data to Zapier, Make, n8n, Pabbly, mobile apps, or custom CRMs via background JSON webhooks with authorization headers.
 * **25+ Enterprise Niche Templates:** Instant access to 25+ conversion-optimized templates for booking, medical intake, real estate, and quote calculators.
 * **Cloudflare Turnstile & Advanced Security:** Modern privacy-first Turnstile bot prevention, server-side IP rate limiting (5 submissions / 120s), and SQL injection exploit shield.
@@ -168,7 +168,7 @@ The plugin includes multi-layer anti-spam protection:
 1. **Google reCAPTCHA v3:** Invisible bot detection without annoying puzzles.
 2. **Honeypot Trap:** Invisible fields that trap automated spam bots.
 3. **Timing Trap:** Rejects form submissions sent under 2 seconds (faster than any human).
-4. **Email / Domain Blacklist:** Filter out disposable emails or known spam domains.
+4. **Email / Domain Blacklist & Turnstile (Pro):** Advanced disposable mailbox filtering, domain blocking, and Cloudflare Turnstile protection.
 
 = Can I receive email notifications when a lead is captured? =
 Yes! You can enable instant admin email notifications under **Settings → Email & SMTP**. You can use default WordPress mail or configure authenticated custom SMTP (with TLS or SSL encryption) to ensure your lead alerts never end up in the spam folder.

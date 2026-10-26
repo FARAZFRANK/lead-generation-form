@@ -58,8 +58,7 @@ Designed as a modern, clean, and bloat-free alternative to Contact Form 7, WPFor
 ### 🛡️ Bulletproof Anti-Spam Shield
 * **Invisible Google reCAPTCHA v3:** Background verification with no disruptive user puzzles.
 * **Hidden Honeypot Traps:** Traps malicious spambots silently without impacting genuine users.
-* **Submission Speed Trap:** Blocks instant robotic scripted submissions.
-* **Domain & Email Blacklisting:** Filter out disposable and known fraudulent domains.
+* **Submission Speed Trap:** Blocks instant robotic scripted submissions sent under 2 seconds.
 
 ### ✉️ Reliable Email & Marketing Automation
 * **Custom Authenticated SMTP:** Built-in SMTP engine (TLS/SSL) with instant live test email delivery tool.
