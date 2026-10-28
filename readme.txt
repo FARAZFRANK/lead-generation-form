@@ -1,5 +1,5 @@
 === Lead Generation Form - Form Builder, Contact Form, Survey & Inquiry Forms ===
-Contributors: awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife, FARAZFRANK
+Contributors: FARAZFRANK, awordpresslife, razipathhan, hanif0991, muhammadshahid, fkfaisalkhan007, sharikkhan007, zishlife
 Tags: contact-form, form-builder, forms, lead-generation, contact-us
 Requires at least: 5.6
 Tested up to: 7.1
