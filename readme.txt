@@ -123,6 +123,42 @@ Need online payments, multi-step funnels, or dynamic quote estimators? Upgrade t
 
 ---
 
+### Supported Themes
+
+Lead Generation Form is rigorously tested and seamlessly compatible with popular WordPress themes, delivering flawless styling and responsive layouts out of the box.
+You can also effortlessly embed and customize your forms across the WordPress Block Editor (Gutenberg), Elementor, and WooCommerce pages:
+
+* [Blog Over](https://wordpress.org/themes/blog-over/) – by A WP Life
+* [Business Formula](https://wordpress.org/themes/business-formula/) – by A WP Life
+* [Avantex](https://wordpress.org/themes/avantex/) – by WP Frank
+* [Blog Over News](https://wordpress.org/themes/blog-over-news/) – by A WP Life
+* [Neom Blog](https://wordpress.org/themes/neom-blog/) – by A WP Life
+* [Paws and Care](https://wordpress.org/themes/paws-and-care/) – by WP Frank
+* [Medical Health](https://wordpress.org/themes/medical-health/) – by WP Frank
+* [BusinessExpo](https://wordpress.org/themes/businessexpo/) – by WP Frank
+* [Formula](https://wordpress.org/themes/formula/) – by A WP Life
+* [AwpBusinessPress](https://wordpress.org/themes/awpbusinesspress/) – by A WP Life
+* [MediHealth](https://wordpress.org/themes/medihealth/) – by A WP Life
+* [Marin](https://wordpress.org/themes/marin/) – by WP Frank
+* [Leather House](https://wordpress.org/themes/leather-house/) – by WP Frank
+* [Astra](https://wordpress.org/themes/astra/) – by Brainstorm Force
+* [Hello Elementor](https://wordpress.org/themes/hello-elementor/) – by Elementor
+* [OceanWP](https://wordpress.org/themes/oceanwp/) – by oceanwp
+* [GeneratePress](https://wordpress.org/themes/generatepress/) – by Tom
+* [Kadence](https://wordpress.org/themes/kadence/) – by Kadence WP
+* [Neve](https://wordpress.org/themes/neve/) – by Themeisle
+* [Blocksy](https://wordpress.org/themes/blocksy/) – by creativethemeshq
+* [PopularFX](https://wordpress.org/themes/popularfx/) – by Pagelayer
+* [Storefront](https://wordpress.org/themes/storefront/) – by Automattic
+* [Hestia](https://wordpress.org/themes/hestia/) – by Themeisle
+* [Go](https://wordpress.org/themes/go/) – by GoDaddy
+* [Colibri WP](https://wordpress.org/themes/colibri-wp/) – by Extend Themes
+* [Zakra](https://wordpress.org/themes/zakra/) – by ThemeGrill
+* [OnePress](https://wordpress.org/themes/onepress/) – by FameThemes
+* [Sydney](https://wordpress.org/themes/sydney/) – by aThemes
+
+---
+
 == Installation ==
 
 ### Automatic Installation (Recommended)

@@ -1305,7 +1305,8 @@ function wlgf_shortcode_callback( $atts ) {
                     } else {
                          echo '<div class="wlgf-alert wlgf-alert--success">' . wp_kses_post($success_msg) . '</div>';
                     }
-                    return;
+                    echo '</div>';
+                    return ob_get_clean();
                }
 
                // 2. Vulnerability Scanner & SQLi Exploit Shield (drops sqlmap / Acunetix / fuzzing probes)
@@ -1319,7 +1320,8 @@ function wlgf_shortcode_callback( $atts ) {
                     } else {
                          echo '<div class="wlgf-alert wlgf-alert--success">' . wp_kses_post($success_msg) . '</div>';
                     }
-                    return;
+                    echo '</div>';
+                    return ob_get_clean();
                }
 
                // 3. Submission Rate Limiting (stops rapid-fire automated scripts from flooding inbox)
